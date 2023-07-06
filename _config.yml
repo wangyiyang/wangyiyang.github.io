@@ -168,10 +168,10 @@ beaudar:
     repo: mzlogin/blog-comments
 # giscus 配置参考：https://giscus.app/zh-CN
 giscus:
-    repo: mzlogin/blog-comments
-    repo-id: MDEwOlJlcG9zaXRvcnk5MzEyNzkxNw==
+    repo: wangyiyang/wangyiyang.github.io
+    repo-id: R_kgDOJ3qrmA
     category: Announcements
-    category-id: DIC_kwDOBY0E7c4CRtg9
+    category-id: DIC_kwDOJ3qrmM4CXtem
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
@@ -188,7 +188,7 @@ simple_jekyll_search:
 #      Google      #
 # ---------------- #
 google:
-    analytics_id: # G-20FLEG5Q2W
+    analytics_id: G-F6QSY1142J
     adsense:
         enabled: false
         footer: false
