@@ -4,10 +4,10 @@
 baseurl:
 url: https://www.wangyiyang.cc
 date_format: "ordinal"
-title: 码志
-subtitle: "公众号：闷骚的程序员"
-description: "王翊仰的个人博客，公众号：闷骚的程序员"
-keywords: 码志, Wang Yiyang, 闷骚的程序员
+title: 老王编程
+#subtitle: "公众号：闷骚的程序员"
+description: "王翊仰的个人博客"
+keywords: 王翊仰, Wang Yiyang
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
@@ -39,7 +39,7 @@ components:
     # 页面右上角，以及「关于」页面的二维码
     # 修改图片请替换 assets/images/qrcode.jpg
     qrcode:
-        enabled: true
+        enabled: false
         image_alt: 闷骚的程序员
     # 维基索引页使用哪种视图，支持 列表（list）/分类（cate）
     wiki:
@@ -145,28 +145,28 @@ comments_provider: giscus
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # disqus 配置参考：https://disqus.com
-disqus:
-    username: 
-# gitment 配置参考：https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: mzlogin
-    repo: blog-comments
-    oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-# gitalk 配置参考：https://github.com/gitalk/gitalk#install
-gitalk:
-    owner: mzlogin
-    repo: blog-comments
-    clientID: d2e1cbbd298958076462
-    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-# utterances 配置参考：https://utteranc.es/
-utterances:
-    repo: mzlogin/blog-comments
-# beaudar 配置参考：https://beaudar.lipk.org/
-beaudar:
-    repo: mzlogin/blog-comments
-# giscus 配置参考：https://giscus.app/zh-CN
+#disqus:
+#    username:
+## gitment 配置参考：https://imsun.net/posts/gitment-introduction/
+#gitment:
+#    owner: mzlogin
+#    repo: blog-comments
+#    oauth:
+#        client_id: d2e1cbbd298958076462
+#        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+## gitalk 配置参考：https://github.com/gitalk/gitalk#install
+#gitalk:
+#    owner: mzlogin
+#    repo: blog-comments
+#    clientID: d2e1cbbd298958076462
+#    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+## utterances 配置参考：https://utteranc.es/
+#utterances:
+#    repo: mzlogin/blog-comments
+## beaudar 配置参考：https://beaudar.lipk.org/
+#beaudar:
+#    repo: mzlogin/blog-comments
+## giscus 配置参考：https://giscus.app/zh-CN
 giscus:
     repo: wangyiyang/wangyiyang.github.io
     repo-id: R_kgDOJ3qrmA
