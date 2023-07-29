@@ -4,8 +4,8 @@
 baseurl:
 url: https://www.wangyiyang.cc
 date_format: "ordinal"
-title: 老王编程
-#subtitle: "公众号：闷骚的程序员"
+title: 王翊仰的个人博客
+#subtitle: "生命不息，折腾不止"
 description: "王翊仰的个人博客"
 keywords: 王翊仰, Wang Yiyang
 timezone: Asia/Shanghai
