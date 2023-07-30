@@ -47,5 +47,5 @@ permalink: /archives/
 </li>
 {% endfor %}
 
-<!--</ol>-->
+</ol>
 </section>

@@ -1,4 +1,4 @@
-# 码志
+# 王翊仰的博客
 
 我的个人博客：<https://wangyiyang.cc>，欢迎 Star 和 Fork。
 

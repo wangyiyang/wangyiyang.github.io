@@ -4,9 +4,9 @@
 baseurl:
 url: https://www.wangyiyang.cc
 date_format: "ordinal"
-title: 王翊仰的个人博客
+title: 王翊仰的博客
 #subtitle: "生命不息，折腾不止"
-description: "王翊仰的个人博客"
+description: "王翊仰的博客"
 keywords: 王翊仰, Wang Yiyang
 timezone: Asia/Shanghai
 encoding: "utf-8"
