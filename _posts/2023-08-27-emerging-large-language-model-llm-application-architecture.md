@@ -16,7 +16,7 @@ mindmap2: false
 
 作者：[Cobus Greyling](https://cobusgreyling.medium.com/)
 
-![Alt text](images/posts/2023-08-27-emerging-large-language-model-llm-application-architecture/image.png)
+![Alt text](/images/posts/2023-08-27-emerging-large-language-model-llm-application-architecture/image.png)
 
 Due to the highly unstructured nature of Large Language Models (LLMs), there are thought and market shifts taking place on how to implement LLMs.
 
