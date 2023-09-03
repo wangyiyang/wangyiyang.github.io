@@ -15,7 +15,7 @@ mindmap: true
 mindmap2: true
 ---
 
-- Kubernetes Core
+- Kubernetes Map
 	- Cluster Architecture
 		- Master
 			- Etcd
@@ -106,11 +106,53 @@ mindmap2: true
 		- Cgroup
 	- 容器
 		- 镜像
+			- 镜像拉取策略
+				- IfNotPresent(default)
+				- Always
+				- Never
+			- 默认镜像拉取策略
+				- 如果你省略了 `imagePullPolicy` 字段，并且你为容器镜像指定了摘要， 那么 `imagePullPolicy` 会自动设置为 `IfNotPresent`。
+				- 如果你省略了 `imagePullPolicy` 字段，并且容器镜像的标签是 `:latest`， `imagePullPolicy` 会自动设置为 `Always`。
+				- 如果你省略了 `imagePullPolicy` 字段，并且没有指定容器镜像的标签， `imagePullPolicy` 会自动设置为 `Always`。
+				- 如果你省略了 `imagePullPolicy` 字段，并且为容器镜像指定了非 `:latest` 的标签， `imagePullPolicy` 就会自动设置为 `IfNotPresent`。
 		- 容器环境
+			- 文件系统，其中包含一个[镜像](https://kubernetes.io/zh-cn/docs/concepts/containers/images/) 和一个或多个的[卷](https://kubernetes.io/zh-cn/docs/concepts/storage/volumes/)
+			- 容器自身的信息
+			- 集群中其他对象的信息
 		- 容器运行时类（Runtime Class）
 		- 容器生命周期回调
 	- Workloads
 		- Pod
+			- 生命周期
+				- Pending：Pod 已被 Kubernetes 系统接受，但有一个或者多个容器尚未创建亦未运行。此阶段包括等待 Pod 被调度的时间和通过网络下载镜像的时间。
+				- Running：Pod 已经绑定到了某个节点，Pod 中所有的容器都已被创建。至少有一个容器仍在运行，或者正处于启动或重启状态。
+				- Succeeded：Pod 中的所有容器都已成功终止，并且不会再重启。
+				- Failed：Pod 中的所有容器都已终止，并且至少有一个容器是因为失败终止。也就是说，容器以非 0 状态退出或者被系统终止。
+				- Unknown：因为某些原因无法取得 Pod 的状态。这种情况通常是因为与 Pod 所在主机通信失败。
+			- 容器状态：
+				- `Waiting`
+				- `Running`
+				-  `Terminated`
+			- 容器重启策略（restartPolicy）
+				- Always（default）
+				- OnFailure
+				- Never
+			- Pod 状况
+				- PodScheduled
+				- PodHasNetwork
+				- ContainersReady
+				- Initialized
+				- Ready
+			- 探测类型
+				- `livenessProbe`
+				- `readinessProbe`
+				- `startupProbe`
+			- Init 容器
+			- 干扰（Disruptions）
+			- 临时容器
+			- Pod QoS 类
+			- 用户命名空间
+			- Downward API
 		- Controllers
 			- Deployments
 			- ReplicaSet
@@ -147,4 +189,4 @@ mindmap2: true
 	- Security
 	- Policies
 	- Scheduling，Preemption and Eviction
-
+	- 
