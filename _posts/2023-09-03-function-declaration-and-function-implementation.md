@@ -1,6 +1,6 @@
 ---
 layout: post
-title: function-declaration-and-function-implementation
+title: 函数声明和函数实现
 categories: [Language]
 description: 函数声明和函数实现需要分开的主要原因是编译器的编译过程。编译器在一次通过代码时，会按顺序进行解析和编译。当编译器在遇到函数调用的地方时，它需要知道该函数的名称、参数类型和返回类型等信息。函数声明的作用就是提供这些信息，告诉编译器函数的存在和签名。
 keywords: Language
