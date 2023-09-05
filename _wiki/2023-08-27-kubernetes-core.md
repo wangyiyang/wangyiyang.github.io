@@ -2,7 +2,7 @@
 layout: wiki
 title: Kubernetes Core (未完)
 cate1: Cloud
-cate2:
+cate2: Kubernetes
 description: Kubernetes Core
 keywords: Kubernetes
 type:
