@@ -377,7 +377,7 @@ prefect orion start
 
 对于我们的代码，这是截图：
 
-![Alt text](/static/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image4.png)
+![Alt text](/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image4.png)
 
 您可以查看不同任务的日志以及我们代码的流程。您还可以从仪表板获得更多信息。所以请随意尝试。
 Prefect有许多有趣的功能。我非常喜欢它的并发、并行和异步支持。
