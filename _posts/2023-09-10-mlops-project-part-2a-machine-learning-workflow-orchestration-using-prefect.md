@@ -53,8 +53,6 @@ mindmap2: false
 所有这些都将帮助组织和开发人员更快地完成任务并找到问题，使他们能够将注意力集中在更重要的事情上。
 太好了！让我们看看如何在实践中完成。我们的流水线可能如下所示：
 
-![Alt text](image.png)
-
 ![Alt text](/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image3.png)
 
 对于这个项目，我们实际上并不需要流水线，但我只是想展示一下我们如何创建一个流水线。根据使用情况，拥有一个流水线可能会很有用。例如，如果您有一个要定期执行的数据流水线，或者想要一个用于训练机器学习模型的流水线。在这里，我只是想展示如果您在项目中需要，可以如何做到这一点。
