@@ -156,7 +156,32 @@ mindmap2: true
 		- Controllers
 			- Deployments
 			- ReplicaSet
-			- StatefulSet
+			- StatefulSet(20230915更新)
+				- 价值：
+					- 稳定的、唯一的网络标识符。
+					- 稳定的、持久的存储。
+					- 有序的、优雅的部署和扩缩。
+					- 有序的、自动的滚动更新。
+				- 限制：
+					-  PersistentVolume Provisioner 
+					- 删除或者扩缩 StatefulSet 不会删除它关联的存储卷
+					- StatefulSet 当前需要无头服务来负责 Pod 的网络标识。
+					- 当删除一个 StatefulSet 时，该 StatefulSet 不提供任何终止 Pod 的保证。 
+					- 在默认 Pod 管理策略(OrderedReady) 时使用滚动更新， 可能进入需要人工干预才能修复的损坏状态。
+				- 组件：
+					- 最短就绪秒数（可选，`.spec.minReadySeconds`）：指定新创建的 Pod 应该在没有任何容器崩溃的情况下运行并准备就绪，才能被认为是可用的。
+					- Pod 管理策略（可选，`.spec.podManagementPolicy`）：指定控制器如何管理 Pod。
+						- OrderedReady，表示控制器应该按照它们在 StatefulSet 中的顺序创建和删除 Pod。
+						- Parallel，表示控制器可以并行创建和删除 Pod。
+					- 更新策略（可选，`.spec.updateStrategy`）：指定控制器如何更新 Pod。
+						- OnDelete，表示手动更新 Pod。
+						- RollingUpdate，表示控制器应该自动更新 Pod。
+					- 服务名称（可选，`.spec.serviceName`）：指定用于访问 Pod 的服务的名称。
+					- 卷声明（可选，`.spec.volumeClaimTemplates`）：指定 StatefulSet 管理的卷声明。
+					- Pod 模板（`.spec.template`）：指定 StatefulSet 管理的 Pod 的模板。
+					- Pod 模板标签（`.spec.template.metadata.labels`）：指定 StatefulSet 管理的 Pod 的标签。
+					- 起始序号（`.spec.podManagementPolicy`）：指定 StatefulSet 管理的 Pod 的起始序号。
+					- 最大不可用 Pod 数（`.spec.updateStrategy.rollingUpdate.maxUnavailable`）：指定在滚动更新期间可以不可用的 Pod 的最大数量
 			- DaemonSet
 			- Job
 			- CronJob
@@ -189,4 +214,3 @@ mindmap2: true
 	- Security
 	- Policies
 	- Scheduling，Preemption and Eviction
-	- 
