@@ -1,0 +1,3 @@
+{
+    "baiduPush": "node utils/baiduPush.js https://www.wangyiyang.cc && bash baiduPush.sh"
+}
