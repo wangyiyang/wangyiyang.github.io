@@ -12,7 +12,7 @@ const DOMAIN = process.argv.splice(2)[0]; // 获取命令行传入的参数
 if (DOMAIN) {
   main();
 } else {
-  console.log(chalk.red('node utils/baiduPush.js https://www.wangyiyang.cc'))
+  console.log('node utils/baiduPush.js https://www.wangyiyang.cc')
 }
 
 /**
