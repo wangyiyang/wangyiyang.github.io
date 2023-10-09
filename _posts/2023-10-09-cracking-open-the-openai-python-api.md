@@ -16,7 +16,7 @@ mindmap2: false
 
 ## 一个完整的面向初学者友好的介绍，附带示例代码。
 
-![](http://static.wangyiyang.cc/Pasted%20image%2020230928155858.png)
+![](/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928155858.png)
 *Photo by [Martin Sanchez](https://unsplash.com/@martinsanchez?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
 这是关于实际应用大型语言模型（LLM）[系列](https://towardsdatascience.com/a-practical-introduction-to-llms-65194dda1148)的第二篇文章。在这里，我将为初学者提供一个友好的OpenAI API入门介绍。这使您能够超越像ChatGPT这样的受限聊天界面，更好地利用LLM来满足您独特的用例。以下是提供的Python示例代码，并可在[GitHub存储库](https://github.com/ShawhinT/YouTube-Blog/tree/main/LLMs/openai-api)中找到。
@@ -54,7 +54,7 @@ mindmap2: false
 
 虽然这个例子似乎与API无关，但实际上这就是API的工作原理。你发送一个请求给远程应用程序，就像你给你的美食朋友发短信一样。然后，远程应用程序发送回一个响应，就像你朋友回你短信一样。
 
-![](http://static.wangyiyang.cc/Pasted%20image%2020230928160230.png)
+![](/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928160230.png)
 *A visual analogy of how APIs work. Image by author.*
 
 API与上面的类比的区别在于，你不是通过手机的短信应用发送请求，而是使用你喜欢的编程语言，如Python、JavaScript、Ruby、Java等。这对于开发需要使用外部信息的软件非常有用，因为信息的获取可以自动化处理。
@@ -63,7 +63,7 @@ API与上面的类比的区别在于，你不是通过手机的短信应用发�
 
 我们可以使用API与大型语言模型进行交互。其中一个流行的API是OpenAI的API，通过它，你可以使用Python将提示发送到OpenAI，并获取相应的回复，而不是在ChatGPT的网页界面中键入提示信息。
 
-![](http://static.wangyiyang.cc/Pasted%20image%2020230928160659.png)
+![](/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928160659.png)
 *Visualization of how API calls to OpenAI works. Image by author.*
 
 这样做使几乎任何人都能够访问最先进的LLM（以及其他ML模型），而无需为运行它们而提供计算资源。当然，缺点是OpenAI并非出于慈善目的提供这项服务。每个API调用都是需要付费的，稍后我们会详细讨论这个话题。
@@ -79,7 +79,7 @@ API的一些显著特点（ChatGPT中不可用）如下所列：
 
 OpenAI API提供了[多个可供选择的模型](https://platform.openai.com/docs/models)。选择最适合的模型取决于你的具体用例。下面是当前可用的模型列表[1]。
 
-![](http://static.wangyiyang.cc/Pasted%20image%2020230928161043.png)
+![](/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928161043.png)
 *List of available models via the OpenAI API as of Jul 2023. Image by author. [[1](https://platform.openai.com/docs/models)]*
 
 **注意：** 上述列出的每个项目都有一组不同大小和价格的模型可供选择。请查阅[文档](https://platform.openai.com/docs/models)以获取最新信息。
@@ -91,7 +91,7 @@ OpenAI API提供了[多个可供选择的模型](https://platform.openai.com/doc
 在LLM的上下文中，令牌（Token）实际上是表示一组单词和字符的一组数字。例如，"The" 可以是一个令牌，" end"（带有空格）是另一个令牌，"." 是另一个令牌。
 因此，文本 "The End." 将由3个令牌组成，比如（73，102，6）。
 
-![](http://static.wangyiyang.cc/Pasted%20image%2020230928161504.png)
+![](/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928161504.png)
 *Toy example showing one possible token mapping between text and integers. Image by author.*
 
 这是一个关键的步骤，因为LLM（即神经网络）不能直接“理解”文本。文本必须转换为数值表示，以便模型可以对输入进行数学运算。因此，需要进行令牌化处理。
