@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 解读 OpenAI（Python）API
+title: 【翻译】解读 OpenAI（Python）API
 categories: [AI, LLM]
 description: 一个完整的面向初学者友好的介绍，附带示例代码。
 keywords: AI, LLM
