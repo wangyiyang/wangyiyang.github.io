@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LLM实用介绍
+title: 【翻译】LLM实用介绍
 categories: [翻译, LLM, AI]
 description: 在实践中使用LLM的3个级别
 keywords: LLM, AI, 机器学习, 人工智能
