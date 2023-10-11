@@ -18,6 +18,6 @@ clean:
 	$(JEKYLL) clean
 
 syncfile:
-	qshell qupload2 --src-dir=_site --bucket=blog-wangyy
+	qshell qupload2 --src-dir=_site --bucket=blog-wangyy --overwrite
 
 .PHONY: all build serve sass clean
