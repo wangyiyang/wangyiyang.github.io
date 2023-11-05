@@ -243,7 +243,7 @@ demo_chatbot.launch()
 
 这将通过本地 URL 启动界面。如果窗口没有自动打开，您可以将 URL 直接复制粘贴到浏览器中打开。
 
-![Alt text](/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/1*okUwxEBv2oZuUYi7Pks3sw.gif)
+![Alt text](/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/okUwxEBv2oZuUYi7Pks3sw.gif)
 
 ### Hugging Face Spaces
 
