@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 模块化未来：组装式应用与 PBC 的演进与实践
+title: 模块化未来：组装式应用与PBC的演进与实践
 categories: [PBC, 组装式应用, 企业架构, 数字化转型]
 description: 随着数字化转型的加速，企业对灵活、可扩展的技术架构需求越来越高。传统的单体应用已无法满足快速变化的市场需求，而微服务架构虽然在一定程度上缓解了这个问题，但其复杂性也给企业带来了新的挑战。为了解决这些问题，组装式应用（Composable Applications）和 Packaged Business Capabilities（PBC，打包的业务能力）逐渐成为企业架构中的关键概念。
 keywords: PBC, 组装式应用, 企业架构, 数字化转型s
