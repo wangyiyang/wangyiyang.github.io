@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 探秘软件架构世界：多种架构类型剖析与选型指南
-categories: [架构, 微服务, 事件驱动, 服务网格, 无服务器, 面向服务, 插件式, CQRS, 分布式]
+categories: [software-architecture, software-development]
 description: 在软件开发的广袤天地里，软件架构宛如一座大厦的基石与框架，其设计的优劣直接关乎项目的成败、维护成本以及未来的可扩展性。今天，就让我们一同深入探究常见的软件架构类型，明晰它们各自的“性格特点”、适用场景，为我们在项目实践中的架构选型点亮明灯。
-keywords: 软件架构, 单体架构, 分层架构, 微服务架构, 事件驱动架构, 服务网格架构, 无服务器架构, 面向服务架构, 插件式架构, CQRS架构, 分布式架构
+keywords: software architecture, software development, software design, software engineering
 mermaid: false
 sequence: false
 flow: false
