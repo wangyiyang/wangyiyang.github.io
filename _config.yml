@@ -4,8 +4,8 @@
 baseurl:
 url: https://www.wangyiyang.cc
 date_format: "ordinal"
-title: 王翊仰的博客
-#subtitle: "生命不息，折腾不止"
+title: 老王的知识库
+subtitle: "记录日常学习与思考"
 description: "老王的知识库"
 keywords: 王翊仰, Wang Yiyang
 timezone: Asia/Shanghai
