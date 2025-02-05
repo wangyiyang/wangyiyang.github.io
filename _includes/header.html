@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/octicons/octicons/octicons.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8213039222083919"
      crossorigin="anonymous"></script>
-    {% assign highlight_base_url = 'https://mazhuang.org/rouge-themes/dist' %}
+    {% assign highlight_base_url = 'https://wangyiyang.cc/rouge-themes/dist' %}
     {% if site.cdn.jsdelivr.enabled %}
     {% assign highlight_base_url = 'https://fastly.jsdelivr.net/gh/mzlogin/rouge-themes@master/dist' %}
     {% endif %}
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/share.js/dist/css/share.min.css">
     {% endif %}
     {% if site.components.fancybox.enabled %}
-    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+    <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/fancybox.css"/>
     {% endif %}
     <!-- Latest compiled and minified CSS -->
     {% for css in page.css %}

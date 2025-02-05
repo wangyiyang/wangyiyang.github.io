@@ -97,13 +97,13 @@
     {% endif %}
 
     {% if page.mathjax %}
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/mathjax/MathJax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="{{ assets_base_url }}/assets/js/MathJax.js"></script>
     {% endif %}
 
     {% if page.mindmap %}
-    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/mzlogin/kityminder-core@dev/dist/kityminder.core.css">
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/mzlogin/kity@dev/dist/kity.min.js"></script>
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/mzlogin/kityminder-core@dev/dist/kityminder.core.min.js"></script>
+    <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/kityminder.core.css">
+    <script type="text/javascript" src="{{ assets_base_url }}/assets/js/kity.min.js"></script>
+    <script type="text/javascript" src="{{ assets_base_url }}/assets/js/kityminder.core.min.js"></script>
     <script>
 $(document).ready(function(){
   $('.language-mindmap').each(function(index, element) {
