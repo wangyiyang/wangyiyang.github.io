@@ -1,17 +1,17 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl:
+baseurl: /
 url: https://www.wangyiyang.cc
 date_format: "ordinal"
-title: 老王的知识库
+title: 老王杂货铺
 subtitle: "记录日常学习与思考"
-description: "老王的知识库"
-keywords: 王翊仰, Wang Yiyang
+description: "老王杂货铺"
+keywords: 王翊仰, Wang Yiyang, 老王, 老王杂货铺
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
-since: 2015
+since: 2025
 # 源码仓库，请替换成自己的
 repository: wangyiyang/wangyiyang.github.io
 # 对 css 和 js 资源的 cdn 加速配置
