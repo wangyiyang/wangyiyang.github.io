@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "baiduPush": "node utils/baiduPush.mjs https://www.wangyiyang.cc && bash baiduPush.sh"
+        "baiduPush": "node utils/baiduPush.mjs https://wangyiyang.github.io && bash baiduPush.sh"
     },
     "dependencies": {
         "chalk": "^5.3.0",
