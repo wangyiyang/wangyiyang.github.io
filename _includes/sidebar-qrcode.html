@@ -1,4 +1,5 @@
 {% if site.components.qrcode.enabled %}
+<h3>关注公众号</h3>
 <div class="qrcode-container">
   <img src="{{ site.url }}/images/weixin.JPG" alt="{{ site.components.qrcode.image_alt }}" class="qrcode-img" />
 </div>
@@ -6,12 +7,12 @@
 <style>
 .qrcode-container {
   text-align: center;
-  padding: 10px;
+  padding: 10px 0 20px 0;
 }
 
 .qrcode-img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   border: 2px solid #f8f8f8;
@@ -25,8 +26,8 @@
 
 @media (max-width: 768px) {
   .qrcode-img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
   }
 }
 </style>
