@@ -1,3 +1,33 @@
 {% if site.components.qrcode.enabled %}
-<img style="height:72px;width:72px" src="{{ site.url }}/assets/images/qrcode.jpg" alt="{{ site.components.qrcode.image_alt }}" />
+<div class="qrcode-container">
+  <img src="{{ site.url }}/images/weixin.JPG" alt="{{ site.components.qrcode.image_alt }}" class="qrcode-img" />
+</div>
+
+<style>
+.qrcode-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.qrcode-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border: 2px solid #f8f8f8;
+  transition: transform 0.2s ease;
+}
+
+.qrcode-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .qrcode-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+</style>
 {% endif %}
