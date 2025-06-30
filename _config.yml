@@ -4,10 +4,10 @@
 baseurl: 
 url: https://www.wangyiyang.cc
 date_format: "ordinal"
-title: 老王杂货铺
-subtitle: YY的技术思考"
-description: "老王杂货铺"
-keywords: 王翊仰, Wang Yiyang, 老王, 老王杂货铺
+title: 翊行代码
+subtitle: "翊码行远，仰观星辰 ——用代码丈量世界，以仰望探索未知"
+description: "翊码行远，仰观星辰 ——用代码丈量世界，以仰望探索未知"
+keywords: 王翊仰, Wang Yiyang, 翊行代码, 编程, 技术博客
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
