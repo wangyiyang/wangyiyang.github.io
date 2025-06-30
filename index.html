@@ -13,9 +13,9 @@ comments: false
     <div class="collection-head">
       <div class="container">
         <div class="columns">
-          <div class="column two-thirds">
+          <div class="column full-width">
             <div class="collection-title">
-              <h1 class="collection-header" id="sub-title"><span>{{ site.subtitle }}</span></h1>
+              <h1 class="collection-header" id="sub-title"><span>翊码行远，仰观星辰<br><small style="font-size: 0.7em; font-weight: 300;">用代码丈量世界，以仰望探索未知</small></span></h1>
               <div class="collection-info">
                 <span class="meta-info mobile-hidden">
                   <span class="octicon octicon-location"></span>
@@ -32,11 +32,6 @@ comments: false
                   <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a>
                 </span>
               </div>
-            </div>
-          </div>
-          <div class="column one-third mobile-hidden">
-            <div class="collection-title">
-              {% include sidebar-qrcode.html %}
             </div>
           </div>
         </div>
@@ -170,3 +165,28 @@ comments: false
     <!-- /pagination -->
 </section>
 <!-- /section.content -->
+
+<style>
+@media (max-width: 768px) {
+  .home .collection-head .collection-header {
+    font-size: 1.5em !important;
+    line-height: 1.3;
+  }
+  
+  .home .collection-head .collection-header small {
+    font-size: 0.6em !important;
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home .collection-head .collection-header {
+    font-size: 1.2em !important;
+  }
+  
+  .home .collection-head .collection-header small {
+    font-size: 0.55em !important;
+  }
+}
+</style>
