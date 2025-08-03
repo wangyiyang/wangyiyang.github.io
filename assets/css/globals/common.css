@@ -536,7 +536,8 @@
 }
 
 .markdown-body .highlight {
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    position: relative;
 }
 
 .markdown-body .highlight pre,.markdown-body pre {
@@ -544,8 +545,9 @@
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    /* background-color: #f7f7f7; */
-    /* border-radius: 3px */
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    border: 1px solid #d0d7de;
 }
 
 .markdown-body .highlight pre {
@@ -674,6 +676,45 @@
 
 pre {
     border: 1px solid #ccc;
+}
+
+/* 代码复制按钮样式 */
+.code-copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #24292f;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.code-copy-btn:hover {
+    background: #30363d;
+    border-color: #8b949e;
+}
+
+.code-copy-btn:active {
+    background: #21262d;
+}
+
+.markdown-body .highlight:hover .code-copy-btn {
+    opacity: 1;
+}
+
+.code-copy-btn.copied {
+    background: #238636;
+    border-color: #2ea043;
+}
+
+.code-copy-btn.copied:hover {
+    background: #2ea043;
 }
 
 .tools-wrapper {
