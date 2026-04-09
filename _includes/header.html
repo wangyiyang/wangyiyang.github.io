@@ -40,7 +40,13 @@
     {% endif %}
     <link rel="canonical" href="{{ page.url | prepend: site.url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.subscribe_rss }}">
+    
+    <!-- Favicon & Touch Icons -->
     <link rel="shortcut icon" href="{{ assets_base_url }}/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ assets_base_url }}/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ assets_base_url }}/assets/images/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ assets_base_url }}/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ assets_base_url }}/assets/images/favicon-16x16.png">
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}">
       {% if page.keywords %}
