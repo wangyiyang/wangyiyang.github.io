@@ -6,6 +6,27 @@ layout: default
 {% if site.cdn.jsdelivr.enabled %}
 {% assign assets_base_url = "https://fastly.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
 {% endif %}
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title | escape }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author }}",
+    "url": "{{ site.url }}"
+  },
+  {% if page.date %}
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% endif %}
+  {% if page.categories %}
+  "articleSection": "{{ page.categories | first }}",
+  {% endif %}
+  "url": "{{ site.url }}{{ page.url | remove_first:'index.html' }}"
+}
+</script>
 <section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 15, ''}}">
 <div class="container">
   <div class="columns">
