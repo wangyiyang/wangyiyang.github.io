@@ -53,6 +53,10 @@ bundle exec jekyll clean
 npm run baiduPush
 
 # 同步文件到 CDN（七牛云）
+# 先在 .env 中配置 QINIU_AK / QINIU_SK / QINIU_BUCKET
+make qiniu-login
+make cdn-sync
+# 兼容旧命令
 make syncfile
 ```
 

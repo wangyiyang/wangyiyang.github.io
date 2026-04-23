@@ -9,6 +9,7 @@
 * [效果预览](#效果预览)
 * [Fork 指南](#fork-指南)
 * [使用文档](#使用文档)
+  * [七牛 CDN 同步](#七牛-cdn-同步)
 * [经验与思考](#经验与思考)
 * [联系我](#联系我)
 * [致谢](#致谢)
@@ -62,6 +63,55 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 - [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/)。
 
 - 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
+
+### 七牛 CDN 同步
+
+仓库已经内置七牛同步能力，默认会读取项目根目录下的 `.env` 配置，并在同步前自动完成 `qshell` 本地账号配置。
+
+1. 安装 `qshell`。
+
+   可以参考七牛官方文档：[Qshell 工具说明](https://developer.qiniu.com/kodo/1302/qshell)。
+
+2. 在项目根目录创建 `.env`。
+
+   ```bash
+   QINIU_AK=你的七牛 AccessKey
+   QINIU_SK=你的七牛 SecretKey
+   QINIU_BUCKET=你的七牛 Bucket
+   # 可选，本地账号别名；不填时默认使用 blog-wangyy
+   QINIU_USERNAME=blog-wangyy
+   ```
+
+   **注意：** `.env` 已加入 `.gitignore`，不要把密钥提交到仓库。
+
+3. 执行同步。
+
+   ```bash
+   # 仅配置 qshell 本地账号
+   make qiniu-login
+
+   # 一键构建并上传 _site 到七牛
+   make cdn-sync
+
+   # 兼容旧命令
+   make syncfile
+   ```
+
+4. 同步行为说明。
+
+   - `make cdn-sync` 会依次执行：检查 `qshell`、校验 `.env`、写入本地账号、`jekyll clean`、`jekyll build`、上传 `_site/`。
+   - 上传命令使用 `qshell qupload2 --overwrite --rescan-local`，适合静态站点全量覆盖同步。
+   - 如果你只想更换本地账号别名，可以修改 `.env` 里的 `QINIU_USERNAME`。
+
+5. GitHub Actions 自动同步。
+
+   仓库提供 `.github/workflows/qiniu-sync.yml`，推送到 `master` 分支时会自动构建并同步到七牛；也可以在 GitHub Actions 页面手动触发 `Sync to Qiniu CDN`。
+
+   需要在 GitHub 仓库的 Secrets 中配置：
+
+   - `QINIU_AK`
+   - `QINIU_SK`
+   - `QINIU_BUCKET`
 
 ## 经验与思考
 

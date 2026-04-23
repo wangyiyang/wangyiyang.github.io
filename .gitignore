@@ -1,4 +1,5 @@
 _site/
+.env
 *.sw[po]
 *.~vsd
 \#*\#
