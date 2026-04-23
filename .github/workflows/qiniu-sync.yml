@@ -9,6 +9,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     env:
+      JEKYLL_GITHUB_TOKEN: ${{ github.token }}
       QINIU_AK: ${{ secrets.QINIU_AK }}
       QINIU_SK: ${{ secrets.QINIU_SK }}
       QINIU_BUCKET: ${{ secrets.QINIU_BUCKET }}
