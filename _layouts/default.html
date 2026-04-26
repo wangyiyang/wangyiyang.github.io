@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% assign assets_base_url = site.url %}
+{% assign assets_base_url = site.baseurl | default: '' | replace: '//', '/' | replace: '/$', '' %}
 {% if site.cdn.jsdelivr.enabled %}
 {% assign assets_base_url = "https://fastly.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
 {% endif %}

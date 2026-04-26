@@ -1,0 +1,23 @@
+.theme-page-hero {
+  border-bottom: 1px solid var(--theme-border);
+  padding: var(--theme-space-12) 0 var(--theme-space-8);
+}
+
+.theme-page-title {
+  color: var(--theme-text);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.theme-page-description {
+  color: var(--theme-muted);
+  font-size: 1.06rem;
+  line-height: 1.75;
+  margin-top: var(--theme-space-4);
+  max-width: 720px;
+}
+
+.theme-page-content {
+  padding: var(--theme-space-10, 2.5rem) 0 var(--theme-space-16);
+}

@@ -1,0 +1,26 @@
+:root {
+  --theme-bg: #fbfbfa;
+  --theme-surface: #ffffff;
+  --theme-text: #18191b;
+  --theme-muted: #626973;
+  --theme-subtle: #8a929c;
+  --theme-border: #e5e7eb;
+  --theme-border-strong: #cfd5dd;
+  --theme-accent: #2563eb;
+  --theme-accent-dark: #1d4ed8;
+  --theme-code-bg: #f5f7fa;
+  --theme-radius-sm: 4px;
+  --theme-radius-md: 8px;
+  --theme-container: 1120px;
+  --theme-reading: 760px;
+  --theme-space-1: 0.25rem;
+  --theme-space-2: 0.5rem;
+  --theme-space-3: 0.75rem;
+  --theme-space-4: 1rem;
+  --theme-space-6: 1.5rem;
+  --theme-space-8: 2rem;
+  --theme-space-12: 3rem;
+  --theme-space-16: 4rem;
+  --theme-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --theme-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}

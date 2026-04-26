@@ -1,0 +1,70 @@
+html {
+  background: var(--theme-bg);
+}
+
+body {
+  background: var(--theme-bg);
+  color: var(--theme-text);
+  font-family: var(--theme-font-sans);
+  letter-spacing: 0;
+}
+
+a {
+  color: var(--theme-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus {
+  color: var(--theme-accent-dark);
+}
+
+.markdown-body {
+  color: var(--theme-text);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  color: var(--theme-text);
+  letter-spacing: 0;
+  margin-top: 2.2em;
+}
+
+.markdown-body p,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body blockquote,
+.markdown-body table,
+.markdown-body pre {
+  margin-bottom: 1.15em;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid var(--theme-accent);
+  color: var(--theme-muted);
+  background: transparent;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  background: var(--theme-code-bg);
+  border-radius: var(--theme-radius-sm);
+  font-family: var(--theme-font-mono);
+}
+
+.markdown-body pre {
+  background: var(--theme-code-bg);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--theme-radius-md);
+}
+
+.markdown-body img,
+.markdown-body video {
+  border-radius: var(--theme-radius-md);
+  height: auto;
+  max-width: 100%;
+}
