@@ -120,6 +120,10 @@ lsi: false
 quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
+exclude:
+    - AGENTS.md
+    - docs/superpowers/
+    - node_modules/
 plugins:
     - jekyll-github-metadata
     - rouge
