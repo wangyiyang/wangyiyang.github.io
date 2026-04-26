@@ -1,0 +1,15 @@
+{% if paginator.total_pages > 1 %}
+<nav class="theme-pagination" aria-label="文章分页">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <a class="theme-button" href="{{ '/' | relative_url }}">上一页</a>
+    {% else %}
+    <a class="theme-button" href="{{ '/page' | append: paginator.previous_page | relative_url }}">上一页</a>
+    {% endif %}
+  {% endif %}
+  <span class="theme-meta">第 {{ paginator.page }} / {{ paginator.total_pages }} 页</span>
+  {% if paginator.next_page %}
+  <a class="theme-button" href="{{ '/page' | append: paginator.next_page | relative_url }}">下一页</a>
+  {% endif %}
+</nav>
+{% endif %}

@@ -1,0 +1,22 @@
+<section class="theme-section">
+  <div class="theme-container">
+    <header class="theme-section-header">
+      <div class="theme-section-kicker">Topics</div>
+      <h2 class="theme-section-title">专题路径</h2>
+      <p class="theme-section-description">专题是阅读路径，不只是分类聚合。</p>
+    </header>
+    <div class="theme-grid theme-grid-3">
+      {% for topic in site.data.topics %}
+      {% assign topic_posts = site.categories[topic.category] | default: empty %}
+      <article class="topic-path" id="{{ topic.key }}">
+        <h3><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></h3>
+        <p>{{ topic.description }}</p>
+        <div class="theme-meta">
+          <span>{{ topic_posts.size }} 篇文章</span>
+          <span>{{ topic.category }}</span>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

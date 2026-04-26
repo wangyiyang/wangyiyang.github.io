@@ -1,0 +1,20 @@
+{% assign manifesto = site.data.workbench.manifesto %}
+<section class="workbench-hero">
+  <div class="theme-container workbench-hero-grid">
+    <div>
+      <div class="workbench-eyebrow">{{ manifesto.eyebrow }}</div>
+      <h1 class="workbench-title">{{ manifesto.title }}</h1>
+      <p class="workbench-description">{{ manifesto.description }}</p>
+      <div class="workbench-actions">
+        {% for action in manifesto.actions %}
+        <a class="theme-button {% if action.primary %}theme-button-primary{% endif %}" href="{{ action.url | relative_url }}">{{ action.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="workbench-status" aria-label="Workbench status">
+      {% for item in manifesto.status %}
+      <span>{{ item }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>

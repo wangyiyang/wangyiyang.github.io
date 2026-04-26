@@ -1,0 +1,15 @@
+{% assign article_items = include.posts | default: site.posts %}
+<ol class="theme-list article-list">
+  {% for post in article_items limit: include.limit %}
+  <li class="theme-list-item article-list-item">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ post.description | default: post.excerpt | strip_html | strip }}</p>
+    <div class="theme-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      {% for cat in post.categories %}
+      <a href="{{ '/categories/#' | append: cat | relative_url }}">{{ cat }}</a>
+      {% endfor %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
