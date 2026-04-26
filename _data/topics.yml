@@ -1,0 +1,35 @@
+- key: ai
+  title: AI
+  category: AI
+  description: 关注 AI 编程、模型应用和工程化落地。
+  url: /categories/#AI
+- key: agent
+  title: Agent
+  category: Agent
+  description: 从 Agent 架构、工具调用、追踪到生产治理。
+  url: /categories/#Agent
+- key: rag
+  title: RAG
+  category: RAG
+  description: 面向真实业务知识库的检索增强生成实践。
+  url: /categories/#RAG
+- key: langchain
+  title: LangChain
+  category: LangChain
+  description: LangChain 与 LangGraph 在 Agent 应用中的工程路径。
+  url: /categories/#LangChain
+- key: mlops
+  title: MLOps
+  category: MLOps
+  description: 模型、数据、评估、部署和观测的生产流程。
+  url: /categories/#MLOps
+- key: architecture
+  title: 架构
+  category: 架构
+  description: 用系统设计和工程约束提高长期可维护性。
+  url: /categories/#架构
+- key: one-person-company
+  title: 一人公司
+  category: One-Person-Company
+  description: 用 AI、自动化和内容系统放大个人产出。
+  url: /categories/#One-Person-Company
