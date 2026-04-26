@@ -114,6 +114,7 @@ exclude:
     - AGENTS.md
     - docs/superpowers/
     - node_modules/
+    - scripts/
 plugins:
     - jekyll-github-metadata
     - rouge
