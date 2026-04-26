@@ -1,0 +1,12 @@
+{% if page.previous or page.next %}
+<nav class="post-footer-nav" aria-label="文章导航">
+  {% if page.previous %}
+  <a class="theme-button" href="{{ page.previous.url | relative_url }}">上一篇：{{ page.previous.title }}</a>
+  {% else %}
+  <span></span>
+  {% endif %}
+  {% if page.next %}
+  <a class="theme-button" href="{{ page.next.url | relative_url }}">下一篇：{{ page.next.title }}</a>
+  {% endif %}
+</nav>
+{% endif %}
