@@ -6,6 +6,7 @@ keywords: 专题,AI,Agent,RAG,LangChain,MLOps,一人公司
 comments: false
 menu: 专题
 permalink: /topics/
+full_width: true
 ---
 
 {% include theme/topic-paths.html %}

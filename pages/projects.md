@@ -6,6 +6,7 @@ keywords: 项目,开源,工具,一人公司,AI工程
 comments: false
 menu: 项目
 permalink: /projects/
+full_width: true
 ---
 
 {% include theme/featured-projects.html %}

@@ -6,6 +6,7 @@ keywords: 王翊仰,一人公司,AI工程,自动化,技术写作
 comments: true
 menu: 关于
 permalink: /about/
+full_width: true
 ---
 
 我是王翊仰。这个博客记录我作为独立开发者和一人公司实践者，如何把 AI、代码、自动化、写作和开源项目组织成一套长期运转的个人生产基础设施。
