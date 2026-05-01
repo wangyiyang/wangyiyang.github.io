@@ -2,8 +2,8 @@
   <div class="theme-container">
     <header class="theme-section-header">
       <div class="theme-section-kicker">Projects</div>
-      <h2 class="theme-section-title">正在构建的项目与工具</h2>
-      <p class="theme-section-description">项目按能力模块组织，GitHub 数据只作为辅助信息，核心结构由静态数据维护。</p>
+      <h2 class="theme-section-title">在做的项目</h2>
+      <p class="theme-section-description">一些自己用或开源的小工具。</p>
     </header>
     {% for group in site.data.projects %}
     <section class="project-group" id="{{ group.key }}">
@@ -17,7 +17,6 @@
             <p>{{ project.description }}</p>
             <div class="theme-meta">
               <span>{{ project.language }}</span>
-              <span>{{ project.stars }} stars</span>
               <span>Updated {{ project.updated }}</span>
             </div>
             <div class="theme-tags">

@@ -6,9 +6,7 @@ menu: 首页
 ---
 
 {% include theme/hero-manifesto.html %}
-{% include theme/workbench-modules.html %}
 {% include theme/featured-projects.html %}
-{% include theme/production-system.html %}
 {% include theme/topic-paths.html %}
 
 <section class="theme-section">
@@ -16,7 +14,7 @@ menu: 首页
     <header class="theme-section-header">
       <div class="theme-section-kicker">Writing</div>
       <h2 class="theme-section-title">最新文章</h2>
-      <p class="theme-section-description">文章是工作台的持续沉淀区，记录 AI 工程、一人公司和产品实验中的判断、方法与复盘。</p>
+      <p class="theme-section-description">记录技术实践中的判断、方法与复盘。</p>
     </header>
     {% include theme/article-list.html posts=paginator.posts limit=10 %}
     {% include theme/pagination.html %}
