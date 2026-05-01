@@ -1,0 +1,29 @@
+<header class="post-hero">
+  <div class="theme-container">
+    <div class="post-hero-inner">
+      <div class="theme-meta">
+        {% if page.date %}
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+        {% endif %}
+        {% for cat in page.categories %}
+        <a href="{{ '/categories/#' | append: cat | relative_url }}">{{ cat }}</a>
+        {% endfor %}
+        {% if site.components.word_count.enabled %}
+        <span>约 {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }} 分钟</span>
+        {% endif %}
+      </div>
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+      {% endif %}
+      {% if page.keywords %}
+      <div class="theme-tags">
+        {% assign keyword_items = page.keywords | split: ',' %}
+        {% for keyword in keyword_items %}
+        <span class="theme-tag">{{ keyword | strip }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,22 @@
+<section class="theme-section">
+  <div class="theme-container">
+    <header class="theme-section-header">
+      <div class="theme-section-kicker">Workbench</div>
+      <h2 class="theme-section-title">个人生产系统的能力模块</h2>
+      <p class="theme-section-description">这些模块把 AI、自动化、写作、产品实验和开源组件组织成可持续迭代的工作台。</p>
+    </header>
+    <div class="theme-grid theme-grid-3">
+      {% for module in site.data.workbench.modules %}
+      <article class="workbench-module" id="{{ module.key }}">
+        <h3>{{ module.title }}</h3>
+        <p>{{ module.description }}</p>
+        <div class="theme-tags">
+          {% for link in module.links %}
+          <a class="theme-tag" href="{{ link.url | relative_url }}">{{ link.label }}</a>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

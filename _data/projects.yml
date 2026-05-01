@@ -1,0 +1,100 @@
+- key: ai-engineering
+  title: AI 工程
+  description: Agent、RAG、MCP 和 AI 编程相关工程项目。
+  projects:
+    - name: OLL
+      repo: wangyiyang/OLL
+      url: https://github.com/wangyiyang/OLL
+      description: 面向业务内容与门户体验的工程系统实验。
+      language: Java
+      stars: 1
+      updated: 2026-04-26
+      tags: [Java, CMS, Portal]
+    - name: oss-mcp
+      repo: wangyiyang/oss-mcp
+      url: https://github.com/wangyiyang/oss-mcp
+      description: 对象存储 MCP 服务，用于把存储能力接入 AI 工具链。
+      language: Python
+      stars: 0
+      updated: 2025-12-25
+      tags: [Python, MCP, OSS]
+- key: automation-tools
+  title: 自动化工具
+  description: 面向个人工作流、代码代理和系统配置的自动化资产。
+  projects:
+    - name: agent-skills
+      repo: wangyiyang/agent-skills
+      url: https://github.com/wangyiyang/agent-skills
+      description: 面向 Agent 工作流的可复用技能集合。
+      language: Python
+      stars: 3
+      updated: 2026-03-30
+      tags: [Agent, Skills, Python]
+    - name: dotfiles
+      repo: wangyiyang/dotfiles
+      url: https://github.com/wangyiyang/dotfiles
+      description: 本机开发环境和 shell 工作流配置。
+      language: Shell
+      stars: 0
+      updated: 2026-03-30
+      tags: [Shell, macOS, Workflow]
+- key: content-system
+  title: 内容系统
+  description: 支撑写作、发布和内容沉淀的工具与站点。
+  projects:
+    - name: wangyiyang.github.io
+      repo: wangyiyang/wangyiyang.github.io
+      url: https://github.com/wangyiyang/wangyiyang.github.io
+      description: 当前技术博客和个人生产系统入口。
+      language: HTML
+      stars: 3
+      updated: 2026-04-23
+      tags: [Jekyll, Blog, Writing]
+    - name: Article
+      repo: wangyiyang/Article
+      url: https://github.com/wangyiyang/Article
+      description: 文章、草稿和内容资产管理仓库。
+      language: Python
+      stars: 1
+      updated: 2026-04-12
+      tags: [Writing, Python, Archive]
+- key: product-experiments
+  title: 产品实验
+  description: 一人公司方向的产品、工具和业务系统实验。
+  projects:
+    - name: Lichun
+      repo: wangyiyang/Lichun
+      url: https://github.com/wangyiyang/Lichun
+      description: TypeScript 产品实验仓库。
+      language: TypeScript
+      stars: 0
+      updated: 2026-04-26
+      tags: [TypeScript, Product, Experiment]
+    - name: Juanbing
+      repo: wangyiyang/Juanbing
+      url: https://github.com/wangyiyang/Juanbing
+      description: TypeScript 工具或产品实验仓库。
+      language: TypeScript
+      stars: 0
+      updated: 2026-04-26
+      tags: [TypeScript, Product, Experiment]
+- key: open-source-components
+  title: 开源组件
+  description: 可复用组件、模板和社区项目。
+  projects:
+    - name: md
+      repo: wangyiyang/md
+      url: https://github.com/wangyiyang/md
+      description: 微信 Markdown 编辑器，支持主题样式、内容管理、多图床和 AI 助手。
+      language: Vue
+      stars: 0
+      updated: 2026-04-04
+      tags: [Vue, Markdown, Editor]
+    - name: fastapi-project-template
+      repo: wangyiyang/fastapi-project-template
+      url: https://github.com/wangyiyang/fastapi-project-template
+      description: FastAPI 项目模板。
+      language: Python
+      stars: 0
+      updated: 2025-12-05
+      tags: [FastAPI, Python, Template]

@@ -1,0 +1,11 @@
+{% assign primary_category = page.categories | first %}
+{% assign related_posts = site.categories[primary_category] | where_exp: "post", "post.url != page.url" %}
+{% if related_posts.size > 0 %}
+<section class="theme-section related-posts">
+  <header class="theme-section-header">
+    <div class="theme-section-kicker">Related</div>
+    <h2 class="theme-section-title">继续阅读 {{ primary_category }}</h2>
+  </header>
+  {% include theme/article-list.html posts=related_posts limit=3 %}
+</section>
+{% endif %}

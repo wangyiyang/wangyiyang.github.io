@@ -1,37 +1,40 @@
 ---
 layout: page
-title: About
-description: 打码改变世界
-keywords: Yiyang Wang, 王翊仰
+title: 关于
+description: 我关注如何用 AI、代码、自动化和写作构建一套可持续演进的个人生产系统。
+keywords: 王翊仰,一人公司,AI工程,自动化,技术写作
 comments: true
 menu: 关于
 permalink: /about/
+full_width: true
 ---
 
-王翊仰
+我是王翊仰。这个博客记录我作为独立开发者和一人公司实践者，如何把 AI、代码、自动化、写作和开源项目组织成一套长期运转的个人生产基础设施。
 
-## 联系
+## 长期方向
 
-<ul>
-{% for website in site.data.social %}
-<li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
-{% endfor %}
-{% if site.url contains 'mazhuang.org' %}
-<!--<li>
-微信公众号：<br />
-<img style="height:192px;width:192px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/qrcode.jpg" alt="闷骚的程序员" />
-</li>-->
-{% endif %}
-</ul>
+- 用 AI 工程系统放大个人交付能力。
+- 用自动化工具减少重复劳动。
+- 用写作和复盘沉淀可复用的方法。
+- 用开源项目验证工具、流程和产品想法。
 
+## 生产系统
 
-## Skill Keywords
+{% include theme/production-system.html %}
+
+## 技术关键词
 
 {% for skill in site.data.skills %}
 ### {{ skill.name }}
-<div class="btn-inline">
+<div class="theme-tags">
 {% for keyword in skill.keywords %}
-<button class="btn btn-outline" type="button">{{ keyword }}</button>
+<span class="theme-tag">{{ keyword }}</span>
 {% endfor %}
 </div>
+{% endfor %}
+
+## 联系
+
+{% for website in site.data.social %}
+- {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 {% endfor %}

@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/globals/responsive.css">
     <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/posts/index.css">
     <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/octicons/octicons/octicons.css">
+    {% if site.google.adsense.enabled %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8213039222083919"
      crossorigin="anonymous"></script>
+    {% endif %}
     {% assign highlight_base_url = 'https://www.wangyiyang.cc/rouge-themes/dist' %}
     {% if site.cdn.jsdelivr.enabled %}
     {% assign highlight_base_url = 'https://fastly.jsdelivr.net/gh/mzlogin/rouge-themes@master/dist' %}
@@ -33,6 +35,7 @@
     {% for css in page.css %}
     <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/{{css}}">
     {% endfor %}
+    <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/theme/main.css">
 
     {% if site.ios_app_name %}
        <meta name="apple-mobile-web-app-capable" content="yes">
@@ -59,10 +62,10 @@
       {% if page.excerpt %}
     <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines}}">
     <meta name="og:description" content="{{ page.excerpt | strip_html | strip_newlines}}">
-      {% else if page.description %}
+      {% elsif page.description %}
     <meta name="description" content="{{ page.description | strip_html | strip_newlines}}">
     <meta name="og:description" content="{{ page.description | strip_html | strip_newlines}}">
-      {% else if content %}
+      {% elsif content %}
     <meta name="description" content="{{ content | strip_html | strip_newlines | truncatewords: 100 }}">
     <meta name="og:description" content="{{ content | strip_html | strip_newlines | truncatewords: 100 }}">
       {% endif %}
@@ -133,9 +136,8 @@
             </button>
             <nav class="site-header-nav" role="navigation">
                 {% for nav in site.navs %}
-                <a href="{{ site.url }}{{ nav.href }}" class="{% if nav.mobile-hidden %}mobile-hidden {% endif %}{% if page.menu == nav.label %}selected {% endif %}site-header-nav-item" target="{{ nav.target | default: _self }}" title="{{ nav.label }}">{{ nav.label }}</a>
+                <a href="{{ site.url }}{{ nav.href }}" class="{% if nav.mobile-hidden %}mobile-hidden {% endif %}{% if page.menu == nav.label %}selected {% endif %}site-header-nav-item" target="{{ nav.target | default: '_self' }}" title="{{ nav.label }}">{{ nav.label }}</a>
                 {% endfor %}
-                <a class="mobile-hidden" href="{{ site.url }}{{ site.subscribe_rss }}"><span class="octicon octicon-rss" style="color:orange;"></span></a>
             </nav>
         </div>
     </header>

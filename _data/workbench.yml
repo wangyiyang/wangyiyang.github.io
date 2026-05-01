@@ -1,0 +1,74 @@
+manifesto:
+  eyebrow: 独立开发者工作台
+  title: 一人公司时代，开发者需要自己的 AI 工程系统。
+  description: 我在这里记录如何用代码、AI、自动化和写作，构建个人生产基础设施。
+  actions:
+    - label: 开源项目
+      url: /projects/
+      primary: true
+    - label: 生产系统
+      url: /about/
+      primary: false
+    - label: 专题文章
+      url: /topics/
+      primary: false
+  status:
+    - AI Engineering
+    - Automation
+    - Writing
+    - Open Source
+    - Product Experiments
+
+modules:
+  - key: ai-engineering
+    title: AI 工程
+    description: 围绕 Agent、RAG、MCP 与模型工程，把 AI 能力变成可交付系统。
+    links:
+      - label: Agent 专题
+        url: /topics/#agent
+      - label: MCP 实践
+        url: /categories/#MCP
+  - key: automation
+    title: 自动化工具
+    description: 用脚本、工作流和代理系统减少重复劳动，让个人项目具备组织级执行力。
+    links:
+      - label: 自动化文章
+        url: /topics/#one-person-company
+      - label: 工具项目
+        url: /projects/#automation-tools
+  - key: content-system
+    title: 内容系统
+    description: 把写作、复盘和知识管理沉淀成可检索、可复用、可迭代的内容资产。
+    links:
+      - label: 专题路径
+        url: /topics/
+      - label: 最新文章
+        url: /archives/
+  - key: product-experiments
+    title: 产品实验
+    description: 以一人公司的方式快速验证产品、工具和工作流，保留能产生复利的部分。
+    links:
+      - label: 一人公司
+        url: /categories/#One-Person-Company
+      - label: 项目页
+        url: /projects/
+  - key: open-source
+    title: 开源组件
+    description: 将可复用的工程实践沉淀为开源仓库、模板和技能包。
+    links:
+      - label: 开源项目
+        url: /open-source/
+      - label: GitHub
+        url: https://github.com/wangyiyang
+
+system_flow:
+  - label: 输入信息
+    description: 从文章、产品想法、用户反馈和工程问题中收集上下文。
+  - label: AI 辅助处理
+    description: 让 Agent、MCP 和提示工程参与分析、规划、编码与复盘。
+  - label: 自动化执行
+    description: 用脚本、CI、模板和工作流减少重复操作。
+  - label: 产品/文章输出
+    description: 把实验结果交付为产品、工具、文章或开源项目。
+  - label: 复盘沉淀
+    description: 将验证过的方法沉淀为下一轮系统能力。

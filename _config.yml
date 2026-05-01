@@ -73,30 +73,20 @@ navs:
     label: 首页
 
   -
-    href: /categories/
-    label: 分类
+    href: /archives/
+    label: 文章
 
   -
-    href: /archives/
-    label: 归档
-    mobile-hidden: true
+    href: /topics/
+    label: 专题
+
+  -
+    href: /projects/
+    label: 项目
 
   -
     href: /open-source/
     label: 开源
-    mobile-hidden: true
-
-  -
-    href: /fragments/
-    label: 片段
-
-  -
-    href: /wiki/
-    label: 维基
-
-  -
-    href: /links/
-    label: 链接
     mobile-hidden: true
 
   -
@@ -120,6 +110,11 @@ lsi: false
 quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
+exclude:
+    - AGENTS.md
+    - docs/superpowers/
+    - node_modules/
+    - scripts/
 plugins:
     - jekyll-github-metadata
     - rouge

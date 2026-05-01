@@ -12,7 +12,7 @@
 SimpleJekyllSearch({
     searchInput: document.getElementById('search_box'),
     resultsContainer: document.getElementById('search_results'),
-    json: '{{ site.url }}/assets/search_data.json?v={{ "now" | date: "%s"}}',
+    json: '{{ "/assets/search_data.json" | relative_url }}',
     searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>',
     noResultsText: 'No results found',
     limit: {{ site.simple_jekyll_search.limit }},
