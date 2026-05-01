@@ -43,7 +43,7 @@
     {% endif %}
     <link rel="canonical" href="{{ page.url | prepend: site.url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.subscribe_rss }}">
-    
+
     <!-- Favicon & Touch Icons -->
     <link rel="shortcut icon" href="{{ assets_base_url }}/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ assets_base_url }}/assets/images/apple-touch-icon.png">
@@ -88,7 +88,7 @@
     <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
     <meta property="article:author" content="{{ site.author }}">
     {% endif %}
-    
+
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.github_username }}">
@@ -108,6 +108,15 @@
     {% else %}
     <meta name="twitter:image" content="{{ site.url }}/assets/images/default-og.png">
     {% endif %}
+
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
 
     <script src="{{ assets_base_url }}/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="{{ assets_base_url }}/assets/js/main.js"></script>
@@ -138,6 +147,10 @@
                 {% for nav in site.navs %}
                 <a href="{{ site.url }}{{ nav.href }}" class="{% if nav.mobile-hidden %}mobile-hidden {% endif %}{% if page.menu == nav.label %}selected {% endif %}site-header-nav-item" target="{{ nav.target | default: '_self' }}" title="{{ nav.label }}">{{ nav.label }}</a>
                 {% endfor %}
+                <button class="theme-toggle mobile-hidden" type="button" onclick="toggleTheme();" aria-label="切换主题" title="切换主题">
+                  <span class="theme-toggle-light">&#9788;</span>
+                  <span class="theme-toggle-dark">&#9790;</span>
+                </button>
             </nav>
         </div>
     </header>

@@ -7,6 +7,14 @@ function toggleMenu() {
   }
 }
 
+function toggleTheme() {
+  var html = document.documentElement;
+  var current = html.getAttribute('data-theme');
+  var next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+
 jQuery(function() {
   // 回到顶部
   function toTop () {
@@ -34,7 +42,7 @@ jQuery(function() {
   function addCodeCopyButtons() {
     // 查找所有代码块
     var codeBlocks = document.querySelectorAll('.highlight');
-    
+
     codeBlocks.forEach(function(codeBlock) {
       // 创建复制按钮
       var copyButton = document.createElement('button');
@@ -42,15 +50,15 @@ jQuery(function() {
       copyButton.type = 'button';
       copyButton.setAttribute('aria-label', '复制代码');
       copyButton.innerHTML = '复制';
-      
+
       // 将按钮添加到代码块容器
       codeBlock.appendChild(copyButton);
-      
+
       // 添加点击事件
       copyButton.addEventListener('click', function() {
         var code = codeBlock.querySelector('code');
         var textToCopy = code ? code.innerText : codeBlock.innerText;
-        
+
         // 使用现代 Clipboard API
         if (navigator.clipboard && window.isSecureContext) {
           navigator.clipboard.writeText(textToCopy).then(function() {
@@ -66,18 +74,18 @@ jQuery(function() {
       });
     });
   }
-  
+
   // 显示复制成功状态
   function showCopySuccess(button) {
     button.classList.add('copied');
     button.innerHTML = '已复制';
-    
+
     setTimeout(function() {
       button.classList.remove('copied');
       button.innerHTML = '复制';
     }, 2000);
   }
-  
+
   // 降级复制方案（用于不支持现代 API 的浏览器）
   function fallbackCopyToClipboard(text, button) {
     var textArea = document.createElement('textarea');
@@ -88,7 +96,7 @@ jQuery(function() {
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
-    
+
     try {
       document.execCommand('copy');
       showCopySuccess(button);
@@ -99,7 +107,7 @@ jQuery(function() {
         button.innerHTML = '复制';
       }, 2000);
     }
-    
+
     document.body.removeChild(textArea);
   }
 
