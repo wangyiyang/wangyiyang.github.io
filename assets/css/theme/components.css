@@ -114,3 +114,22 @@
 [data-theme="dark"] .theme-toggle .theme-toggle-dark {
   display: inline;
 }
+
+/* WeChat QR code */
+.wechat-qr-wrap {
+  text-align: center;
+}
+
+.wechat-qr-img {
+  width: 180px;
+  height: 180px;
+  border-radius: var(--theme-radius-md);
+  border: 1px solid var(--theme-border);
+  box-shadow: 0 2px 8px var(--theme-shadow);
+}
+
+.wechat-qr-caption {
+  color: var(--theme-muted);
+  font-size: 0.9rem;
+  margin-top: var(--theme-space-3);
+}
