@@ -3,7 +3,7 @@ layout: post
 title: "让Claude调用你的代码[MCP开发入门02]"
 categories: [MCP, AI, FastMCP, Python]
 description: "手把手教你用6行Python代码构建第一个MCP服务器，让Claude、GPT等AI模型直接调用你的本地函数，告别复杂的API适配。"
-keywords: MCP, FastMCP, AI工具, Python, Claude, API开发
+keywords: MCP, FastMCP, AI工具, Python, Claude, API开发, MCP开发, MCP入门, MCP教程, AI编程, 智能体开发
 mermaid: true
 sequence: false
 flow: false

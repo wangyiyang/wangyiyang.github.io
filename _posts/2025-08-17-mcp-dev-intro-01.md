@@ -3,7 +3,7 @@ layout: post
 title: "告别Function Calling适配噩梦[MCP开发入门01]"
 categories: [MCP, AI, Function Calling]
 description: "深度解析MCP协议如何终结Function Calling时代的集成噩梦，实现AI工具的标准化与高效开发。"
-keywords: MCP, Function Calling, AI集成, FastMCP, API适配, 大模型
+keywords: MCP, MCP开发, MCP协议, Function Calling, AI集成, FastMCP, API适配, 大模型, MCP入门, MCP教程, AI工具集成, Model Context Protocol
 mermaid: true
 sequence: false
 flow: false
