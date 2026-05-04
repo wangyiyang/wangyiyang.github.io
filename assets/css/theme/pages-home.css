@@ -5,7 +5,7 @@
 .workbench-hero-grid {
   display: grid;
   gap: var(--theme-space-12);
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  grid-template-columns: 1fr;
   align-items: end;
 }
 
@@ -69,12 +69,132 @@
   margin: 0;
 }
 
+/* 首页主体：左右两栏 */
+.home-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  gap: var(--theme-space-10);
+  align-items: start;
+}
+
+.home-sidebar {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+}
+
+/* 侧边栏卡片 */
+.sidebar-widget {
+  border: 1px solid var(--theme-border);
+  border-radius: var(--theme-radius-md);
+  padding: var(--theme-space-5);
+  margin-bottom: var(--theme-space-5);
+}
+
+.sidebar-widget-title {
+  color: var(--theme-text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 var(--theme-space-3);
+}
+
+/* 公众号二维码 */
+.sidebar-wechat {
+  text-align: center;
+}
+
+.sidebar-wechat .wechat-qr-wrap {
+  margin: var(--theme-space-3) 0;
+}
+
+.sidebar-wechat .wechat-qr-img {
+  width: 180px;
+  height: 180px;
+  border-radius: var(--theme-radius-md);
+  border: 1px solid var(--theme-border);
+  box-shadow: 0 2px 8px var(--theme-shadow);
+}
+
+.sidebar-wechat .wechat-qr-caption {
+  color: var(--theme-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: var(--theme-space-2) 0 0;
+}
+
+.sidebar-widget-desc {
+  color: var(--theme-muted);
+  font-size: 0.85rem;
+  margin: var(--theme-space-3) 0 0;
+}
+
+/* 关于 */
+.sidebar-about p {
+  color: var(--theme-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 var(--theme-space-2);
+}
+
+.sidebar-about a {
+  color: var(--theme-accent);
+  font-size: 0.9rem;
+}
+
+/* 分类列表 */
+.sidebar-topic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-topic-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--theme-space-1) 0;
+  border-bottom: 1px solid var(--theme-border);
+}
+
+.sidebar-topic-list li:last-child {
+  border-bottom: none;
+}
+
+.sidebar-topic-list a {
+  color: var(--theme-text);
+  font-size: 0.9rem;
+}
+
+.sidebar-topic-list a:hover {
+  color: var(--theme-accent);
+}
+
+.sidebar-topic-list span {
+  color: var(--theme-muted);
+  font-size: 0.8rem;
+  font-family: var(--theme-font-mono);
+}
+
 @media (max-width: 900px) {
   .workbench-hero-grid {
     grid-template-columns: 1fr;
   }
 
   .workbench-hero-wechat {
+    display: none;
+  }
+
+  .home-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .home-sidebar {
+    position: static;
+  }
+
+  .sidebar-wechat {
     display: none;
   }
 }

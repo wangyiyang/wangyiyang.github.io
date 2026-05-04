@@ -1,0 +1,26 @@
+<div class="sidebar-widget sidebar-wechat">
+  <h3 class="sidebar-widget-title">微信公众号</h3>
+  <div class="wechat-qr-wrap">
+    <img src="{{ site.url }}/images/weixin.JPG" alt="{{ site.components.qrcode.image_alt }}" class="wechat-qr-img" />
+    <p class="wechat-qr-caption">{{ site.components.qrcode.image_alt }}</p>
+  </div>
+  <p class="sidebar-widget-desc">扫码关注，获取更多技术文章与实践经验。</p>
+</div>
+
+<div class="sidebar-widget sidebar-about">
+  <h3 class="sidebar-widget-title">关于</h3>
+  <p>独立开发者，关注如何用 AI、代码、自动化和写作构建个人生产系统。</p>
+  <a href="{{ '/about/' | relative_url }}">了解更多 →</a>
+</div>
+
+<div class="sidebar-widget sidebar-topics">
+  <h3 class="sidebar-widget-title">分类</h3>
+  <ul class="sidebar-topic-list">
+    {% for topic in site.data.topics %}
+    <li>
+      <a href="{{ topic.url | relative_url }}">{{ topic.title }}</a>
+      <span>{{ site.categories[topic.category].size | default: 0 }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

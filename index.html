@@ -6,19 +6,19 @@ menu: 首页
 ---
 
 {% include theme/hero-manifesto.html %}
-{% include theme/featured-projects.html %}
-{% include theme/topic-paths.html %}
 
-<section class="theme-section">
-  <div class="theme-container">
-    <header class="theme-section-header">
-      <div class="theme-section-kicker">Writing</div>
-      <h2 class="theme-section-title">最新文章</h2>
-      <p class="theme-section-description">记录技术实践中的判断、方法与复盘。</p>
-    </header>
-    {% include theme/article-list.html posts=paginator.posts limit=10 %}
-    {% include theme/pagination.html %}
+<section class="theme-section home-main-section">
+  <div class="theme-container home-two-column">
+    <div class="home-content">
+      <header class="theme-section-header">
+        <div class="theme-section-kicker">Writing</div>
+        <h2 class="theme-section-title">最新文章</h2>
+      </header>
+      {% include theme/article-list.html posts=paginator.posts limit=10 %}
+      {% include theme/pagination.html %}
+    </div>
+    <aside class="home-sidebar">
+      {% include theme/home-sidebar.html %}
+    </aside>
   </div>
 </section>
-
-{% include theme/wechat-qr.html %}
