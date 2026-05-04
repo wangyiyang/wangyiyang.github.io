@@ -1,4 +1,12 @@
 <aside class="post-toc" aria-label="文章目录">
   <h2 class="post-toc-title">Contents</h2>
   {% include sidebar-post-nav.html %}
+
+  <div class="post-toc-wechat" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--theme-border);">
+    <h2 class="post-toc-title">公众号</h2>
+    <div class="wechat-qr-wrap">
+      <img src="{{ site.url }}/images/weixin.JPG" alt="{{ site.components.qrcode.image_alt }}" class="wechat-qr-img" style="width: 140px; height: 140px;" />
+      <p class="wechat-qr-caption" style="font-size: 0.8rem;">{{ site.components.qrcode.image_alt }}</p>
+    </div>
+  </div>
 </aside>

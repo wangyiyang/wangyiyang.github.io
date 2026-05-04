@@ -11,10 +11,9 @@
         {% endfor %}
       </div>
     </div>
-    <div class="workbench-status" aria-label="Workbench status">
-      {% for item in manifesto.status %}
-      <span>{{ item }}</span>
-      {% endfor %}
+    <div class="workbench-hero-wechat" aria-label="WeChat QR">
+      <img src="{{ site.url }}/images/weixin.JPG" alt="{{ site.components.qrcode.image_alt }}" />
+      <p>{{ site.components.qrcode.image_alt }}</p>
     </div>
   </div>
 </section>

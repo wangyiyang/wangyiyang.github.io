@@ -48,8 +48,33 @@
   padding-left: var(--theme-space-4);
 }
 
+.workbench-hero-wechat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--theme-space-3);
+}
+
+.workbench-hero-wechat img {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--theme-radius-md);
+  border: 1px solid var(--theme-border);
+  box-shadow: 0 2px 8px var(--theme-shadow);
+}
+
+.workbench-hero-wechat p {
+  color: var(--theme-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   .workbench-hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .workbench-hero-wechat {
+    display: none;
   }
 }

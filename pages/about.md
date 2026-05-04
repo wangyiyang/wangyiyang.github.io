@@ -38,3 +38,8 @@ full_width: true
 {% for website in site.data.social %}
 - {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 {% endfor %}
+- 微信公众号：**{{ site.components.qrcode.image_alt }}**
+
+<div class="wechat-qr-wrap">
+  <img src="{{ site.url }}/images/weixin.JPG" alt="{{ site.components.qrcode.image_alt }}" class="wechat-qr-img" />
+</div>
