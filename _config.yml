@@ -85,11 +85,6 @@ navs:
     label: 项目
 
   -
-    href: /open-source/
-    label: 开源
-    mobile-hidden: true
-
-  -
     href: /about/
     label: 关于
 
