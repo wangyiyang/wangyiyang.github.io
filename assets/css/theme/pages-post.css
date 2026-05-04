@@ -21,6 +21,7 @@
 }
 
 .post-toc {
+  align-self: start;
   position: sticky;
   top: 92px;
 }
@@ -38,6 +39,12 @@
 
 .post-toc a:hover {
   color: var(--theme-accent);
+}
+
+/* 目录内容区域限制高度，内部可滚动，确保下方二维码始终可见 */
+#post-directory-module {
+  max-height: calc(100vh - 280px);
+  overflow-y: auto;
 }
 
 .post-footer-nav {

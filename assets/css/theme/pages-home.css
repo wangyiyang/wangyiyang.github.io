@@ -56,8 +56,8 @@
 }
 
 .workbench-hero-wechat img {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border-radius: var(--theme-radius-md);
   border: 1px solid var(--theme-border);
   box-shadow: 0 2px 8px var(--theme-shadow);
