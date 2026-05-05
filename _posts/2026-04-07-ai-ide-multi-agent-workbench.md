@@ -4,7 +4,7 @@ title: "AI IDE 正在从「一个助手」变成「一个多 Agent 工作台」"
 categories: [AI, 编程工具, Agent]
 description: "主流 AI coding 产品正在从增强编辑器演化为可运行的多 Agent 工作台。本文分析 Cursor、Claude Code、OpenAI Codex 和 Windsurf 的产品分化方向。"
 keywords: AI IDE, Cursor, Claude Code, Codex, Windsurf, Agent, 多Agent工作台
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false

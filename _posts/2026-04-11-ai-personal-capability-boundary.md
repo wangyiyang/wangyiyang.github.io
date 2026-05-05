@@ -4,7 +4,7 @@ title: "当 AI 开始替你做事，个人能力边界会发生什么变化"
 categories: [AI, 个人成长, 职业发展]
 description: "AI 代做不会简单替代个人能力，它会重新划分能力边界：执行被外包，判断变得更重要。"
 keywords: AI, 个人能力, 能力边界, 执行外包, 判断力
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false

@@ -4,7 +4,7 @@ title: "为什么多数 AI 项目死在看起来什么都能做"
 categories: [AI, 产品思维, 创业]
 description: "AI 项目最危险的阶段，不是能力不够，而是能力看起来太多，导致产品边界消失。"
 keywords: AI项目, 产品边界, 产品定位, AI产品, 边界定义
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false

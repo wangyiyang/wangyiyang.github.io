@@ -4,7 +4,7 @@ title: "AI 会写代码之后，程序员真正值钱的能力是什么？"
 categories: [AI, 编程, 职业发展]
 description: "AI 吃掉的是机械实现，留下来的却是更昂贵的东西：工程判断力、系统控制力，以及把 Agent 约束进现实世界的能力。"
 keywords: AI编程, 古法编程, 工程判断力, Coding Agent, 程序员价值
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false

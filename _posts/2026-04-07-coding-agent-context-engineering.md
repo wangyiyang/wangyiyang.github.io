@@ -4,7 +4,7 @@ title: "为什么同样的 Coding Agent，有人觉得神，有人觉得废"
 categories: [AI, 编程工具, Agent]
 description: "同一个 Coding Agent，在不同工程环境里会表现得像两个产品。差距越来越不只在模型，而在上下文工程。"
 keywords: Coding Agent, 上下文工程, Claude Code, AGENTS.md, 工程环境
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false

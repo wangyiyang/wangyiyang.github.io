@@ -4,7 +4,7 @@ title: "超级个体不是一个人干十个人的活"
 categories: [个人成长, 效率, AI]
 description: "超级个体的核心不是更拼，而是把自己的工作系统重新设计成可复用、可外包、可自动化的结构。"
 keywords: 超级个体, 个人工作系统, AI杠杆, 效率, 复利
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false

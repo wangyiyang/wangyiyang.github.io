@@ -4,7 +4,7 @@ title: "Claude Code 被吐槽变笨：AI 编程工具的信任危机"
 categories: [AI, 编程工具, Claude Code]
 description: "AI 编程工具最大的风险不是某一次输出不好，而是用户无法判断它什么时候可靠、什么时候不可靠。本文分析 Claude Code 信任危机的深层原因。"
 keywords: Claude Code, AI编程, 信任危机, Coding Agent, 可靠性
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false

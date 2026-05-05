@@ -4,7 +4,7 @@ title: "AI 时代，个人开发者第一次拥有产品实现权"
 categories: [AI, 个人成长, 产品思维]
 description: "AI 给个人开发者带来的最大变化，不是写代码更快，而是一个人第一次更接近完整产品闭环。"
 keywords: AI, 个人开发者, 产品实现权, 独立开发, 产品闭环
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false

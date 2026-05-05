@@ -4,7 +4,7 @@ title: "Skill 的第一性原理：被低估的 Prompt 工程"
 categories: [AI, Agent, Prompt Engineering]
 description: "当 Agent 从'会调用工具'走向'能稳定做事'，Skill 开始变成一层真正的工程封装。本文分析为什么 Skill 不是 Prompt Engineering 的边角料，而是 Prompt Engineering 开始工程化之后的重要产物。"
 keywords: Skill, Prompt Engineering, Agent, Codex, Claude Code, Windsurf, 任务封装
-mermaid: false
+mermaid: true
 sequence: false
 flow: false
 mathjax: false
