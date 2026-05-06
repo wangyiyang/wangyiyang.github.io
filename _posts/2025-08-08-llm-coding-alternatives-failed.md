@@ -11,7 +11,10 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
-![alt text](/images/posts/2025-08-08-llm-coding-alternatives-failed/image.png)
+<picture>
+  <source srcset="/images/posts/2025-08-08-llm-coding-alternatives-failed/image.webp" type="image/webp">
+  <img src="/images/posts/2025-08-08-llm-coding-alternatives-failed/image.png" alt="alt text" loading="lazy">
+</picture>
 
 **——Claude Code 为何仍是编程战场的“实战王者”**
 

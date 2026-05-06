@@ -19,7 +19,10 @@ mindmap2: false
 
 这是一系列关于如何在实践中使用大型语言模型（LLMs）的第三篇文章。在这篇文章中，我将为初学者提供一个简明易懂的指南，介绍Hugging Face Transformers库。该库提供了一种简单且免费的方式来使用各种开源语言模型。我将从概念回顾开始，然后深入介绍示例Python代码。
 
-![Alt text](/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image.png)
+<picture>
+  <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image.webp" type="image/webp">
+  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image.png" alt="Alt text" loading="lazy">
+</picture>
 
 *Photo by Jéan Béller on Unsplash*
 
@@ -78,7 +81,10 @@ Transformers库的最大好处之一是，我们只需简单地更改传递给pi
 
 符合这些标准的模型是新发布的Llama 2。更具体地说，Llama-2–7b-chat-hf是Llama 2系列模型之一，拥有约70亿个参数，针对聊天进行了优化，并且采用Hugging Face Transformers格式。我们可以通过模型卡片了解更多有关此模型的信息，如图所示。
 
-![Alt text](/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image1.png)
+<picture>
+  <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image1.webp" type="image/webp">
+  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image1.png" alt="Alt text" loading="lazy">
+</picture>
 
 *Touring the Llama-2–7b-chat-hf model card. Image by author.*
 
@@ -243,11 +249,17 @@ demo_chatbot.launch()
 
 这将通过本地 URL 启动界面。如果窗口没有自动打开，您可以将 URL 直接复制粘贴到浏览器中打开。
 
-![Alt text](/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/okUwxEBv2oZuUYi7Pks3sw.gif)
+<picture>
+  <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/okUwxEBv2oZuUYi7Pks3sw.webp" type="image/webp">
+  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/okUwxEBv2oZuUYi7Pks3sw.gif" alt="Alt text" loading="lazy">
+</picture>
 
 ### Hugging Face Spaces
 
-![Alt text](/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image3.png)
+<picture>
+  <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image3.webp" type="image/webp">
+  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image3.png" alt="Alt text" loading="lazy">
+</picture>
 
 为了进一步，我们可以通过 Hugging Face Spaces 快速部署这个界面。Spaces 是由 Hugging Face 托管的 Git 仓库，并提供计算资源增强。根据使用情况，可以选择免费和付费选项。在这里，我们将使用免费选项。
 要创建一个新的 Space，首先打开 Spaces 页面，然后点击 "Create new space"。接下来，配置 Space，给它一个名称，例如 "my-first-space"，并选择 Gradio 作为 SDK。然后点击 "Create Space"。

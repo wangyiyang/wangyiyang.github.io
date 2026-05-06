@@ -62,7 +62,10 @@ cd charts_mcp_server
 claude
 ```
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image.png" alt="alt text" loading="lazy">
+</picture>
 
 ### 需求分析
 
@@ -86,27 +89,51 @@ claude
 
 在 Claude Code 执行过程中，我们可能会遇到一些提示，询问我们是否执行指令或者执行修改，这种情况下我一般选择第二个（在本项目或本次会话默认是直接执行）
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-1.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-1.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-1.png" alt="alt text" loading="lazy">
+</picture>
 
 大概过了2-3分钟，Claude Code 完成了初步的设计以及开发计划，如下图。这里我们一样选择第二个，如果觉得它的计划不够完善，我们选择第三个`No. keep planning`。
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-2.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-2.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-2.png" alt="alt text" loading="lazy">
+</picture>
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-3.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-3.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-3.png" alt="alt text" loading="lazy">
+</picture>
 
 之后Claude Code 进入了开发阶段，并且给出了一个Task List逐步执行，如下图。
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-4.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-4.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-4.png" alt="alt text" loading="lazy">
+</picture>
 
 大概过了10分钟，Claude Code 完成了初步的开发工作。下图是Claude Code 生成的代码结构, 以及总结。
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-5.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-5.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-5.png" alt="alt text" loading="lazy">
+</picture>
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-6.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-6.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-6.png" alt="alt text" loading="lazy">
+</picture>
 
 到此 我们一条指令执行了12分钟，完成了初步的开发,如果计算官方成本大概$20,但是在我使用的镜像站，成本$1.86 折合RMB 0.93(没有算错，前一段搞活动充一送一， 细节可以私信我)
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-7.png)
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-8.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-7.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-7.png" alt="alt text" loading="lazy">
+</picture>
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-8.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-8.png" alt="alt text" loading="lazy">
+</picture>
 
 接下来我们执行 `/init`，生成 `CLAUDE.md` 文件，让后续的开发更加顺利。接着我们执行`/clear`开启一个新的对话，避免上下文过大，减少后面的使用成本。
 
@@ -179,16 +206,28 @@ Output:
 
 当然直接运行还是遇到了一些问题，最后直接把遇到的问题复制粘贴给 Claude Code 也是完美解决，这里就不做过多描述，接着我们运行我们的MCP Server:
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-13.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-13.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-13.png" alt="alt text" loading="lazy">
+</picture>
 
 最后我们在Cherry Studio中集成编写好的 MCP:
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-9.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-9.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-9.png" alt="alt text" loading="lazy">
+</picture>
 
 最后我们进行验证：
 
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-12.png)
-![alt text](/images/posts/2025-08-17-mcp-dev-intro-04/image-10.png)
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-12.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-12.png" alt="alt text" loading="lazy">
+</picture>
+<picture>
+  <source srcset="/images/posts/2025-08-17-mcp-dev-intro-04/image-10.webp" type="image/webp">
+  <img src="/images/posts/2025-08-17-mcp-dev-intro-04/image-10.png" alt="alt text" loading="lazy">
+</picture>
 
 最后的成本也在40刀左右（实际花费2元）。
 

@@ -105,7 +105,10 @@ mindmap2: false
 
 配合那张价格面板截图（`image-4.png`），感受会更直观：
 
-![Windsurf 模型价格截图](/images/posts/2025-12-08-windsurf-still-my-choice/image-4.png)
+<picture>
+  <source srcset="/images/posts/2025-12-08-windsurf-still-my-choice/image-4.webp" type="image/webp">
+  <img src="/images/posts/2025-12-08-windsurf-still-my-choice/image-4.png" alt="Windsurf 模型价格截图" loading="lazy">
+</picture>
 
 一眼看过去，你会发现 Windsurf 在模型和价格上的几个特点：
 

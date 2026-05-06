@@ -17,7 +17,10 @@ mindmap2: false
 
 今天要介绍的**ScreenCoder**，就是专门解决这个痛点的开源项目。一张UI截图进去，干净的HTML/CSS代码出来，准确率高得吓人。
 
-![ScreenCoder概览](/images/posts/2025-08-09-screencoder-ui-to-code/teaser.jpg)
+<picture>
+  <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/teaser.webp" type="image/webp">
+  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/teaser.jpg" alt="ScreenCoder概览" loading="lazy">
+</picture>
 *ScreenCoder：从UI截图到代码的完整流程*
 
 ## ScreenCoder解决什么问题？
@@ -148,10 +151,16 @@ ScreenCoder支持多种大语言模型，你可以根据需求选择：
 
 **视觉效果对比一目了然：**
 
-![其他方法效果](/images/posts/2025-08-09-screencoder-ui-to-code/example_others.jpeg)
+<picture>
+  <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/example_others.webp" type="image/webp">
+  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/example_others.jpeg" alt="其他方法效果" loading="lazy">
+</picture>
 *其他方法的转换结果：布局偏差明显，元素错位严重*
 
-![ScreenCoder效果](/images/posts/2025-08-09-screencoder-ui-to-code/example_ours.jpeg)
+<picture>
+  <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/example_ours.webp" type="image/webp">
+  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/example_ours.jpeg" alt="ScreenCoder效果" loading="lazy">
+</picture>
 *ScreenCoder的转换结果：布局精准，元素完美对齐*
 
 **其他方法的问题：**

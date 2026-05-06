@@ -18,7 +18,10 @@ mindmap2: false
 
 一个LangChain教程，用Python构建任何具有大型语言模型的东西
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image.png" alt="Alt text" loading="lazy">
+</picture>
 
 *“随机鹦鹉对另一只说了什么？“（图片由作者绘制）*
 
@@ -76,7 +79,10 @@ import langchain
 
 **LLM提供程序（必填）** -您首先需要一个您想要使用的LLM提供程序的API密钥。我们目前正在经历“人工智能的Linux时刻”，开发人员必须在性能和成本之间进行权衡的基础模型之间进行选择。
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image1.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image1.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image1.png" alt="Alt text" loading="lazy">
+</picture>
 
 *LLM提供商：专有和开源基础模型（图片由作者提供，灵感来自Fiddler.ai，首次发表在W&B的博客上）*
 
@@ -155,7 +161,10 @@ completion = llm(prompt)
 
 ```
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image2.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image2.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image2.png" alt="Alt text" loading="lazy">
+</picture>
 
 *LLM模型（作者图片）*
 
@@ -179,7 +188,10 @@ text = "Alice has a parrot. What animal is Alice's pet?"
 text_embedding = embeddings.embed_query(text)
 ```
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image3.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image3.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image3.png" alt="Alt text" loading="lazy">
+</picture>
 
 *文本嵌入模型（作者图片）*
 
@@ -303,7 +315,10 @@ overall_chain = SimpleSequentialChain(chains=[chain, chain_two], verbose=True)
 catchphrase = overall_chain.run("colorful socks")
 ```
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image4.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image4.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image4.png" alt="Alt text" loading="lazy">
+</picture>
 
 *使用LangChain中的PromptTemplates和LLM输出SimpleSequentialChain（作者截图）*
 
@@ -357,7 +372,10 @@ result = qa({"query": query})
 print(result['result'])
 ```
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image5.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image5.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image5.png" alt="Alt text" loading="lazy">
+</picture>
 
 *RetrievalQA的输出（作者截图）*
 
@@ -367,7 +385,10 @@ print(result['result'])
 
 对于像聊天机器人这样的应用程序，它们必须记住以前的对话。但默认情况下，LLM没有任何长期记忆，除非您输入聊天历史。
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image6.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image6.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image6.png" alt="Alt text" loading="lazy">
+</picture>
 
 *有和没有对话记忆的聊天（图片由作者在ifaketextmessage.com上制作，灵感来自Pinecone）*
 
@@ -397,7 +418,10 @@ conversation.predict(input="How many pets do Alice and Bob have?")
 
 尽管LLM非常强大，但也有一些局限性：它们缺乏上下文信息（例如，对训练数据中不包含的特定知识的访问），它们可能很快变得过时（例如，GPT-4是在2021年9月之前根据数据进行训练的），他们的数学很差。
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image7.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image7.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image7.png" alt="Alt text" loading="lazy">
+</picture>
 
 *法学硕士数学不好*
 
@@ -425,7 +449,10 @@ agent = initialize_agent(tools,
 agent.run("When was Barack Obama born? How old was he in 2022?")
 ```
 
-![Alt text](/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image8.png)
+<picture>
+  <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image8.webp" type="image/webp">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image8.png" alt="Alt text" loading="lazy">
+</picture>
 
 *LLM代理的输出（作者截图）*
 

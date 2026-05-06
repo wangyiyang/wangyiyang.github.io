@@ -15,7 +15,10 @@ mindmap2: false
 
 在Claude断供Windsurf服务后，整个开发者社区都在唱衰Windsurf，仿佛它已经是明日黄花。Twitter上、Reddit上、各种技术群里，清一色的声音。
 
-![最近一个月的Cursor使用情况](/images/posts/2025-07-07-cursor-analytics.png)
+<picture>
+  <source srcset="/images/posts/2025-07-07-cursor-analytics.webp" type="image/webp">
+  <img src="/images/posts/2025-07-07-cursor-analytics.png" alt="最近一个月的Cursor使用情况" loading="lazy">
+</picture>
 
 但是看到上面这张图了吗？这是我最近一个月的Cursor使用情况。各种限制让我活干到一半就"跑路"，结果就是：**Cursor的输出基本为0，钱却一分没少花！**
 
