@@ -13,6 +13,8 @@ mindmap2: false
 ---
 
 
+
+![MCP Agent 生态](/assets/images/mcp-agent-ecosystem-cover.jpg)
 ## 引言：为什么 MCP 是 AI 工具集成的未来
 
 在做 AI 应用开发时，最头疼的是什么？不是模型调优，不是 prompt 工程，而是**工具集成**。
