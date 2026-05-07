@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "2025：Vibe Coding，把自己变成一家公司——数字化军火库的意图驱动闭环"
 categories: [个人成长, 效率]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_one-person-company-01_001.jpg"
 ---
 
 

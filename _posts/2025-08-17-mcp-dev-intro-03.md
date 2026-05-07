@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "让Claude成为你的数据库专家[MCP开发入门03]"
 categories: [MCP, AI, 数据库, API集成]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_mcp-dev-intro-03_001.jpg"
 ---
 
 ```mermaid

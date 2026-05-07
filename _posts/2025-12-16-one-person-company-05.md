@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "把收钱做成闭环：Stripe 与国内对公对私支付指南"
 categories: ["One-Person-Company", "Stripe", "Payment"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_one-person-company-05_001.jpg"
 ---
 今天是 2025 年 12 月 16 日。  
 很多程序员开一人公司后，会发现一个反直觉的事实：

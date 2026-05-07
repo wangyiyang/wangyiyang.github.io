@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "12 | 标准 content_blocks 深度实战：DeepSeek × LangChain v1 推理过程可视化与安全提取"
 categories: ["DeepSeek", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-12_001.jpg"
 ---
 ## 一、从第 06 篇的旧代码说起：为什么这是“临时方案”
 

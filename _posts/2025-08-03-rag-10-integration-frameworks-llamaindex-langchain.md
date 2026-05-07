@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记10：LlamaIndex与LangChain集成应用"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-10-integration-frameworks-llamaindex-langchain_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第10篇**：深入探讨主流RAG框架的特点与应用，掌握快速构建RAG系统的方法

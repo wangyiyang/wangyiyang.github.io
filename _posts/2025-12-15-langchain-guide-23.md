@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "23 | LangChain v1 × Mem0：middleware 自动长期记忆"
 categories: ["Mem0", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-23_001.jpg"
 ---
 > 你做了一个很聪明的 Agent，却总被用户吐槽“像金鱼”：  
 > 昨天刚说过“报表别给我讲大道理，先给结论 + 风险点”，今天它又重新问一遍。

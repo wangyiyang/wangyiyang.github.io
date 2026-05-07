@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记05：高级技术GraphRAG与Self-RAG"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-05-advanced-techniques-graphrag-selfrag_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第5篇**：深入GraphRAG、Self-RAG等前沿技术，掌握下一代RAG系统的核心算法

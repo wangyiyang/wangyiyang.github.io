@@ -1,10 +1,12 @@
 ---
+
 layout: post
 title: "企业AI编程合规指南：私有化大模型部署的负责任实践"
 date: 2025-06-30 10:00:00 +0800
 categories: [AI, 企业应用, 合规]
 tags: [AI编程, 合规, 私有化部署, 负责任AI, 企业治理]
 description: "深度解析企业AI编程工具的合规要求与负责任实践，从技术架构到治理框架的完整指南，确保AI编程既高效又合规。"
+cover: "/images/posts/post_enterprise-private-llm-ai-programming-revolution_001.jpg"
 ---
 
 > 💡 **核心观点预览**

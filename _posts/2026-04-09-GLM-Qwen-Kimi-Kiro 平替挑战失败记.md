@@ -13,11 +13,6 @@ mindmap2: false
 ---
 
 
-<picture>
-  <source srcset="./static/images/image.webp" type="image/webp">
-  <img src="./static/images/image.png" alt="alt text" loading="lazy">
-</picture>
-
 **——Claude Code 为何仍是编程战场的“实战王者”**
 
 当开源模型以“免费”、“国产”、“高性能”刷屏时，我尝试用 GLM 4.5、Qwen3 Coder、Kimi K2 平替 Claude Code。24 小时后，我默默续费了账单。**省米虽好，但效率和时间更贵**。

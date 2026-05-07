@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "10 | LangGraph v1 实战：用 DeepSeek 搭建“能暂停和续命”的智能数据分析 Agent"
 categories: ["LangGraph", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-10_001.jpg"
 ---
 ## 一、为什么只用 LangChain 还不够？
 

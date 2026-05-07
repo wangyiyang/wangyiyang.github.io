@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "22 | LangChain v1 Agent：工具别全开！动态选工具把越权和误用按住"
 categories: ["Agent", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-22_001.jpg"
 ---
 > 真实线上事故里，Agent 最常犯的错不是“答错”，而是“用错工具”：  
 > 你给了它 12 个工具，它往往能选中那个**最不该选的**。

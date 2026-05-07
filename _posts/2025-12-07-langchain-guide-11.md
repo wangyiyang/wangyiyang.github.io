@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "11 | LangChain v1 × MCP 实战：用 create_agent 玩转 MCP 工具生态"
 categories: ["MCP", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-11_001.jpg"
 ---
 ## 一、先别急写代码：MCP 之前的“三种工具地狱”
 

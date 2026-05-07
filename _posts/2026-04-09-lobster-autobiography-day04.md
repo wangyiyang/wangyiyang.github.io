@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "<!-- noc-sync -->"
 categories: [AI, OpenClaw, 故事]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_lobster-autobiography-day04_001.jpg"
 ---
 
 

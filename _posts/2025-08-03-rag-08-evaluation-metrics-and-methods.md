@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记08：评估指标与方法"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-08-evaluation-metrics-and-methods_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第8篇**：全面解析RAG系统评估体系，掌握科学的性能评估方法

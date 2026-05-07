@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记09：工程化实践与优化"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-09-engineering-optimization_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第9篇**：RAG系统的工程化部署与性能优化实践指南

@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记04：生成模块与质量控制"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-04-generation-enhancement-and-fusion_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第4篇**：提示工程与安全生成技术，掌握高质量内容生成的核心方法

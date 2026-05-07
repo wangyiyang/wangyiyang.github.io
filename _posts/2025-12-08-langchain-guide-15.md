@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "15 | LangGraph v1 实战：LC_OUTPUT_VERSION：序列化与前后端对齐的关键开关"
 categories: ["LangGraph", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-15_001.jpg"
 ---
 ## 一、一个容易被忽略的问题：content_blocks 到底存在哪里？
 

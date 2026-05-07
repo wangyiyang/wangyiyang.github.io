@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记06：法律领域应用实践"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-06-legal-domain-application-practice_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第6篇**：专业领域RAG技术深度应用，探索法律行业的智能化变革

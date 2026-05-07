@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "使用Claude Code 开发一个图表分析MCP Server[MCP开发入门04]"
 categories: [MCP, AI, Claude Code, Data Visualization]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_mcp-dev-intro-04_001.jpg"
 ---
 
 今天趁着周末，来实现一个图表分析的MCP工具。一个多月前，这个MCP Server在我们公司内部我已经使用 Gemini CLI实现了一套，支持了pyecharts 中16种常用的图表类型。因为这个工具还是非常实用的，今天我们使用Claude Code 再实现一遍，一来可以让大家直观的感受一下Claude Code的能力, 而来也算是MCP 开发的一次最佳实践,受限于篇幅我们在本文仅实现了柱状图、饼图、线状图， 其他的实现也是类似的套路。最后我们的全部代码以及所有Claude Code 的交互我都已经上传到了Github。

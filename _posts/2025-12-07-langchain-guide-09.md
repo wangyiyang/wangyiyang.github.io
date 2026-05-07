@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "09 | 冷饭新炒：DeepSeek × LangChain 1.x，智能数据分析全流程再升级"
 categories: ["DeepSeek", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-09_001.jpg"
 ---
 阅读量：待发布 更新于：2025-XX-XX
 

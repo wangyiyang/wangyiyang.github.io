@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "16 | LangChain v1 Agent：中间件一把梭治理"
 categories: ["Agent", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-16_001.jpg"
 ---
 > 你写 Agent 的业务逻辑可能只要 30 行；但一旦要上线，真正麻烦的是：日志、鉴权、脱敏、工具权限、重试、审批、成本控制……这些“治理需求”往往散落在各处，最后变成一坨不可复用的 if/else。
 >

@@ -25,11 +25,10 @@
       </div>
       {% endif %}
     </div>
-    {% assign post_slug = page.url | split: '/' | last %}
-    {% assign image_path = '/images/posts/post_' | append: post_slug | append: '_001.jpg' %}
-    {% assign image_full_path = site.baseurl | append: image_path %}
+    {% if page.cover %}
     <div class="post-hero-image">
-      <img src="{{ image_full_path }}" alt="{{ page.title }}" loading="lazy" />
+      <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" loading="lazy" />
     </div>
+    {% endif %}
   </div>
 </header>

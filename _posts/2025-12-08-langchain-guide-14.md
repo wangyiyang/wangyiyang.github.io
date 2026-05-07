@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "14 | LangGraph v1 实战：MCP 工具多模态返回，用 content_blocks 一口收"
 categories: ["LangGraph", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-14_001.jpg"
 ---
 ## 一、问题升级：不仅模型是多模态，工具也在变多模态
 

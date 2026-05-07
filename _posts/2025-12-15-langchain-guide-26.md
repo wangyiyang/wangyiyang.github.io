@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "26 | 记忆评测与回归：记忆是否有用要能量化"
 categories: ["LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-26_001.jpg"
 ---
 > 长期记忆这件事，最容易“做起来很酷，上线后很难受”。  
 > 因为它不像加一个工具那样“有/无”清晰，而是会悄悄改变：**答案风格、事实引用、越权风险、成本曲线**。

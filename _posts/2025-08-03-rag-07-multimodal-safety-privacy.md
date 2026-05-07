@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记07：多模态RAG与隐私安全"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-07-multimodal-safety-privacy_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第7篇**：探索多模态RAG技术，深入安全隐私保护机制

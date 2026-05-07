@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "25 | Mem0 记忆治理：矛盾更新、TTL、忘记我（delete_all）怎么落地"
 categories: ["Mem0", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-25_001.jpg"
 ---
 > 第 23/24 篇我们把 Mem0 接进 LangChain v1：  
 > 要么用 middleware 做“自动记忆”，要么把记忆封装成 MCP 工具做“显式记忆”。  

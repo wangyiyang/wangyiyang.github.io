@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记02：数据索引阶段深度解析"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-02-data-indexing-deep-analysis_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第2篇**：深入数据索引核心，掌握从原始文档到向量检索的技术本质

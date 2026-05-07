@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "07 | DeepSeek+LangChain——根据数据报表生成带图表的 PPT"
 categories: ["DeepSeek", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-07_001.jpg"
 ---
 阅读量：481 发布时间：2025-03-07
 

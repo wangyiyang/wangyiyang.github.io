@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "13 | LangGraph v1 实战：content_blocks 让文本×图片同场：多模态输入输出实战"
 categories: ["LangGraph", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-13_001.jpg"
 ---
 ## 一、从 DeepSeek 文本推理，走向多模态世界
 

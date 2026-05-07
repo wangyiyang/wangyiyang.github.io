@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记03：智能检索核心技术"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-03-retrieval-strategies-and-optimization_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第3篇**：混合检索与重排序算法实战，掌握精准信息检索的核心算法

@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记11：RAGAS评估系统深度解析"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-11-evaluation-system-ragas_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第11篇**：深入RAGAS评估框架，构建科学的RAG系统评估体系

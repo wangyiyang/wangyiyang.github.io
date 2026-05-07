@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "深度RAG笔记01：核心概念与诞生背景"
 categories: [RAG, AI, 深度学习]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-01-fundamentals-core-concepts-and-background_001.jpg"
 ---
 
 > **翊行代码:深度RAG笔记第1篇**：深入RAG技术核心，掌握检索增强生成的基本概念与诞生背景

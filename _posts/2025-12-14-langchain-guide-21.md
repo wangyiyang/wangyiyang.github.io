@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "21 | LangChain v1 Agent：动态选模，DeepSeek-V3.2/V3.2-Speciale在同一个ChatBI里怎么分工？"
 categories: ["Agent", "LangChain", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-21_001.jpg"
 ---
 > 你想用最强推理模型把 ChatBI 的“分析质量”拉满，但一接上工具就翻车：**模型不支持 Tool Calls / JSON Output**。
 >

@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Notion：一人公司的信息与执行闭环指南"
 categories: ["One-Person-Company", "Notion", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_one-person-company-03_001.jpg"
 ---
 今天是 2025 年 12 月 16 日。  
 如果说 GitHub 解决的是“一人公司怎么把代码交付做成流水线”，那 Notion 解决的就是另一个更隐蔽、也更致命的问题：

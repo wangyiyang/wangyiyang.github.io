@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "加餐01 | LangChain v1 Agent：Trace→评测闭环（LangSmith × Langfuse）"
 categories: ["Observability", "Agent", "LangChain"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-addon-01_001.jpg"
 ---
 > “我一直把 LangSmith 当 trace 观测工具来用，后来手写了个 LogMiddleware，就更不怎么碰它了。直到看到你提 Dataset…能不能讲讲 LangSmith 的正确打开方式？”
 

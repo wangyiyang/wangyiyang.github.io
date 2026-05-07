@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "我的龙虾给自己写了一个 MCP Skill"
 categories: [AI, OpenClaw, MCP]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_lobster-wrote-its-own-mcp-skill_001.jpg"
 ---
 
 # 我的龙虾给自己写了一个 MCP Skill

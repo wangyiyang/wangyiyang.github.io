@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Claude Code、Codex、Windsurf：把 AI 编程助手接入一人公司的 Notion×GitHub 闭环（MCP 实战）"
 categories: ["One-Person-Company", "Notion", "AI"]
@@ -10,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_one-person-company-04_001.jpg"
 ---
 今天是 2025 年 12 月 16 日。  
 很多程序员开一人公司后，会很快买一堆 AI 工具：IDE 里一个、终端里一个、浏览器里一个。
