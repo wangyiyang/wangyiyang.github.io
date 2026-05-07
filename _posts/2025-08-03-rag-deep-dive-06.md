@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/深度RAG笔记06-深度RAG笔记06-法律文档智能检索系统_001.jpg"
 
 # 深度RAG笔记06：深度RAG笔记06：法律文档智能检索系统
 

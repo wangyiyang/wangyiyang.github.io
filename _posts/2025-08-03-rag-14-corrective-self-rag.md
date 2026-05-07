@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/深度RAG笔记14-自修正机制与准确性提升_001.jpg"
 
 > **翊行代码:深度RAG笔记第14篇**：多步推理与自我修正机制，让你的AI不再瞎编乱造
 

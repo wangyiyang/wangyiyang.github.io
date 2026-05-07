@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/深度RAG笔记04-深度RAG笔记04-生成模块与质量控制_001.jpg"
 
 # 深度RAG笔记04：深度RAG笔记04：生成模块与质量控制
 

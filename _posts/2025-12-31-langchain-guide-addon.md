@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/06-DeepSeek-R1-LangChain-智能数据分析全流程实践_001.jpg"
 
 
 阅读量：3948 发布日期：2025-03-05

@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/深度RAG笔记10-深度RAG笔记10-框架_001.jpg"
 
 # 深度RAG笔记10：深度RAG笔记10：框架"混搭"的艺术——LangChain+LlamaIndex强强联合实战
 

@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/GLM-Qwen-Kimi-Kiro-平替挑战失败记_001.jpg"
 
 
 **——Claude Code 为何仍是编程战场的“实战王者”**

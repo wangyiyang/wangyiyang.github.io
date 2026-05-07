@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/深度RAG笔记08-深度RAG笔记08-企业级RAG项目规划与技术选型实战指南_001.jpg"
 
 # 深度RAG笔记08：深度RAG笔记08：企业级RAG项目规划与技术选型实战指南
 

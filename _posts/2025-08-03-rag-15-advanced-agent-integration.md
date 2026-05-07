@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/深度RAG笔记15-Agent增强与智能决策系统_001.jpg"
 
 > **翊行代码:深度RAG笔记第15篇**：GraphRAG+RAPTOR+Agent三剑合璧，构建下一代智能问答系统
 

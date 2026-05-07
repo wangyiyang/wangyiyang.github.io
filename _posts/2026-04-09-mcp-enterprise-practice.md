@@ -11,6 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
+cover: "/images/posts/MCP-开发实战-从入门到企业级应用_001.jpg"
 
 
 
