@@ -23,7 +23,7 @@ cover: "/images/posts/post_screencoder-ui-to-code_001.jpg"
 
 <picture>
   <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/teaser.webp" type="image/webp">
-  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/teaser.jpg" alt="ScreenCoder概览" loading="lazy">
+  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/teaser.webp" alt="ScreenCoder概览" loading="lazy">
 </picture>
 *ScreenCoder：从UI截图到代码的完整流程*
 
@@ -157,13 +157,13 @@ ScreenCoder支持多种大语言模型，你可以根据需求选择：
 
 <picture>
   <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/example_others.webp" type="image/webp">
-  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/example_others.jpeg" alt="其他方法效果" loading="lazy">
+  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/example_others.webp" alt="其他方法效果" loading="lazy">
 </picture>
 *其他方法的转换结果：布局偏差明显，元素错位严重*
 
 <picture>
   <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/example_ours.webp" type="image/webp">
-  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/example_ours.jpeg" alt="ScreenCoder效果" loading="lazy">
+  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/example_ours.webp" alt="ScreenCoder效果" loading="lazy">
 </picture>
 *ScreenCoder的转换结果：布局精准，元素完美对齐*
 

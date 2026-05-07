@@ -17,7 +17,7 @@ cover: "/images/posts/MCP-开发实战-从入门到企业级应用_001.jpg"
 
 <picture>
   <source srcset="/assets/images/mcp-agent-ecosystem-cover.webp" type="image/webp">
-  <img src="/assets/images/mcp-agent-ecosystem-cover.jpg" alt="MCP Agent 生态" loading="lazy">
+  <img src="/assets/images/mcp-agent-ecosystem-cover.webp" alt="MCP Agent 生态" loading="lazy">
 </picture>
 ## 引言：为什么 MCP 是 AI 工具集成的未来
 

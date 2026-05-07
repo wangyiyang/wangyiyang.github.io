@@ -20,7 +20,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *“随机鹦鹉对另一只说了什么？“（图片由作者绘制）*
@@ -81,7 +81,7 @@ import langchain
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image1.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image1.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image1.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *LLM提供商：专有和开源基础模型（图片由作者提供，灵感来自Fiddler.ai，首次发表在W&B的博客上）*
@@ -163,7 +163,7 @@ completion = llm(prompt)
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image2.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image2.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image2.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *LLM模型（作者图片）*
@@ -190,7 +190,7 @@ text_embedding = embeddings.embed_query(text)
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image3.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image3.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image3.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *文本嵌入模型（作者图片）*
@@ -317,7 +317,7 @@ catchphrase = overall_chain.run("colorful socks")
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image4.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image4.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image4.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *使用LangChain中的PromptTemplates和LLM输出SimpleSequentialChain（作者截图）*
@@ -374,7 +374,7 @@ print(result['result'])
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image5.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image5.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image5.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *RetrievalQA的输出（作者截图）*
@@ -387,7 +387,7 @@ print(result['result'])
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image6.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image6.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image6.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *有和没有对话记忆的聊天（图片由作者在ifaketextmessage.com上制作，灵感来自Pinecone）*
@@ -420,7 +420,7 @@ conversation.predict(input="How many pets do Alice and Bob have?")
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image7.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image7.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image7.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *法学硕士数学不好*
@@ -451,7 +451,7 @@ agent.run("When was Barack Obama born? How old was he in 2022?")
 
 <picture>
   <source srcset="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image8.webp" type="image/webp">
-  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image8.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-8-20-getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications/image8.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *LLM代理的输出（作者截图）*

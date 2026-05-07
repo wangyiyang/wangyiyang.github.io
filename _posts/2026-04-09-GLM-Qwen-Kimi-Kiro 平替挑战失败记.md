@@ -18,7 +18,7 @@ cover: "/images/posts/GLM-Qwen-Kimi-Kiro-平替挑战失败记_001.jpg"
 
 当开源模型以“免费”、“国产”、“高性能”刷屏时，我尝试用 GLM 4.5、Qwen3 Coder、Kimi K2 平替 Claude Code。24 小时后，我默默续费了账单。**省米虽好，但效率和时间更贵**。
 
-![image.png](attachment:203b011d-a8be-4b18-92fd-cf729383c304:image.png)
+![image.png](attachment:203b011d-a8be-4b18-92fd-cf729383c304:image.webp)
 
 **先说结论：Claude Code** > **GLM 4.5 + CC > Kimi K2 +CC >Qwen3 Coder +CC > Kiro**
 

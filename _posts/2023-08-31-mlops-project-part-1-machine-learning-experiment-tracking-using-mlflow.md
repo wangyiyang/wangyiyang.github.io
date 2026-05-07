@@ -295,7 +295,7 @@ mlflow.log_metric("accuracy", results[1])
 
 <picture>
   <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091227.webp" type="image/webp">
-  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091227.png" alt="" loading="lazy">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091227.webp" alt="" loading="lazy">
 </picture>
 
 然后，您可以轻松地访问每个实验并查看每次运行的更多细节，并进行比较。您可以根据训练时间、准确性等不同参数选择一个模型。
@@ -310,7 +310,7 @@ mlflow.log_metric("accuracy", results[1])
 
 <picture>
   <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091508.webp" type="image/webp">
-  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091508.png" alt="" loading="lazy">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091508.webp" alt="" loading="lazy">
 </picture>
 
 正如您所见，模型、分词器以及所有所需Python包的信息和其他元数据都被保存了下来。每个运行都有一个唯一的运行ID，我们稍后会用到它。
@@ -319,7 +319,7 @@ mlflow.log_metric("accuracy", results[1])
 
 <picture>
   <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091555.webp" type="image/webp">
-  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091555.png" alt="" loading="lazy">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091555.webp" alt="" loading="lazy">
 </picture>
 [原图](https://neptune.ai/experiment-tracking)
 
@@ -331,7 +331,7 @@ mlflow.log_metric("accuracy", results[1])
 
 <picture>
   <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092233.webp" type="image/webp">
-  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092233.png" alt="" loading="lazy">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092233.webp" alt="" loading="lazy">
 </picture>
 [来源](https://www.databricks.com/fr/blog/2020/04/15/databricks-extends-mlflow-model-registry-with-enterprise-features.html)
 
@@ -339,19 +339,19 @@ mlflow.log_metric("accuracy", results[1])
 
 <picture>
   <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092333.webp" type="image/webp">
-  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092333.png" alt="" loading="lazy">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092333.webp" alt="" loading="lazy">
 </picture>
 
 接下来，如果您转到屏幕上方的"`Models`"选项卡，您将看到所有的版本。您可以选择每个版本，然后设置其阶段。在这里，我们将所有版本都设置为`暂存`状态。增加对每个版本更改的数据描述以及开发人员的姓名是一个很好的做法。
 
 <picture>
   <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092529.webp" type="image/webp">
-  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092529.png" alt="" loading="lazy">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092529.webp" alt="" loading="lazy">
 </picture>
 
 <picture>
   <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092534.webp" type="image/webp">
-  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092534.png" alt="" loading="lazy">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092534.webp" alt="" loading="lazy">
 </picture>
 
 您还可以使用API和`MlflowClient`，在代码中执行这些步骤。请在[这里](https://www.mlflow.org/docs/latest/model-registry.html)查看API文档，并通过以下视频了解更多细节。我更推荐使用用户界面。
@@ -360,7 +360,7 @@ mlflow.log_metric("accuracy", results[1])
 
 <picture>
   <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092714.webp" type="image/webp">
-  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092714.png" alt="" loading="lazy">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092714.webp" alt="" loading="lazy">
 </picture>
 
 然后，我们可以使用该版本的运行ID下载模型及其他所需文件，如分词器，并进行部署。在我们的案例中，我们希望加载Keras模型。请查看[文档](https://www.mlflow.org/docs/latest/python_api/mlflow.keras.html)以获取更多详细信息：

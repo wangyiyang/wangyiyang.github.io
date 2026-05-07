@@ -21,7 +21,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image.webp" type="image/webp">
-  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *Photo by Jéan Béller on Unsplash*
@@ -83,7 +83,7 @@ Transformers库的最大好处之一是，我们只需简单地更改传递给pi
 
 <picture>
   <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image1.webp" type="image/webp">
-  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image1.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image1.webp" alt="Alt text" loading="lazy">
 </picture>
 
 *Touring the Llama-2–7b-chat-hf model card. Image by author.*
@@ -258,7 +258,7 @@ demo_chatbot.launch()
 
 <picture>
   <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image3.webp" type="image/webp">
-  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image3.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/image3.webp" alt="Alt text" loading="lazy">
 </picture>
 
 为了进一步，我们可以通过 Hugging Face Spaces 快速部署这个界面。Spaces 是由 Hugging Face 托管的 Git 仓库，并提供计算资源增强。根据使用情况，可以选择免费和付费选项。在这里，我们将使用免费选项。

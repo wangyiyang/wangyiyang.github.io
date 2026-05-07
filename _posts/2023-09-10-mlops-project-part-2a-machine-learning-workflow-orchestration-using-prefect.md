@@ -36,7 +36,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image1.webp" type="image/webp">
-  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image1.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image1.webp" alt="Alt text" loading="lazy">
 </picture>
 
 [来源](https://www.youtube.com/watch?v=eKzCjNXoCTc&list=PL3MmuxUbc_hIUISrluw_A7wDSmfOhErJK&index=22)
@@ -51,7 +51,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image2.webp" type="image/webp">
-  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image2.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image2.webp" alt="Alt text" loading="lazy">
 </picture>
 
 [来源](https://www.youtube.com/watch?v=eKzCjNXoCTc&list=PL3MmuxUbc_hIUISrluw_A7wDSmfOhErJK&index=22)
@@ -61,7 +61,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image3.webp" type="image/webp">
-  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image3.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image3.webp" alt="Alt text" loading="lazy">
 </picture>
 
 对于这个项目，我们实际上并不需要流水线，但我只是想展示一下我们如何创建一个流水线。根据使用情况，拥有一个流水线可能会很有用。例如，如果您有一个要定期执行的数据流水线，或者想要一个用于训练机器学习模型的流水线。在这里，我只是想展示如果您在项目中需要，可以如何做到这一点。
@@ -386,7 +386,7 @@ prefect orion start
 
 <picture>
   <source srcset="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image4.webp" type="image/webp">
-  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image4.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image4.webp" alt="Alt text" loading="lazy">
 </picture>
 
 您可以查看不同任务的日志以及我们代码的流程。您还可以从仪表板获得更多信息。所以请随意尝试。

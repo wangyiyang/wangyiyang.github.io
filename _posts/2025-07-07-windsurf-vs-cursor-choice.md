@@ -17,7 +17,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2025-07-07-cursor-analytics.webp" type="image/webp">
-  <img src="/images/posts/2025-07-07-cursor-analytics.png" alt="最近一个月的Cursor使用情况" loading="lazy">
+  <img src="/images/posts/2025-07-07-cursor-analytics.webp" alt="最近一个月的Cursor使用情况" loading="lazy">
 </picture>
 
 但是看到上面这张图了吗？这是我最近一个月的Cursor使用情况。各种限制让我活干到一半就"跑路"，结果就是：**Cursor的输出基本为0，钱却一分没少花！**

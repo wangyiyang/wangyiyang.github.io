@@ -339,7 +339,7 @@ Python REPL can execute arbitrary code. Use with caution.
 
 ```
 
-![image.png](attachment:21d4f4eb-824e-4863-b5c8-326f6c387360:image.png)
+![image.png](attachment:21d4f4eb-824e-4863-b5c8-326f6c387360:image.webp)
 
 ---
 

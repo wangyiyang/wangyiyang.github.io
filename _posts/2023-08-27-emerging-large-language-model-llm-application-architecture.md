@@ -18,7 +18,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-08-27-emerging-large-language-model-llm-application-architecture/image.webp" type="image/webp">
-  <img src="/images/posts/2023-08-27-emerging-large-language-model-llm-application-architecture/image.png" alt="Alt text" loading="lazy">
+  <img src="/images/posts/2023-08-27-emerging-large-language-model-llm-application-architecture/image.webp" alt="Alt text" loading="lazy">
 </picture>
 
 Due to the highly unstructured nature of Large Language Models (LLMs), there are thought and market shifts taking place on how to implement LLMs.
@@ -83,7 +83,7 @@ In the case of Autonomous Agents, other tools can also be included like Python M
 
 对于自治代理，还可以包含其他工具，例如Python Math Libraries，Search等。生成的响应将呈现给用户，并用作后续或下一步查询或对话周转的上下文。
 
-![Alt text](images/posts/2023-08-27-emerging-large-language-model-llm-application-architecture/image.png)
+![Alt text](images/posts/2023-08-27-emerging-large-language-model-llm-application-architecture/image.webp)
 
 The process of creating contextually relevant prompts are further aided by Autonomous Agents, prompt pipelines where a prompt is engineered in real-time based on relevant available data, conversation context and more.
 
