@@ -4,7 +4,7 @@ layout: post
 title: "从UI截图到代码：ScreenCoder让前端开发告别切图烦恼"
 categories: [AI, 技术]
 description: "从UI截图到代码：ScreenCoder让前端开发告别切图烦恼"
-keywords: 从UI���代�ScreenCoder让�端�发告���烦�
+keywords: 从UI截图到代码ScreenCoder让前端开发告别切图烦恼
 mermaid: true
 sequence: false
 flow: false
@@ -21,10 +21,7 @@ cover: "/images/posts/post_screencoder-ui-to-code_001.jpg"
 
 今天要介绍的**ScreenCoder**，就是专门解决这个痛点的开源项目。一张UI截图进去，干净的HTML/CSS代码出来，准确率高得吓人。
 
-<picture>
-  <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/teaser.webp" type="image/webp">
-  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/teaser.webp" alt="ScreenCoder概览" loading="lazy">
-</picture>
+![ScreenCoder概览](./static/images/teaser.jpg)
 *ScreenCoder：从UI截图到代码的完整流程*
 
 ## ScreenCoder解决什么问题？
@@ -62,21 +59,21 @@ flowchart LR
 
 **1. YouTube页面转换演示**
 <video width="100%" controls>
-  <source src="assets/media/posts/2025-08-09-screencoder-ui-to-code/Youtube.mp4" type="video/mp4">
+  <source src="./static/videos/Youtube.mp4" type="video/mp4">
   您的浏览器不支持视频标签。
 </video>
 *复杂的视频播放页面，包含多层次布局和丰富的UI组件*
 
 **2. Instagram页面转换演示**  
 <video width="100%" controls>
-  <source src="assets/media/posts/2025-08-09-screencoder-ui-to-code/Instagram.mp4" type="video/mp4">
+  <source src="./static/videos/Instagram.mp4" type="video/mp4">
   您的浏览器不支持视频标签。
 </video>
 *社交媒体界面，网格布局和卡片式设计的完美还原*
 
 **3. 设计稿定制化演示**
 <video width="100%" controls>
-  <source src="assets/media/posts/2025-08-09-screencoder-ui-to-code/Design-Draft.mp4" type="video/mp4">
+  <source src="./static/videos/Design-Draft.mp4" type="video/mp4">
   您的浏览器不支持视频标签。
 </video>
 *展示了ScreenCoder的定制化修改能力，可以根据需求调整生成的代码*
@@ -155,16 +152,10 @@ ScreenCoder支持多种大语言模型，你可以根据需求选择：
 
 **视觉效果对比一目了然：**
 
-<picture>
-  <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/example_others.webp" type="image/webp">
-  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/example_others.webp" alt="其他方法效果" loading="lazy">
-</picture>
+![其他方法效果](./static/images/example_others.jpeg)
 *其他方法的转换结果：布局偏差明显，元素错位严重*
 
-<picture>
-  <source srcset="/images/posts/2025-08-09-screencoder-ui-to-code/example_ours.webp" type="image/webp">
-  <img src="/images/posts/2025-08-09-screencoder-ui-to-code/example_ours.webp" alt="ScreenCoder效果" loading="lazy">
-</picture>
+![ScreenCoder效果](./static/images/example_ours.jpeg)
 *ScreenCoder的转换结果：布局精准，元素完美对齐*
 
 **其他方法的问题：**
