@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 如何使用 Markdown 编写数学公式
+cover: "/images/posts/Markdown数学公式_001.webp"
 categories: Other
 description: 如何使用 Markdown 编写数学公式
 keywords: Markdown

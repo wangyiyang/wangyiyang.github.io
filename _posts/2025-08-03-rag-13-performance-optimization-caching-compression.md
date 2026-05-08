@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记13：性能优化与缓存压缩"
+cover: "/images/posts/深度RAG性能优化_001.webp"
 categories: [RAG, AI, 深度学习]
 description: 深入RAG系统性能优化策略，掌握缓存与压缩的核心技术
 keywords: RAG, 性能优化, 缓存策略, 数据压缩, 系统加速, 内存优化

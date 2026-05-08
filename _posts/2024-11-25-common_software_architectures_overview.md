@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 探秘软件架构世界：多种架构类型剖析与选型指南
+cover: "/images/posts/软件架构类型_001.webp"
 categories: [software-architecture, software-development]
 description: 在软件开发的广袤天地里，软件架构宛如一座大厦的基石与框架，其设计的优劣直接关乎项目的成败、维护成本以及未来的可扩展性。今天，就让我们一同深入探究常见的软件架构类型，明晰它们各自的“性格特点”、适用场景，为我们在项目实践中的架构选型点亮明灯。
 keywords: software architecture, software development, software design, software engineering

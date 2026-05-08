@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 放弃Cursor，我依然选择了Claude断供后的Windsurf
+cover: "/images/posts/WindsurfvsCursor_001.webp"
 categories: [AI, Programming Tools, Code Generation, Controversial]
 description: 逆风而行的选择：为什么在整个科技圈都唱衰Windsurf时，我却坚持认为它比Cursor更强？一个程序员的反潮流宣言
 keywords: Cursor, Claude Code, Windsurf, AI编程, 代码生成, GitHub Copilot, MCP

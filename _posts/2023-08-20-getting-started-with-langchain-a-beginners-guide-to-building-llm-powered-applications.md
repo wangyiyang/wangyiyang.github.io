@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【翻译】LangChain入门：创建LLM驱动应用程序的初学者指南
+cover: "/images/posts/LangChain入门-LLM应用_001.webp"
 categories: [LLM, LangChain, Translation]
 description: A LangChain tutorial to build anything with large language models in Python
 keywords: LLM, LangChain

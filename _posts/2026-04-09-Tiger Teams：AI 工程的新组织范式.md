@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Tiger Teams：AI 工程的新组织范式"
+cover: "/images/posts/Tiger-Teams-AI工程组织_001.webp"
 categories: [AI, 技术]
 description: "AI 工程进入深水区后，组织方式也要变。真正有效的团队，不是按职能排队，而是围绕问题组建高密度小队。"
 keywords: Tiger,TeamsAI,工程的新组织范式

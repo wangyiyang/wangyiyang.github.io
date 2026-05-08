@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "**GLM/Qwen/Kimi/Kiro 平替挑战失败记**"
+cover: "/images/posts/GLM-Qwen-Kimi平替挑战失败_001.webp"
 categories: [AI, 技术]
 description: "**GLM/Qwen/Kimi/Kiro 平替挑战失败记**"
 keywords: **GLM/Qwen/Kimi/Kiro,平替挑战失败记**

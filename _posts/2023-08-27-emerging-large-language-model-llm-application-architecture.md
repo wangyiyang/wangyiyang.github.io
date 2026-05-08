@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【翻译】新兴的大型语言模型 （LLM） 应用程序体系结构
+cover: "/images/posts/LLM应用程序架构_001.webp"
 categories: [LLM, NLP, 机器学习, AI]
 description: 由于大型语言模型（LLM）的高度非结构化性质，关于如何实现LLMs，思想和市场正在发生变化。
 keywords: LLM, NLP, 机器学习, AI

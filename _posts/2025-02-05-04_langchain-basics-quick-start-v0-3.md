@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 04 | LangChain 快速入门
+cover: "/images/posts/04-LangChain快速入门_001.webp"
 categories: [AI, LangChain]
 description: 本文将介绍如何使用 LangChain 快速入门。    
 keywords: AI, LangChain, LangChain-OpenAI,
