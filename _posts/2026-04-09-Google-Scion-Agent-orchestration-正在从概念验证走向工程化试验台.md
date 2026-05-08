@@ -3,7 +3,7 @@
 layout: post
 title: "Google Scion:Agent orchestration 正在从概念验证走向工程化试验台"
 categories: [AI, 技术]
-description: "Google Scion:Agent orchestration æ­£å¨ä»æ¦å¿µéªè¯èµ°åå·¥ç¨åè¯éªå°"
+description: "Google Scion:Agent orchestration 正在从概念验证走向工程化试验台"
 keywords: Google,Scion:Agent,orchestration,正在从概念验证走向工程化试验台
 mermaid: true
 sequence: false
