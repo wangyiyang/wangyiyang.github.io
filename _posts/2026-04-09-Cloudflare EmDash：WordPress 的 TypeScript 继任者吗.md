@@ -11,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+permalink: /2026/04/09/Cloudflare-EmDashWordPress-的-TypeScript-继任者吗/
 ---
 
 

@@ -12,6 +12,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 cover: "/images/posts/post_screencoder-ui-to-code_001.jpg"
+permalink: /2026/04/09/从UI截图到代码ScreenCoder让前端开发告别切图烦恼/
 ---
 
 

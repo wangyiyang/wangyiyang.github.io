@@ -11,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+permalink: /2026/04/09/Finalrun-AI-开发工作流正在从写代码走向写完即验证/
 ---
 
 

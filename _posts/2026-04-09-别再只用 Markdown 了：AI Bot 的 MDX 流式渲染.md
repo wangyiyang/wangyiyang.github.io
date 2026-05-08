@@ -11,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+permalink: /2026/04/09/别再只用-Markdown-了AI-Bot-的-MDX-流式渲染/
 ---
 
 

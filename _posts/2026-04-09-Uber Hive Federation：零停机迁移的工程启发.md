@@ -11,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+permalink: /2026/04/09/Uber-Hive-Federation零停机迁移的工程启发/
 ---
 
 

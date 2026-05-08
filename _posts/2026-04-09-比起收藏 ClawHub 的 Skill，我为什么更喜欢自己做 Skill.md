@@ -11,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+permalink: /2026/04/09/比起收藏-ClawHub-的-Skill我为什么更喜欢自己做-Skill/
 ---
 
 

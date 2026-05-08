@@ -12,6 +12,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 cover: "/images/posts/post_skill-first-principles-underrated-prompt-engineering_001.jpg"
+permalink: /2026/04/09/Skill-的第一性原理被低估的-Prompt-工程/
 ---
 
 

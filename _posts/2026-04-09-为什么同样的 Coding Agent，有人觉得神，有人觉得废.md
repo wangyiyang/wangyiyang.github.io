@@ -12,6 +12,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 cover: "/images/posts/post_coding-agent-context-engineering-gap_001.jpg"
+permalink: /2026/04/09/为什么同样的-Coding-Agent有人觉得神有人觉得废/
 ---
 
 

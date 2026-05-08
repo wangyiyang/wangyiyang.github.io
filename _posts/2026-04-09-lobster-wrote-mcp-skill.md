@@ -12,6 +12,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 cover: "/images/posts/post_lobster-wrote-its-own-mcp-skill_001.jpg"
+permalink: /2026/04/09/lobster-wrote-mcp-skill/
 ---
 
 # 我的龙虾给自己写了一个 MCP Skill

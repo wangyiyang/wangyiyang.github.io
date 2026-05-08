@@ -11,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+permalink: /2026/04/09/Project-GlasswingAgent-时代的软件供应链安全/
 ---
 
 

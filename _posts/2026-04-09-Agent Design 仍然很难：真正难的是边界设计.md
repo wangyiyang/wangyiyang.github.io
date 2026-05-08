@@ -11,6 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+permalink: /2026/04/09/Agent-Design-仍然很难真正难的是边界设计/
 ---
 
 

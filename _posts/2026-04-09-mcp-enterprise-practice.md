@@ -10,6 +10,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+permalink: /2026/04/09/mcp-enterprise-practice/
 ---
 cover: "/images/posts/MCP-开发实战-从入门到企业级应用_001.jpg"
 

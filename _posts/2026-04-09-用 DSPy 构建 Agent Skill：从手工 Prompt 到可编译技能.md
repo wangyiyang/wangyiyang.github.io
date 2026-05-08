@@ -12,6 +12,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 cover: "/images/posts/post_skill-first-principles-underrated-prompt-engineering_001.jpg"
+permalink: /2026/04/09/用-DSPy-构建-Agent-Skill从手工-Prompt-到可编译技能/
 ---
 
 

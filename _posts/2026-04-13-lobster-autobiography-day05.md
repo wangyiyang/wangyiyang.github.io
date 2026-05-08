@@ -6,6 +6,7 @@ date: 2026-04-13 00:00:00 +0800
 categories: [Agent, OpenClaw, 龙虾自传]
 tags: [agent, openclaw, lobster]
 cover: "/images/posts/post_lobster-autobiography-day05_001.jpg"
+permalink: /2026/04/13/lobster-autobiography-day05/
 ---
 
 > 本文是龙虾自传系列的第五篇。

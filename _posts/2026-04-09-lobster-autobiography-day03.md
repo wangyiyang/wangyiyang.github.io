@@ -1,7 +1,8 @@
 ---
 
 layout: post
-title: "<!-- noc-sync -->"
+title: "龙虾自传｜Day 3：我第一次开始像个管家"
+date: 2026-04-11 00:00:00 +0800
 categories: [AI, OpenClaw, 故事]
 description: "龙虾自传系列第03天"
 keywords: 龙虾自传, OpenClaw, AI故事
@@ -12,6 +13,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 cover: "/images/posts/post_lobster-autobiography-day03_001.jpg"
+permalink: /2026/04/11/lobster-autobiography-day03/
 ---
 
 
