@@ -25,9 +25,9 @@ featured_posts:
       title: "Claude Code vs Cursor：突破AI编程工具选型的认知盲区"
       description: "从实际项目出发，对比两款AI编程工具的真实表现"
       tag: "📈 持续热门"
-    - url: /2025/08/17/mcp-dev-intro-01/
-      title: "MCP开发入门（一）：从零开始，用Python打造你的第一个MCP Server"
-      description: "MCP协议完整实战教程，覆盖开发、调试、部署全流程"
+    - url: /2025/08/17/mcp-dev-intro-03/
+      title: "MCP开发入门（三）：工具调用与资源管理"
+      description: "深入MCP协议的工具调用机制和资源管理策略"
       tag: "🆕 最新发布"
 
 modules: []
