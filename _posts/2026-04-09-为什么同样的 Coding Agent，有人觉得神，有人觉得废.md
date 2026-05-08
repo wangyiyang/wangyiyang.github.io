@@ -2,7 +2,7 @@
 
 layout: post
 title: "为什么同样的 Coding Agent，有人觉得神，有人觉得废？"
-categories: [AI, ææ¯]
+categories: [AI, 技术]
 description: "åä¸ä¸ª Coding Agentï¼å¨ä¸åå·¥ç¨ç¯å¢éä¼è¡¨ç°å¾åä¸¤ä¸ªäº§åãå·®è·è¶æ¥è¶ä¸åªå¨æ¨¡åï¼èå¨ä¸ä¸æå·¥ç¨ã"
 keywords: 为什么同样的,Coding,Agent,有人觉得神,有人觉得废
 mermaid: true

@@ -2,7 +2,7 @@
 
 layout: post
 title: "Google Scion：多 Agent 编排需要工程化试验台"
-categories: [AI, ææ¯]
+categories: [AI, 技术]
 description: "多 Agent 真正难的，不是让几个 Agent 互相说话，而是让它们在可重复、可观察、可回放的环境里协作。"
 keywords: Google,Scion多,Agent,编排需要工程化试验台
 mermaid: true

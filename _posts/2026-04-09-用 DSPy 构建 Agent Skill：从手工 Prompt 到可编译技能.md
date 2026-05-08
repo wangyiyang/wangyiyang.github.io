@@ -2,7 +2,7 @@
 
 layout: post
 title: "用 DSPy 构建 Agent Skill：从手工 Prompt 到可编译技能"
-categories: [AI, ææ¯]
+categories: [AI, 技术]
 description: "Skill 不应该只是一段写得很长的 Prompt。真正可复用的 Skill，应该能被评测、被优化、被迁移。"
 keywords: 用,DSPy,构建,Agent,Skill从手工,Prompt,到可编译技能
 mermaid: true

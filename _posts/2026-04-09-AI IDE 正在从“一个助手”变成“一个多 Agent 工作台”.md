@@ -2,7 +2,7 @@
 
 layout: post
 title: "AI IDE 正在从“一个助手”变成“一个多 Agent 工作台”"
-categories: [AI, ææ¯]
+categories: [AI, 技术]
 description: "过去我们讨论 AI IDE，常常是在讨论模型强不强、补全准不准、改代码快不快。"
 keywords: AI,IDE,正在从“一个助手”变成“一个多,Agent,工作台”
 mermaid: true

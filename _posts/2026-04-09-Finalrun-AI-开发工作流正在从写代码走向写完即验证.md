@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Finalrun：AI 开发工作流正在从写代码走向写完即验证"
-categories: [AI, ææ¯]
+categories: [AI, 技术]
 description: "代码生成越来越快，谁来保证它是对的？"
 keywords: FinalrunAI,开发工作流正在从写代码走向写完即验证
 mermaid: true
