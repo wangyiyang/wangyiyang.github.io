@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "AI Agent 的版本控制难题，Cloudflare 给了一个解法"
+title: "Cloudflare Artifacts 实战：给 AI Agent 加上 Git 版本控制"
 date: 2026-05-11 10:40:00 +0800
 categories: [AI, Agent, Engineering]
 image: /images/posts/post_cloudflare-artifacts-version-control_001.png
+description: "Cloudflare 内测 Artifacts 功能，为 AI Agent 生成代码提供类 Git 版本控制。支持 commit、branch、rollback，解决 AI Coding 的版本管理难题。"
+keywords: "Cloudflare Artifacts, AI Agent, 版本控制, Git, AI Coding, Workers, 代码生成"
 ---
 
 如果你用过 AI Agent 生成代码，会遇到一个很具体的问题：**每一次重新生成，都是全新的开始**。
