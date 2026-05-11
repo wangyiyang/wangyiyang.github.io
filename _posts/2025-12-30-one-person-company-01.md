@@ -2,6 +2,7 @@
 
 layout: post
 title: "2025：Vibe Coding，把自己变成一家公司——数字化军火库的意图驱动闭环"
+date: 2025-12-30 08:00:00 +0800
 categories: ["One-Person-Company", "AI", "Engineering"]
 description: "最近一段时间，“Spec Coding 将颠覆 Vibe Coding”这句话在开发者圈里刷屏。我的建议是：先别站队。"
 keywords: "One-Person-Company, AI, Engineering, 2025：Vibe Coding，把自己变成一家公司——数字化军火库的意图驱动闭环"

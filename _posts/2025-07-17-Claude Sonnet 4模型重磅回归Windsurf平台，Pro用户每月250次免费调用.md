@@ -2,6 +2,7 @@
 
 layout: post
 title: "Claude Sonnet 4æ¨¡åéç£åå½Windsurfå¹³å°ï¼Proç¨æ·æ¯æ250æ¬¡åè´¹è°ç¨"
+date: 2025-07-17 08:00:00 +0800
 categories: [AI, ç¼ç¨å·¥å·]
 description: "Claude Sonnet 4æ¨¡åéç£åå½Windsurfå¹³å°ï¼Proç¨æ·æ¯æ250æ¬¡åè´¹è°ç¨"
 keywords: Claude,Sonnet,4æ¨¡åéç£åå½Windsurfå¹³å°Proç¨æ·æ¯æ250æ¬¡åè´¹è°ç¨

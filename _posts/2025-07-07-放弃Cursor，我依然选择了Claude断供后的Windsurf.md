@@ -2,6 +2,7 @@
 
 layout: post
 title: "æ¾å¼Cursorï¼æä¾ç¶éæ©äºClaudeæ­ä¾åçWindsurf"
+date: 2025-07-07 08:00:00 +0800
 categories: [AI, ç¼ç¨å·¥å·]
 description: "æ¾å¼Cursorï¼æä¾ç¶éæ©äºClaudeæ­ä¾åçWindsurf"
 keywords: æ¾åCursoræä¾ç¶éæ©äºClaudeæ­ä¾åçWindsurf

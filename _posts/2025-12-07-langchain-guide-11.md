@@ -2,6 +2,7 @@
 
 layout: post
 title: "11 | LangChain v1 × MCP 实战：用 create_agent 玩转 MCP 工具生态"
+date: 2025-12-07 08:00:00 +0800
 categories: ["MCP", "LangChain", "AI"]
 description: "在第 08 篇里，我们已经用 DeepSeek + MCP 做过 Demo：数学运算服务器、天气服务器、Tavily 搜索、Gaode LBS…… 但如果不用 MCP、LangChain v1，你很可能会落入下面几种“工具地狱”："
 keywords: "MCP, LangChain, AI, 11 | LangChain v1 × MCP 实战：用 create_agent 玩转 MCP 工具生态"

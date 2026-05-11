@@ -2,6 +2,7 @@
 
 layout: post
 title: "09 | 冷饭新炒：DeepSeek × LangChain 1.x，智能数据分析全流程再升级"
+date: 2025-12-07 08:00:00 +0800
 categories: ["DeepSeek", "LangChain", "AI"]
 description: "阅读量：待发布 更新于：2025-XX-XX"
 keywords: "DeepSeek, LangChain, AI, 09 | 冷饭新炒：DeepSeek × LangChain 1.x，智能数据分析全流程再升级"

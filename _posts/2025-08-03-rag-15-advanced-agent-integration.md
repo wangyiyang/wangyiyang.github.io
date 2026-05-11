@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记15：Agent增强与智能决策系统"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: GraphRAG+RAPTOR+Agent三剑合璧，构建下一代智能问答系统
 keywords: RAG, Agent, GraphRAG, RAPTOR, 智能决策, 自主推理, 多模态

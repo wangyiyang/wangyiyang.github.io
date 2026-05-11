@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【翻译】了解 MLOps 的核心 - 构建机器学习 （ML） 管道
+date: 2023-09-13 08:00:00 +0800
 cover: "/images/posts/MLOps核心构建ML管道_001.webp"
 categories: [MLOps, AI]
 description: 实现MLOps以使AI工作的实用指南

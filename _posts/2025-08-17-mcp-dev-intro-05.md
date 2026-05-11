@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "MCP开发入门（五）：构建企业级AI系统——安全可控的生产方案"
+date: 2025-08-17 08:00:00 +0800
 categories: [AI, MCP, 教程]
 description: "从认证到监控，完整讲解如何构建企业级MCP服务器。包含Bearer Token认证、中间件防护、模块化架构、性能优化和监控告警系统。"
 keywords: MCP, 企业级, 安全认证, 中间件, 监控告警, FastMCP

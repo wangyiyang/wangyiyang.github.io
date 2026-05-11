@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记06：深度RAG笔记06：法律文档智能检索系统"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第6篇**：专业领域RAG技术深度应用，探索法律行业的智能化变革"
 keywords: RAG, 检索增强生成, 深度学习, AI

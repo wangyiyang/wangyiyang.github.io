@@ -2,6 +2,7 @@
 
 layout: post
 title: "深度RAG笔记07：多模态RAG与隐私安全"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: 探索多模态RAG技术，深入安全隐私保护机制
 keywords: RAG, 多模态, 隐私保护, 安全机制, 图像检索, 音频处理

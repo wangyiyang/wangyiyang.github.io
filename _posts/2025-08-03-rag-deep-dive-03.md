@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记03：深度RAG笔记03：智能检索核心技术"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第3篇**：混合检索与重排序算法实战，掌握精准信息检索的核心算法"
 keywords: RAG, 检索增强生成, 深度学习, AI

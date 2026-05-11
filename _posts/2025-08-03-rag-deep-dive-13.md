@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记13：RAG系统性能优化实战，从秒级到毫秒级的极致提升[深度RAG笔记13]"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第13篇**：HNSW索引与缓存架构深度优化，实现毫秒级响应的高性能系统"
 keywords: RAG, 检索增强生成, 深度学习, AI

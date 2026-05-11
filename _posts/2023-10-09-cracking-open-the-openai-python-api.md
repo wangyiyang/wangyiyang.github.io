@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【翻译】解读 OpenAI（Python）API
+date: 2023-10-09 08:00:00 +0800
 cover: "/images/posts/OpenAI-API解读_001.webp"
 categories: [AI, LLM]
 description: 一个完整的面向初学者友好的介绍，附带示例代码。

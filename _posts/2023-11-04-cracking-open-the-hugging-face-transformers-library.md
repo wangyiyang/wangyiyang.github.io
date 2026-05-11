@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【翻译】解密 Hugging Face Transformers 库
+date: 2023-11-04 08:00:00 +0800
 cover: "/images/posts/HuggingFace-Transformers_001.webp"
 categories: [AI, NLP, Transformers,LLM]
 description: 使用开源 LLM 的快速入门指南

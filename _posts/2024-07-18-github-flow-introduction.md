@@ -1,6 +1,7 @@
 ---
 layout: post
 title: GitHub Flow 工作流程简介
+date: 2024-07-18 08:00:00 +0800
 cover: "/images/posts/GitHub-Flow工作流_001.webp"
 categories: [GitHub, Git]
 description: GitHub Flow 是一种基于 Git 的工作流程，适用于团队协作开发。本文介绍了 GitHub Flow 的基本概念和使用方法。

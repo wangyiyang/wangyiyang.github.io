@@ -2,6 +2,7 @@
 
 layout: post
 title: "15 | LangGraph v1 实战：LC_OUTPUT_VERSION：序列化与前后端对齐的关键开关"
+date: 2025-12-08 08:00:00 +0800
 categories: ["LangGraph", "LangChain", "AI"]
 description: "在前两篇里，我们一直在用一个看似「理所当然」的属性："
 keywords: "LangGraph, LangChain, AI, 15 | LangGraph v1 实战：LC_OUTPUT_VERSION：序列化与前后端对齐的关键开关"

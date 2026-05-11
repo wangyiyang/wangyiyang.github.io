@@ -2,6 +2,7 @@
 
 layout: post
 title: "20 | LangChain v1 Agent：全链路追踪开起来，事故复盘不用猜"
+date: 2025-12-14 08:00:00 +0800
 categories: ["Agent", "LangChain", "AI"]
 description: "> 线上 Agent 出问题时，最常见的“复盘现场”是这样的： > > - 现象：工具调用突然暴增、成本飙升、或者干脆把生产打挂 > - 追问：到底是谁触发的？哪一次对话？模型看见了什么？工具拿到了什么参数？ > - 结果：日志只有一..."
 keywords: "Agent, LangChain, AI, 20 | LangChain v1 Agent：全链路追踪开起来，事故复盘不用猜"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【翻译】MLOps项目-第一部分：使用MLflow进行机器学习实验跟踪
+date: 2023-08-31 08:00:00 +0800
 cover: "/images/posts/MLflow机器学习实验跟踪_001.webp"
 categories: [MLOps, AI]
 description: 本系列旨在训练一个简单的情感分析模型，并将其部署到Google Cloud（Cloud Run）作为无服务器微服务，使用Streamlit构建简单的用户界面，并利用MLflow、Prefect&ZenML以及EvidentlyAI&Seldon ALIBI Detect等MLOps工具进行实验跟踪、工作流编排和模型监测。

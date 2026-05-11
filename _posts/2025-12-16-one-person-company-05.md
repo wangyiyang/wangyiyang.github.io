@@ -2,6 +2,7 @@
 
 layout: post
 title: "把收钱做成闭环：Stripe 与国内对公对私支付指南"
+date: 2025-12-16 08:00:00 +0800
 categories: ["One-Person-Company", "Stripe", "Payment"]
 description: "今天是 2025 年 12 月 16 日。 很多程序员开一人公司后，会发现一个反直觉的事实："
 keywords: "One-Person-Company, Stripe, Payment, 把收钱做成闭环：Stripe 与国内对公对私支付指南"

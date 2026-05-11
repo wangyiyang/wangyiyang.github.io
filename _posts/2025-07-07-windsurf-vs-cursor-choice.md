@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 放弃Cursor，我依然选择了Claude断供后的Windsurf
+date: 2025-07-07 08:00:00 +0800
 cover: "/images/posts/WindsurfvsCursor_001.webp"
 categories: [AI, Programming Tools, Code Generation, Controversial]
 description: 逆风而行的选择：为什么在整个科技圈都唱衰Windsurf时，我却坚持认为它比Cursor更强？一个程序员的反潮流宣言

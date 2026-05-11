@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记07：深度RAG笔记07：RAG+AI Agent在医疗行业的十大落地案例"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第7篇**：从前沿技术到实际落地，解密RAG+AI Agent如何变革医疗行业"
 keywords: RAG, 检索增强生成, 深度学习, AI

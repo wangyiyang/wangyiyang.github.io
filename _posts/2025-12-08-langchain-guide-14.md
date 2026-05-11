@@ -2,6 +2,7 @@
 
 layout: post
 title: "14 | LangGraph v1 实战：MCP 工具多模态返回，用 content_blocks 一口收"
+date: 2025-12-08 08:00:00 +0800
 categories: ["LangGraph", "LangChain", "AI"]
 description: "上一篇我们解决的是「模型多模态」的问题："
 keywords: "LangGraph, LangChain, AI, MCP, 14 | LangGraph v1 实战：MCP 工具多模态返回，用 content_blocks 一口收"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Claude Code效率神器：claude-task-master让AI任务管理变得如此简单
+date: 2025-07-08 08:00:00 +0800
 cover: "/images/posts/claude-task-master效率_001.webp"
 categories: [AI, Programming Tools, Task Management, Claude Code]
 description: 深度解析claude-task-master项目：从安装配置到实战应用的完整指南，让Claude Code用户的任务管理效率提升10倍

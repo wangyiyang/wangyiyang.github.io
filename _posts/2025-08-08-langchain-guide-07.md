@@ -2,6 +2,7 @@
 
 layout: post
 title: "07 | DeepSeek+LangChain——根据数据报表生成带图表的 PPT"
+date: 2025-08-08 08:00:00 +0800
 categories: ["DeepSeek", "LangChain", "AI"]
 description: "阅读量：481 发布时间：2025-03-07"
 keywords: "DeepSeek, LangChain, AI, 07 | DeepSeek+LangChain——根据数据报表生成带图表的 PPT"

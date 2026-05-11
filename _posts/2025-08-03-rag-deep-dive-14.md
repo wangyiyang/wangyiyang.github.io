@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记14：20分钟解决RAG胡说八道问题[深度RAG笔记14]"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第14篇**：多步推理与自我修正机制，让你的AI不再瞎编乱造"
 keywords: RAG, 检索增强生成, 深度学习, AI

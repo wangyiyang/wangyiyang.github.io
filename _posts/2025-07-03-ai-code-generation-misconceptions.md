@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 一个月50W行代码程序员眼中AI代码生成的误区
+date: 2025-07-03 08:00:00 +0800
 cover: "/images/posts/AI代码生成误区_001.webp"
 categories: [AI, 软件开发]
 description: 深入分析AI代码生成领域的三种典型派别及其认知误区，探讨如何理性看待和使用AI代码生成技术，避免过度依赖或盲目排斥的极端态度。

@@ -2,6 +2,7 @@
 
 layout: post
 title: "19 | LangChain v1 Agent：越聊越贵的解法"
+date: 2025-12-14 08:00:00 +0800
 categories: ["Agent", "LangChain", "AI"]
 description: "> 你以为长对话是“体验升级”，上线后才发现它也是“账单放大器”。 > 同一段历史每轮都重复发给模型：token 线性累积、延迟线性累积；一开 trace / 回放，还会把上下文体积一起放大。 > > LangChain v1 的解法..."
 keywords: "Agent, LangChain, AI, 19 | LangChain v1 Agent：越聊越贵的解法"

@@ -2,6 +2,7 @@
 
 layout: post
 title: "22 | LangChain v1 Agent：工具别全开！动态选工具把越权和误用按住"
+date: 2025-12-14 08:00:00 +0800
 categories: ["Agent", "LangChain", "AI"]
 description: "> 真实线上事故里，Agent 最常犯的错不是“答错”，而是“用错工具”： > 你给了它 12 个工具，它往往能选中那个最不该选的。 > > 所以治理的第一性原理是：工具不是能力扩展，是权限授予。 > 既然是权限，就不该“全量暴露”，..."
 keywords: "Agent, LangChain, AI, 22 | LangChain v1 Agent：工具别全开！动态选工具把越权和误用按住"

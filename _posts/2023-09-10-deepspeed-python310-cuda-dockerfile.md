@@ -1,6 +1,7 @@
 ---
 layout: post
 title: DeepSpeed Python3.10 CUDA Dockerfile
+date: 2023-09-10 08:00:00 +0800
 cover: "/images/posts/DeepSpeed-CUDA-Dockerfile_001.webp"
 categories: [LLM, AI, DeepSpeed, Dockerfile, CUDA, Docker]
 description: 因为官方目前给到的DockerfilePython是3.6的，所以我自己写了一个Python3.10的Dockerfile，供大家参考。中间删除了一些不必要的包，如果有需要的可以自行添加。

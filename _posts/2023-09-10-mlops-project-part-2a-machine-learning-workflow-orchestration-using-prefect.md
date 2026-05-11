@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【翻译】MLOps项目——第2部分a：使用Prefect进行机器学习工作流编排
+date: 2023-09-10 08:00:00 +0800
 cover: "/images/posts/Prefect机器学习工作流编排_001.webp"
 categories: [MLOps, AI]
 description: 我将演示如何使用两个流行的工具进行任务完成：Prefect和ZenML。还有一些令人难以置信的工具，我们无法在本文中全部包含，比如Flyte、Kale、Aro等。

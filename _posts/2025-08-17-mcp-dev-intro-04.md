@@ -2,6 +2,7 @@
 
 layout: post
 title: "使用Claude Code 开发一个图表分析MCP Server[MCP开发入门04]"
+date: 2025-08-17 08:00:00 +0800
 categories: [MCP, AI, Claude Code, Data Visualization]
 description: "通过实战案例，展示如何利用Claude Code和FastMCP，快速开发一个支持柱状图、饼图、折线图的智能图表分析MCP服务器。"
 keywords: MCP, Claude Code, FastMCP, Pyecharts, AI开发, 数据可视化

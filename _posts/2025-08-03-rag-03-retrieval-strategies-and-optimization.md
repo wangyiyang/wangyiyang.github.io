@@ -2,6 +2,7 @@
 
 layout: post
 title: "深度RAG笔记03：智能检索核心技术"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: 混合检索与重排序算法实战，掌握精准信息检索的核心算法
 keywords: RAG, 混合检索, 重排序, BM25, 向量检索, ColBERT

@@ -2,6 +2,7 @@
 
 layout: post
 title: "Notion：一人公司的信息与执行闭环指南"
+date: 2025-12-16 08:00:00 +0800
 categories: ["One-Person-Company", "Notion", "AI"]
 description: "今天是 2025 年 12 月 16 日。 如果说 GitHub 解决的是“一人公司怎么把代码交付做成流水线”，那 Notion 解决的就是另一个更隐蔽、也更致命的问题："
 keywords: "One-Person-Company, Notion, AI, Notion：一人公司的信息与执行闭环指南"

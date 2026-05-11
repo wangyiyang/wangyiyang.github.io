@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记05：深度RAG笔记05：电商智能客服RAG系统实战"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第5篇**：大规模客服系统的技术架构，揭秘企业级RAG技术实战"
 keywords: RAG, 检索增强生成, 深度学习, AI

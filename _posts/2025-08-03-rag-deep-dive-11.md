@@ -2,6 +2,7 @@
 
 layout: post
 title: "深度RAG笔记11：RAGAS实战指南，20分钟给你的RAG系统做个准确体检[深度RAG笔记11]"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第11篇**：用RAGAS框架快速评估RAG系统性能，从安装到出报告，一篇文章搞定"
 keywords: RAG, 检索增强生成, 深度学习, AI

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记15：20分钟打造自主决策RAG系统[深度RAG笔记15]"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第15篇**：GraphRAG+RAPTOR+Agent三剑合璧，构建下一代智能问答系统"
 keywords: RAG, 检索增强生成, 深度学习, AI

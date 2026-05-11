@@ -2,6 +2,7 @@
 
 layout: post
 title: "23 | LangChain v1 × Mem0：middleware 自动长期记忆"
+date: 2025-12-15 08:00:00 +0800
 categories: ["Mem0", "LangChain", "AI"]
 description: "> 你做了一个很聪明的 Agent，却总被用户吐槽“像金鱼”： > 昨天刚说过“报表别给我讲大道理，先给结论 + 风险点”，今天它又重新问一遍。 > > 很多人第一反应是：把偏好写进 system prompt，或者把历史对话越堆越长..."
 keywords: "Mem0, LangChain, AI, 23 | LangChain v1 × Mem0：middleware 自动长期记忆"

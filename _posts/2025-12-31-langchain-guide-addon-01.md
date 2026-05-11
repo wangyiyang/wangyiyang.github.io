@@ -2,6 +2,7 @@
 
 layout: post
 title: "加餐01 | LangChain v1 Agent：Trace→评测闭环（LangSmith × Langfuse）"
+date: 2025-12-31 08:00:00 +0800
 categories: ["Observability", "Agent", "LangChain"]
 description: "> “我一直把 LangSmith 当 trace 观测工具来用，后来手写了个 LogMiddleware，就更不怎么碰它了。直到看到你提 Dataset…能不能讲讲 LangSmith 的正确打开方式？”"
 keywords: "Observability, Agent, LangChain, LangSmith, Langfuse, 加餐01 | LangChain v1 Agent：Trace→评测闭环（LangSmith × Langfuse）"

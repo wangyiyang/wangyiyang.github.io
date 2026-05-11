@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【翻译】LLM实用介绍
+date: 2023-10-10 08:00:00 +0800
 cover: "/images/posts/LLM实用介绍_001.webp"
 categories: [翻译, LLM, AI]
 description: 在实践中使用LLM的3个级别

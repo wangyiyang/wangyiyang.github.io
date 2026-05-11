@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 02 | 解锁高效周报生成：Prompt工程实战与大模型优化指南
+date: 2024-11-27 08:00:00 +0800
 cover: "/images/posts/Prompt工程周报生成_001.webp"
 categories: [AI, OpenAI, Prompt-Engineering]
 description: 本文将以构建一个周报小助手为切入点，深入探究如何施展Prompt工程“魔法”，让大模型输出更契合我们心意、更具价值的周报内容，同时分享一系列优化大模型回答表现的实用策略与技巧。

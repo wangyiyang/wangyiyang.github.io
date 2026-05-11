@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记13：性能优化与缓存压缩"
+date: 2025-08-03 08:00:00 +0800
 cover: "/images/posts/深度RAG性能优化_001.webp"
 categories: [RAG, AI, 深度学习]
 description: 深入RAG系统性能优化策略，掌握缓存与压缩的核心技术

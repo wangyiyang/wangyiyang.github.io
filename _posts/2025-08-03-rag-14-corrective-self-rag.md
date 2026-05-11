@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记14：自修正机制与准确性提升"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: 解决RAG系统胡说八道问题，通过多步推理和自我修正机制大幅提升准确性
 keywords: RAG, 自修正, 准确性, 多步推理, Self-RAG, Corrective-RAG, 置信度评估

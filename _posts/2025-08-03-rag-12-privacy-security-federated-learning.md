@@ -2,6 +2,7 @@
 
 layout: post
 title: "深度RAG笔记12：隐私安全与联邦学习"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: 深入探讨RAG系统的隐私保护机制与联邦学习应用
 keywords: RAG, 隐私保护, 联邦学习, 数据安全, 差分隐私, 同态加密

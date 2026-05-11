@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记12：20分钟掌握RAG隐私保护核心技术，企业数据安全不踩坑[深度RAG笔记12]"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第12篇**：数据安全与合规的双重保障，构建安全可信的智能系统"
 keywords: RAG, 检索增强生成, 深度学习, AI

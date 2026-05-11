@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "深度RAG笔记09：深度RAG笔记09：LangFuse vs LangSmith终极PK！这两个RAG监控神器到底选哪个？"
+date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第9篇**：RAG系统上线后怎么监控？两大热门平台深度对比，手把手教你选择最适合的观测工具"
 keywords: RAG, 检索增强生成, 深度学习, AI

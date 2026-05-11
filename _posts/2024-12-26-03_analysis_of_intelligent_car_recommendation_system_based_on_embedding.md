@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 03 | 基于 Embedding 的智能汽车推荐系统
+date: 2024-12-26 08:00:00 +0800
 cover: "/images/posts/智能汽车推荐系统_001.webp"
 categories: [AI, OpenAI, Prompt-Engineering]
 description: 本文将介绍如何使用大语言模型平台的大语言模型与 Embedding（向量嵌入）技术，构建智能购车推荐系统。

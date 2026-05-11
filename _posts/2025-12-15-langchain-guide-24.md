@@ -2,6 +2,7 @@
 
 layout: post
 title: "24 | Mem0 MCP × LangChain v1：把记忆当 MCP 工具（最小权限 + HITL）"
+date: 2025-12-15 08:00:00 +0800
 categories: ["Mem0", "LangChain", "AI"]
 description: "> 第 23 篇我们把“读记忆 + 写回”做进 middleware，做到“自动长期记忆”。 > 但线上还有一类更危险的需求：用户让你改/删记忆（“把那条偏好改一下”“忘掉我 2023 年的记录”）。 > > 这类操作的本质是“持久化..."
 keywords: "Mem0, LangChain, AI, MCP, 24 | Mem0 MCP × LangChain v1：把记忆当 MCP 工具（最小权限 + HITL）"

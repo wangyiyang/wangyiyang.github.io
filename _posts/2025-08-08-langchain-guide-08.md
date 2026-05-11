@@ -2,6 +2,7 @@
 
 layout: post
 title: "08. 解锁AI潜能：DeepSeek与LangChain的MCP客户端教程"
+date: 2025-08-08 08:00:00 +0800
 categories: ["MCP", "LangChain", "AI"]
 description: "> Model-Control-Protocol (MCP) 是一个开放标准，用于定义大型语言模型如何与外部工具和服务进行通信。本文将详细介绍如何使用DeepSeek与MCP进行集成，并且如何和mcp.so 大量的mcp服务进行集成，..."
 keywords: "MCP, LangChain, AI, DeepSeek, 08. 解锁AI潜能：DeepSeek与LangChain的MCP客户端教程"
