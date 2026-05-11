@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "深度RAG笔记09：深度RAG笔记09：LangFuse vs LangSmith终极PK！这两个RAG监控神器到底选哪个？"
+title: "深度RAG笔记：LangFuse vs LangSmith终极PK！这两个RAG监控神器到底选哪个？"
 date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第9篇**：RAG系统上线后怎么监控？两大热门平台深度对比，手把手教你选择最适合的观测工具"
@@ -11,8 +11,8 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
----
 cover: "/images/posts/深度RAG笔记09-深度RAG笔记09-LangFuse-vs-LangSmith终极PK-这两个RAG监控神器到底选哪_001.jpg"
+---
 
 # 深度RAG笔记09：深度RAG笔记09：LangFuse vs LangSmith终极PK！这两个RAG监控神器到底选哪个？
 
@@ -394,6 +394,5 @@ def rag_pipeline(query):
 
 **下一篇预告**：我们将深入RAG框架对比分析，详解LangChain、LlamaIndex、RAGFlow等主流框架的特点与选择策略。
 
----
 
 **本文是《深度RAG笔记》系列的第9篇，聚焦企业级RAG系统的完整实施方法论。接下来我们将进入框架对比篇，敬请期待！**

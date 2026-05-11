@@ -11,8 +11,8 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
----
 cover: "/images/posts/深度RAG笔记14-20分钟解决RAG胡说八道问题-深度RAG笔记14_001.jpg"
+---
 
 # 深度RAG笔记14：20分钟解决RAG胡说八道问题[深度RAG笔记14]
 
@@ -493,7 +493,6 @@ RAG系统不准确主要是三个问题：AI急着答题、不会自我检查、
 
 **下期预告**：RAG和Agent融合的最新技术解析。
 
----
 
 **本文是RAG实战系列第14篇，专注解决准确性问题。关注我们，获取更多实战干货！**
 

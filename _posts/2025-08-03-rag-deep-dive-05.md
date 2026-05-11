@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "深度RAG笔记05：深度RAG笔记05：电商智能客服RAG系统实战"
+title: "深度RAG笔记：电商智能客服RAG系统实战"
 date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第5篇**：大规模客服系统的技术架构，揭秘企业级RAG技术实战"
@@ -11,8 +11,8 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
----
 cover: "/images/posts/深度RAG笔记05-深度RAG笔记05-电商智能客服RAG系统实战_001.jpg"
+---
 
 # 深度RAG笔记05：深度RAG笔记05：电商智能客服RAG系统实战
 
@@ -551,6 +551,5 @@ class RealTimeDataSync:
 
 **下期预告**：我们将深入**法律文档智能检索系统**，看看RAG如何在专业性要求极高的法律领域发挥价值！
 
----
 
 **本文是RAG实战攻略系列的第5篇，通过电商客服真实案例展示RAG的企业级应用。关注"翊行代码"，获取更多AI技术落地干货！**

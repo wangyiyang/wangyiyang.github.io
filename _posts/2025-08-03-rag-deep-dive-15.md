@@ -11,8 +11,8 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
----
 cover: "/images/posts/深度RAG笔记15-20分钟打造自主决策RAG系统-深度RAG笔记15_001.jpg"
+---
 
 # 深度RAG笔记15：20分钟打造自主决策RAG系统[深度RAG笔记15]
 
@@ -506,7 +506,6 @@ RAG技术发展到现在，已经不只是个"检索+生成"的工具了。
 
 **下期预告**：RAG实战攻略系列到此完美收官！
 
----
 
 **本文是RAG实战攻略系列的最终篇，感谢15期的陪伴！关注我们，探索更多AI前沿技术！**
 

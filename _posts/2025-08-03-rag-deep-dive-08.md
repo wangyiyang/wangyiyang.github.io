@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "深度RAG笔记08：深度RAG笔记08：企业级RAG项目规划与技术选型实战指南"
+title: "深度RAG笔记：企业级RAG项目规划与技术选型实战指南"
 date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第8篇**：从技术研究到企业落地的完整决策框架，掌握RAG项目成功实施的关键要素"
@@ -11,8 +11,8 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
----
 cover: "/images/posts/深度RAG笔记08-深度RAG笔记08-企业级RAG项目规划与技术选型实战指南_001.jpg"
+---
 
 # 深度RAG笔记08：深度RAG笔记08：企业级RAG项目规划与技术选型实战指南
 
@@ -633,6 +633,5 @@ graph TD
 
 下一篇我们会聊聊RAG项目的部署和运维，敬请期待！
 
----
 
 **本文是深度RAG笔记第8篇，专注企业级项目规划与技术选型。关注翊行代码，一起深入RAG技术栈！**

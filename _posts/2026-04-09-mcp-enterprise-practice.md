@@ -12,8 +12,8 @@ mathjax: false
 mindmap: false
 mindmap2: false
 permalink: /2026/04/09/mcp-enterprise-practice/
----
 cover: "/images/posts/MCP-开发实战-从入门到企业级应用_001.jpg"
+---
 
 
 
@@ -1238,7 +1238,6 @@ MCP 正在改变 AI 工具集成的方式。从 Function Calling 的适配噩梦
 **公众号**：翊行代码
 **博客**：https://wangyiyang.cc
 
----
 
 *本文预估字数：约 13,000 字*
 *投稿 InfoQ 中文站，稿费 800 元（封顶）*

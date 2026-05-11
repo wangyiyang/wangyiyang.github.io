@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "深度RAG笔记04：深度RAG笔记04：生成模块与质量控制"
+title: "深度RAG笔记：生成模块与质量控制"
 date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第4篇**：提示工程与安全生成技术，掌握高质量内容生成的核心方法"
@@ -11,8 +11,8 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
----
 cover: "/images/posts/深度RAG笔记04-深度RAG笔记04-生成模块与质量控制_001.jpg"
+---
 
 # 深度RAG笔记04：深度RAG笔记04：生成模块与质量控制
 
@@ -525,6 +525,5 @@ graph TD
 
 **下期预告**：我们将通过**电商智能客服**真实案例，看看RAG如何在日处理10万咨询的高压环境下发挥价值！
 
----
 
 **本文是RAG实战攻略系列的第4篇，深度解析生成模块核心技术。关注"翊行代码"，获取更多AI技术实战干货！**

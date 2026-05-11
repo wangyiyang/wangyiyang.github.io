@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "深度RAG笔记06：深度RAG笔记06：法律文档智能检索系统"
+title: "深度RAG笔记：法律文档智能检索系统"
 date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
 description: "**翊行代码:深度RAG笔记第6篇**：专业领域RAG技术深度应用，探索法律行业的智能化变革"
@@ -11,8 +11,8 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
----
 cover: "/images/posts/深度RAG笔记06-深度RAG笔记06-法律文档智能检索系统_001.jpg"
+---
 
 # 深度RAG笔记06：深度RAG笔记06：法律文档智能检索系统
 
@@ -731,7 +731,6 @@ graph TB
 
 **下期预告**：我们将深入**医疗知识问答系统**，探索多模态RAG在生命健康领域的创新应用！
 
----
 
 **本文深度RAG笔记系列的第6篇，展示了RAG技术在专业法律领域的深度应用。关注\"翊行代码\"，获取更多AI技术在垂直行业的落地案例！**
 
