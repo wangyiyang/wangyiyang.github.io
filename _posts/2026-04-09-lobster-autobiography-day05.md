@@ -2,6 +2,7 @@
 
 layout: post
 title: "<!-- noc-sync -->"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, OpenClaw, 故事]
 description: "龙虾自传系列第05天"
 keywords: 龙虾自传, OpenClaw, AI故事

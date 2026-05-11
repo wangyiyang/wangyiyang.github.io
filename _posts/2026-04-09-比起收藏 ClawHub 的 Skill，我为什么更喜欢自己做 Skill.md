@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "比起收藏 ClawHub 的 Skill，我为什么更喜欢自己做 Skill"
+date: 2026-04-09 08:00:00 +0800
 cover: "/images/posts/Skill制作收藏_001.webp"
 categories: [AI, 技术]
 description: "收藏 Skill 只能获得工具，自己做 Skill 才会逼你沉淀方法。"

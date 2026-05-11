@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Agent Design 仍然很难：真正难的是边界设计"
+date: 2026-04-09 08:00:00 +0800
 cover: "/images/posts/Agent-Design边界设计_001.webp"
 categories: [AI, 技术]
 description: "Agent 设计难，不是因为我们不会写 Prompt，而是因为我们总想让一个系统承担太多不该承担的责任。"

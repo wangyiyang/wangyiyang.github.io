@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "别再只用 Markdown 了：AI Bot 的 MDX 流式渲染"
+date: 2026-04-09 08:00:00 +0800
 cover: "/images/posts/MDX-流式渲染_001.webp"
 categories: [AI, 技术]
 description: "AI Bot 的下一步，不只是把回答写得更像文章，而是把回答变成可交互的界面。Markdown 负责表达内容，MDX 负责把内容变成组件。"

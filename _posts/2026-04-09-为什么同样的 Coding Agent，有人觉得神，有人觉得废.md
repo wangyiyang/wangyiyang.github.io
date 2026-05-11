@@ -2,6 +2,7 @@
 
 layout: post
 title: "为什么同样的 Coding Agent，有人觉得神，有人觉得废？"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, 技术]
 description: "同一个 Coding Agent，在不同工程环境里会表现得像两个产品。差距越来越不只在模型，而在上下文工程。"
 keywords: 为什么同样的,Coding,Agent,有人觉得神,有人觉得废

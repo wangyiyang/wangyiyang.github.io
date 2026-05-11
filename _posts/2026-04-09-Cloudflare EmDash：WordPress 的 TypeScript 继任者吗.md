@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cloudflare EmDash：WordPress 的 TypeScript 继任者吗"
+date: 2026-04-09 08:00:00 +0800
 cover: "/images/posts/Cloudflare-EmDash-WordPress继任者_001.webp"
 categories: [AI, 技术]
 description: "EmDash 有意思的地方，不是它想替代 WordPress，而是它把 CMS 重新放进 TypeScript、边缘计算和 Agent 时代来设计。"

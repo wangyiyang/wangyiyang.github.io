@@ -2,6 +2,7 @@
 
 layout: post
 title: "Claude Code 被吐槽变笨：AI 编程工具的信任危机"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, ç¼ç¨å·¥å·]
 description: "AI 编程工具最大的风险，不是某一次输出不好，而是用户无法判断它什么时候可靠、什么时候不可靠。"
 keywords: Claude,Code,被吐槽变笨AI,编程工具的信任危机

@@ -2,6 +2,7 @@
 
 layout: post
 title: "Cursor Composer vs Claude Code：AI Copilot 的技术差异"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, ç¼ç¨å·¥å·]
 description: "选择 AI Copilot，不该只看“谁更聪明”，而要看它如何嵌入你的开发流程。"
 keywords: Cursor,Composer,vs,Claude,CodeAI,Copilot,的技术差异

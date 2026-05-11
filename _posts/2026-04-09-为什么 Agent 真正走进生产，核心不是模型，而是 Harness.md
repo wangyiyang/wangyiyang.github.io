@@ -2,6 +2,7 @@
 
 layout: post
 title: "为什么 Agent 真正走进生产，核心不是模型，而是 Harness"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, 技术]
 description: "当 Agent 从 Demo 走向生产，真正决定成败的，往往不是模型能力的上限，而是执行系统的下限。"
 keywords: 为什么,Agent,真正走进生产,核心不是模型,而是,Harness

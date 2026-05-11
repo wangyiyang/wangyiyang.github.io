@@ -2,6 +2,7 @@
 
 layout: post
 title: "Skill 的第一性原理：被低估的 Prompt 工程"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, 技术]
 description: "当 Agent 从“会调用工具”走向“能稳定做事”，Skill 开始变成一层真正的工程封装。"
 keywords: Skill,的第一性原理被低估的,Prompt,工程

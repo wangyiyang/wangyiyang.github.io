@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Uber Hive Federation：零停机迁移的工程启发"
+date: 2026-04-09 08:00:00 +0800
 cover: "/images/posts/Uber-Hive-Federation迁移_001.webp"
 categories: [AI, 技术]
 description: "大规模数据迁移真正难的，不是把数据搬过去，而是在业务不停的情况下让系统逐步切换。"

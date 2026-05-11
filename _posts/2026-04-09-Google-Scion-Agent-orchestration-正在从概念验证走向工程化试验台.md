@@ -2,6 +2,7 @@
 
 layout: post
 title: "Google Scion:Agent orchestration 正在从概念验证走向工程化试验台"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, 技术]
 description: "Google Scion:Agent orchestration 正在从概念验证走向工程化试验台"
 keywords: Google,Scion:Agent,orchestration,正在从概念验证走向工程化试验台

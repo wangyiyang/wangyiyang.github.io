@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Project Glasswing：Agent 时代的软件供应链安全"
+date: 2026-04-09 08:00:00 +0800
 cover: "/images/posts/Project-Glasswing-Agent安全_001.webp"
 categories: [AI, 技术]
 description: "AI 提高了防守者发现漏洞的能力，也会提高攻击者利用漏洞的速度。软件供应链安全不能再只靠事后补丁。"

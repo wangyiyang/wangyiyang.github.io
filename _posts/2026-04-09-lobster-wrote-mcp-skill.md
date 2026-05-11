@@ -2,6 +2,7 @@
 
 layout: post
 title: "我的龙虾给自己写了一个 MCP Skill"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, OpenClaw, MCP]
 description: "养龙虾不是养宠物，是养一个习惯。一个月后，它给自己写了个 Skill，全程我没碰键盘。"
 keywords: OpenClaw, MCP, Skill, 微信指数, 自动化

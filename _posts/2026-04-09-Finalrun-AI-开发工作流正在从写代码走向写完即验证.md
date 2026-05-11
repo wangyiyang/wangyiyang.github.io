@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Finalrun：AI 开发工作流正在从写代码走向写完即验证"
+date: 2026-04-09 08:00:00 +0800
 cover: "/images/posts/Finalrun-AI开发工作流验证_001.webp"
 categories: [AI, 技术]
 description: "代码生成越来越快，谁来保证它是对的？"

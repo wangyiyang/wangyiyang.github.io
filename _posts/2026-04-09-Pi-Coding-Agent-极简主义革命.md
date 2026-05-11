@@ -2,6 +2,7 @@
 
 layout: post
 title: "大道至简：一个 Claude Code 用户的 Pi 救赎"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, 技术]
 description: "当 Claude Code 变成了一艘"宇宙飞船"，有人选择造一艘自己的独木舟。"å®å®é£è¹"ï¼æäººéæ©é ä¸èèªå·±çç¬æ¨èã"
 keywords: 大道至简一个,Claude,Code,用户的,Pi,救赎

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "分层 Agentic RAG：多模态推理与错误恢复"
+date: 2026-04-09 08:00:00 +0800
 cover: "/images/posts/分层Agentic-RAG_001.webp"
 categories: [AI, RAG]
 description: "RAG 的难点正在从“能不能检索到内容”，转向“能不能在多源、多模态、多跳推理里主动修错”。"

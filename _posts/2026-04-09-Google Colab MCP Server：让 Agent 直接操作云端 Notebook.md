@@ -2,6 +2,7 @@
 
 layout: post
 title: "Google Colab MCP Server：让 Agent 直接操作云端 Notebook"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, MCP]
 description: "Colab 接入 MCP 的意义，不是多了一个 Notebook 入口，而是 Agent 可以把高风险、高算力、可复现实验放到云端执行。"
 keywords: Google,Colab,MCP,Server让,Agent,直接操作云端,Notebook

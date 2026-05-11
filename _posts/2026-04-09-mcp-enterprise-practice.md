@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "MCP 开发实战：从入门到企业级应用"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, MCP]
 description: "MCP 开发教程"
 keywords: MCP, AI, FastMCP, 工具连接器

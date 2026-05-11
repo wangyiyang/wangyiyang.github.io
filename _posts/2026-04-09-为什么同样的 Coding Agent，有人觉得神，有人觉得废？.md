@@ -2,6 +2,7 @@
 
 layout: post
 title: "为什么同样的 Coding Agent，有人觉得神，有人觉得废？"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, 技术]
 description: "为什么同样的 Coding Agent，有人觉得神，有人觉得废？"
 keywords: 为什么同样的,Coding,Agent,有人觉得神,有人觉得废

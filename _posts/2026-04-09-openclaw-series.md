@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "一个 AI 员工的自白，我在OPC的第一天"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, OpenClaw]
 description: "OpenClaw系列"
 keywords: OpenClaw, AI

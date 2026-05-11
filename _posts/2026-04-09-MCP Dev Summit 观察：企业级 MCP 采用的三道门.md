@@ -2,6 +2,7 @@
 
 layout: post
 title: "MCP Dev Summit 观察：企业级 MCP 采用的三道门"
+date: 2026-04-09 08:00:00 +0800
 categories: [AI, MCP]
 description: "企业采用 MCP，不会只因为协议流行。它必须先过安全、治理和可观测性三道门。"
 keywords: MCP,Dev,Summit,观察企业级,MCP,采用的三道门
