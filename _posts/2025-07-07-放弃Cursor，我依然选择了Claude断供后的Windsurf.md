@@ -1,11 +1,11 @@
 ---
 
 layout: post
-title: "æ¾å¼Cursorï¼æä¾ç¶éæ©äºClaudeæ­ä¾åçWindsurf"
+title: "放弃Cursor，我依然选择了Claude断供后的Windsurf"
 date: 2025-07-07 08:00:00 +0800
-categories: [AI, ç¼ç¨å·¥å·]
-description: "æ¾å¼Cursorï¼æä¾ç¶éæ©äºClaudeæ­ä¾åçWindsurf"
-keywords: æ¾åCursoræä¾ç¶éæ©äºClaudeæ­ä¾åçWindsurf
+categories: [AI, 编程工具]
+description: "放弃Cursor，我依然选择了Claude断供后的Windsurf"
+keywords: Cursor,Claude,断供,Windsurf,AI编程
 mermaid: true
 sequence: false
 flow: false
