@@ -1,11 +1,10 @@
 ---
-
 layout: post
 title: "Claude Code 被吐槽变笨：AI 编程工具的信任危机"
 date: 2026-04-09 08:00:00 +0800
-categories: [AI, ç¼ç¨å·¥å·]
+categories: [AI, 编程工具]
 description: "AI 编程工具最大的风险，不是某一次输出不好，而是用户无法判断它什么时候可靠、什么时候不可靠。"
-keywords: Claude,Code,被吐槽变笨AI,编程工具的信任危机
+keywords: Claude,Code,被吐槽变笨,AI,编程工具,信任危机
 mermaid: true
 sequence: false
 flow: false
@@ -13,7 +12,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 cover: "/images/posts/post_claude-code-vs-cursor-breakthrough_001.jpg"
-permalink: /2026/04/09/Claude-Code-被吐槽变笨AI-编程工具的信任危机/
+permalink: /2026/04/09/Claude-Code-被吐槽变笨-AI-编程工具的信任危机/
 ---
 
 

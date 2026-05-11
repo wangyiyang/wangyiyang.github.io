@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "深度RAG笔记10：深度RAG笔记10：框架"混搭"的艺术——LangChain+LlamaIndex强强联合实战"
+title: "深度RAG笔记10：框架混搭的艺术——LangChain+LlamaIndex强强联合实战"
 date: 2025-08-03 08:00:00 +0800
 categories: [AI, RAG]
-description: "**翊行代码:深度RAG笔记第10篇**：别再纠结选哪个了，教你用最佳组合打造超强RAG系统"
+description: "翊行代码:深度RAG笔记第10篇：别再纠结选哪个了，教你用最佳组合打造超强RAG系统"
 keywords: RAG, 检索增强生成, 深度学习, AI
 mermaid: true
 sequence: false
@@ -11,8 +11,8 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
----
 cover: "/images/posts/深度RAG笔记10-深度RAG笔记10-框架_001.jpg"
+---
 
 # 深度RAG笔记10：深度RAG笔记10：框架"混搭"的艺术——LangChain+LlamaIndex强强联合实战
 
