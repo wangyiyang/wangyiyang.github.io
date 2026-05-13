@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-24_001.jpg"
+cover: "/images/posts/post_langchain-guide-24_001.webp"
 ---
 > 第 23 篇我们把“读记忆 + 写回”做进 middleware，做到“自动长期记忆”。  
 > 但线上还有一类更危险的需求：**用户让你改/删记忆**（“把那条偏好改一下”“忘掉我 2023 年的记录”）。

@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_one-person-company-02_001.jpg"
+cover: "/images/posts/post_one-person-company-02_001.webp"
 ---
 今天是 2025 年 12 月 16 日。  
 “程序员开一人公司”这股潮，我认为最值得聊的不是融资叙事，而是一个更朴素的问题：

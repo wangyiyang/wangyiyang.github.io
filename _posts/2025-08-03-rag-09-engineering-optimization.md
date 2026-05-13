@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_rag-09-engineering-optimization_001.jpg"
+cover: "/images/posts/post_rag-09-engineering-optimization_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第9篇**：RAG系统的工程化部署与性能优化实践指南

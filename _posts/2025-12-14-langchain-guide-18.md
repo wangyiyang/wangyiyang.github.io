@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-18_001.jpg"
+cover: "/images/posts/post_langchain-guide-18_001.webp"
 ---
 > 最危险的不是模型“胡说八道”，而是它“说到做到”。  
 > 一旦你的工具具备副作用，Agent 做出的一个 tool_call，可能就把事故写进生产：群发邮件、批量退款、删库改表……

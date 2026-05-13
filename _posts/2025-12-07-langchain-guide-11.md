@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-11_001.jpg"
+cover: "/images/posts/post_langchain-guide-11_001.webp"
 ---
 ## 一、先别急写代码：MCP 之前的“三种工具地狱”
 

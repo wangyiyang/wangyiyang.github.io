@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-06_001.jpg"
+cover: "/images/posts/post_langchain-guide-06_001.webp"
 ---
 ## 📊 引言：DeepSeek R1 的数据分析革命
 

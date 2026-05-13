@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_mcp-dev-intro-03_001.jpg"
+cover: "/images/posts/post_mcp-dev-intro-03_001.webp"
 ---
 
 ```mermaid

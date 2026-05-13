@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_google-scion-agent-orchestration-testbed_001.jpg"
+cover: "/images/posts/post_google-scion-agent-orchestration-testbed_001.webp"
 permalink: /2026/04/09/Google-Colab-MCP-Server让-Agent-直接操作云端-Notebook/
 ---
 

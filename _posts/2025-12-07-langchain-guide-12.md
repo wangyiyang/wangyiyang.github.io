@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-12_001.jpg"
+cover: "/images/posts/post_langchain-guide-12_001.webp"
 ---
 ## 一、从第 06 篇的旧代码说起：为什么这是“临时方案”
 

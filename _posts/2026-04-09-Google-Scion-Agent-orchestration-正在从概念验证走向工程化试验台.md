@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_google-scion-agent-orchestration-testbed_001.jpg"
+cover: "/images/posts/post_google-scion-agent-orchestration-testbed_001.webp"
 permalink: /2026/04/09/Google-Scion-Agent-orchestration-正在从概念验证走向工程化试验台/
 ---
 

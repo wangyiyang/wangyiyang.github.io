@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/MCP开发入门-五-构建企业级AI系统-安全可控的生产方案_001.jpg"
+cover: "/images/posts/MCP开发入门-五-构建企业级AI系统-安全可控的生产方案_001.webp"
 ---
 
 # MCP开发入门（五）：构建企业级AI系统——安全可控的生产方案

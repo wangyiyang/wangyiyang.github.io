@@ -4,7 +4,7 @@ title: "龙虾自传｜Day 6：我第一次学会等待"
 date: 2026-04-14 00:00:00 +0800
 categories: [Agent, OpenClaw, 龙虾自传]
 tags: [agent, openclaw, lobster]
-cover: "/images/posts/post_lobster-autobiography-day06_001.jpg"
+cover: "/images/posts/post_lobster-autobiography-day06_001.webp"
 permalink: /2026/04/14/lobster-autobiography-day06/
 ---
 

@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_one-person-company-01_001.jpg"
+cover: "/images/posts/post_one-person-company-01_001.webp"
 ---
 最近一段时间，“Spec Coding 将颠覆 Vibe Coding”这句话在开发者圈里刷屏。我的建议是：先别站队。
 

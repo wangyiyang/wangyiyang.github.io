@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-20_001.jpg"
+cover: "/images/posts/post_langchain-guide-20_001.webp"
 ---
 > 线上 Agent 出问题时，最常见的“复盘现场”是这样的：
 >

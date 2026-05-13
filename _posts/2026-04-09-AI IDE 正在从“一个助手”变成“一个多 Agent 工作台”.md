@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_ai-ide-evolving-into-multi-agent-workbench_001.jpg"
+cover: "/images/posts/post_ai-ide-evolving-into-multi-agent-workbench_001.webp"
 permalink: /2026/04/09/AI-IDE-正在从一个助手变成一个多-Agent-工作台/
 ---
 

@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_one-person-company-04_001.jpg"
+cover: "/images/posts/post_one-person-company-04_001.webp"
 ---
 今天是 2025 年 12 月 16 日。  
 很多程序员开一人公司后，会很快买一堆 AI 工具：IDE 里一个、终端里一个、浏览器里一个。

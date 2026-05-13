@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记02-深度RAG笔记02-数据索引阶段深度解析_001.jpg"
+cover: "/images/posts/深度RAG笔记02-深度RAG笔记02-数据索引阶段深度解析_001.webp"
 ---
 
 # 深度RAG笔记02：深度RAG笔记02：数据索引阶段深度解析

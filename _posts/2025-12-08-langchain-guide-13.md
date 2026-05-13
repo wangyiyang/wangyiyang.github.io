@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-13_001.jpg"
+cover: "/images/posts/post_langchain-guide-13_001.webp"
 ---
 ## 一、从 DeepSeek 文本推理，走向多模态世界
 

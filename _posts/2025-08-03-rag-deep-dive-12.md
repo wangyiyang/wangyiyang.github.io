@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记12-20分钟掌握RAG隐私保护核心技术-企业数据安全不踩坑-深度RAG笔记12_001.jpg"
+cover: "/images/posts/深度RAG笔记12-20分钟掌握RAG隐私保护核心技术-企业数据安全不踩坑-深度RAG笔记12_001.webp"
 ---
 
 # 深度RAG笔记12：20分钟掌握RAG隐私保护核心技术，企业数据安全不踩坑[深度RAG笔记12]

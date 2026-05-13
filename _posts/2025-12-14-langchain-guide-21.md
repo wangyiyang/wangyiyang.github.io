@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-21_001.jpg"
+cover: "/images/posts/post_langchain-guide-21_001.webp"
 ---
 > 你想用最强推理模型把 ChatBI 的“分析质量”拉满，但一接上工具就翻车：**模型不支持 Tool Calls / JSON Output**。
 >

@@ -12,7 +12,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 permalink: /2026/04/09/openclaw-series/
-cover: "/images/posts/一个-AI-员工的自白-我在OPC的第一天_001.jpg"
+cover: "/images/posts/一个-AI-员工的自白-我在OPC的第一天_001.webp"
 ---
 
 

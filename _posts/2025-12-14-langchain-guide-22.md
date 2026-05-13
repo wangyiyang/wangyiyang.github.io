@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-22_001.jpg"
+cover: "/images/posts/post_langchain-guide-22_001.webp"
 ---
 > 真实线上事故里，Agent 最常犯的错不是“答错”，而是“用错工具”：  
 > 你给了它 12 个工具，它往往能选中那个**最不该选的**。

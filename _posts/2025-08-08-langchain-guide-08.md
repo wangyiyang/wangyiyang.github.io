@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-08_001.jpg"
+cover: "/images/posts/post_langchain-guide-08_001.webp"
 ---
 > Model-Control-Protocol (MCP) 是一个开放标准，用于定义大型语言模型如何与外部工具和服务进行通信。本文将详细介绍如何使用DeepSeek与MCP进行集成，并且如何和mcp.so 大量的mcp服务进行集成，实现功能强大的AI应用。
 > 

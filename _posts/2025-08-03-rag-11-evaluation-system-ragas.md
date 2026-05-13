@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_rag-11-evaluation-system-ragas_001.jpg"
+cover: "/images/posts/post_rag-11-evaluation-system-ragas_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第11篇**：深入RAGAS评估框架，构建科学的RAG系统评估体系

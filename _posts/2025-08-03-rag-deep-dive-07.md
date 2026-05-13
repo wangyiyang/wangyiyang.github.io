@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记07-深度RAG笔记07-RAG-AI-Agent在医疗行业的十大落地案例_001.jpg"
+cover: "/images/posts/深度RAG笔记07-深度RAG笔记07-RAG-AI-Agent在医疗行业的十大落地案例_001.webp"
 ---
 
 # 深度RAG笔记07：深度RAG笔记07：RAG+AI Agent在医疗行业的十大落地案例

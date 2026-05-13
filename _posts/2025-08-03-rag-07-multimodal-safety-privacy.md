@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_rag-07-multimodal-safety-privacy_001.jpg"
+cover: "/images/posts/post_rag-07-multimodal-safety-privacy_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第7篇**：探索多模态RAG技术，深入安全隐私保护机制

@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-10_001.jpg"
+cover: "/images/posts/post_langchain-guide-10_001.webp"
 ---
 ## 一、为什么只用 LangChain 还不够？
 

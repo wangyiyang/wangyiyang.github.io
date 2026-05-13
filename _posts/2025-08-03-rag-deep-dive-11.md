@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_rag-11-evaluation-system-ragas_001.jpg"
+cover: "/images/posts/post_rag-11-evaluation-system-ragas_001.webp"
 ---
 
 # 深度RAG笔记11：RAGAS实战指南，20分钟给你的RAG系统做个准确体检[深度RAG笔记11]

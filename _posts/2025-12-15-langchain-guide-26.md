@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-26_001.jpg"
+cover: "/images/posts/post_langchain-guide-26_001.webp"
 ---
 > 长期记忆这件事，最容易“做起来很酷，上线后很难受”。  
 > 因为它不像加一个工具那样“有/无”清晰，而是会悄悄改变：**答案风格、事实引用、越权风险、成本曲线**。

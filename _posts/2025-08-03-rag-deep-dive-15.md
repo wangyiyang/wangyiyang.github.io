@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记15-20分钟打造自主决策RAG系统-深度RAG笔记15_001.jpg"
+cover: "/images/posts/深度RAG笔记15-20分钟打造自主决策RAG系统-深度RAG笔记15_001.webp"
 ---
 
 # 深度RAG笔记15：20分钟打造自主决策RAG系统[深度RAG笔记15]

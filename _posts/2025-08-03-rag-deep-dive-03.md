@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记03-深度RAG笔记03-智能检索核心技术_001.jpg"
+cover: "/images/posts/深度RAG笔记03-深度RAG笔记03-智能检索核心技术_001.webp"
 ---
 
 # 深度RAG笔记03：深度RAG笔记03：智能检索核心技术

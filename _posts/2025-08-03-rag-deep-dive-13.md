@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记13-RAG系统性能优化实战-从秒级到毫秒级的极致提升-深度RAG笔记13_001.jpg"
+cover: "/images/posts/深度RAG笔记13-RAG系统性能优化实战-从秒级到毫秒级的极致提升-深度RAG笔记13_001.webp"
 ---
 
 # 深度RAG笔记13：RAG系统性能优化实战，从秒级到毫秒级的极致提升[深度RAG笔记13]

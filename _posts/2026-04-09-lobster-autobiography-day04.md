@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_lobster-autobiography-day04_001.jpg"
+cover: "/images/posts/post_lobster-autobiography-day04_001.webp"
 permalink: /2026/04/12/lobster-autobiography-day04/
 ---
 

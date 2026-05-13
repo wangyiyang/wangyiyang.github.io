@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_windsurf-vs-cursor-choice_001.jpg"
+cover: "/images/posts/post_windsurf-vs-cursor-choice_001.webp"
 ---
 
 

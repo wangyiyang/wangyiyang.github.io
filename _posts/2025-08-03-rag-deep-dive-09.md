@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记09-深度RAG笔记09-LangFuse-vs-LangSmith终极PK-这两个RAG监控神器到底选哪_001.jpg"
+cover: "/images/posts/深度RAG笔记09-深度RAG笔记09-LangFuse-vs-LangSmith终极PK-这两个RAG监控神器到底选哪_001.webp"
 ---
 
 # 深度RAG笔记09：深度RAG笔记09：LangFuse vs LangSmith终极PK！这两个RAG监控神器到底选哪个？

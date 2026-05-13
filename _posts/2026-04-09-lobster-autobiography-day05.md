@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_lobster-autobiography-day05_001.jpg"
+cover: "/images/posts/post_lobster-autobiography-day05_001.webp"
 ---
 
 

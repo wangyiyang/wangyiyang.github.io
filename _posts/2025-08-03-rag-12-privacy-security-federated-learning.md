@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_rag-12-privacy-security-federated-learning_001.jpg"
+cover: "/images/posts/post_rag-12-privacy-security-federated-learning_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第12篇**：深入探讨RAG系统的隐私保护机制与联邦学习应用

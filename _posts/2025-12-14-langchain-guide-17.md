@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-17_001.jpg"
+cover: "/images/posts/post_langchain-guide-17_001.webp"
 ---
 > 你以为“把密钥塞进 prompt”只是图省事。  
 > 直到某天你打开 trace / 回放，看到它跟着 messages 被录了下来（甚至被人一键搜索到）：

@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_rag-03-retrieval-strategies-and-optimization_001.jpg"
+cover: "/images/posts/post_rag-03-retrieval-strategies-and-optimization_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第3篇**：混合检索与重排序算法实战，掌握精准信息检索的核心算法

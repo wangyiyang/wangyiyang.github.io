@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记01-深度RAG笔记01-核心概念与诞生背景_001.jpg"
+cover: "/images/posts/深度RAG笔记01-深度RAG笔记01-核心概念与诞生背景_001.webp"
 ---
 
 # 深度RAG笔记01：深度RAG笔记01：核心概念与诞生背景

@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-14_001.jpg"
+cover: "/images/posts/post_langchain-guide-14_001.webp"
 ---
 ## 一、问题升级：不仅模型是多模态，工具也在变多模态
 

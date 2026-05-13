@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-09_001.jpg"
+cover: "/images/posts/post_langchain-guide-09_001.webp"
 ---
 阅读量：待发布 更新于：2025-XX-XX
 

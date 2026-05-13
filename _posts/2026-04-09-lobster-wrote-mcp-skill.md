@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_lobster-wrote-its-own-mcp-skill_001.jpg"
+cover: "/images/posts/post_lobster-wrote-its-own-mcp-skill_001.webp"
 permalink: /2026/04/09/lobster-wrote-mcp-skill/
 ---
 

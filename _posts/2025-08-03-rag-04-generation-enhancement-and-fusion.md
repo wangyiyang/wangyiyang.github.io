@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_rag-04-generation-enhancement-and-fusion_001.jpg"
+cover: "/images/posts/post_rag-04-generation-enhancement-and-fusion_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第4篇**：提示工程与安全生成技术，掌握高质量内容生成的核心方法

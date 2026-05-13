@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_mcp-dev-intro-02_001.jpg"
+cover: "/images/posts/post_mcp-dev-intro-02_001.webp"
 permalink: /2026/04/09/MCP-Dev-Summit-观察企业级-MCP-采用的三道门/
 ---
 

@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/深度RAG笔记14-20分钟解决RAG胡说八道问题-深度RAG笔记14_001.jpg"
+cover: "/images/posts/深度RAG笔记14-20分钟解决RAG胡说八道问题-深度RAG笔记14_001.webp"
 ---
 
 # 深度RAG笔记14：20分钟解决RAG胡说八道问题[深度RAG笔记14]

@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_langchain-guide-15_001.jpg"
+cover: "/images/posts/post_langchain-guide-15_001.webp"
 ---
 ## 一、一个容易被忽略的问题：content_blocks 到底存在哪里？
 

@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_claude-sonnet-4-returns-to-windsurf_001.jpg"
+cover: "/images/posts/post_claude-sonnet-4-returns-to-windsurf_001.webp"
 ---
 
 
