@@ -12,7 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_agent-production-harness_001.jpg"
+cover: "/images/posts/post_agent-production-harness_001.webp"
 permalink: /2026/04/09/为什么-Agent-真正走进生产核心不是模型而是-Harness/
 ---
 

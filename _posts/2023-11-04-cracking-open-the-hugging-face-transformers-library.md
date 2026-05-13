@@ -252,7 +252,7 @@ demo_chatbot.launch()
 这将通过本地 URL 启动界面。如果窗口没有自动打开，您可以将 URL 直接复制粘贴到浏览器中打开。
 
 <picture>
-  <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/okUwxEBv2oZuUYi7Pks3sw.webp" type="image/webp">
+  <source srcset="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/okUwxEBv2oZuUYi7Pks3sw.gif" type="image/webp">
   <img src="/images/posts/2023-11-04-cracking-open-the-hugging-face-transformers-library/okUwxEBv2oZuUYi7Pks3sw.gif" alt="Alt text" loading="lazy">
 </picture>
 

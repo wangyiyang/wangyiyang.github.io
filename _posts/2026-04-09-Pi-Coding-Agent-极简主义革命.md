@@ -11,7 +11,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-cover: "/images/posts/post_claude-code-vs-cursor-breakthrough_001.jpg"
+cover: "/images/posts/post_claude-code-vs-cursor-breakthrough_001.webp"
 permalink: /2026/04/09/Pi-Coding-Agent-极简主义革命/
 ---
 
