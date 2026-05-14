@@ -1,6 +1,6 @@
 ---
 title: "从零构建多代理系统：我学到的那些课"
-date: 2026-05-14
+date: 2026-05-14 09:00:00 +0800
 categories: [AI, Agent, 工程实践]
 tags: [Multi-Agent, Shopify, Claude, SwarmSDK, MCP]
 permalink: /2026/05/14/multi-agent-system-lessons/
