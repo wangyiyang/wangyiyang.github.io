@@ -6,7 +6,7 @@ tags: [Multi-Agent, Shopify, Claude, SwarmSDK, MCP]
 permalink: /2026/05/14/multi-agent-system-lessons/
 ---
 
-![cover](/images/posts/multi-agent-system-lessons_1200x630.webp)
+![cover](/images/posts/multi-agent-system-lessons_1200x630.jpg)
 
 ## 开篇：一个 Hackday 项目如何改变了我对 AI 的认知
 
