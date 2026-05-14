@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "把 GitHub Pro 用回本：一人公司的工程化与交付闭环指南"
+date: 2025-12-16 08:00:00 +0800
 categories: ["One-Person-Company", "GitHub", "Engineering"]
 description: "今天是 2025 年 12 月 16 日。 “程序员开一人公司”这股潮，我认为最值得聊的不是融资叙事，而是一个更朴素的问题："
 keywords: "One-Person-Company, GitHub, Engineering, 把 GitHub Pro 用回本：一人公司的工程化与交付闭环指南"
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_one-person-company-02_001.webp"
 ---
 今天是 2025 年 12 月 16 日。  
 “程序员开一人公司”这股潮，我认为最值得聊的不是融资叙事，而是一个更朴素的问题：

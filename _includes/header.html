@@ -133,6 +133,33 @@
       gtag('config', '{{ site.google.analytics_id }}');
     </script>
     {% endif %}
+    
+    <!-- Mermaid.js for diagram support -->
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        themeVariables: {
+          primaryColor: '#e1f5fe',
+          primaryTextColor: '#01579b',
+          primaryBorderColor: '#0288d1',
+          lineColor: '#0288d1',
+          secondaryColor: '#fff3e0',
+          tertiaryColor: '#e8f5e9'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis'
+        },
+        sequence: {
+          useMaxWidth: true,
+          diagramMarginX: 50,
+          diagramMarginY: 10
+        }
+      });
+    </script>
 </head>
 <body class="{{ page.class }}" data-mz="{{ page.class }}">
     <header class="site-header">

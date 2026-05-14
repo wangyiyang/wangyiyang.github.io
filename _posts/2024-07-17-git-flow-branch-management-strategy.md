@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Git Flow：分支管理策略的详细指南
+date: 2024-07-17 08:00:00 +0800
+cover: "/images/posts/Git-Flow分支管理策略_001.webp"
 categories: [Git,Software Development]
 description: 探讨了 Git Flow 分支模型，这是一种流行的软件开发流程管理策略。本文介绍了 Git Flow 的基本概念、分支模型、使用方法，以及实施这一策略的优缺点。对于处理复杂项目的团队来说，这篇文章提供了全面的 Git Flow 视角，帮助提高代码质量和开发效率。
 keywords: Git, Git Flow, 分支管理, 软件开发, 版本控制, 分支模型

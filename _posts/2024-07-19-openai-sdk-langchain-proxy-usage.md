@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 在 OpenAI SDK 和 LangChain OpenAI 中使用代理
+date: 2024-07-19 08:00:00 +0800
+cover: "/images/posts/OpenAI-SDK-LangChain代理_001.webp"
 categories: [OpenAI, LangChain]
 description: "本文介绍了如何在 OpenAI SDK 和 LangChain OpenAI 中使用代理。通过设置环境变量或在代码中直接配置代理，可以确保在进行 API 调用时，所有请求都会通过指定的代理服务器。这种方法可以帮助开发者在受限的网络环境中正常使用 OpenAI 的服务，并且提高网络请求的安全性和灵活性。" 
 keywords: OpenAI, LangChain, 代理, SDK, API, 网络请求

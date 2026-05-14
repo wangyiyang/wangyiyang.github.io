@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 【翻译】MLOps项目——第2部分a：使用Prefect进行机器学习工作流编排
+date: 2023-09-10 08:00:00 +0800
+cover: "/images/posts/Prefect机器学习工作流编排_001.webp"
 categories: [MLOps, AI]
 description: 我将演示如何使用两个流行的工具进行任务完成：Prefect和ZenML。还有一些令人难以置信的工具，我们无法在本文中全部包含，比如Flyte、Kale、Aro等。
 keywords: MLOps, AI, Prefect, ZenML
@@ -34,7 +36,10 @@ mindmap2: false
 
 让我们考虑一个标准的机器学习流水线：
 
-![Alt text](/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image1.png)
+<picture>
+  <source srcset="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image1.webp" type="image/webp">
+  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image1.webp" alt="Alt text" loading="lazy">
+</picture>
 
 [来源](https://www.youtube.com/watch?v=eKzCjNXoCTc&list=PL3MmuxUbc_hIUISrluw_A7wDSmfOhErJK&index=22)
 
@@ -46,14 +51,20 @@ mindmap2: false
 
 失败可能以意想不到的方式发生。例如，输入数据存在缺陷，API在某些时刻无法连接，MLflow也可能出现类似情况。如果您使用数据库存储MLflow的产物或实验等，问题可能会出现。工作流编排旨在减轻这些问题的影响，并协助解决这些问题。
 
-![Alt text](/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image2.png)
+<picture>
+  <source srcset="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image2.webp" type="image/webp">
+  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image2.webp" alt="Alt text" loading="lazy">
+</picture>
 
 [来源](https://www.youtube.com/watch?v=eKzCjNXoCTc&list=PL3MmuxUbc_hIUISrluw_A7wDSmfOhErJK&index=22)
 
 所有这些都将帮助组织和开发人员更快地完成任务并找到问题，使他们能够将注意力集中在更重要的事情上。
 太好了！让我们看看如何在实践中完成。我们的流水线可能如下所示：
 
-![Alt text](/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image3.png)
+<picture>
+  <source srcset="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image3.webp" type="image/webp">
+  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image3.webp" alt="Alt text" loading="lazy">
+</picture>
 
 对于这个项目，我们实际上并不需要流水线，但我只是想展示一下我们如何创建一个流水线。根据使用情况，拥有一个流水线可能会很有用。例如，如果您有一个要定期执行的数据流水线，或者想要一个用于训练机器学习模型的流水线。在这里，我只是想展示如果您在项目中需要，可以如何做到这一点。
 
@@ -375,7 +386,10 @@ prefect orion start
 
 对于我们的代码，这是截图：
 
-![Alt text](/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image4.png)
+<picture>
+  <source srcset="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image4.webp" type="image/webp">
+  <img src="/images/posts/2023-09-10-mlops-project-part-2a-machine-learning-workflow-orchestration-using-prefect/image4.webp" alt="Alt text" loading="lazy">
+</picture>
 
 您可以查看不同任务的日志以及我们代码的流程。您还可以从仪表板获得更多信息。所以请随意尝试。
 Prefect有许多有趣的功能。我非常喜欢它的并发、并行和异步支持。

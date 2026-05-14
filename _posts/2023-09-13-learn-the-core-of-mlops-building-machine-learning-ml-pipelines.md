@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 【翻译】了解 MLOps 的核心 - 构建机器学习 （ML） 管道
+date: 2023-09-13 08:00:00 +0800
+cover: "/images/posts/MLOps核心构建ML管道_001.webp"
 categories: [MLOps, AI]
 description: 实现MLOps以使AI工作的实用指南
 keywords: MLOps, AI,
@@ -33,7 +35,10 @@ mindmap2: false
 
 MLOps以自动化方式将上述三个管道结合在一起，并确保ML解决方案是可靠、可测试和可重复的。在本博客的剩余部分中，我将逐个解释这三个管道。
 
-![](/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110030.png)
+<picture>
+  <source srcset="/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110030.webp" type="image/webp">
+  <img src="/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110030.webp" alt="" loading="lazy">
+</picture>
 
 Photo by [Hitesh Choudhary](https://unsplash.com/@hiteshchoudhary?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
@@ -41,7 +46,10 @@ Photo by [Hitesh Choudhary](https://unsplash.com/@hiteshchoudhary?utm_source=me
 
 下图展示了MLOps上述三个管道的所有关键组件。可以看到，构建端到端的MLOps解决方案可能相当复杂，但请不要担心，我将在接下来的系列文章中逐一详细解释这些组件，并演示如何实现每个组件。
 
-![](/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110226.png)
+<picture>
+  <source srcset="/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110226.webp" type="image/webp">
+  <img src="/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110226.webp" alt="" loading="lazy">
+</picture>
 
 Learning the core of MLOps — Building ML Pipelines (Image by Author)
 

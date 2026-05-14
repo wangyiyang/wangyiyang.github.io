@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "深度RAG笔记09：工程化实践与优化"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: RAG系统的工程化部署与性能优化实践指南
 keywords: RAG, 工程化, 性能优化, 系统部署, 生产环境, DevOps
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-09-engineering-optimization_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第9篇**：RAG系统的工程化部署与性能优化实践指南

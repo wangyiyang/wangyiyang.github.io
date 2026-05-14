@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.wangyiyang.cc/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /_drafts/
+Disallow: /_fragments/
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+# Crawl rate
+Crawl-delay: 1

@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "深度RAG笔记06：法律领域应用实践"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: 专业领域RAG技术深度应用，探索法律行业的智能化变革
 keywords: RAG, 法律检索, 专业领域, 智能助手, 法条检索, 案例分析
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-06-legal-domain-application-practice_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第6篇**：专业领域RAG技术深度应用，探索法律行业的智能化变革

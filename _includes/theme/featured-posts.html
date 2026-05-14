@@ -1,0 +1,19 @@
+<section class="theme-section featured-posts">
+  <div class="theme-container">
+    <header class="theme-section-header">
+      <div class="theme-section-kicker">Featured</div>
+      <h2 class="theme-section-title">{{ site.data.workbench.featured_posts.title }}</h2>
+      <p class="theme-section-subtitle">{{ site.data.workbench.featured_posts.subtitle }}</p>
+    </header>
+    <div class="featured-posts-grid">
+      {% for post in site.data.workbench.featured_posts.posts %}
+      <article class="featured-post-card">
+        <div class="featured-post-tag">{{ post.tag }}</div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description }}</p>
+        <a href="{{ post.url | relative_url }}" class="featured-post-link">阅读全文 →</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

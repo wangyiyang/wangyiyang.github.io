@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "26 | 记忆评测与回归：记忆是否有用要能量化"
+date: 2025-12-15 08:00:00 +0800
 categories: ["LangChain", "AI"]
 description: "> 长期记忆这件事，最容易“做起来很酷，上线后很难受”。 > 因为它不像加一个工具那样“有/无”清晰，而是会悄悄改变：答案风格、事实引用、越权风险、成本曲线。 > > 第 23～25 篇我们把 Mem0 接进 LangChain v1..."
 keywords: "LangChain, AI, 26 | 记忆评测与回归：记忆是否有用要能量化"
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-26_001.webp"
 ---
 > 长期记忆这件事，最容易“做起来很酷，上线后很难受”。  
 > 因为它不像加一个工具那样“有/无”清晰，而是会悄悄改变：**答案风格、事实引用、越权风险、成本曲线**。

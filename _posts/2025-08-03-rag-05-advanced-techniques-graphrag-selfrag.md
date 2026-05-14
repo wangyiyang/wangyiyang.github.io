@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "深度RAG笔记05：高级技术GraphRAG与Self-RAG"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: 深入GraphRAG、Self-RAG等前沿技术，掌握下一代RAG系统的核心算法
 keywords: RAG, GraphRAG, Self-RAG, 知识图谱, 自主修正, 高级技术
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-05-advanced-techniques-graphrag-selfrag_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第5篇**：深入GraphRAG、Self-RAG等前沿技术，掌握下一代RAG系统的核心算法

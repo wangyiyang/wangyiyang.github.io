@@ -1,15 +1,18 @@
 ---
+
 layout: post
 title: "让Claude成为你的数据库专家[MCP开发入门03]"
+date: 2025-08-17 08:00:00 +0800
 categories: [MCP, AI, 数据库, API集成]
 description: "通过MCP协议，让Claude等AI模型无缝访问企业数据库、调用外部API、处理文件，实现从数据查询到业务操作的全流程自动化。"
-keywords: MCP, AI, 数据库集成, API调用, FastMCP, 企业应用
+keywords: MCP, AI, 数据库集成, API调用, FastMCP, 企业应用, MCP开发, MCP实战, 数据库MCP, AI数据库, 智能体开发
 mermaid: true
 sequence: false
 flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_mcp-dev-intro-03_001.webp"
 ---
 
 ```mermaid

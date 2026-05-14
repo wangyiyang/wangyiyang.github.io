@@ -1,9 +1,11 @@
 ---
 layout: post
 title: 🚀 Claude Code + Cursor：AI编程的黄金组合来了！
+date: 2025-06-25 08:00:00 +0800
+cover: "/images/posts/Claude-Code-Cursor黄金组合_001.webp"
 categories: [AI, Programming Tools, Code Generation]
 description: Claude Code的TUI终端能力 + Cursor的IDE体验 = 完美编程工作流！深度解析两大AI工具的最佳搭配使用方案。
-keywords: Claude Code, Cursor, AI编程工具, TUI, IDE, 编程效率
+keywords: Claude Code, Cursor, AI编程工具, AI IDE, 编程效率, 代码生成, AI辅助编程, 智能编程助手, Claude教程, Cursor教程, AI编程对比
 mermaid: true
 sequence: false
 flow: false

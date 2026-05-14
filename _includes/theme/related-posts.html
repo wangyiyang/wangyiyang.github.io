@@ -1,11 +1,41 @@
 {% assign primary_category = page.categories | first %}
 {% assign related_posts = site.categories[primary_category] | where_exp: "post", "post.url != page.url" %}
+
+{% comment %} 如果同分类文章不足5篇，尝试匹配标签 {% endcomment %}
+{% if related_posts.size < 5 %}
+  {% assign needed = 5 | minus: related_posts.size %}
+  {% assign tag_posts = "" | split: "" %}
+  {% for tag in page.tags %}
+    {% for post in site.tags[tag] %}
+      {% unless post.url == page.url %}
+        {% unless related_posts contains post %}
+          {% assign tag_posts = tag_posts | push: post %}
+        {% endunless %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
+  {% assign related_posts = related_posts | concat: tag_posts | uniq | slice: 0, 5 %}
+{% endif %}
+
+{% comment %} 如果还不够，补充最新文章 {% endcomment %}
+{% if related_posts.size < 5 %}
+  {% assign needed = 5 | minus: related_posts.size %}
+  {% assign recent_posts = site.posts | where_exp: "post", "post.url != page.url" %}
+  {% for post in recent_posts %}
+    {% unless related_posts contains post %}
+      {% assign related_posts = related_posts | push: post %}
+    {% endunless %}
+    {% if related_posts.size >= 5 %}{% break %}{% endif %}
+  {% endfor %}
+{% endif %}
+
 {% if related_posts.size > 0 %}
 <section class="theme-section related-posts">
   <header class="theme-section-header">
     <div class="theme-section-kicker">Related</div>
-    <h2 class="theme-section-title">继续阅读 {{ primary_category }}</h2>
+    <h2 class="theme-section-title">继续阅读</h2>
+    <p class="theme-section-subtitle">探索更多相关技术内容</p>
   </header>
-  {% include theme/article-list.html posts=related_posts limit=3 %}
+  {% include theme/article-list.html posts=related_posts limit=5 %}
 </section>
 {% endif %}

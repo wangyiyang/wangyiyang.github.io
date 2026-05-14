@@ -11,6 +11,25 @@ manifesto:
       primary: false
   status: []
 
+featured_posts:
+  enabled: true
+  title: "热门文章"
+  subtitle: "精选阅读量最高的技术干货"
+  max_posts: 3
+  posts:
+    - url: /2025/07/08/claude-task-master-efficiency-guide/
+      title: "Claude Code效率神器：claude-task-master让AI任务管理变得如此简单"
+      description: "深度解析claude-task-master项目：从安装配置到实战应用的完整指南"
+      tag: "🔥 本周最热"
+    - url: /2025/06/25/claude-code-vs-cursor-breakthrough/
+      title: "Claude Code vs Cursor：突破AI编程工具选型的认知盲区"
+      description: "从实际项目出发，对比两款AI编程工具的真实表现"
+      tag: "📈 持续热门"
+    - url: /2025/08/17/mcp-dev-intro-03/
+      title: "MCP开发入门（三）：工具调用与资源管理"
+      description: "深入MCP协议的工具调用机制和资源管理策略"
+      tag: "🆕 最新发布"
+
 modules: []
 
 system_flow: []

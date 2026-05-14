@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "深度RAG笔记08：评估指标与方法"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: 全面解析RAG系统评估体系，掌握科学的性能评估方法
 keywords: RAG, 评估指标, 性能测试, RAGAS, 评估方法, 基准测试
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-08-evaluation-metrics-and-methods_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第8篇**：全面解析RAG系统评估体系，掌握科学的性能评估方法

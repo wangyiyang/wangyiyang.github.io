@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "12 | 标准 content_blocks 深度实战：DeepSeek × LangChain v1 推理过程可视化与安全提取"
+date: 2025-12-07 08:00:00 +0800
 categories: ["DeepSeek", "LangChain", "AI"]
 description: "在第 06 篇的数据分析 Demo 里，我们为了从 DeepSeek 输出中抠出 JSON，写过类似这样的代码："
 keywords: "DeepSeek, LangChain, AI, 12 | 标准 content_blocks 深度实战：DeepSeek × LangChain v1 推理过程可视化与安全提取"
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-12_001.webp"
 ---
 ## 一、从第 06 篇的旧代码说起：为什么这是“临时方案”
 

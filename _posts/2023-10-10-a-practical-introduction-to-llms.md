@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 【翻译】LLM实用介绍
+date: 2023-10-10 08:00:00 +0800
+cover: "/images/posts/LLM实用介绍_001.webp"
 categories: [翻译, LLM, AI]
 description: 在实践中使用LLM的3个级别
 keywords: LLM, AI, 机器学习, 人工智能
@@ -19,7 +21,10 @@ mindmap2: false
 这是一系列关于实际应用大型语言模型（LLMs）的文章中的第一篇。在这篇文章中，我将介绍LLMs并介绍与其相关的三个工作层次。未来的文章将探讨LLMs的实际应用方面，例如如何使用[OpenAI公开的API](https://medium.com/towards-data-science/cracking-open-the-openai-python-api-230e4cae7971%EF%BC%8CHugging)，[Hugging Face Transformers Python库](https://medium.com/towards-data-science/cracking-open-the-hugging-face-transformers-library-350aa0ef0161)，如何[微调LLMs](https://medium.com/towards-data-science/fine-tuning-large-language-models-llms-23473d763b91)，以及如何从头开始构建LLM。
 
 
-![](/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103302.png)
+<picture>
+  <source srcset="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103302.webp" type="image/webp">
+  <img src="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103302.webp" alt="" loading="lazy">
+</picture>
 *Photo by [Patrick Tomasso](https://unsplash.com/@impatrickt?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*  
 
 # **什么是LLM？**
@@ -39,7 +44,10 @@ LLM是Large Language Model的缩写，是人工智能和机器学习领域的一
 
 语言模型比大型语言模型更通用。就像所有的正方形都是矩形，但不是所有的矩形都是正方形。所有LLM都是语言模型，但并非所有语言模型都是LLM。
 
-![](/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103909.png)
+<picture>
+  <source srcset="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103909.webp" type="image/webp">
+  <img src="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103909.webp" alt="" loading="lazy">
+</picture>
 *大型语言模型是一种特殊的语言模型。作者图片*
 
 好吧，LLM是一种特殊类型的语言模型，但是是什么让它们特别呢？
@@ -65,7 +73,10 @@ GPT-3（以及其他大型语言模型）的主要创新在于它可以在各种
 
 例如，给定序列“听你的_”，最有可能的下一个单词可能是：心脏、内脏、身体、父母、祖母等。这可能看起来像下面所示的概率分布。
 
-![](/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928104704.png)
+<picture>
+  <source srcset="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928104704.webp" type="image/webp">
+  <img src="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928104704.webp" alt="" loading="lazy">
+</picture>
 
 *Toy probability distribution of next work in sequence “Listen to your ___.” Image by author.*
 

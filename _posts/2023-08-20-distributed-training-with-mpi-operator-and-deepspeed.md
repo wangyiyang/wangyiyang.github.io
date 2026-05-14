@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 使用 MPI Opnerator 和 DeepSpeed 进行分布式训练
+date: 2023-08-20 08:00:00 +0800
+cover: "/images/posts/MPI-DeepSpeed分布式训练_001.webp"
 categories: [MLOps, LLM]
 description: 使用 MPI Opnerator 和 DeepSpeed 进行分布式训练
 keywords: MLOps, LLM

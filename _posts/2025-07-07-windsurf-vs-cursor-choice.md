@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 放弃Cursor，我依然选择了Claude断供后的Windsurf
+date: 2025-07-07 08:00:00 +0800
+cover: "/images/posts/WindsurfvsCursor_001.webp"
 categories: [AI, Programming Tools, Code Generation, Controversial]
 description: 逆风而行的选择：为什么在整个科技圈都唱衰Windsurf时，我却坚持认为它比Cursor更强？一个程序员的反潮流宣言
 keywords: Cursor, Claude Code, Windsurf, AI编程, 代码生成, GitHub Copilot, MCP
@@ -15,7 +17,10 @@ mindmap2: false
 
 在Claude断供Windsurf服务后，整个开发者社区都在唱衰Windsurf，仿佛它已经是明日黄花。Twitter上、Reddit上、各种技术群里，清一色的声音。
 
-![最近一个月的Cursor使用情况](/images/posts/2025-07-07-cursor-analytics.png)
+<picture>
+  <source srcset="/images/posts/2025-07-07-cursor-analytics.webp" type="image/webp">
+  <img src="/images/posts/2025-07-07-cursor-analytics.webp" alt="最近一个月的Cursor使用情况" loading="lazy">
+</picture>
 
 但是看到上面这张图了吗？这是我最近一个月的Cursor使用情况。各种限制让我活干到一半就"跑路"，结果就是：**Cursor的输出基本为0，钱却一分没少花！**
 

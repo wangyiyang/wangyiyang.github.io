@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "21 | LangChain v1 Agent：动态选模，DeepSeek-V3.2/V3.2-Speciale在同一个ChatBI里怎么分工？"
+date: 2025-12-14 08:00:00 +0800
 categories: ["Agent", "LangChain", "AI"]
 description: "> 你想用最强推理模型把 ChatBI 的“分析质量”拉满，但一接上工具就翻车：模型不支持 Tool Calls / JSON Output。 > > 这不是“模型不够强”，而是“能力约束不匹配”。 > LangChain v1 的解..."
 keywords: "Agent, LangChain, AI, DeepSeek, 21 | LangChain v1 Agent：动态选模，DeepSeek-V3.2/V3.2-Speciale在同一个ChatBI里怎么分工？"
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-21_001.webp"
 ---
 > 你想用最强推理模型把 ChatBI 的“分析质量”拉满，但一接上工具就翻车：**模型不支持 Tool Calls / JSON Output**。
 >

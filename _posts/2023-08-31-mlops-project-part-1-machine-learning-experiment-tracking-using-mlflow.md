@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 【翻译】MLOps项目-第一部分：使用MLflow进行机器学习实验跟踪
+date: 2023-08-31 08:00:00 +0800
+cover: "/images/posts/MLflow机器学习实验跟踪_001.webp"
 categories: [MLOps, AI]
 description: 本系列旨在训练一个简单的情感分析模型，并将其部署到Google Cloud（Cloud Run）作为无服务器微服务，使用Streamlit构建简单的用户界面，并利用MLflow、Prefect&ZenML以及EvidentlyAI&Seldon ALIBI Detect等MLOps工具进行实验跟踪、工作流编排和模型监测。
 keywords: MLOps, AI, MLflow
@@ -293,7 +295,10 @@ mlflow.log_metric("accuracy", results[1])
 
 正如您所见，我们可以使用`autolog()`函数来自动记录TensorFlow和Scikit Learn的参数，或者我们也可以手动记录我们想要的任何内容。最后，在使用不同的超参数训练不同模型后，您将看到类似下面的结果：
 
-![](/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091227.png)
+<picture>
+  <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091227.webp" type="image/webp">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091227.webp" alt="" loading="lazy">
+</picture>
 
 然后，您可以轻松地访问每个实验并查看每次运行的更多细节，并进行比较。您可以根据训练时间、准确性等不同参数选择一个模型。
 
@@ -305,13 +310,19 @@ mlflow.log_metric("accuracy", results[1])
 
 让我们来看一下其中一次运行保存了哪些内容。例如，我们来看一下深度学习模型的一次运行的结果：
 
-![](/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091508.png)
+<picture>
+  <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091508.webp" type="image/webp">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091508.webp" alt="" loading="lazy">
+</picture>
 
 正如您所见，模型、分词器以及所有所需Python包的信息和其他元数据都被保存了下来。每个运行都有一个唯一的运行ID，我们稍后会用到它。
 
 现在，让我们进入下一个阶段，称为模型管理，这一阶段介绍如何管理已训练的模型。
 
-![](/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091555.png)
+<picture>
+  <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091555.webp" type="image/webp">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831091555.webp" alt="" loading="lazy">
+</picture>
 [原图](https://neptune.ai/experiment-tracking)
 
 正如您从上面的代码中看到的，我们对每次运行保存了模型。接下来应该进行模型版本管理，然后进行部署。让我们看看MLflow如何用于模型管理。
@@ -320,24 +331,39 @@ mlflow.log_metric("accuracy", results[1])
 
 然后，部署工程师或团队可以开始使用模型注册表中的模型和暂存模型，并根据模型的大小或推理时间等参数，决定哪个模型将进入生产阶段。
 
-![](/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092233.png)
+<picture>
+  <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092233.webp" type="image/webp">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092233.webp" alt="" loading="lazy">
+</picture>
 [来源](https://www.databricks.com/fr/blog/2020/04/15/databricks-extends-mlflow-model-registry-with-enterprise-features.html)
 
 要在模型注册表中注册一个模型，请选择其中一个运行，并在`Artifacts`下选择模型文件夹。然后，"`Register Model`"按钮将变为可见状态。您必须选择一个包含所有版本的模型名称。我们创建了一个模型名称为"customer-sentiment-analysis"，并根据准确性指标注册了三个模型，每个方法一个。
 
-![](/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092333.png)
+<picture>
+  <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092333.webp" type="image/webp">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092333.webp" alt="" loading="lazy">
+</picture>
 
 接下来，如果您转到屏幕上方的"`Models`"选项卡，您将看到所有的版本。您可以选择每个版本，然后设置其阶段。在这里，我们将所有版本都设置为`暂存`状态。增加对每个版本更改的数据描述以及开发人员的姓名是一个很好的做法。
 
-![](/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092529.png)
+<picture>
+  <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092529.webp" type="image/webp">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092529.webp" alt="" loading="lazy">
+</picture>
 
-![](/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092534.png)
+<picture>
+  <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092534.webp" type="image/webp">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092534.webp" alt="" loading="lazy">
+</picture>
 
 您还可以使用API和`MlflowClient`，在代码中执行这些步骤。请在[这里](https://www.mlflow.org/docs/latest/model-registry.html)查看API文档，并通过以下视频了解更多细节。我更推荐使用用户界面。
 
 然后，您可以比较处于暂存阶段的模型，并选择一个用于生产部署。在我们的例子中，深度学习模型的准确性更高，因此我们将其推进到`生产`阶段。当您将模型转换至生产阶段时，模型注册表仅为该模型版本分配一个标签，实际上并未将模型部署到生产环境中。可以借助具体的部署代码完成实际的部署，来为注册表增添连续集成与持续交付（CI/CD）的流程。
 
-![](/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092714.png)
+<picture>
+  <source srcset="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092714.webp" type="image/webp">
+  <img src="/images/posts/2023-08-31-mlops-project-part-1-machine-learning-experiment-tracking-using-mlflow/Pasted%20image%2020230831092714.webp" alt="" loading="lazy">
+</picture>
 
 然后，我们可以使用该版本的运行ID下载模型及其他所需文件，如分词器，并进行部署。在我们的案例中，我们希望加载Keras模型。请查看[文档](https://www.mlflow.org/docs/latest/python_api/mlflow.keras.html)以获取更多详细信息：
 

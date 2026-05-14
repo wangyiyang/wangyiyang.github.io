@@ -25,5 +25,10 @@
       </div>
       {% endif %}
     </div>
+    {% if page.cover %}
+    <div class="post-hero-image">
+      <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" loading="lazy" />
+    </div>
+    {% endif %}
   </div>
 </header>

@@ -1,0 +1,26 @@
+/* Post Hero Image */
+.post-hero-image {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.post-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.post-hero-image:hover img {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .post-hero-image {
+    margin-top: 1rem;
+    border-radius: 8px;
+  }
+}

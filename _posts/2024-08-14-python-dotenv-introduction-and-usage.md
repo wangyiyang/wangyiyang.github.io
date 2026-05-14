@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Python 中的 dotenv——配置管理的魔法棒
+date: 2024-08-14 08:00:00 +0800
+cover: "/images/posts/Python-dotenv配置管理_001.webp"
 categories: [Python]
 description: "在 Python 开发的奇妙世界里，dotenv 是一个能让我们的配置管理变得轻松又高效的神奇工具。今天，就让我们一起深入探索 dotenv 的魅力！"
 keywords: Python, dotenv, 配置管理, 环境变量

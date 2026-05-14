@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "深度RAG笔记01：核心概念与诞生背景"
+date: 2025-08-03 08:00:00 +0800
 categories: [RAG, AI, 深度学习]
 description: 深入RAG技术核心，掌握检索增强生成的基本概念与诞生背景
 keywords: RAG, 检索增强生成, LLM, 向量检索, 知识库
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_rag-01-fundamentals-core-concepts-and-background_001.webp"
 ---
 
 > **翊行代码:深度RAG笔记第1篇**：深入RAG技术核心，掌握检索增强生成的基本概念与诞生背景

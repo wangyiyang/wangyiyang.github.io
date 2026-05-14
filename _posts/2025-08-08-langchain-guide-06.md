@@ -1,6 +1,8 @@
 ---
+
 layout: post
 title: "06 | DeepSeek R1 × LangChain：智能数据分析全流程实践"
+date: 2025-08-08 08:00:00 +0800
 categories: ["DeepSeek", "LangChain", "AI"]
 description: "在当今数据驱动的商业环境中，数据分析师和开发者仍在与繁琐的ETL流程、复杂的代码调试以及耗时的可视化调整作斗争。DeepSeek R1打破这一困境，以三大核心优势重塑数据分析工作流："
 keywords: "DeepSeek, LangChain, AI, 06 | DeepSeek R1 × LangChain：智能数据分析全流程实践"
@@ -10,6 +12,7 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+cover: "/images/posts/post_langchain-guide-06_001.webp"
 ---
 ## 📊 引言：DeepSeek R1 的数据分析革命
 

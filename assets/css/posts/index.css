@@ -1,4 +1,4 @@
-#post-directory-module {
+##post-directory-module {
     z-index: 999;
 }
 
@@ -76,7 +76,7 @@
 .posts-list-meta {
     font-size: 12px;
     font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-    line-height: 2;
+    line-height: 2{
     color: #555;
     background: #fff;
 }
