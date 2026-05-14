@@ -156,7 +156,8 @@ $(document).ready(function(){
         position: 'fixed',
         width: 'inherit'
       });
-      $('.post-directory').css('overflow', 'auto');
+      $('.post-directory').css('overflow-y', 'auto');
+      $('.post-directory').css('overflow-x', 'hidden');
     } else {
       $('#post-directory-module').css({
         position: 'inherit',
