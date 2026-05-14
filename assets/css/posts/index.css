@@ -1,4 +1,4 @@
-#post-directory-module {
+##post-directory-module {
     z-index: 999;
 }
 
@@ -6,10 +6,12 @@
     font-size: 14px;
     background: #fff;
     overflow: hidden;
-    width: 300px;
+    width: 100%;
     padding-bottom: 1em;
     border: 1px solid #efefef;
     color: #999;
+    box-sizing: border-box;
+    word-break: break-word;
 }
 
 .post-directory ul,
@@ -74,7 +76,7 @@
 .posts-list-meta {
     font-size: 12px;
     font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-    line-height: 2;
+    line-height: 2{
     color: #555;
     background: #fff;
 }
