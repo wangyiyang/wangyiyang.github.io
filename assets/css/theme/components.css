@@ -65,6 +65,11 @@
 
 .site-header .container {
   max-width: var(--theme-container);
+  margin: 0 auto;
+  padding: 0 var(--theme-space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* === 站点品牌 Logo === */
@@ -103,14 +108,27 @@
   line-height: 1;
 }
 
-.site-header h1 a,
+.site-header-nav {
+  float: none;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .site-header-nav-item {
   color: var(--theme-text);
+  text-decoration: none;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s;
 }
 
 .site-header-nav-item.selected,
 .site-header-nav-item:hover {
   color: var(--theme-accent);
+  border-bottom-color: var(--theme-accent);
 }
 
 /* === Footer 朱红印章 === */
