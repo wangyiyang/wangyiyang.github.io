@@ -1,6 +1,10 @@
 <header class="post-hero">
   <div class="theme-container">
     <div class="post-hero-inner">
+      <div class="post-hero-logo">
+        <img src="{{ site.url }}/images/yixing-logo.svg" alt="{翊}" width="40" height="40">
+        <span>翊行代码</span>
+      </div>
       <div class="theme-meta">
         {% if page.date %}
         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>

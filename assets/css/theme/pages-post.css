@@ -1,25 +1,61 @@
+/* === 文章页 Header：占顶 30vh === */
 .post-hero {
+  padding: 0;
+  min-height: 30vh;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
   border-bottom: 1px solid var(--theme-border);
-  padding: var(--theme-space-12) 0 var(--theme-space-8);
 }
 
 .post-hero-inner {
   max-width: var(--theme-reading);
+  margin: 0 auto;
+  padding: var(--theme-space-8) var(--theme-space-6);
+  width: 100%;
+}
+
+.post-hero-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--theme-space-3);
+  margin-bottom: var(--theme-space-4);
+}
+
+.post-hero-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.post-hero-logo span {
+  font-family: var(--theme-font-serif);
+  font-size: 1rem;
+  color: var(--theme-muted);
+  letter-spacing: 0.05em;
 }
 
 .post-title {
   color: var(--theme-text);
-  font-size: clamp(2rem, 5vw, 3.8rem);
-  line-height: 1.12;
-  margin: var(--theme-space-4) 0;
+  font-family: var(--theme-font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.3;
+  margin: var(--theme-space-3) 0;
 }
 
 .post-description {
   color: var(--theme-muted);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   line-height: 1.75;
 }
 
+/* === 文章主体：680px 居中 === */
+.post-content-wrap {
+  max-width: var(--theme-reading);
+  margin: 0 auto;
+  padding: var(--theme-space-8) var(--theme-space-6);
+}
+
+/* === TOC：右侧浮动，灰色小字，当前项朱红 === */
 .post-toc {
   align-self: start;
   position: sticky;
@@ -28,23 +64,47 @@
 
 .post-toc-title {
   color: var(--theme-text);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-bottom: var(--theme-space-3);
 }
 
 .post-toc a {
   color: var(--theme-muted);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  text-decoration: none;
 }
 
 .post-toc a:hover {
   color: var(--theme-accent);
 }
 
-/* 目录内容区域限制高度，内部可滚动，确保下方二维码始终可见 */
+.post-toc .active > a {
+  color: var(--theme-accent);
+  font-weight: 600;
+}
+
+/* 目录内容区域限制高度，内部可滚动 */
 #post-directory-module {
   max-height: calc(100vh - 280px);
   overflow-y: auto;
+}
+
+#post-directory-module ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#post-directory-module li {
+  padding: 0.15em 0;
+}
+
+#post-directory-module li li {
+  padding-left: 1em;
 }
 
 .post-footer-nav {

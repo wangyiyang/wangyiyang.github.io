@@ -1,19 +1,27 @@
 :root {
-  --theme-bg: #fbfbfa;
-  --theme-surface: #ffffff;
-  --theme-text: #18191b;
-  --theme-muted: #626973;
-  --theme-subtle: #8a929c;
-  --theme-border: #e5e7eb;
-  --theme-border-strong: #cfd5dd;
-  --theme-accent: #2563eb;
-  --theme-accent-dark: #1d4ed8;
-  --theme-code-bg: #f5f7fa;
+  /* 翊行代码 VI 四色 */
+  --yx-ink: #0A0A0A;
+  --yx-washi: #FAFAFA;
+  --yx-vermilion: #C0392B;
+  --yx-gold: #D4A84B;
+
+  /* 功能色（由四色派生） */
+  --theme-bg: #FAFAFA;
+  --theme-surface: #FFFFFF;
+  --theme-text: #0A0A0A;
+  --theme-muted: rgba(10, 10, 10, 0.55);
+  --theme-subtle: rgba(10, 10, 10, 0.35);
+  --theme-border: rgba(10, 10, 10, 0.08);
+  --theme-border-strong: rgba(10, 10, 10, 0.15);
+  --theme-accent: #C0392B;
+  --theme-accent-dark: #9E2B20;
+  --theme-code-bg: #0A0A0A;
+  --theme-code-text: #FAFAFA;
   --theme-shadow: rgba(0, 0, 0, 0.04);
   --theme-radius-sm: 4px;
   --theme-radius-md: 8px;
   --theme-container: 1120px;
-  --theme-reading: 760px;
+  --theme-reading: 680px;
   --theme-space-1: 0.25rem;
   --theme-space-2: 0.5rem;
   --theme-space-3: 0.75rem;
@@ -24,20 +32,24 @@
   --theme-space-10: 2.5rem;
   --theme-space-12: 3rem;
   --theme-space-16: 4rem;
-  --theme-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  --theme-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* 字体栈：思源宋体 → 思源黑体 → Inter → 系统回退 */
+  --theme-font-serif: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif;
+  --theme-font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --theme-font-mono: "JetBrains Mono", "SFMono-Regular", "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 [data-theme="dark"] {
-  --theme-bg: #0d1117;
-  --theme-surface: #161b22;
-  --theme-text: #c9d1d9;
-  --theme-muted: #8b949e;
-  --theme-subtle: #6e7681;
-  --theme-border: #30363d;
-  --theme-border-strong: #484f58;
-  --theme-accent: #58a6ff;
-  --theme-accent-dark: #79c0ff;
-  --theme-code-bg: #1c2128;
+  --theme-bg: #0A0A0A;
+  --theme-surface: #111111;
+  --theme-text: #FAFAFA;
+  --theme-muted: rgba(250, 250, 250, 0.5);
+  --theme-subtle: rgba(250, 250, 250, 0.3);
+  --theme-border: rgba(250, 250, 250, 0.1);
+  --theme-border-strong: rgba(250, 250, 250, 0.15);
+  --theme-accent: #C0392B;
+  --theme-accent-dark: #E04A3A;
+  --theme-code-bg: #111111;
+  --theme-code-text: #FAFAFA;
   --theme-shadow: rgba(0, 0, 0, 0.3);
 }

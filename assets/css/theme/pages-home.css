@@ -1,12 +1,56 @@
+/* === 首页 Hero：水墨头图背景 === */
 .workbench-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
   padding: var(--theme-space-16) 0 var(--theme-space-12);
 }
 
+.workbench-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.workbench-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .workbench-hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: var(--theme-space-12);
   grid-template-columns: 1fr;
   align-items: end;
+}
+
+.workbench-hero-content {
+  max-width: 600px;
+}
+
+.workbench-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--theme-space-3);
+  margin-bottom: var(--theme-space-4);
+}
+
+.workbench-brand img {
+  width: 48px;
+  height: 48px;
+}
+
+.workbench-brand-name {
+  font-family: var(--theme-font-serif);
+  font-size: 1.1rem;
+  color: var(--theme-text);
+  letter-spacing: 0.08em;
 }
 
 .workbench-eyebrow {
@@ -19,16 +63,17 @@
 
 .workbench-title {
   color: var(--theme-text);
-  font-size: clamp(2.4rem, 6vw, 5rem);
-  line-height: 1.05;
-  margin: var(--theme-space-4) 0;
+  font-family: var(--theme-font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  margin: var(--theme-space-3) 0;
 }
 
 .workbench-description {
   color: var(--theme-muted);
-  font-size: 1.12rem;
+  font-size: 1.05rem;
   line-height: 1.8;
-  max-width: 720px;
+  max-width: 520px;
 }
 
 .workbench-actions,

@@ -32,9 +32,10 @@
   font-weight: 600;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
-  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-  color: white;
+  background: var(--theme-accent);
+  color: #fff;
   margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
 }
 
 .featured-post-card h3 {

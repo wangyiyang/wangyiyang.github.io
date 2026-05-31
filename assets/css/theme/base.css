@@ -18,20 +18,35 @@ a {
 a:hover,
 a:focus {
   color: var(--theme-accent-dark);
+  text-decoration: underline;
 }
 
+/* === Markdown 正文 === */
 .markdown-body {
   color: var(--theme-text);
-  font-size: 17px;
-  line-height: 1.85;
+  font-family: var(--theme-font-sans);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .markdown-body h2,
 .markdown-body h3,
 .markdown-body h4 {
   color: var(--theme-text);
+  font-family: var(--theme-font-serif);
   letter-spacing: 0;
   margin-top: 2.2em;
+  line-height: 1.3;
+}
+
+.markdown-body h2 {
+  font-size: 1.5rem;
+}
+
+.markdown-body h3 {
+  font-size: 1.25rem;
 }
 
 .markdown-body p,
@@ -40,31 +55,154 @@ a:focus {
 .markdown-body blockquote,
 .markdown-body table,
 .markdown-body pre {
-  margin-bottom: 1.15em;
+  margin-bottom: 1.5em;
 }
 
+/* === 引用块：朱红竖线 + 5% 灰背景 + 倾斜 === */
 .markdown-body blockquote {
-  border-left: 3px solid var(--theme-accent);
+  border-left: 4px solid var(--theme-accent);
   color: var(--theme-muted);
-  background: transparent;
+  background: rgba(10, 10, 10, 0.04);
+  padding: 1em 1.2em;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  border-radius: 0 var(--theme-radius-sm) var(--theme-radius-sm) 0;
 }
 
+[data-theme="dark"] .markdown-body blockquote {
+  background: rgba(250, 250, 250, 0.04);
+}
+
+/* === 行内代码 === */
 .markdown-body code,
 .markdown-body tt {
-  background: var(--theme-code-bg);
+  background: rgba(10, 10, 10, 0.06);
   border-radius: var(--theme-radius-sm);
   font-family: var(--theme-font-mono);
+  font-size: 0.875em;
+  padding: 0.15em 0.35em;
 }
 
+[data-theme="dark"] .markdown-body code,
+[data-theme="dark"] .markdown-body tt {
+  background: rgba(250, 250, 250, 0.08);
+}
+
+/* === 代码块：深色主题 === */
 .markdown-body pre {
   background: var(--theme-code-bg);
   border: 1px solid var(--theme-border);
   border-radius: var(--theme-radius-md);
+  overflow-x: auto;
 }
 
+.markdown-body pre code {
+  background: transparent;
+  font-family: var(--theme-font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* Rouge 高亮覆盖：深色主题 */
+.markdown-body pre .highlight,
+.markdown-body pre .hll { background: transparent; }
+.markdown-body pre .c { color: #6a737d; font-style: italic; }
+.markdown-body pre .k { color: #C0392B; font-weight: 600; }
+.markdown-body pre .o { color: #d1d5db; }
+.markdown-body pre .cm { color: #6a737d; font-style: italic; }
+.markdown-body pre .cp { color: #6a737d; font-weight: 600; }
+.markdown-body pre .c1 { color: #6a737d; font-style: italic; }
+.markdown-body pre .cs { color: #6a737d; font-weight: 600; font-style: italic; }
+.markdown-body pre .gd { color: #ff7b72; background: rgba(255,123,114,0.1); }
+.markdown-body pre .ge { font-style: italic; }
+.markdown-body pre .gr { color: #ff7b72; }
+.markdown-body pre .gh { color: #79c0ff; }
+.markdown-body pre .gi { color: #7ee787; background: rgba(126,231,135,0.1); }
+.markdown-body pre .go { color: #8b949e; }
+.markdown-body pre .gp { color: #79c0ff; }
+.markdown-body pre .gs { font-weight: 600; }
+.markdown-body pre .gu { color: #79c0ff; }
+.markdown-body pre .gt { color: #ff7b72; }
+.markdown-body pre .kc { color: #79c0ff; }
+.markdown-body pre .kd { color: #C0392B; font-weight: 600; }
+.markdown-body pre .kn { color: #C0392B; font-weight: 600; }
+.markdown-body pre .kp { color: #79c0ff; }
+.markdown-body pre .kr { color: #C0392B; font-weight: 600; }
+.markdown-body pre .kt { color: #C0392B; font-weight: 600; }
+.markdown-body pre .m { color: #79c0ff; }
+.markdown-body pre .s { color: #a5d6ff; }
+.markdown-body pre .na { color: #7ee787; }
+.markdown-body pre .nb { color: #d1d5db; }
+.markdown-body pre .nc { color: #e6c07b; }
+.markdown-body pre .no { color: #79c0ff; }
+.markdown-body pre .nd { color: #d2a8ff; }
+.markdown-body pre .ni { color: #d1d5db; }
+.markdown-body pre .ne { color: #ff7b72; }
+.markdown-body pre .nf { color: #e6c07b; }
+.markdown-body pre .nl { color: #d1d5db; }
+.markdown-body pre .nn { color: #e6c07b; }
+.markdown-body pre .nx { color: #d1d5db; }
+.markdown-body pre .py { color: #d1d5db; }
+.markdown-body pre .nt { color: #7ee787; }
+.markdown-body pre .nv { color: #79c0ff; }
+.markdown-body pre .ow { color: #C0392B; font-weight: 600; }
+.markdown-body pre .w { color: #484f58; }
+.markdown-body pre .mb { color: #79c0ff; }
+.markdown-body pre .mf { color: #79c0ff; }
+.markdown-body pre .mh { color: #79c0ff; }
+.markdown-body pre .mi { color: #79c0ff; }
+.markdown-body pre .mo { color: #79c0ff; }
+.markdown-body pre .sa { color: #a5d6ff; }
+.markdown-body pre .sb { color: #a5d6ff; }
+.markdown-body pre .sc { color: #a5d6ff; }
+.markdown-body pre .dl { color: #a5d6ff; }
+.markdown-body pre .sd { color: #6a737d; }
+.markdown-body pre .s2 { color: #a5d6ff; }
+.markdown-body pre .se { color: #79c0ff; }
+.markdown-body pre .sh { color: #a5d6ff; }
+.markdown-body pre .si { color: #a5d6ff; }
+.markdown-body pre .sx { color: #a5d6ff; }
+.markdown-body pre .sr { color: #79c0ff; }
+.markdown-body pre .s1 { color: #a5d6ff; }
+.markdown-body pre .ss { color: #79c0ff; }
+.markdown-body pre .bp { color: #d1d5db; }
+.markdown-body pre .fm { color: #e6c07b; }
+.markdown-body pre .vc { color: #79c0ff; }
+.markdown-body pre .vg { color: #79c0ff; }
+.markdown-body pre .vi { color: #79c0ff; }
+.markdown-body pre .vm { color: #79c0ff; }
+.markdown-body pre .il { color: #79c0ff; }
+
+/* === 图片 === */
 .markdown-body img,
 .markdown-body video {
+  border: 1px solid #E5E5E5;
   border-radius: var(--theme-radius-md);
   height: auto;
   max-width: 100%;
+  display: block;
+}
+
+/* === 表格 === */
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92em;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  border: 1px solid var(--theme-border);
+  padding: 0.5em 0.75em;
+}
+
+.markdown-body table th {
+  background: rgba(10, 10, 10, 0.03);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .markdown-body table th {
+  background: rgba(250, 250, 250, 0.05);
 }

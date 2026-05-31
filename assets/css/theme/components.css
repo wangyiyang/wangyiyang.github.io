@@ -67,6 +67,32 @@
   max-width: var(--theme-container);
 }
 
+/* === 站点品牌 Logo === */
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--theme-space-3);
+  text-decoration: none;
+}
+
+.site-brand:hover {
+  text-decoration: none;
+}
+
+.site-logo {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.site-brand-name {
+  font-family: var(--theme-font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--theme-text);
+  letter-spacing: 0.05em;
+}
+
 .site-header h1 a,
 .site-header-nav-item {
   color: var(--theme-text);
@@ -75,6 +101,15 @@
 .site-header-nav-item.selected,
 .site-header-nav-item:hover {
   color: var(--theme-accent);
+}
+
+/* === Footer 朱红印章 === */
+.footer-seal {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.25em;
 }
 
 /* Theme toggle button */

@@ -1,7 +1,7 @@
 manifesto:
   eyebrow: ""
-  title: 王翊仰的技术笔记
-  description: 记录代码、AI 和工程实践中的思考与踩坑。
+  title: 翊行代码
+  description: 翊码行远，仰观星辰 ——用代码丈量世界，以仰望探索未知
   actions:
     - label: 文章归档
       url: /archives/
