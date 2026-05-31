@@ -72,6 +72,12 @@
   justify-content: space-between;
 }
 
+/* Override primer.css clearfix pseudo-elements that become flex items */
+.site-header .container::before,
+.site-header .container::after {
+  display: none;
+}
+
 /* === 站点品牌 Logo === */
 /* Override common.css float/line-height */
 .site-header h1 {
