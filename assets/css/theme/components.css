@@ -66,7 +66,7 @@
 .site-header .container {
   max-width: var(--theme-container);
   margin: 0 auto;
-  padding: 0 var(--theme-space-6);
+  padding: 16px var(--theme-space-6);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,7 +83,7 @@
 .site-brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
   vertical-align: middle;
 }
@@ -93,8 +93,8 @@
 }
 
 .site-logo {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   display: block;
   flex-shrink: 0;
 }
