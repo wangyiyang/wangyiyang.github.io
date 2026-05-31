@@ -1,11 +1,10 @@
 /* === 首页 Hero：水墨头图背景 === */
 .workbench-hero {
   position: relative;
-  min-height: 50vh;
+  height: 400px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  padding: var(--theme-space-16) 0 var(--theme-space-12);
 }
 
 .workbench-hero-image {
@@ -18,39 +17,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 55%;
 }
 
 .workbench-hero-grid {
   position: relative;
   z-index: 1;
-  display: grid;
-  gap: var(--theme-space-12);
-  grid-template-columns: 1fr;
-  align-items: end;
+  width: 100%;
 }
 
 .workbench-hero-content {
   max-width: 600px;
-}
-
-.workbench-brand {
-  display: flex;
-  align-items: center;
-  gap: var(--theme-space-3);
-  margin-bottom: var(--theme-space-4);
-}
-
-.workbench-brand img {
-  width: 48px;
-  height: 48px;
-}
-
-.workbench-brand-name {
-  font-family: var(--theme-font-serif);
-  font-size: 1.1rem;
-  color: var(--theme-text);
-  letter-spacing: 0.08em;
+  padding-bottom: var(--theme-space-8);
 }
 
 .workbench-eyebrow {
@@ -64,16 +42,17 @@
 .workbench-title {
   color: var(--theme-text);
   font-family: var(--theme-font-serif);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  line-height: 1.15;
-  margin: var(--theme-space-3) 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  margin: var(--theme-space-2) 0;
 }
 
 .workbench-description {
   color: var(--theme-muted);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.75;
   max-width: 520px;
+  margin: 0;
 }
 
 .workbench-actions,
