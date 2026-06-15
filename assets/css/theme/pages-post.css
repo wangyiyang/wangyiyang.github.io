@@ -87,9 +87,9 @@
   font-weight: 600;
 }
 
-/* 目录内容区域限制高度，内部可滚动 */
+/* 目录内容区域限制高度，内部可滚动；预留底部二维码空间 */
 #post-directory-module {
-  max-height: calc(100vh - 280px);
+  max-height: calc(100vh - 480px);
   overflow-y: auto;
 }
 
