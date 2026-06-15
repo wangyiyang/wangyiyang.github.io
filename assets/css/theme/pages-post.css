@@ -60,6 +60,9 @@
   align-self: start;
   position: sticky;
   top: 92px;
+  max-height: calc(100vh - 112px);
+  display: flex;
+  flex-direction: column;
 }
 
 .post-toc-title {
@@ -87,9 +90,10 @@
   font-weight: 600;
 }
 
-/* 目录内容区域限制高度，内部可滚动；预留底部二维码空间 */
+/* 目录内容区域弹性填充剩余空间，内部可滚动 */
 #post-directory-module {
-  max-height: calc(100vh - 480px);
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
 }
 
@@ -105,6 +109,10 @@
 
 #post-directory-module li li {
   padding-left: 1em;
+}
+
+.post-toc-wechat {
+  flex-shrink: 0;
 }
 
 .post-footer-nav {
