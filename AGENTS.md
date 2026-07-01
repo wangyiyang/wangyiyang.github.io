@@ -154,6 +154,15 @@ bundle update   # 更新依赖
 npm install     # 安装依赖（主要用于百度推送功能）
 ```
 
+## Git 工作流
+
+本项目是个人博客，采用**简化工作流**：
+
+- **直接提交到 `master` 分支**，无需创建功能分支或 PR
+- Commit 遵循 Conventional Commits 规范：`feat/fix/refactor/docs/test/chore`
+- 保持原子提交，一个 Commit 只解决一个关注点
+- 提交前确保本地构建成功（`bundle exec jekyll build`）
+
 ## 注意事项
 
 - 所有文章图片应放在 `images/posts/` 对应目录下
