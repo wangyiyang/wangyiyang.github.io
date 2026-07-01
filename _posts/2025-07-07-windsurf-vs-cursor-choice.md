@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 放弃Cursor，我依然选择了Claude断供后的Windsurf
+title: "Claude 断供后 Windsurf 的反转：为什么我逆风坚持用 Windsurf"
 date: 2025-07-07 08:00:00 +0800
 cover: "/images/posts/WindsurfvsCursor_001.webp"
 categories: [AI, Programming Tools, Code Generation, Controversial]
