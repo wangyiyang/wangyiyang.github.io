@@ -1,4 +1,11 @@
-# Zoox Cortex：一个无框架的 AI Gateway 生产实践
+---
+layout: post
+title: "Zoox Cortex：一个无框架的 AI Gateway 生产实践"
+date: 2026-05-15 09:30:00 +0800
+categories: [AI Engineering, System Design]
+tags: [Zoox, AI Gateway, Agent, MCP, 生产实践]
+description: "Zoox 工程师从零搭建无框架 AI Gateway 的生产实践——支撑 100+ 内部客户端、多模型多模态 Agent 工作流的架构决策实录。"
+---
 
 > 当大多数团队还在争论「用 LangChain 还是 LlamaIndex」时，Zoox 的工程师选择了一条更激进的路：不用任何框架，从零搭建一个支撑 100+ 内部客户端、多模型、多模态、Agent 工作流的 AI Gateway。这个决策背后的思考，比框架选型本身更值得参考。
 

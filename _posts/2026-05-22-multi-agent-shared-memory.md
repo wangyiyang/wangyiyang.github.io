@@ -5,6 +5,7 @@ date: 2026-05-22 23:19:00 +0800
 categories: AI Agent
 tags: [AI Agent, AgentMemory, Multica, MCP, 多设备工作流]
 image: /images/posts/agentmemory-architecture-2026-05-22.png
+description: "3台设备6个Agent共享一个大脑——用 AgentMemory 解决多设备 Agent 记忆碎片化问题的实战方案。"
 excerpt: "从记忆分裂到云端统一：一个架构师的多Agent实践"
 ---
 

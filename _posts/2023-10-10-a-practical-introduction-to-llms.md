@@ -27,7 +27,7 @@ mindmap2: false
 </picture>
 *Photo by [Patrick Tomasso](https://unsplash.com/@impatrickt?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*  
 
-# **什么是LLM？**
+## **什么是LLM？**
 
 LLM是Large Language Model的缩写，是人工智能和机器学习领域的一项最新创新。这种强大的新型人工智能于2022年12月随着ChatGPT的发布而病毒式传播。
 
@@ -38,7 +38,7 @@ LLM是Large Language Model的缩写，是人工智能和机器学习领域的一
 这个感觉不一样
 
 <iframe width="680" height="382" src="https://www.youtube.com/embed/tFHeUSJAYbE" title="A Practical Introduction to Large Language Models (LLMs)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-# **什么使LLM“大”？**
+## **什么使LLM“大”？**
 
 当我听到“大型语言模型”这个术语时，我的第一个问题是，这与“常规”语言模型有什么不同？
 
@@ -57,7 +57,7 @@ LLM是Large Language Model的缩写，是人工智能和机器学习领域的一
 1. 从数量上来说，区分一个大型语言模型（LLM）的特点是其使用的参数数量。目前的大型语言模型通常拥有大约1000亿到1000亿个参数[1]。
 2. 定性地说，当语言模型变得“大”时，会发生一些值得注意的事情。它表现出所谓的涌现特性。zero-shot learning [1].当语言模型达到足够大的规模时，这些属性似乎突然出现。
 
-# **Zero-shot Learning Zero-shot学习**
+## **Zero-shot Learning Zero-shot学习**
 
 GPT-3（以及其他大型语言模型）的主要创新在于它可以在各种情境下进行零样本学习[2]。这意味着即使没有明确进行该任务的训练，ChatGPT也能执行该任务。
 
@@ -67,7 +67,7 @@ GPT-3（以及其他大型语言模型）的主要创新在于它可以在各种
 
 例如，如果你想让计算机进行语言翻译、情感分析和识别语法错误。这些任务中的每一个都需要一个专门的模型，该模型是在大量标记的示例集上训练的。然而，现在，LLM可以在没有明确培训的情况下完成所有这些事情。
 
-# **LLM如何工作？**
+## **LLM如何工作？**
 
 用于训练大多数最先进的LLM的核心任务是单词预测。换句话说，给定一个单词序列，下一个单词的概率分布是什么？
 
@@ -84,7 +84,7 @@ GPT-3（以及其他大型语言模型）的主要创新在于它可以在各种
 
 虽然没有明确的答案来解释为什么会发生这种情况（目前只有猜测），但很明显，LLM是一种强大的技术，具有无数潜在的用例。
 
-# **使用LLM的3个级别**
+## **使用LLM的3个级别**
 
 现在，我们转向如何在实践中使用这种强大的技术。虽然有无数潜在的LLM用例，但在这里我将它们分为3个级别，按所需的技术知识和计算资源排序。我们从最容易接近的开始。
 

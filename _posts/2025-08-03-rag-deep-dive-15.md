@@ -14,7 +14,7 @@ mindmap2: false
 cover: "/images/posts/深度RAG笔记15-20分钟打造自主决策RAG系统-深度RAG笔记15_001.webp"
 ---
 
-# 深度RAG笔记15：20分钟打造自主决策RAG系统[深度RAG笔记15]
+## 深度RAG笔记15：20分钟打造自主决策RAG系统[深度RAG笔记15]
 
 
 > **翊行代码:深度RAG笔记第15篇**：GraphRAG+RAPTOR+Agent三剑合璧，构建下一代智能问答系统

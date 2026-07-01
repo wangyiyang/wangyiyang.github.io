@@ -16,7 +16,7 @@ cover: "/images/posts/post_lobster-wrote-its-own-mcp-skill_001.webp"
 permalink: /2026/04/09/lobster-wrote-mcp-skill/
 ---
 
-# 我的龙虾给自己写了一个 MCP Skill
+## 我的龙虾给自己写了一个 MCP Skill
 
 我的龙虾跑了一个月，今天它给自己写了个Skill。
 
@@ -111,4 +111,3 @@ Agent、MCP、RAG、大模型……这些数据决定我写什么内容。但Not
 
 ---
 
-*2026-04-09*

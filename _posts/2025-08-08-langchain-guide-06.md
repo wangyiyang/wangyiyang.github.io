@@ -501,7 +501,7 @@ def competitive_analysis(product_data, market_data, competitor_data):
 
 ---
 
-# 📝 结语：数据分析的新纪元
+## 📝 结语：数据分析的新纪元
 
 DeepSeek R1与LangChain的结合标志着数据分析领域进入了一个新的时代。通过本指南，我们展示了如何利用这一强大组合构建高效、精准且易于使用的数据分析系统。从基础环境配置到复杂的竞争情报分析，这一技术栈都能以前所未有的速度和准确性满足您的需求。
 

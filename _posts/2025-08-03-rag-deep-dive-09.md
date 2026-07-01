@@ -14,7 +14,7 @@ mindmap2: false
 cover: "/images/posts/深度RAG笔记09-深度RAG笔记09-LangFuse-vs-LangSmith终极PK-这两个RAG监控神器到底选哪_001.webp"
 ---
 
-# 深度RAG笔记09：深度RAG笔记09：LangFuse vs LangSmith终极PK！这两个RAG监控神器到底选哪个？
+## 深度RAG笔记09：深度RAG笔记09：LangFuse vs LangSmith终极PK！这两个RAG监控神器到底选哪个？
 
 
 > **翊行代码:深度RAG笔记第9篇**：RAG系统上线后怎么监控？两大热门平台深度对比，手把手教你选择最适合的观测工具

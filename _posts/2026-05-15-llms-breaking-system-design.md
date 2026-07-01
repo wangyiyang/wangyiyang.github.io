@@ -4,6 +4,7 @@ title: "LLM 正在瓦解 20 年的云原生架构假设"
 date: 2026-05-15 09:30:00 +0800
 categories: [AI Engineering, System Design]
 tags: [LLM, Agent, Cloud Native, Stateful Compute, Durable Execution]
+description: "LLM 和 Agent 正在从三个维度瓦解云原生架构的 20 年假设——状态存储、计算范式、系统边界的根本性变革。"
 ---
 
 > 过去十年，"云原生"架构建立在一个 20 年前的假设上：状态存储在数据库，计算是无状态的。LLM 和 Agent 的出现，正在从三个维度瓦解这个假设。

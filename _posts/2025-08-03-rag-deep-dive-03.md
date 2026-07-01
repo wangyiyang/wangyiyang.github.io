@@ -14,7 +14,7 @@ mindmap2: false
 cover: "/images/posts/深度RAG笔记03-深度RAG笔记03-智能检索核心技术_001.webp"
 ---
 
-# 深度RAG笔记03：深度RAG笔记03：智能检索核心技术
+## 深度RAG笔记03：深度RAG笔记03：智能检索核心技术
 
 
 > **翊行代码:深度RAG笔记第3篇**：混合检索与重排序算法实战，掌握精准信息检索的核心算法
@@ -321,4 +321,3 @@ def evaluate_retrieval_quality(queries, ground_truth):
 
 ---
 
-**本文是RAG实战攻略系列的第3篇，专注于检索算法的深度解析。关注我们获取更多RAG技术干货！**

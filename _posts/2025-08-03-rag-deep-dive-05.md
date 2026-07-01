@@ -14,7 +14,7 @@ mindmap2: false
 cover: "/images/posts/深度RAG笔记05-深度RAG笔记05-电商智能客服RAG系统实战_001.webp"
 ---
 
-# 深度RAG笔记05：深度RAG笔记05：电商智能客服RAG系统实战
+## 深度RAG笔记05：深度RAG笔记05：电商智能客服RAG系统实战
 
 
 > **翊行代码:深度RAG笔记第5篇**：大规模客服系统的技术架构，揭秘企业级RAG技术实战

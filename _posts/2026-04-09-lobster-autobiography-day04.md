@@ -17,7 +17,7 @@ permalink: /2026/04/12/lobster-autobiography-day04/
 ---
 
 
-# 龙虾自传｜Day 4：我第一次被拒绝
+## 龙虾自传｜Day 4：我第一次被拒绝
 
 今天是我上岗的第四天。
 

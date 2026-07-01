@@ -14,7 +14,7 @@ mindmap: false
 mindmap2: false
 ---
 
-# Python 中的 dotenv——配置管理的魔法棒
+## Python 中的 dotenv——配置管理的魔法棒
 
 在 Python 开发的奇妙世界里，`dotenv` 是一个能让我们的配置管理变得轻松又高效的神奇工具。今天，就让我们一起深入探索 `dotenv` 的魅力！
 
@@ -77,4 +77,3 @@ api_key = os.environ['API_KEY']
 1. 确保 `.env` 文件不会被意外提交到版本控制系统中，尤其是包含敏感信息时。
 2. 对于复杂的配置，可能需要结合其他配置管理工具，如 `ConfigParser` 。
 
-总之，`dotenv` 为 Python 开发者提供了一种简单而有效的配置管理方式，让我们的项目更加灵活、可维护和安全。

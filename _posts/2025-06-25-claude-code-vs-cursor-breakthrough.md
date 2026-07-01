@@ -14,7 +14,7 @@ mindmap: false
 mindmap2: false
 ---
 
-# 🚀 Claude Code + Cursor：AI编程的黄金组合来了！
+## 🚀 Claude Code + Cursor：AI编程的黄金组合来了！
 
 ## 💭 一个意外的发现
 
@@ -348,4 +348,3 @@ Claude Code + Cursor这个组合让我重新定义了什么叫"高效编程"：
 ---
 
 **如果这篇文章对你有帮助，欢迎分享给更多的开发者朋友！**  
-**让我们一起拥抱AI编程的黄金时代！** 🚀✨

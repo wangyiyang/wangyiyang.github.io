@@ -11,7 +11,7 @@ keywords: "Deep Research, Multi-Agent, RAG, Production, Thoughtworks"
 
 ![cover](/images/posts/deep-research-agents-production-lessons_1200x630.jpg)
 
-# 深度研究智能体的生产级架构：来自 Thoughtworks 的实战复盘
+## 深度研究智能体的生产级架构：来自 Thoughtworks 的实战复盘
 
 **作者**: Sarang Kulkarni (Thoughtworks) | **来源**: InfoQ Arc of AI Conference 2026
 
@@ -146,4 +146,3 @@ Harness 包含：工具设计、记忆系统、验证检查、约束条件和反
 
 ---
 
-*本文是对 InfoQ 文章《Sarang Kulkarni on Lessons from Building Deep Research Agents in Production》的深度解读，更多详情可[阅读原文](https://www.infoq.com/news/2026/05/kulkarni-deep-research-agents/)。*

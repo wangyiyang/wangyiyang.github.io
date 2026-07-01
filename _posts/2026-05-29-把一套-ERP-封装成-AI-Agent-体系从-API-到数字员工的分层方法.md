@@ -3,7 +3,7 @@ layout: post
 title: "把一套 ERP 封装成 AI Agent 体系:从 API 到数字员工的分层方法"
 date: 2026-05-29 08:00:00 +0800
 categories: ["AI", "Agent"]
-description: ""
+description: "把一套 ERP 系统封装成 AI Agent 体系——从底层 API 适配到顶层数字员工的分层架构方法论，附完整实现路径。"
 keywords: "把一套 ERP 封装成 AI Agent 体系:从 API "
 mermaid: true
 sequence: false

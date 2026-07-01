@@ -14,7 +14,7 @@ mindmap: false
 mindmap2: false
 ---
 
-# 在 OpenAI SDK 和 LangChain OpenAI 中使用代理
+## 在 OpenAI SDK 和 LangChain OpenAI 中使用代理
 
 在开发过程中，使用代理服务器可以帮助你控制网络请求的流向、提高安全性或遵循公司的网络政策。本文将介绍如何在 OpenAI SDK 和 LangChain OpenAI 中使用代理。
 

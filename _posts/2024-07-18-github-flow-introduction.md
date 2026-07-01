@@ -14,7 +14,7 @@ mindmap: false
 mindmap2: false
 ---
 
-# GitHub Flow 工作流程简介
+## GitHub Flow 工作流程简介
 
 GitHub Flow 是一种简单而有效的 Git 分支工作流程，适用于许多软件开发团队。它的核心理念是通过一系列步骤，使代码从开发到部署过程透明化和系统化。本文将详细介绍 GitHub Flow 的各个阶段，帮助您更好地理解和应用这一工作流程，同时探讨其优缺点。
 
