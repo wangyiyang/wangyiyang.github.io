@@ -1,6 +1,11 @@
 /* Post Hero Image */
 .post-hero-image {
-  margin-top: 2rem;
+  max-width: var(--theme-container);
+  margin: 2rem auto 0;
+  padding: 0 var(--theme-space-6);
+}
+
+.post-hero-image-inner {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
