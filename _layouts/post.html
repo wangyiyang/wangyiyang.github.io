@@ -12,12 +12,32 @@ layout: default
     "name": "{{ site.author }}",
     "url": "{{ site.url }}"
   },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.author }}",
+    "url": "{{ site.url }}"
+  },
+  {% if page.description %}
+  "description": "{{ page.description | strip_html | strip_newlines }}",
+  {% endif %}
   {% if page.date %}
   "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
   {% endif %}
   {% if page.categories %}
   "articleSection": "{{ page.categories | first }}",
   {% endif %}
+  {% if page.og_image_url %}
+  "image": "{{ page.og_image_url }}",
+  {% elsif page.photo_url %}
+  "image": "{{ page.photo_url }}",
+  {% else %}
+  "image": "{{ site.url }}/assets/images/default-og.png",
+  {% endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url | remove_first:'index.html' }}"
+  },
   "url": "{{ site.url }}{{ page.url | remove_first:'index.html' }}"
 }
 </script>
