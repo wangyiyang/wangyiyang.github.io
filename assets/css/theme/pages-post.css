@@ -9,10 +9,17 @@
 }
 
 .post-hero-inner {
-  max-width: var(--theme-reading);
+  max-width: var(--theme-container);
   margin: 0 auto;
   padding: var(--theme-space-8) var(--theme-space-6);
   width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: var(--theme-space-12);
+}
+
+.post-hero-content {
+  max-width: var(--theme-reading);
 }
 
 .post-hero-logo {
