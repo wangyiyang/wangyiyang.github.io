@@ -124,6 +124,15 @@
   padding-top: var(--theme-space-6);
 }
 
+/* 修复：related-posts 的 border-top 与 card 底部边框重叠 */
+.related-posts {
+  border-top: none !important;
+}
+
+.related-posts > .theme-list {
+  border-top: 1px solid var(--theme-border);
+}
+
 @media (max-width: 900px) {
   .post-toc {
     position: static;
@@ -131,5 +140,10 @@
 
   .post-footer-nav {
     grid-template-columns: 1fr;
+  }
+
+  /* 目录在小屏上不再需要滚动限制 */
+  #post-directory-module {
+    max-height: none;
   }
 }
