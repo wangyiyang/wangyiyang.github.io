@@ -163,6 +163,18 @@ npm install     # 安装依赖（主要用于百度推送功能）
 - 保持原子提交，一个 Commit 只解决一个关注点
 - 提交前确保本地构建成功（`bundle exec jekyll build`）
 
+## 可用 Skill
+
+### `notion-to-blog` — Notion → 博客文章转换
+
+位于 `.agents/skills/notion-to-blog/`。当用户给出 Notion 页面 URL 要求「转换为博客文章」时使用。
+自动完成：从 Notion API 获取 Markdown 内容、下载配图到 `images/posts/`、生成 `_posts/` 文章。
+
+用法：参考 SKILL.md 或直接运行辅助脚本：
+```bash
+.agents/skills/notion-to-blog/convert.sh <notion-page-url>
+```
+
 ## 注意事项
 
 - 所有文章图片应放在 `images/posts/` 对应目录下
