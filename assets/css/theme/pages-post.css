@@ -70,6 +70,7 @@
   max-height: calc(100vh - 112px);
   display: flex;
   flex-direction: column;
+  padding-left: 0.5rem;
 }
 
 .post-toc-title {
@@ -111,11 +112,16 @@
 }
 
 #post-directory-module li {
-  padding: 0.15em 0;
+  padding: 0.35em 0;
 }
 
 #post-directory-module li li {
   padding-left: 1em;
+}
+
+.post-directory .toc-item .toc-text {
+  display: inline-block;
+  padding: 0.15em 0;
 }
 
 .post-toc-wechat {
