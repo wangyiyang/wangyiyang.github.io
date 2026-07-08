@@ -41,5 +41,5 @@ full_width: true
 - 微信公众号：**{{ site.components.qrcode.image_alt }}**
 
 <div class="wechat-qr-wrap">
-  <img src="{{ site.url }}/images/weixin.webp" alt="{{ site.components.qrcode.image_alt }}" class="wechat-qr-img" />
+  <img src="{{ site.url }}/images/qrcode.jpg" alt="{{ site.components.qrcode.image_alt }}" class="wechat-qr-img" />
 </div>
