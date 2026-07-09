@@ -12,11 +12,11 @@ mindmap: false
 mindmap2: false
 ---
 
-![封面图：标准化的链条 vs 手搓的链条，只标准化了一半](/images/posts/mcp-ema-standardized-half/01.png)
+![](/images/posts/mcp-ema-standardized-half/01.png)
 前几天刷到一条新闻：MCP 的 Enterprise-Managed Authorization（EMA）转正为 stable——Anthropic、Microsoft、Okta 已经采用，Claude、VS Code 等客户端，以及 Asana、Atlassian、Figma、Linear、Supabase 等一批 Server 都宣布了支持。
 看到新闻的第一反应不是「又一个协议更新」，而是一阵强烈的既视感：EMA 做的这件事，我几年前在项目里**手搓过一个私有版**。这篇文章想讲清楚三件事：我当年为什么要手搓、EMA 把哪一半标准化了、以及剩下那一半为什么协议永远不会替你解决。
 先补一段背景。**EMA（Enterprise-Managed Authorization，企业托管授权）是 MCP 授权规范的官方扩展**。它把「谁能连哪个 MCP Server、拿什么 scope」这个决策，从每个用户的逐个授权，上移到企业自己信任的身份提供商（IdP，如 Okta）手里：管理员配置一次策略，员工用企业身份登录一次，被授权的 MCP Server 就自动全部连上，全程没有任何 per-server 的 OAuth 授权环节——官方把这个体验叫 **zero-touch**。
-![传统 OAuth（左）需要用户在浏览器里逐个走授权；ID-JAG / EMA（右）在后端完成全部换发，用户零感知。图源：[dev.to](http://dev.to)《ID-JAG Deep Dive》](/images/posts/mcp-ema-standardized-half/02.png)
+![](/images/posts/mcp-ema-standardized-half/02.png)
 ### per-user OAuth 弹窗，从来不是我们的选项
 把 Agent 接进企业内部系统，生态里的教科书路径是 per-user OAuth：**每个用户 × 每个下游系统**，各自走一遍授权弹窗、各自维护一份 token。这个乘法放到企业里，结局不难推演：
 - **对用户**：光是把十几个内部系统逐个授权一遍就要耗掉大半天，token 过期后还得再来一轮；
@@ -39,14 +39,11 @@ mindmap2: false
 EMA 的核心，是把「用户凭证」从链路里彻底拿掉——用户只对企业 IdP 登录一次，之后在链路上流转的不是账号密码，而是 IdP 签发的**身份断言 JWT（ID-JAG，Identity Assertion JWT Authorization Grant，一个 IETF OAuth 草案）**：
 1. **用户只认 IdP**：真正的登录只发生在用户 ↔ IdP 之间，主凭证不下发给任何 MCP Server。
 2. **IdP 签发身份断言**：用 ID-JAG 签出一张 JWT，声明「这个用户 / 这个客户端被允许连这个 Server、在这个 scope 下」。
-3. **在 MCP Server 的授权服务器换 token**：这张断言被换成 access token，客户端带着它去调 Server。
-![ID-JAG 完整时序：SSO 登录 → Token Exchange 换 ID-JAG → 在 Resource AS 换 access token → 调用 API。图源：[dev.to](http://dev.to)《ID-JAG Deep Dive》](/images/posts/mcp-ema-standardized-half/03.png)
-![IdP 收到 Token Exchange 请求后的内部处理：用「管理员预配置的策略评估」取代了用户点同意按钮。图源：[dev.to](http://dev.to)《ID-JAG Deep Dive》](/images/posts/mcp-ema-standardized-half/04.png)
+3. **在 MCP Server 的授权服务器换 token**：这张断言被换成 access token，客户端带着它去调 Server
+![](/images/posts/mcp-ema-standardized-half/03.png)
+![](/images/posts/mcp-ema-standardized-half/04.png)
 没错，这就是上一节那条手搓链的标准化版本：平台 token 换成了 IdP 签发的身份断言，点对点的私有换发约定换成了公开的 IETF 草案，散落在后端配置里的授权决策上移到了企业 IdP——我当年欠下的四条债，EMA 直接还掉了前两条；至于后两条，正是下半篇要讲的事。落地上，Okta Cross App Access 是首个支持的 IdP 路径，而且要 IdP 和 MCP Server 两头都支持这个扩展——有意义，但还不算完整。
-<callout icon="🔑">
-	**关键边界**：EMA 把身份策略与工具调用**解耦**——它只决定「谁能连哪个 Server、什么 scope」这个**连接级**问题；token 签发后**不再检查 MCP 流量**，也就是不做运行时逐动作授权。下半篇的讨论，全都发生在这条边界之外。
-</callout>
-> 素材来源：InfoQ《AI Model Context Protocol Adds Centralised Auth for Enterprise》（2026-07-06）[原文](https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/)
+> **关键边界**：EMA 把身份策略与工具调用**解耦**——它只决定「谁能连哪个 Server、什么 scope」这个**连接级**问题；token 签发后**不再检查 MCP 流量**，也就是不做运行时逐动作授权。下半篇的讨论，全都发生在这条边界之外。素材来源：InfoQ《AI Model Context Protocol Adds Centralised Auth for Enterprise》（2026-07-06）[原文](https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/)
 ### 一个自然的追问：JWT 被抓到，能靠 prompt 注入偷别人数据吗？
 这是很多人会混掉的地方。要先拆开**两条独立的攻击链**：「抓到 JWT」是**凭证窃取 / 重放**，「prompt 注入」是**操纵 LLM**。
 先立一个前提：无论 EMA 还是自建方案，凭证都**不该进入模型上下文**。只要守住这条，单纯的 prompt 注入**偷不到一个 LLM 从没见过的 JWT**。prompt 注入真正的危害，是操纵模型**越权调用工具**——但用的仍是当前会话本人的 token，它能让 A 的 Agent 在 A 的权限内乱来，却不会自动拿到 B 的 token 去查 B。
