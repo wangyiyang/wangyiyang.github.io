@@ -23,7 +23,6 @@ ok "Notion API token 已就绪"
 URL="$1"
 PAGE_ID_RAW=$(echo "$URL" | grep -oP '[a-f0-9]{32}' | head -1)
 [ -n "$PAGE_ID_RAW" ] || die "无法从 URL 提取页面 ID: $URL"
-# 转为 UUID 格式
 PAGE_ID="${PAGE_ID_RAW:0:8}-${PAGE_ID_RAW:8:4}-${PAGE_ID_RAW:12:4}-${PAGE_ID_RAW:16:4}-${PAGE_ID_RAW:20:12}"
 info "页面 ID: $PAGE_ID"
 
@@ -33,7 +32,6 @@ PAGE_JSON=$(curl -sf -H "Authorization: Bearer $TOKEN" \
   -H "Notion-Version: 2022-06-28" \
   "https://api.notion.com/v1/pages/$PAGE_ID") || die "获取页面失败"
 
-# 提取关键属性
 TITLE=$(echo "$PAGE_JSON" | python3 -c "
 import json, sys
 data = json.load(sys.stdin)
@@ -46,7 +44,8 @@ import json, sys
 data = json.load(sys.stdin)
 props = data.get('properties', {})
 for name, val in props.items():
-    if val.get('type') == 'multi_select' and '系列' in name or '标签' in name:
+    t = val.get('type', '')
+    if t == 'multi_select' and ('系列' in name or '标签' in name):
         tags = [item['name'] for item in val.get('multi_select', [])]
         print(','.join(tags))
         break
@@ -56,7 +55,8 @@ import json, sys
 data = json.load(sys.stdin)
 props = data.get('properties', {})
 for name, val in props.items():
-    if val.get('type') == 'rich_text' and ('摘要' in name or '观点' in name):
+    t = val.get('type', '')
+    if t == 'rich_text' and ('摘要' in name or '观点' in name):
         texts = [t['plain_text'] for t in val.get('rich_text', [])]
         print(''.join(texts)[:200])
         break
@@ -66,31 +66,27 @@ import json, sys
 data = json.load(sys.stdin)
 props = data.get('properties', {})
 for name, val in props.items():
-    if val.get('type') == 'date' and ('发布' in name):
+    t = val.get('type', '')
+    if t == 'date' and ('发布' in name):
         d = val.get('date', {})
         print(d.get('start', '') if d else '')
         break
 " || echo "")
 
-if [ -z "$PUB_DATE" ]; then
-  PUB_DATE=$(date +%Y-%m-%d)
-fi
+[ -z "$PUB_DATE" ] && PUB_DATE=$(date +%Y-%m-%d)
 
 ok "标题: $TITLE"
 ok "分类: $CATEGORIES"
 ok "发布日期: $PUB_DATE"
 
 # === 4. 生成文件名和目录 ===
-# 从标题生成 slug（取前 4 个英文/拼音字符或直接用标题）
 SLUG=$(echo "$TITLE" | python3 -c "
 import sys, re
 t = sys.stdin.read().strip()
-# 先试标题中的英文部分
 eng = re.findall(r'[a-zA-Z]+', t)
 if eng:
     print('-'.join(eng).lower()[:60])
 else:
-    # 全中文：简短截取
     print(t[:12])
 " | sed 's/[^a-zA-Z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//;s/-$//')
 [ -z "$SLUG" ] && SLUG="post-$(date +%Y%m%d)"
@@ -109,66 +105,118 @@ MARKDOWN=$(curl -sf -H "Authorization: Bearer $TOKEN" \
   python3 -c "import json, sys; print(json.load(sys.stdin)['markdown'])") || die "获取 Markdown 失败"
 ok "Markdown 内容已获取（${#MARKDOWN} 字符）"
 
-# === 6. 下载图片 ===
+# === 6. 提取图片 URL（Python 方式，正确处理 alt text 中的嵌套链接）===
+info "提取图片 URL..."
+IMG_URLS=$(echo "$MARKDOWN" | python3 -c "
+import sys, re
+lines = sys.stdin.read().split('\n')
+urls = []
+for line in lines:
+    if '![' in line:
+        start = line.rfind('(')
+        end = line.rfind(')')
+        if start != -1 and end != -1 and end > start:
+            url = line[start+1:end]
+            urls.append(url)
+for u in urls:
+    print(u)
+")
+
+echo "$IMG_URLS" > /tmp/notion_blog_img_urls.txt
+IMG_COUNT=$(echo "$IMG_URLS" | grep -c '.' || true)
+info "发现 $IMG_COUNT 张图片"
+
+# === 7. 下载图片 ===
 info "下载配图..."
 IMG_DIR_FULL="${BLOG_ROOT}/${IMG_DIR}"
 mkdir -p "$IMG_DIR_FULL"
 
 i=1
-while read -r url; do
+while IFS= read -r url; do
   [ -z "$url" ] && continue
   case "$url" in
-    *.png?*)    ext="png" ;;
-    *.jpeg?*|*.jpg?*) ext="jpeg" ;;
-    *.gif?*)    ext="gif" ;;
-    *.webp?*)   ext="webp" ;;
-    *)          ext="png" ;;
+    *.png?*|*.png)    ext="png" ;;
+    *.jpeg?*|*.jpg?*|*.jpeg|*.jpg) ext="jpg" ;;
+    *.gif?*|*.gif)    ext="gif" ;;
+    *.webp?*|*.webp)  ext="webp" ;;
+    *)                ext="png" ;;
   esac
   filename="$(printf '%02d' $i).${ext}"
   if curl -sfL -o "${IMG_DIR_FULL}/${filename}" "$url"; then
     size=$(wc -c < "${IMG_DIR_FULL}/${filename}")
-    info "  [$i/] $filename (${size} bytes)"
+    info "  [$i/$IMG_COUNT] $filename (${size} bytes)"
   else
-    info "  ⚠️  图片 $i 下载失败"
+    info "  ⚠️  [$i/$IMG_COUNT] $filename 下载失败"
   fi
   i=$((i+1))
-done < <(echo "$MARKDOWN" | grep -oP '!\[.*?\]\(\K[^)]+' || true)
+done < /tmp/notion_blog_img_urls.txt
 
 ok "配图下载完成 (共 $((i-1)) 张)"
 
-# === 7. 替换 Markdown 中的图片路径 ===
-while read -r url; do
-  [ -z "$url" ] && continue
-  local_path="/${IMG_DIR}/$(basename "$url" | sed 's/\?.*//')"
-  # 实际替换使用序号文件名，重新扫描
-  :
-done < <(echo "$MARKDOWN" | grep -oP '!\[.*?\]\(\K[^)]+' || true)
-
-# 用序号替换（简化版：将所有远程 URL 按顺序替换为本地路径）
+# === 8. 处理 Notion 特有标记并替换图片路径 ===
 TEMP_MD=$(mktemp)
 echo "$MARKDOWN" > "$TEMP_MD"
 
-i=1
-while read -r url; do
-  [ -z "$url" ] && continue
-  case "$url" in
-    *.png?*)    ext="png" ;;
-    *.jpeg?*|*.jpg?*) ext="jpeg" ;;
-    *.gif?*)    ext="gif" ;;
-    *.webp?*)   ext="webp" ;;
-    *)          ext="png" ;;
-  esac
-  filename="$(printf '%02d' $i).${ext}"
-  # 先获取 alt 文本（保留原有 alt）
-  alt=$(echo "$MARKDOWN" | grep -oP "!\[.*?\]\(\Q${url}\E\)" | grep -oP '!\[\K[^\]]+' | head -1)
-  sed -i "s|${url}|/images/posts/${PUB_DATE}-${SLUG}/${filename}|g" "$TEMP_MD"
-  i=$((i+1))
-done < <(echo "$MARKDOWN" | grep -oP '!\[.*?\]\(\K[^)]+' || true)
+# 8a. 用 Python 处理 Notion 标记和图片替换
+python3 << PYEOF
+import re, sys
 
-# 移除 <empty-block/>
-sed -i 's/<empty-block\/>//g' "$TEMP_MD"
+slug = "${PUB_DATE}-${SLUG}"
+with open("$TEMP_MD", 'r') as f:
+    md = f.read()
 
-# === 8. 组装文章 ===
+lines = md.split('\n')
+
+# 收集图片 URL 映射（与下载顺序一致）
+img_urls = []
+for line in lines:
+    if '![' in line:
+        start = line.rfind('(')
+        end = line.rfind(')')
+        if start != -1 and end != -1 and end > start:
+            img_urls.append(line[start+1:end])
+
+# 处理每一行
+cleaned = []
+for line in lines:
+    stripped = line.strip()
+    
+    # 8a-1: 移除 <callout> 标签
+    if stripped.startswith('<callout') or stripped == '</callout>':
+        continue
+    # 8a-2: 清理 callout 内容前的制表符（保留 >）
+    if stripped.startswith('>'):
+        line = line.lstrip('\t').lstrip()
+    # 8a-3: <empty-block/> 替换为空行（保留段落分隔）
+    if stripped == '<empty-block/>':
+        cleaned.append('')
+        continue
+    # 8a-4: 替换图片 URL 为本地路径
+    if '![' in line:
+        for idx, url in enumerate(img_urls):
+            if url in line and len(url) > 30:  # 避免短字符串误匹配
+                filename = f"{idx+1:02d}.png"
+                if '.jpg' in url.lower() or '.jpeg' in url.lower():
+                    filename = f"{idx+1:02d}.jpg"
+                elif '.gif' in url.lower():
+                    filename = f"{idx+1:02d}.gif"
+                elif '.webp' in url.lower():
+                    filename = f"{idx+1:02d}.webp"
+                line = re.sub(r'\]\(https?://[^)]+\)',
+                             f'](/images/posts/{slug}/{filename})',
+                             line)
+                break
+    cleaned.append(line)
+
+new_md = '\n'.join(cleaned)
+with open("$TEMP_MD", 'w') as f:
+    f.write(new_md)
+
+img_replaced = new_md.count('/images/posts/')
+print(f"已替换 {img_replaced} 张图片路径")
+PYEOF
+
+# === 9. 组装文章 ===
 KEYWORDS="${CATEGORIES//,/，}"
 [ -n "$DESC" ] && KEYWORDS="${KEYWORDS}，${DESC:0:50}"
 
@@ -199,4 +247,5 @@ echo ""
 echo "📋 下一步："
 echo "  1. 检查文章内容: less ${POST_FILE}"
 echo "  2. 验证构建: bundle exec jekyll build"
-echo "  3. 如果没有构建错误，提交即可"
+echo "  3. 用浏览器检查渲染效果"
+echo "  4. 确认无误后提交推送"

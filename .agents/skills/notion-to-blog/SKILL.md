@@ -11,13 +11,11 @@ description: >-
 
 ## 前提条件
 
-- `ntn` CLI 已安装（`which ntn`）
 - `NOTION_API_TOKEN` 已配置（`~/.config/notion/api_key` 或环境变量）
 
 ### 验证认证
 
 ```bash
-# 检查 token 是否可用
 export NOTION_API_TOKEN=$(cat ~/.config/notion/api_key 2>/dev/null)
 if [ -z "$NOTION_API_TOKEN" ]; then
   echo "❌ NOTION_API_TOKEN 未设置"
@@ -33,11 +31,11 @@ echo "✅ Notion API token 已就绪"
 从用户提供的 Notion URL 中提取页面 ID：
 
 ```
-https://www.notion.so/wangyiyangcc/...f13de73301f7403994c44210f6604a28...
+https://www.notion.so/wangyiyangcc/...f13de73301f7403994c44210f6604a28?view=...
 ```
 
-页面 ID 是 URL 中 `...` 和 `?` 之间的 32 位 hex 字符串（或下划线连接的两个 32 位 hex），
-实际 API 调用时需加连字符：`f13de733-01f7-4039-94c4-4210f6604a28`
+页面 ID 是 URL 路径中 32 位 hex 字符串，API 调用时需加连字符：
+`f13de733-01f7-4039-94c4-4210f6604a28`
 
 **获取页面属性（含标题、分类、摘要等 Front Matter 信息）：**
 
@@ -72,22 +70,20 @@ for name, val in props.items():
 当用户给出的 URL 指向一个数据库视图（URL 中包含 `?v=...`），先查询数据库获取所有文章：
 
 ```bash
-# 1. 先获取数据库详情
+# 1. 获取数据库详情
 curl -s -H "Authorization: Bearer $TOKEN" \
   -H "Notion-Version: 2022-06-28" \
   "https://api.notion.com/v1/databases/{database-id}"
 
-# 2. 查询数据库中所有页面
+# 2. 查询数据库所有页面
 curl -s -X POST -H "Authorization: Bearer $TOKEN" \
   -H "Notion-Version: 2022-06-28" \
-  "https://api.notion.com/v1/databases/{database-id}/query" \
-  -d '{}'
+  "https://api.notion.com/v1/databases/{database-id}/query" -d '{}'
 ```
 
 **获取页面 Markdown 内容：**
 
 ```bash
-# 获取单页内容
 curl -s -H "Authorization: Bearer $TOKEN" \
   -H "Notion-Version: 2022-06-28" \
   "https://api.notion.com/v1/pages/{page-id}/markdown" | \
@@ -96,48 +92,107 @@ curl -s -H "Authorization: Bearer $TOKEN" \
 
 ### 步骤 2：提取并下载图片
 
-从 Markdown 中提取所有 `![](url)` 图片引用，下载到本地：
+**⚠️ 注意图片 URL 提取的陷阱：**
+
+Notion 的 markdown 导出中，图片 alt text 可能包含嵌套的 markdown 链接（如 `[dev.to](http://dev.to)`），
+使用简单 regex `!\[.*?\]\(([^)]+)\)` 会因为嵌套 `)` 而截断 URL。
+正确做法：使用 Python 按行查找，定位到行末的 `)()` 对。
+
+```python
+with open('/tmp/markdown.md') as f:
+    lines = f.readlines()
+
+for i, line in enumerate(lines):
+    if '![' in line:
+        # 取最后一个 ( 到最后一个 ) 之间的内容（忽略 alt 中的嵌套 link）
+        start = line.rfind('(')
+        end = line.rfind(')')
+        url = line[start+1:end]
+        # 识别图片类型
+        if 'prod-files-secure.s3' in url:
+            img_type = 'cover / 内部图片'
+        elif 'dev.to' in url:
+            img_type = 'Dev.to 外部图'
+        # ...
+```
+
+**下载图片到指定目录：**
 
 ```bash
-# 提取图片 URL 列表
-extract_images() {
-  local markdown="$1"
-  echo "$markdown" | grep -oP '!\[.*?\]\(\K[^)]+' 
-}
-
-# 下载图片到指定目录
-download_images() {
-  local img_dir="$1"
-  mkdir -p "$img_dir"
-  local i=1
-  while read -r url; do
-    case "$url" in
-      *.png?*)  ext="png" ;;
-      *.jpeg?*|*.jpg?*) ext="jpeg" ;;
-      *.gif?*)  ext="gif" ;;
-      *.webp?*) ext="webp" ;;
-      *)        ext="png" ;;
-    esac
-    local filename="$(printf '%02d' $i).${ext}"
-    echo "⬇️  下载 $filename ..."
-    curl -sL -o "${img_dir}/${filename}" "$url"
-    i=$((i+1))
-  done
-}
+IMG_DIR="images/posts/{文章slug}"
+mkdir -p "$IMG_DIR"
+i=1
+while read -r url; do
+  case "$url" in
+    *.png?*|*.png)  ext="png" ;;
+    *.jpeg?*|*.jpg?*) ext="jpg" ;;
+    *.gif?*|*.gif)  ext="gif" ;;
+    *.webp?*|*.webp) ext="webp" ;;
+    *)              ext="png" ;;
+  esac
+  filename="$(printf '%02d' $i).${ext}"
+  curl -sL -o "${IMG_DIR}/${filename}" "$url"
+  i=$((i+1))
+done < /tmp/img_urls.txt
 ```
 
-### 步骤 3：生成文章文件名
+> **注意：** Notion S3 图片 URL 有时效性（约 1 小时）。每次重新拉取 markdown 后，S3 签名 URL 会变化，
+> 必须重新下载 S3 托管的图片。Dev.to 等外部 CDN 图片 URL 通常稳定，无需重复下载。
 
-文章文件命名规则：`_posts/{日期}-{kebab-title}.md`
+### 步骤 3：处理 Notion 特有标记
+
+Notion 的 markdown 导出包含非标准标记，必须处理：
+
+#### 3.1 `<callout>` 标签 → markdown 引用块
+
+Notion 的 callout 块导出为 `<callout icon="..." color="...">` 自定义 HTML 标签，**浏览器不识别**。
+必须将其转换为标准 markdown blockquote：
+
+```python
+# 输入：
+# <callout icon="💡" color="gray_bg">
+# 	> **关键边界**：内容...
+# </callout>
+
+# 处理：移除 <callout> 和 </callout> 行，保留 > 内容
+cleaned = []
+for line in lines:
+    stripped = line.strip()
+    if stripped.startswith('<callout') or stripped == '</callout>':
+        continue  # 移除 callout 标签
+    if stripped.startswith('>'):
+        line = line.lstrip('\t').lstrip()  # 清理 > 前的制表符
+    cleaned.append(line)
+```
+
+#### 3.2 `<empty-block/>` → 空行
+
+Notion 的空段落导出为 `<empty-block/>`，**必须替换为空行而非直接删除**，
+否则 blockquote 和紧接的标题之间没有空行分隔，会导致引用范围扩张。
+
+```python
+# ✅ 正确：替换为空行
+if stripped == '<empty-block/>':
+    cleaned.append('')  # 保留段落分隔
+    continue
+
+# ❌ 错误：直接删除（导致 blockquote 吞噬后续标题）
+# continue  # 不要这样做！
+```
+
+#### 3.3 图片 alt text 为空
+
+Notion 可能导出 `![](...)`（空 alt），这是正常现象，保留原样即可。
+
+### 步骤 4：生成文章文件名
 
 ```
-日期 = plan_publish_date 或当前日期
-kebab-title = 标题转英文小写连字符（从标题拼音或英文提取）
+_posts/{日期}-{kebab-title}.md
 ```
 
-Fallback：如果标题是全中文，用标题的拼音首字母或直接使用关键英文词。
+日期 = `计划发布日` 或当前日期。注意 Jekyll 默认不构建未来日期的文章（需要 `--future` 标志或在 `_config.yml` 中设置 `future: true`）。
 
-### 步骤 4：生成 Front Matter
+### 步骤 5：生成 Front Matter
 
 ```yaml
 ---
@@ -155,49 +210,80 @@ mindmap2: false
 ---
 ```
 
-> **注意：** Front Matter 中的 `layout: post` 和末尾的 feature switch 是固定的模板字段，
-> 即使 Notion 中没有对应的属性，也应保留默认值 `false`。其他字段优先从 Notion 属性中提取。
+> **注意：** `layout: post` 和 feature switch 是固定模板字段，即使 Notion 中没有对应属性，也保留默认值 `false`。
 
-### 步骤 5：替换 Markdown 中的图片路径
+### 步骤 6：替换 Markdown 中的图片路径
 
-将 Markdown 中所有 `![](https://prod-files-secure.s3.aws...)` 替换为：
+将远程图片 URL 按顺序替换为本地路径。由于 markdown 中 alt text 可能含嵌套链接，
+**不要使用简单的 sed 字符串替换**，应逐行按 URL 特征匹配：
+
+```python
+import re
+
+url_mappings = [
+    (r'https://prod-files-secure\.s3\.us-west-2\.amazonaws\.com[^)]+', '01.png'),
+    (r'https://media2\.dev\.to/dynamic/image/[^)]*gw11kx[^)]+\.png', '02.png'),
+    (r'https://media2\.dev\.to/dynamic/image/[^)]*knk0m1[^)]+\.png', '03.png'),
+    # ...
+]
+
+new_lines = []
+for line in lines:
+    for pattern, filename in url_mappings:
+        if re.search(pattern, line):
+            line = re.sub(r'\]\(https://[^)]+\)',
+                         f'](/images/posts/{slug}/{filename})', line)
+    new_lines.append(line)
 ```
-![](/images/posts/{文章目录名}/{filename})
-```
 
-第一张图片放在文章开头 Front Matter 之后作为题图/封面。
-
-### 步骤 6：构建验证
+### 步骤 7：构建验证
 
 ```bash
 cd <project-root>
 bundle exec jekyll build 2>&1 | grep -E '(error|Warning|done)'
 ```
 
-确认没有构建错误。
+确认没有构建错误后，建议用浏览器工具打开页面检查渲染效果，重点关注：
+- 图片是否显示（alt text 正常）
+- blockquote 是否范围正确（没有吞噬标题）
+- 页面布局是否正常
 
-### 完整脚本示例
+## 完整脚本
 
-完整的转换脚本参考项目 `.agents/skills/notion-to-blog/convert.sh`。
+参考项目 `.agents/skills/notion-to-blog/convert.sh`。
 
 ## 常见问题
 
 ### Q: Notion API 返回 400 "Invalid request URL"
 
 页面 ID 需要用标准 UUID 格式（带连字符）：
-- 从 URL 提取：`f13de73301f7403994c44210f6604a28` → `f13de733-01f7-4039-94c4-4210f6604a28`
+`f13de73301f7403994c44210f6604a28` → `f13de733-01f7-4039-94c4-4210f6604a28`
 
 ### Q: 页面显示为数据库
 
-URL 中的 ID 可能是数据库 ID 而非页面 ID。先用 `GET /v1/databases/{id}` 确认类型，
-然后通过 `POST /v1/databases/{id}/query` 获取子页面列表，再逐个处理每个子页面。
+URL 中的 ID 可能是数据库 ID 而非页面 ID。用 `GET /v1/databases/{id}` 确认类型，
+然后 `POST /v1/databases/{id}/query` 获取子页面列表。
 
 ### Q: 图片下载失败
 
-Notion 的 S3 图片 URL 有时效性（通常 1 小时）。如果在同一个会话中反复获取图片
-失败，重新拉取一次 Markdown 内容获取新的签名的 URL。
+Notion S3 图片 URL 有时效性（约 1 小时），重新拉取 markdown 获得新签名 URL。
+Dev.to 等外部 CDN 图片通常稳定。
 
-### Q: `ntn api` 不支持 database query 端点
+### Q: `ntn api` 不支持某些端点
 
-`ntn api` 的已知端点列表中没有 `POST /v1/databases/{id}/query`。这种情况下
-应直接使用 `curl` 调用 Notion REST API，不要强行用 `ntn api`。
+`ntn` CLI 对未注册的端点不支持。直接使用 `curl` 调用 Notion REST API。
+
+### Q: 图片 URL 提取被 alt text 中的 markdown 链接打断
+
+当 alt text 包含 `[dev.to](http://dev.to)` 时，简单 regex `!\[.*?\]\(([^)]+)\)` 
+会错误匹配到嵌套的 `)`。解法：对每行取 `rfind('(')` 和 `rfind(')')` 定位真正的图片 URL。
+
+### Q: 渲染后 blockquote 范围异常扩张
+
+原因：`<empty-block/>` 被直接删除而非替换为空行，导致 blockquote 和后续标题间没有空行。
+解法：`<empty-block/>` → `''`（空行），确保 blockquote 被正确终止。
+
+### Q: 渲染后出现原始 HTML `<callout>` 标签
+
+原因：Notion 导出的 `<callout>` 自定义标签未被处理。
+解法：移除 `<callout>` 和 `</callout>` 行，保留内部 `>` 引用内容。
