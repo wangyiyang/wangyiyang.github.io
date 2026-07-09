@@ -129,6 +129,9 @@ info "发现 $IMG_COUNT 张图片"
 # === 7. 下载图片 ===
 info "下载配图..."
 IMG_DIR_FULL="${BLOG_ROOT}/${IMG_DIR}"
+
+# ⚠️  每次重新拉取后先清空目录，防止旧文件残留导致顺序错乱
+rm -rf "$IMG_DIR_FULL"
 mkdir -p "$IMG_DIR_FULL"
 
 i=1
@@ -153,13 +156,25 @@ done < /tmp/notion_blog_img_urls.txt
 
 ok "配图下载完成 (共 $((i-1)) 张)"
 
+# === 7b. md5 去重验证 ===
+info "验证图片唯一性..."
+DUPS=$(find "$IMG_DIR_FULL" -name '*.png' -exec md5sum {} \; | sort | uniq -d -w32)
+if [ -n "$DUPS" ]; then
+  echo "$DUPS"
+  die "存在 md5 重复的图片！下载顺序可能出错，请检查后重试"
+fi
+ok "所有图片内容唯一"
+
+# 显示文件列表供核对
+ls -la "$IMG_DIR_FULL/"
+
 # === 8. 处理 Notion 特有标记并替换图片路径 ===
 TEMP_MD=$(mktemp)
 echo "$MARKDOWN" > "$TEMP_MD"
 
 # 8a. 用 Python 处理 Notion 标记和图片替换
 python3 << PYEOF
-import re, sys
+import re, sys, os
 
 slug = "${PUB_DATE}-${SLUG}"
 with open("$TEMP_MD", 'r') as f:
@@ -167,7 +182,7 @@ with open("$TEMP_MD", 'r') as f:
 
 lines = md.split('\n')
 
-# 收集图片 URL 映射（与下载顺序一致）
+# 收集图片 URL（用 rfind 确保正确提取，无视 alt 中的嵌套链接）
 img_urls = []
 for line in lines:
     if '![' in line:
@@ -175,6 +190,8 @@ for line in lines:
         end = line.rfind(')')
         if start != -1 and end != -1 and end > start:
             img_urls.append(line[start+1:end])
+
+assert len(img_urls) > 0, '未找到任何图片 URL'
 
 # 处理每一行
 cleaned = []
@@ -187,21 +204,22 @@ for line in lines:
     # 8a-2: 清理 callout 内容前的制表符（保留 >）
     if stripped.startswith('>'):
         line = line.lstrip('\t').lstrip()
-    # 8a-3: <empty-block/> 替换为空行（保留段落分隔）
+    # 8a-3: <empty-block/> 替换为空行（保留段落分隔，防 blockquote 扩张）
     if stripped == '<empty-block/>':
         cleaned.append('')
         continue
-    # 8a-4: 替换图片 URL 为本地路径
+    # 8a-4: 替换图片 URL 为本地路径（以完整 URL 子串匹配，避免误匹配）
     if '![' in line:
         for idx, url in enumerate(img_urls):
-            if url in line and len(url) > 30:  # 避免短字符串误匹配
-                filename = f"{idx+1:02d}.png"
+            if url in line:
+                ext = 'png'
                 if '.jpg' in url.lower() or '.jpeg' in url.lower():
-                    filename = f"{idx+1:02d}.jpg"
+                    ext = 'jpg'
                 elif '.gif' in url.lower():
-                    filename = f"{idx+1:02d}.gif"
+                    ext = 'gif'
                 elif '.webp' in url.lower():
-                    filename = f"{idx+1:02d}.webp"
+                    ext = 'webp'
+                filename = f'{idx+1:02d}.{ext}'
                 line = re.sub(r'\]\(https?://[^)]+\)',
                              f'](/images/posts/{slug}/{filename})',
                              line)
@@ -246,6 +264,8 @@ ok "配图位置: ${BLOG_ROOT}/${IMG_DIR}/"
 echo ""
 echo "📋 下一步："
 echo "  1. 检查文章内容: less ${POST_FILE}"
-echo "  2. 验证构建: bundle exec jekyll build"
-echo "  3. 用浏览器检查渲染效果"
-echo "  4. 确认无误后提交推送"
+echo "  2. 验证图片唯一性（无输出即正常）:"
+echo "     md5sum ${IMG_DIR}/*.png | sort | uniq -d -w32"
+echo "  3. 验证构建: bundle exec jekyll build"
+echo "  4. 用浏览器检查渲染效果：图片、blockquote、布局"
+echo "  5. 确认无误后提交推送"

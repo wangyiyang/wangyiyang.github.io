@@ -96,48 +96,67 @@ curl -s -H "Authorization: Bearer $TOKEN" \
 
 Notion 的 markdown 导出中，图片 alt text 可能包含嵌套的 markdown 链接（如 `[dev.to](http://dev.to)`），
 使用简单 regex `!\[.*?\]\(([^)]+)\)` 会因为嵌套 `)` 而截断 URL。
-正确做法：使用 Python 按行查找，定位到行末的 `)()` 对。
+正确做法：使用 Python 按行查找，定位到行末的 `rfind('(')` 和 `rfind(')')`：
 
 ```python
-with open('/tmp/markdown.md') as f:
-    lines = f.readlines()
-
-for i, line in enumerate(lines):
+# ✅ 正确：定位行末的 () 对，忽略 alt 中的嵌套链接
+for line in lines:
     if '![' in line:
-        # 取最后一个 ( 到最后一个 ) 之间的内容（忽略 alt 中的嵌套 link）
         start = line.rfind('(')
         end = line.rfind(')')
         url = line[start+1:end]
-        # 识别图片类型
-        if 'prod-files-secure.s3' in url:
-            img_type = 'cover / 内部图片'
-        elif 'dev.to' in url:
-            img_type = 'Dev.to 外部图'
-        # ...
 ```
 
-**下载图片到指定目录：**
+**下载图片（关键：务必保持 URL 顺序与文件名一一对应）：**
 
-```bash
-IMG_DIR="images/posts/{文章slug}"
-mkdir -p "$IMG_DIR"
-i=1
-while read -r url; do
-  case "$url" in
-    *.png?*|*.png)  ext="png" ;;
-    *.jpeg?*|*.jpg?*) ext="jpg" ;;
-    *.gif?*|*.gif)  ext="gif" ;;
-    *.webp?*|*.webp) ext="webp" ;;
-    *)              ext="png" ;;
-  esac
-  filename="$(printf '%02d' $i).${ext}"
-  curl -sL -o "${IMG_DIR}/${filename}" "$url"
-  i=$((i+1))
-done < /tmp/img_urls.txt
+```python
+# 用 Python 统一处理 URL 提取 → 下载 → 文件映射
+# 不要用 bash while read 逐行下载，容易丢失顺序映射
+
+import subprocess, hashlib, os
+
+IMG_DIR = f'images/posts/{slug}'
+os.makedirs(IMG_DIR, exist_ok=True)
+
+# 1. 按 markdown 出现顺序提取所有图片 URL
+urls = []
+for line in lines:
+    if '![' in line:
+        start = line.rfind('(')
+        end = line.rfind(')')
+        if start != -1 and end != -1 and end > start:
+            urls.append(line[start+1:end])
+
+# 2. 逐一下载，文件名 = 序号（01, 02, ...）
+for i, url in enumerate(urls):
+    ext = 'png'
+    if '.jpg' in url.lower() or '.jpeg' in url.lower():
+        ext = 'jpg'
+    elif '.gif' in url.lower():
+        ext = 'gif'
+    elif '.webp' in url.lower():
+        ext = 'webp'
+    filename = f'{i+1:02d}.{ext}'
+    subprocess.run(['curl', '-sL', '-o', f'{IMG_DIR}/{filename}', url])
+
+# 3. ⚠️ 关键验证：确保没有两张图内容相同（之前踩过的大坑）
+hashes = {}
+for filename in sorted(os.listdir(IMG_DIR)):
+    path = os.path.join(IMG_DIR, filename)
+    with open(path, 'rb') as f:
+        h = hashlib.md5(f.read()).hexdigest()
+    hashes[filename] = h
+
+# 如果有重复，说明下载顺序错了，需要手动排查
+for f1 in hashes:
+    for f2 in hashes:
+        if f1 < f2 and hashes[f1] == hashes[f2]:
+            print(f'⚠️  {f1} 和 {f2} 内容相同！下载顺序可能错乱')
 ```
 
 > **注意：** Notion S3 图片 URL 有时效性（约 1 小时）。每次重新拉取 markdown 后，S3 签名 URL 会变化，
 > 必须重新下载 S3 托管的图片。Dev.to 等外部 CDN 图片 URL 通常稳定，无需重复下载。
+> **重要：** 如果中途出错重试，务必先清空图片目录再重新下载，防止旧文件残留导致顺序错乱。
 
 ### 步骤 3：处理 Notion 特有标记
 
@@ -214,27 +233,44 @@ mindmap2: false
 
 ### 步骤 6：替换 Markdown 中的图片路径
 
-将远程图片 URL 按顺序替换为本地路径。由于 markdown 中 alt text 可能含嵌套链接，
-**不要使用简单的 sed 字符串替换**，应逐行按 URL 特征匹配：
+将远程图片 URL 按出现的顺序替换为本地路径。**必须使用同名顺序映射**，
+确保第 N 个提取的 URL 被替换为 `{N:02d}.{ext}`。
 
 ```python
 import re
 
-url_mappings = [
-    (r'https://prod-files-secure\.s3\.us-west-2\.amazonaws\.com[^)]+', '01.png'),
-    (r'https://media2\.dev\.to/dynamic/image/[^)]*gw11kx[^)]+\.png', '02.png'),
-    (r'https://media2\.dev\.to/dynamic/image/[^)]*knk0m1[^)]+\.png', '03.png'),
-    # ...
-]
+# 用与下载时间样的顺序提取 URLs，保证映射一致
+urls = []
+for line in lines:
+    if '![' in line:
+        start = line.rfind('(')
+        end = line.rfind(')')
+        if start != -1 and end != -1 and end > start:
+            urls.append(line[start+1:end])
 
+# 按顺序替换（注意：必须先用 rfind 提取完整的 long URL 再匹配，避免部分匹配）
 new_lines = []
 for line in lines:
-    for pattern, filename in url_mappings:
-        if re.search(pattern, line):
-            line = re.sub(r'\]\(https://[^)]+\)',
-                         f'](/images/posts/{slug}/{filename})', line)
+    if '![' in line:
+        for idx, url in enumerate(urls):
+            if url in line:  # 用完整 URL 做子串匹配，避免误匹配
+                ext = 'png'
+                if '.jpg' in url.lower() or '.jpeg' in url.lower():
+                    ext = 'jpg'
+                elif '.gif' in url.lower():
+                    ext = 'gif'
+                elif '.webp' in url.lower():
+                    ext = 'webp'
+                filename = f'{idx+1:02d}.{ext}'
+                line = re.sub(r'\]\(https?://[^)]+\)',
+                             f'](/images/posts/{slug}/{filename})', line)
+                break
     new_lines.append(line)
 ```
+
+> ⚠️ **注意：** S3 URL 的 query parameters 中可能包含 `+`、`/`、`=` 等字符，
+> 这些字符在 shell 和 sed 中需要特殊处理。建议全程使用 Python 处理，避免 shell 转义问题。
+> 如果中途重新拉取 markdown 后重新下载，务必先清空图片目录再执行，防止旧文件残留。
 
 ### 步骤 7：构建验证
 
@@ -243,10 +279,16 @@ cd <project-root>
 bundle exec jekyll build 2>&1 | grep -E '(error|Warning|done)'
 ```
 
-确认没有构建错误后，建议用浏览器工具打开页面检查渲染效果，重点关注：
-- 图片是否显示（alt text 正常）
-- blockquote 是否范围正确（没有吞噬标题）
-- 页面布局是否正常
+确认没有构建错误后，必须用浏览器工具打开页面检查渲染效果，重点关注：
+
+1. **图片是否正确显示** — 检查每张图的内容是否匹配其上下文
+2. **blockquote 范围是否正确** — 引用块没有吞噬后续标题
+3. **md5 去重检查** — 确认生成的图片目录中没有重复文件：
+   ```bash
+   md5sum images/posts/{slug}/*.png | sort | uniq -d -w32
+   ```
+   如果有输出，说明有两张图相同，下载顺序出错。
+4. **文件数量正确** — 图片数量应与 markdown 中的 `![](...)` 出现次数一致
 
 ## 完整脚本
 
@@ -267,7 +309,15 @@ URL 中的 ID 可能是数据库 ID 而非页面 ID。用 `GET /v1/databases/{id
 ### Q: 图片下载失败
 
 Notion S3 图片 URL 有时效性（约 1 小时），重新拉取 markdown 获得新签名 URL。
-Dev.to 等外部 CDN 图片通常稳定。
+Dev.to 等外部 CDN 图片通常稳定，无需每次重新下载。
+
+### Q: 下载后两张图片内容相同 / md5 一致
+
+原因：下载过程中 URL 提取或顺序映射出错，导致不同序号的文件下载了同一张图。
+**解法：**
+1. 清空图片目录后重新下载
+2. 下载后执行 md5 去重检测
+3. 确认每个文件的 URL 来源与行号对应正确
 
 ### Q: `ntn api` 不支持某些端点
 
@@ -287,3 +337,13 @@ Dev.to 等外部 CDN 图片通常稳定。
 
 原因：Notion 导出的 `<callout>` 自定义标签未被处理。
 解法：移除 `<callout>` 和 `</callout>` 行，保留内部 `>` 引用内容。
+
+### Q: 重试后图片顺序错乱
+
+原因：多次运行下载脚本时，旧图片文件未被清理，新文件写入后与旧文件混合。
+**解法：** 每次重新拉取 markdown 后，先清空图片目录再重新下载：
+```bash
+rm -rf images/posts/{slug}/*
+mkdir -p images/posts/{slug}
+# 然后重新下载
+```
