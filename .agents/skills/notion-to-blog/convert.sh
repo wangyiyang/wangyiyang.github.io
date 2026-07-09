@@ -12,6 +12,7 @@ BLOG_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"  # 项目根目录
 die() { echo "❌ $*" >&2; exit 1; }
 info() { echo "ℹ️  $*"; }
 ok()   { echo "✅ $*"; }
+build() { echo ""; echo "🔨 构建验证..."; cd "$BLOG_ROOT" && bundle exec jekyll build 2>&1 | tail -3; echo ""; }
 
 # === 1. 认证 ===
 [ -f "$TOKEN_FILE" ] || die "Notion token 文件不存在: $TOKEN_FILE"
@@ -19,12 +20,41 @@ TOKEN=$(cat "$TOKEN_FILE")
 [ -n "$TOKEN" ] || die "Notion token 为空"
 ok "Notion API token 已就绪"
 
-# === 2. 从 URL 提取页面 ID ===
-URL="$1"
-PAGE_ID_RAW=$(echo "$URL" | grep -oP '[a-f0-9]{32}' | head -1)
-[ -n "$PAGE_ID_RAW" ] || die "无法从 URL 提取页面 ID: $URL"
-PAGE_ID="${PAGE_ID_RAW:0:8}-${PAGE_ID_RAW:8:4}-${PAGE_ID_RAW:12:4}-${PAGE_ID_RAW:16:4}-${PAGE_ID_RAW:20:12}"
+# === 1b. 判断是 URL 还是 UUID ===
+INPUT="$1"
+if echo "$INPUT" | grep -qP '^[a-f0-9\-]{36}$'; then
+  # 输入已是 UUID
+  PAGE_ID="$INPUT"
+elif echo "$INPUT" | grep -qP '[a-f0-9]{32}'; then
+  # 从完整 URL 提取
+  PAGE_ID_RAW=$(echo "$INPUT" | grep -oP '[a-f0-9]{32}' | head -1)
+  PAGE_ID="${PAGE_ID_RAW:0:8}-${PAGE_ID_RAW:8:4}-${PAGE_ID_RAW:12:4}-${PAGE_ID_RAW:16:4}-${PAGE_ID_RAW:20:12}"
+else
+  die "无法从输入提取页面 ID: $INPUT"
+fi
 info "页面 ID: $PAGE_ID"
+
+# === 1c. 验证是 page 还是 database ===
+TYPE_CHECK=$(curl -sf -H "Authorization: Bearer $TOKEN" \
+  -H "Notion-Version: 2022-06-28" \
+  "https://api.notion.com/v1/pages/$PAGE_ID" | python3 -c "
+import json, sys
+try:
+    data = json.load(sys.stdin)
+    if data.get('object') == 'error':
+        print(data.get('message',''))
+    else:
+        print('page')
+except:
+    print('unknown')")
+
+if [ "$TYPE_CHECK" != "page" ]; then
+  if echo "$TYPE_CHECK" | grep -qi "database"; then
+    die "这是一个 database！请先 POST /v1/databases/\${PAGE_ID}/query 获取子页面列表"
+  else
+    die "API 返回错误: $TYPE_CHECK"
+  fi
+fi
 
 # === 3. 获取页面属性 ===
 info "获取页面属性..."
@@ -156,12 +186,12 @@ done < /tmp/notion_blog_img_urls.txt
 
 ok "配图下载完成 (共 $((i-1)) 张)"
 
-# === 7b. md5 去重验证 ===
+# === 7b. md5 去重验证（覆盖所有图片格式）===
 info "验证图片唯一性..."
-DUPS=$(find "$IMG_DIR_FULL" -name '*.png' -exec md5sum {} \; | sort | uniq -d -w32)
+DUPS=$(find "$IMG_DIR_FULL" -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gif' -o -name '*.webp' \) -exec md5sum {} \; | sort | uniq -d -w32)
 if [ -n "$DUPS" ]; then
   echo "$DUPS"
-  die "存在 md5 重复的图片！下载顺序可能出错，请检查后重试"
+  die "存在 md5 重复的图片！下载顺序可能出错"
 fi
 ok "所有图片内容唯一"
 
@@ -261,11 +291,13 @@ POSTEOF
 
 ok "文章已生成: ${BLOG_ROOT}/${POST_FILE}"
 ok "配图位置: ${BLOG_ROOT}/${IMG_DIR}/"
+
+# === 10. 自动构建验证 ===
+build
+
 echo ""
 echo "📋 下一步："
-echo "  1. 检查文章内容: less ${POST_FILE}"
-echo "  2. 验证图片唯一性（无输出即正常）:"
-echo "     md5sum ${IMG_DIR}/*.png | sort | uniq -d -w32"
-echo "  3. 验证构建: bundle exec jekyll build"
-echo "  4. 用浏览器检查渲染效果：图片、blockquote、布局"
-echo "  5. 确认无误后提交推送"
+echo "  确认无误后提交推送:"
+echo "    git add -A _posts/ images/posts/${PUB_DATE}-${SLUG}/"
+echo "    git commit -m \"feat: 新增博客文章「${TITLE}」\""
+echo "    git push origin master"
