@@ -30,7 +30,7 @@ if not TOKEN:
 
 assert TOKEN, "❌ NOTION_API_TOKEN 未设置"
 
-BLOG_ROOT = Path(__file__).resolve().parent.parent.parent
+BLOG_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 NOTION_VERSION = "2022-06-28"
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",
@@ -110,14 +110,21 @@ info(f"页面 ID: {page_id}")
 info("获取页面属性...")
 props = notion_get(f"pages/{page_id}")["properties"]
 
-# 判断是 page 还是 database
-if "title" not in props:
+# 判断是 page 还是 database（查找 type==title 的属性，兼容中文键名）
+def _find_title_prop(props) -> tuple:
+    """返回 (key, value) 或 None"""
+    for k, v in props.items():
+        if v.get("type") == "title":
+            txt = ''.join(t.get("plain_text", "") for t in v.get("title", []))
+            return k, txt
+    return None, None
+
+title_key, title = _find_title_prop(props)
+if title_key is None:
     # 尝试检查是否 database
     db_check = notion_get(f"databases/{page_id}")
     die(f"这是 database 而非 page。请先查询其子页面:\n"
         f"  POST https://api.notion.com/v1/databases/{page_id}/query")
-
-title = ''.join(t.get("plain_text", "") for t in props.get("title", {}).get("title", []))
 
 categories = []
 description = ""
