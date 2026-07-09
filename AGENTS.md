@@ -172,7 +172,7 @@ npm install     # 安装依赖（主要用于百度推送功能）
 
 用法：参考 SKILL.md 或直接运行辅助脚本：
 ```bash
-.agents/skills/notion-to-blog/convert.sh <notion-page-url>
+.agents/skills/notion-to-blog/convert.py <notion-page-url>
 ```
 
 ## 注意事项
