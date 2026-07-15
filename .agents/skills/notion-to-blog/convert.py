@@ -95,7 +95,12 @@ def gen_slug(title: str) -> str:
         slug = title[:12]
     slug = re.sub(r'[^a-zA-Z0-9\-]', '-', slug)
     slug = re.sub(r'-+', '-', slug).strip('-')
-    return slug or f"post-{PUB_DATE}"
+    return slug or "post"
+
+
+def gen_slug_from_date(date_str: str) -> str:
+    """从日期字符串生成 slug（用于回退）"""
+    return f"post-{date_str}"
 
 
 # ═══════════════════════════════════════════════════════════════════
