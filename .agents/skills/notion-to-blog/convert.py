@@ -232,7 +232,7 @@ for line in lines:
     # 移除 <callout> 标签
     if stripped.startswith("<callout") or stripped == "</callout>":
         continue
-    # 清理 callout 内容前的制表符
+    # 清理 callout/quote 内容前的制表符
     if stripped.startswith(">"):
         line = line.lstrip("\t").lstrip()
     # <empty-block/> → 空行
@@ -258,6 +258,9 @@ for line in lines:
     cleaned.append(line)
 
 body = '\n'.join(cleaned)
+# 确保 blockquote（> 行）后紧跟非空行、且非 > 行时，中间插入空行
+# 防止 kramdown 将后续内容吞入引用块
+body = re.sub(r'^(>.*)\n(?!>|\s*$)', r'\1\n\n', body, flags=re.MULTILINE)
 img_replaced = body.count("/images/posts/")
 info(f"已替换 {img_replaced} 张图片路径")
 
