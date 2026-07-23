@@ -2,7 +2,7 @@
 layout: post
 title: "从 Agent Loop 到自进化：Hermes 有哪些是我们可以抄的"
 categories: [AI Agent]
-description: "承接《Agent Loop 的文章好写》结尾对 OpenClaw/pi 的推荐，回答"真要给 OPc 自研执行 core 时为什么参照物换成 Hermes"：一是 agent + skill 形态太黑盒，要把可控执行程序化；二是要前后端分离，不被前端 TS 体系主导。正文拆 Hermes 自研 loop 和两层自进化（运行时闭环 + DSPy/GEPA 离线进化），落点是"哪些直接抄、哪些反着做""
+description: '承接《Agent Loop 的文章好写》结尾对 OpenClaw/pi 的推荐，回答"真要给 OPc 自研执行 core 时为什么参照物换成 Hermes"：一是 agent + skill 形态太黑盒，要把可控执行程序化；二是要前后端分离，不被前端 TS 体系主导。正文拆 Hermes 自研 loop 和两层自进化（运行时闭环 + DSPy/GEPA 离线进化），落点是"哪些直接抄、哪些反着做"'
 keywords: AI Agent
 mermaid: false
 sequence: false
@@ -14,8 +14,8 @@ mindmap2: false
 
 ![](/images/posts/2026-07-23-agent-loop-hermes/01.png)
 最近 Nous Research 的 Hermes Agent 挺火，官网把它称为“会随你成长”的 Agent。我不太关心这句宣传语，真正让我停下来翻源码的是两个问题：它的 loop 到底怎么跑？它说的“自进化”，最后改动的究竟是什么？
-这件事还有一点前情。在 <mention-page url="https://app.notion.com/p/75f3e1592f914d7eaf7db5ab235a81cc"/> 结尾，我建议想学 Agent Loop 的人先看 OpenClaw 和它的内核 pi，不要急着从零手搓。这个建议没变。但轮到我给 OPc 做执行 core 时，主要参照物却换成了 Hermes。
-先说最现实的问题。OpenClaw 和 Hermes 都大量依赖 agent + skill：Skill 是自然语言，缺少稳定契约，也很难做回归；Hermes 还允许后台 LLM 自己判断何时创建或修改技能。出了问题，排查链路会很长。我在 <mention-page url="https://app.notion.com/p/e18d94f9068d41ae93d0f6f46728ec8e"/> 里已经踩过这类坑，所以这次更想把能确定的执行过程写成程序，把模型留在真正需要判断的位置。
+这件事还有一点前情。在 [《Agent Loop 的文章好写》](/2026-07-08/agent-loop.html) 结尾，我建议想学 Agent Loop 的人先看 OpenClaw 和它的内核 pi，不要急着从零手搓。这个建议没变。但轮到我给 OPc 做执行 core 时，主要参照物却换成了 Hermes。
+先说最现实的问题。OpenClaw 和 Hermes 都大量依赖 agent + skill：Skill 是自然语言，缺少稳定契约，也很难做回归；Hermes 还允许后台 LLM 自己判断何时创建或修改技能。出了问题，排查链路会很长。我在 [《当 AI 学会了你的 Skill，你还剩下什么》](/2026-04-09/当-AI-学会了你的-Skill，你还剩下什么.html) 里已经踩过这类坑，所以这次更想把能确定的执行过程写成程序，把模型留在真正需要判断的位置。
 另一个原因是系统形态。pi 是 TS monorepo 里的嵌入式库，和前端运行时靠得很近。我的设想则是把 core 做成 headless 服务，CLI、IM 和 Web 只是不同入口。以后 OPc 真要从自用工具变成多人系统，也不用再拆一次前后端。Hermes 的 Python `AIAgent` 正好提供了一个更接近这个方向的样本。
 下面不是一份完整的 Hermes 源码导读。我只拆跟这次架构选择有关的部分，也会明确写出哪些地方准备借鉴，哪些地方我不会照搬。
 # 一、Loop：它没有"pi"
@@ -105,7 +105,7 @@ if is_background_review():
 所以 Hermes 的在线学习更像维护一套会变化的工作笔记，而不是在运行时训练模型。
 ## 第二层：DSPy + GEPA 离线进化（独立仓库）
 另一套机制放在独立仓库 `hermes-agent-self-evolution`，不参与实时对话。它读取执行轨迹，定位失败原因，生成候选修改，最终以 PR 的形式回到主仓库。
-这里我很熟悉。在 <mention-page url="https://app.notion.com/p/1699743cc1d04df88143fdebedc3f30d"/> 里，我用 DSPy 把 Skill 中靠手感调整的措辞变成可以评估、回归和重新编译的参数。Hermes 做的是同一类事，只是目标从单个 Skill 扩大到了 prompt、工具描述和其他 agent 组件。
+这里我很熟悉。在 [《我把一个 Skill 从手写 Prompt 重构成了可编译模块》](/2026-06-12/我把一个-Skill-从手写-Prompt-重构成了可编译模块-一次-DSPy-实战复盘.html) 里，我用 DSPy 把 Skill 中靠手感调整的措辞变成可以评估、回归和重新编译的参数。Hermes 做的是同一类事，只是目标从单个 Skill 扩大到了 prompt、工具描述和其他 agent 组件。
 1. 选定目标（某个技能 / prompt 片段 / 工具）
 2. 构建评估数据集（LLM 合成 + 挖真实会话历史 + 人工 golden 集）
 3. 把目标文本包装成 DSPy 模块，让"指令"变成可学习参数
@@ -117,11 +117,4 @@ GEPA 不只接收一个失败分数，还会分析轨迹里的失败原因，再
 我会抄它的分层：前台 loop 只负责把当前任务跑完；后台复盘负责沉淀技能和记忆；更激进的优化放到离线流程里，经过评估和人工审核再合并。这三件事的风险不同，没必要塞进同一个“自进化”开关。
 我也会保留 PR + 人审这条边界。让 agent 生成修改不难，难的是阻止一次看似有效的修改悄悄破坏其他任务。Hermes 不在进行中的会话里热更新，这比“能够自动改自己”更值得抄。
 我不会照搬它让 LLM 直接维护自然语言 Skill 的方式。至少在 OPc 里，能写成确定性程序的步骤仍然应该写成程序；Skill 更适合负责判断、选择和解释。否则系统用得越久，技能目录越大，问题只会从“模型偶尔不稳定”变成“没人知道它为什么这么做”。
-至于自研 loop，我现在的判断也更保守了。Hermes 证明这条路能换来 provider 和平台层面的控制力，但同时也展示了维护成本：重试、fallback、压缩、工具并发、持久化和中断处理，一个都省不掉。是否值得抄，取决于你究竟需要多少控制权。
-# 相关阅读 · 内部关联
-- <mention-page url="https://app.notion.com/p/75f3e1592f914d7eaf7db5ab235a81cc"/> —— 已发布，Loop Engineering 四件事；本文开头的"为什么这次不选 pi"直接承接它结尾的推荐，发布时必须互引
-- <mention-page url="https://app.notion.com/p/1699743cc1d04df88143fdebedc3f30d"/> —— 已发布，把单个 Skill 用 DSPy 重构成可编译模块的实战，和本文第二层直接呼应，发布时可互引
-- <mention-page url="https://app.notion.com/p/e18d94f9068d41ae93d0f6f46728ec8e"/> —— 已发布，Skill 系列开篇，"Prompt 负责想、脚本负责做死"的思路可串进系列
-- <mention-page url="https://app.notion.com/p/3b1bdbd3c73b49ae9604afc4e18e4641"/> —— 撰写中，Eval-driven 笔记；GEPA 的"打分函数 + 回归门"正是这套思路，两篇可互相引流
-- <mention-page url="https://app.notion.com/p/72612009cac74d7d859d97505031cbd9"/>、<mention-page url="https://app.notion.com/p/90b1d7f7695c4795bcff5111c1c4cbef"/> —— 工作区内的 DSPy 基础笔记，润色时可取材
----
+至于自研 loop，我现在的判断也更保守了。Hermes 证明这条路能换来 provider 和平台层面的控制力，但同时也展示了维护成本：重试、fallback、压缩、工具并发、持久化和中断处理，一个都省不掉。是否值得抄，取决于你究竟需要多少控制权。---
