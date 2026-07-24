@@ -23,7 +23,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103302.webp" type="image/webp">
-  <img src="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103302.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103302.webp" alt="" loading="lazy">
 </picture>
 *Photo by [Patrick Tomasso](https://unsplash.com/@impatrickt?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*  
 
@@ -46,7 +46,7 @@ LLM是Large Language Model的缩写，是人工智能和机器学习领域的一
 
 <picture>
   <source srcset="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103909.webp" type="image/webp">
-  <img src="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103909.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928103909.webp" alt="" loading="lazy">
 </picture>
 *大型语言模型是一种特殊的语言模型。作者图片*
 
@@ -75,7 +75,7 @@ GPT-3（以及其他大型语言模型）的主要创新在于它可以在各种
 
 <picture>
   <source srcset="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928104704.webp" type="image/webp">
-  <img src="/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928104704.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-10-10-a-practical-introduction-to-llm/Pasted%20image%2020230928104704.webp" alt="" loading="lazy">
 </picture>
 
 *Toy probability distribution of next work in sequence “Listen to your ___.” Image by author.*

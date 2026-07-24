@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-![Kimi Code CLI 源码与架构主题封面](/images/posts/2026-07-19-kimi-code-cli/01.jpg)
+![Kimi Code CLI 源码与架构主题封面](https://www.wangyiyang.cc/images/posts/2026-07-19-kimi-code-cli/01.jpg)
 Kimi K3 发布那天，我的时间线被刷屏了，跑分截图和长文解读一茬接一茬。
 我在干一件不太合群的事：把同一家公司另一个仓库 clone 下来，读源码。
 那个仓库叫 [kimi-code](https://github.com/MoonshotAI/kimi-code)，月之暗面的终端 Agent，Kimi Code CLI。读完两代源码，我的结论是：**这是国货之光，诚意都写在仓库里。**
@@ -28,7 +28,7 @@ Kimi K3 发布那天，我的时间线被刷屏了，跑分截图和长文解读
 ## 再往代码里走一层
 我读代码库习惯先找边界。kimi-code 的 packages/ 目录没有让我来回猜：界面、事件流、Agent 内核和模型抽象各自待在自己的位置，依赖关系也能顺着目录读下去。
 先上一张全景图：
-![Kimi Code CLI 整体架构图](/images/posts/2026-07-19-kimi-code-cli/02.png)
+![Kimi Code CLI 整体架构图](https://www.wangyiyang.cc/images/posts/2026-07-19-kimi-code-cli/02.png)
 *图：Kimi Code CLI（kimi-code，TypeScript 版）整体架构。官方未提供架构图，本图根据仓库 packages/ 结构与源码整理绘制。*
 kimi-code 的 Agent 内核不直接画界面，只对外吐一条 wire 事件流。TUI 和 Web 界面消费这条流，IDE 则通过适配层接进来。它们共用一套内核，不需要互相知道对方的存在。这个边界的好处在加新前端时最明显：内核一行不用改，新界面只要会消费事件流就能接上。排查问题也省力，事件流就是内核和界面之间的完整对账单，bug 落在哪一侧，对着流看一眼就知道。
 会话本身也是 wire.jsonl 事件日志。回放日志就能恢复现场，持久化和调试因此落在同一套机制里。含金量在出问题时才显出来：复现 bug 不需要用户描述操作步骤，一份 wire.jsonl 扔过来，本地回放就能停在出错前的任意一刻；进程崩溃后的恢复也不用单写快照逻辑，重放日志本身就是恢复。事件溯源在教科书里讲了很多年，在一个终端工具中看到这么完整的实现，我停下来读了好一会儿。

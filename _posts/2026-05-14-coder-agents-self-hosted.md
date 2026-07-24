@@ -9,7 +9,7 @@ description: "Coder Agents 是一个模型无关的平台，让组织能够在�
 keywords: "Coder Agents, AI编码代理, 自托管, 模型无关, DevOps"
 ---
 
-![cover](/images/posts/coder-agents-self-hosted_1200x630.jpg)
+![cover](https://www.wangyiyang.cc/images/posts/coder-agents-self-hosted_1200x630.jpg)
 
 > 当 AI 编码工具从「玩具」变成「生产基础设施」，企业面临的核心问题不再是「用哪个模型」，而是「如何在保证安全与可控的前提下，让 AI 真正融入开发工作流」。Coder Agents 给出的答案值得关注。
 

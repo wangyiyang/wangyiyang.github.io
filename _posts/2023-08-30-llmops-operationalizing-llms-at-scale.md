@@ -36,7 +36,7 @@ In this article, we cover each of the techniques in detail and talk about the be
 
 <picture>
   <source srcset="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105531.webp" type="image/webp">
-  <img src="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105531.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105531.webp" alt="" loading="lazy">
 </picture>
 
 ## Prompt Engineering 提示工程
@@ -116,7 +116,7 @@ Agents can act as a blend of experts, drawing context-specific data from various
 
 <picture>
   <source srcset="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105840.webp" type="image/webp">
-  <img src="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105840.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105840.webp" alt="" loading="lazy">
 </picture>
 
 _Example of an LLM agent architecture for a product documentation chatbot  
@@ -135,7 +135,7 @@ LLM可观测性是一种工具，用于确保实时监控所有提示模板、�
 
 <picture>
   <source srcset="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105915.webp" type="image/webp">
-  <img src="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105915.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105915.webp" alt="" loading="lazy">
 </picture>
 
 ### What Data Is Collected By An LLM Observability System?  LLM可观测性系统收集哪些数据？
@@ -172,7 +172,7 @@ The above diagram shows what LLM observability looks like in the world of founda
 
 <picture>
   <source srcset="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105942.webp" type="image/webp">
-  <img src="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105942.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829105942.webp" alt="" loading="lazy">
 </picture>
 
 These embeddings can then be monitored in real-time across high-dimensional space and any change in behavior or any negative feedback from users can indicate a problem within the LLM application. One method of finding problem responses involves clustering prompts and responses then finding problem clusters through looking at evaluation metrics per cluster, drift per cluster or user feedback – such as thumbs up / thumbs down – per cluster.  
@@ -184,7 +184,7 @@ These embeddings can then be monitored in real-time across high-dimensional spac
 
 <picture>
   <source srcset="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829110008.webp" type="image/webp">
-  <img src="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829110008.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829110008.webp" alt="" loading="lazy">
 </picture>
 
 The problems captured as part of the detections are shown above, where a certain format of misleading responses are grouped together and highlighted. These misleading responses can be fixed through a number of iterative workflows through prompt engineering or fine-tuning.  
@@ -195,7 +195,7 @@ The problems captured as part of the detections are shown above, where a certain
 
 <picture>
   <source srcset="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829110024.webp" type="image/webp">
-  <img src="/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829110024.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-08-30-llmops-operationalizing-llms-at-scale/Pasted%20image%2020230829110024.webp" alt="" loading="lazy">
 </picture>
 
 Once you find a cluster of issues, understanding what specifically in that cluster is problematic can take some work. We recommend integrating an LLM to do the heavy lifting for you. Your LLM observability tool should have a prompt template for the LLM with cluster data to do cluster analysis and cluster comparisons to baseline datasets, with interactive workflows for EDA-type analysis.  

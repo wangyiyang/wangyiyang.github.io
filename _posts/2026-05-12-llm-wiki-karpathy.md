@@ -255,6 +255,6 @@ LLM 不厌倦 bookkeeping。不遗忘更新交叉引用。一次能改 15 个文
 <!--more-->
 
 **相关阅读：**
-- [MCP 协议正在硬化：从玩具到生产基础设施](/2026/04/09/MCP-协议正在硬化/)
-- [Pi：Coding Agent 的极简主义革命](/2026/04/09/Pi-Coding-Agent-极简主义革命/)
-- [为什么 Agent 真正走进生产，核心不是模型，而是 Harness](/2026/04/09/为什么-Agent-真正走进生产-核心不是模型-而是-Harness/)
+- [MCP 协议正在硬化：从玩具到生产基础设施](https://www.wangyiyang.cc/2026/04/09/MCP-协议正在硬化/)
+- [Pi：Coding Agent 的极简主义革命](https://www.wangyiyang.cc/2026/04/09/Pi-Coding-Agent-极简主义革命/)
+- [为什么 Agent 真正走进生产，核心不是模型，而是 Harness](https://www.wangyiyang.cc/2026/04/09/为什么-Agent-真正走进生产-核心不是模型-而是-Harness/)

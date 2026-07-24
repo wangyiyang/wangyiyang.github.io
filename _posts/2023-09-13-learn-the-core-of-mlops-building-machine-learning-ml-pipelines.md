@@ -37,7 +37,7 @@ MLOps以自动化方式将上述三个管道结合在一起，并确保ML解决�
 
 <picture>
   <source srcset="/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110030.webp" type="image/webp">
-  <img src="/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110030.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110030.webp" alt="" loading="lazy">
 </picture>
 
 Photo by [Hitesh Choudhary](https://unsplash.com/@hiteshchoudhary?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
@@ -48,7 +48,7 @@ Photo by [Hitesh Choudhary](https://unsplash.com/@hiteshchoudhary?utm_source=me
 
 <picture>
   <source srcset="/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110226.webp" type="image/webp">
-  <img src="/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110226.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-09-13-learn-the-core-of-mlops-building-machine-learning-ml-pipelines/Pasted%20image%2020230913110226.webp" alt="" loading="lazy">
 </picture>
 
 Learning the core of MLOps — Building ML Pipelines (Image by Author)

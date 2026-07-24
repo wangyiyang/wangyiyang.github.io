@@ -9,7 +9,7 @@ description: "GitHub 秘密扫描 MCP Server 正式 GA，将敏感信息检测�
 keywords: "MCP, Secret Scanning, GitHub, Agent, 安全, AI编程, DevSecOps"
 ---
 
-![cover](/images/posts/2026-05-13-github-mcp-secret-scanning-ga_1200x630.webp)
+![cover](https://www.wangyiyang.cc/images/posts/2026-05-13-github-mcp-secret-scanning-ga_1200x630.webp)
 
 
 ## 开篇引入

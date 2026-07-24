@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-![Eval-driven Development：给流水线每一层设一道分数线，把打分塞进 CI](/images/posts/2026-07-03-agent-eval-driven/01-cover.png)
+![Eval-driven Development：给流水线每一层设一道分数线，把打分塞进 CI](https://www.wangyiyang.cc/images/posts/2026-07-03-agent-eval-driven/01-cover.png)
 怎么判断一个 Agent 准不准、靠不靠谱？这大概是过去一年被问得最多、也最没有统一答案的问题。答案不是「跑几个 case 看看顺不顺眼」，而是把「对不对」换成「打没打分、退没退化」——传统单元测试给的是通过或不通过；LLM 流水线的输出是概率性的，模型换一版、prompt 改一行，结果就漂移了，靠精确匹配的断言根本抓不住这种变化。业内把这套新的验收方式叫 **Eval-driven Development（EDD）**：数据集 + 运行器 + 评分器三件套，把打分这件事塞进 CI，跑起来的方式和单元测试没什么两样。
 之前那篇 DSPy 实战复盘，是给一个 Skill 写打分函数——管的是一个模块。这一篇要回答的，是把这套判断方法铺开到整条 Agent 流水线上：检索、生成、工具调用、最终输出，每一层都要有能拦下退化的分数线，才谈得上真正知道它靠不靠谱。
 ---
@@ -56,7 +56,7 @@ OpenAI 把这套循环压缩成三个词：**Specify → Measure → Improve**�
 所谓 LLM 单元测试，说白了就是针对给定输入评估一条 LLM 输出，判断依据是一组写清楚的标准——比如摘要任务，标准可以是「是否包含足够信息」和「有没有原文里没有的幻觉」。
 ---
 ## 评分器怎么选：能用代码，就别劳烦模型判官
-![评分器成本 / 灵活度光谱：代码断言 → 人工评估 → LLM-as-a-judge](/images/posts/2026-07-03-agent-eval-driven/02-spectrum.png)
+![评分器成本 / 灵活度光谱：代码断言 → 人工评估 → LLM-as-a-judge](https://www.wangyiyang.cc/images/posts/2026-07-03-agent-eval-driven/02-spectrum.png)
 评分手段可以排成一个「成本 / 灵活度」光谱：**代码断言**最快，适合不需要理解语义的属性，比如延迟、字数、JSON 合不合法、有没有必需关键词；**人工评估**是黄金标准但不 scale，适合当冒烟测试，抽几条看看就行；**LLM-as-a-judge** 最慢但最灵活，用另一个模型来程序化判断这条用例过没过。
 能用代码断言解决的，就绝不动用模型判官——便宜、确定、快，还不会自己产生幻觉。
 ### LLM-as-a-judge 的坑（这部分决定你的验收可不可信）
@@ -116,7 +116,7 @@ LangChain 测过工具调用，有个反直觉的结论：函数调用很容易�
 这条经验直接能用：给 Agent 写 eval，别只在最后一步设断言。中间每一次工具调用、每一次决策分支，都应该留一条能单独打分的记录——这样它翻车的时候，你才知道是选错了工具，还是传错了参数，还是压根没按对的顺序走。
 ---
 ## 手把手：给一个退款 Agent 写轨迹评测
-![退款 Agent 轨迹评测：轨迹比对 + 工具/参数正确率 + 声明式断言，三层叠着测](/images/posts/2026-07-03-agent-eval-driven/03-trajectory.png)
+![退款 Agent 轨迹评测：轨迹比对 + 工具/参数正确率 + 声明式断言，三层叠着测](https://www.wangyiyang.cc/images/posts/2026-07-03-agent-eval-driven/03-trajectory.png)
 光说不练假把式。拿一个具体的退款 Agent 举例，它该走的路是：先查订单 `search_orders`，再核对退款政策 `check_refund_policy`，最后才发起退款 `issue_refund`。顺序不能错——没核政策就退款，是事故。下面这三层叠着测，就是把「准不准」落到代码上。
 **第一层：路走对了没——轨迹比对**
 LangChain 的 AgentEvals 包里有现成的 `create_trajectory_match_evaluator`，把 Agent 实际走过的消息序列，和你手写的标准轨迹逐步比：

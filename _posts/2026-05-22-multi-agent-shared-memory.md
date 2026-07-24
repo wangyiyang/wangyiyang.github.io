@@ -64,7 +64,7 @@ AgentMemory 能做到语义检索，搜索"agentmemory 远程状态"这类自然
 
 目前的架构是这样的：
 
-![AgentMemory 架构图](/images/posts/agentmemory-architecture-2026-05-22.png)
+![AgentMemory 架构图](https://www.wangyiyang.cc/images/posts/agentmemory-architecture-2026-05-22.png)
 
 下一步要做的：
 

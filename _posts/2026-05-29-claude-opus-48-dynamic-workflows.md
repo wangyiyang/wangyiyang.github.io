@@ -9,7 +9,7 @@ description: "Anthropic 同时发布 Claude Opus 4.8 和 Dynamic Workflows，前
 keywords: "Claude Opus 4.8, Dynamic Workflows, Anthropic, AI Agent, 子代理, Claude Code"
 ---
 
-![cover](/images/posts/2026-05-29-claude-opus-48-dynamic-workflows_1200x630.jpg)
+![cover](https://www.wangyiyang.cc/images/posts/2026-05-29-claude-opus-48-dynamic-workflows_1200x630.jpg)
 
 ## 导读
 

@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-![cover](/images/posts/harness-explained/cover.png)
+![cover](https://www.wangyiyang.cc/images/posts/harness-explained/cover.png)
 
 > 这篇不绕概念，就一个目标：**用大白话把 Harness 讲明白**。看完你能一句话告诉别人——它是什么、有什么用、为什么 AI 没它就干不成事。
 > （写给会用 AI 工具、却时不时被它坑一把的独立创作者和开发者。）
@@ -35,7 +35,7 @@ Harness = 指令(Instructions) + 工具(Tools) + 环境(Environment) + 反馈(Fe
 
 ## 一个生活场景：AI 是厨师长，Harness 是后厨服务团队
 
-![chef](/images/posts/harness-explained/chef-analogy.png)
+![chef](https://www.wangyiyang.cc/images/posts/harness-explained/chef-analogy.png)
 
 想象 AI 是一位**厨艺顶尖的厨师长**：什么菜都会做，但**不能直接碰食材**，所有动作都得通过服务团队执行。
 
@@ -82,7 +82,7 @@ OpenAI 团队做过一个实验：5 个月、约 100 万行代码、约 1500 个
 
 ## 一张图看懂谁管谁
 
-![architecture](/images/posts/harness-explained/architecture.png)
+![architecture](https://www.wangyiyang.cc/images/posts/harness-explained/architecture.png)
 
 **Agent 是马，Harness 是缰绳和马鞍，你是骑手。** 没有缰绳，再快的马也只会乱跑；缰绳握在谁手里，谁才说了算。
 
@@ -94,7 +94,7 @@ OpenAI 团队做过一个实验：5 个月、约 100 万行代码、约 1500 个
 
 ## 第一性原理：把每个环节的「变量」摁成「常量」
 
-![first principles](/images/posts/harness-explained/first-principles.png)
+![first principles](https://www.wangyiyang.cc/images/posts/harness-explained/first-principles.png)
 
 AI 为什么会跑偏？因为从输入到输出，每个环节都塞满了不确定性——这次要干嘛、它会调什么工具、会不会乱删、格式飘不飘。**Harness 的第一性原理只有一句：在每个环节里，尽量减少变量。** 把模糊的、随机的东西，逐个变成写死的、可预期的常量。
 

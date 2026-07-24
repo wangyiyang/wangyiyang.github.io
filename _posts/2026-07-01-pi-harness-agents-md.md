@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-![模型是快马，AGENTS.md 是你亲手配的鞍](/images/posts/pi-harness-agents-md/harness-saddle.png)
+![模型是快马，AGENTS.md 是你亲手配的鞍](https://www.wangyiyang.cc/images/posts/pi-harness-agents-md/harness-saddle.png)
 
 > 如果你受够了 Claude Code 各种针对性的花活，请你一定要试试 Pi。Pi 几乎什么都没内置，等于把「你自己配的那层」放到了最大——而这层里最稳的资产，就是你写进 `AGENTS.md` 的那几条老原则。
 
@@ -115,11 +115,11 @@ DRY 说得很清楚：重复的知识，一旦要改，必漏改。所以「这�
 
 - **金字塔原理**：所有 PR、Issue、方案汇报，先结论后论据、先全局后细节。——让 Agent 的产出是给人看的，不是一堆意识流。
 
-![原则是内功，Pi 只是一把能把内功放大的剑](/images/posts/pi-harness-agents-md/harness-sword.png)
+![原则是内功，Pi 只是一把能把内功放大的剑](https://www.wangyiyang.cc/images/posts/pi-harness-agents-md/harness-sword.png)
 
 ## 模型和工具迟早都会被换掉，判断力不会
 
-我干过一件挺打脸的事：把主力模型从 Claude Opus 一路换到便宜得多的 DeepSeek Flash，一天的账单从大约 50 块砍到 10 块——结果质量没塌，反而更快了（这段的完整复盘我写在了[《或许是 Harness——我从 Opus 换到了 Flash》](/2026/06/30/from-opus-to-flash/)里）。
+我干过一件挺打脸的事：把主力模型从 Claude Opus 一路换到便宜得多的 DeepSeek Flash，一天的账单从大约 50 块砍到 10 块——结果质量没塌，反而更快了（这段的完整复盘我写在了[《或许是 Harness——我从 Opus 换到了 Flash》](https://www.wangyiyang.cc/2026/06/30/from-opus-to-flash/)里）。
 
 复盘时我才后知后觉：兜底的根本不是模型，是模型外面那层我亲手配的规矩。
 

@@ -24,7 +24,7 @@ LangChain 正是为了解决这一问题而生。它作为一个专为大语言�
 
 <picture>
   <source srcset="/images/posts/2025-02-05-04_langchain-basics-quick-start-v0-3_1.webp" type="image/webp">
-  <img src="/images/posts/2025-02-05-04_langchain-basics-quick-start-v0-3_1.webp" alt="image.png" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2025-02-05-04_langchain-basics-quick-start-v0-3_1.webp" alt="image.png" loading="lazy">
 </picture>
 
 ## 2. LangChain 的核心概念
@@ -66,7 +66,7 @@ LangChain 正是为了解决这一问题而生。它作为一个专为大语言�
 
 <picture>
   <source srcset="/images/posts/2025-02-05-04_langchain-basics-quick-start-v0-3_2.webp" type="image/webp">
-  <img src="/images/posts/2025-02-05-04_langchain-basics-quick-start-v0-3_2.webp" alt="image.png" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2025-02-05-04_langchain-basics-quick-start-v0-3_2.webp" alt="image.png" loading="lazy">
 </picture>
 
 我们可以看到，LangChain 提供了多个关键组件，帮助开发者构建灵活的语言模型应用。以下是一些主要组件的概述：

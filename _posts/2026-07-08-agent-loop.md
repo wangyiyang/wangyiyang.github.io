@@ -15,7 +15,7 @@ mindmap2: false
 诶，我写「Agent Loop 就是感知-决策-行动闭环」那种文章，说实话，分分钟写出来。不用一星期，三天。都不用三天，让模型生成，半小时。画一个圈，标四个箭头——Perceive、Think、Act、Observe——再配一句「未来已来」。好写，太好写了。
 为什么我不写？爺们儿要脸。
 
-![](/images/posts/2026-07-08-agent-loop/01.png)
+![](https://www.wangyiyang.cc/images/posts/2026-07-08-agent-loop/01.png)
 
 要脸的写法，得回答那个圈回答不了的问题：同样一个循环，凭什么有人跑出生产级 Agent，有人跑出一台无限烧钱机器。下面开拆。
 
@@ -80,4 +80,4 @@ def agent_loop(task: str) -> str:
 
 如果你真要动手开发一个带 Agent Loop 的项目，别急着从零手搓，也别一头扎进重型框架——去学学 OpenClaw：这个能清邮箱、管日程的开源个人助理，把 Pi Agent 直接当作自己的 Core。Pi 的作风和本文的论点一脉相承：系统提示词是所有 Agent 里最短的，工具只有四个（Read、Write、Edit、Bash），循环极简，复杂度全部交给扩展系统去长。OpenClaw 拿它当内核，等于给你现场演示了一遍「最简单的循环 + 最认真的工程」在真实产品里长什么样。把这两个仓库（openclaw/openclaw 和 badlogic/pi-mono）丢进 DeepWiki 逛一圈，比读十篇「一文读懂 AI Agent」有用。
 
-![推理 → 行动 → 观察，人在循环里](/images/posts/2026-07-08-agent-loop/02.png)
+![推理 → 行动 → 观察，人在循环里](https://www.wangyiyang.cc/images/posts/2026-07-08-agent-loop/02.png)

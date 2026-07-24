@@ -38,7 +38,7 @@ mindmap2: false
 
 顺序大致是从外往里收：先把权限压到最小，再把它关进沙箱，给真正危险的动作留一道人工确认，最后单独盯一下第三方来源。
 
-![四道闸](/images/posts/skill-kubernetes-security/sandbox.png)
+![四道闸](https://www.wangyiyang.cc/images/posts/skill-kubernetes-security/sandbox.png)
 
 ### 闸门 1：权限最小化
 
@@ -188,7 +188,7 @@ docker run --rm \
 
 到这儿，一个人的活儿交代得差不多了。但同样这四道闸，换到一个团队、一家公司头上，每一道都有行业里叫得出名字、配得齐工具的成套打法。企业级的料，基本都在这几处。
 
-![企业级](/images/posts/skill-kubernetes-security/enterprise.png)
+![企业级](https://www.wangyiyang.cc/images/posts/skill-kubernetes-security/enterprise.png)
 
 **权限那道，企业把它叫「非人身份 + 零信任」。** 别再给 Skill 发长期 token，给它一个可验证的工作负载身份（SPIFFE/SPIRE，或者云上的 Workload Identity、AWS IRSA、Entra Agent ID），密钥从 Vault 这类托管服务按需短时签发，用完即焚，也就是「无常驻密钥」。权限做成即时申请、即时回收（just-in-time / just-enough），还能带时间窗：授权它发邮件，就只给这 30 分钟。NIST 在 2026 年初那份 AI Agent 治理概念文件里说得很直白：AI Agent 得和传统工作负载一样「被认识、被信任、被治理」。
 
@@ -217,7 +217,7 @@ docker run --rm \
 | **供应链** | 公网 pip / npm 直连 | 私有镜像源，离线锁版本 |
 | **网络** | 出网白名单 | 气隙 / 单向网闸 |
 
-![私有化](/images/posts/skill-kubernetes-security/private.png)
+![私有化](https://www.wangyiyang.cc/images/posts/skill-kubernetes-security/private.png)
 
 五件事按地基往上搭：
 
@@ -243,4 +243,4 @@ docker run --rm \
 
 ---
 
-姊妹篇：[我是如何让 Skill 稳下来的](/2026/06/16/我是如何让-Skill-稳下来的.html)
+姊妹篇：[我是如何让 Skill 稳下来的](https://www.wangyiyang.cc/2026/06/16/我是如何让-Skill-稳下来的.html)

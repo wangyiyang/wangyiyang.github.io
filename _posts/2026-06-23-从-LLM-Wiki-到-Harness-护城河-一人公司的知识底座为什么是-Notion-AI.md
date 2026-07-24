@@ -14,7 +14,7 @@ mindmap2: false
 permalink: /2026/06/23/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/
 ---
 
-![一人公司知识底座从本地 LLM Wiki 到 Notion AI 的架构对比图](/images/posts/2026-06-23-从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI_001.png)
+![一人公司知识底座从本地 LLM Wiki 到 Notion AI 的架构对比图](https://www.wangyiyang.cc/images/posts/2026-06-23-从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI_001.png)
 
 > **一句话：**模型正在变成水电，谁都能极低成本用上一流大模型。那么一人公司真正的护城河，不是模型，而是"模型 × 你的结构化上下文 × 编排（Harness）"。
 
@@ -42,7 +42,7 @@ permalink: /2026/06/23/从-LLM-Wiki-到-Harness-护城河-一人公司的知识�
 
 我把本地 LLM Wiki 当作 Agent 体系的知识底座实验过一段时间，撞到了三道天花板。
 
-![本地 LLM Wiki 作为 Agent 知识底座的三道天花板示意图](/images/posts/2026-06-23-从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI_002.png)
+![本地 LLM Wiki 作为 Agent 知识底座的三道天花板示意图](https://www.wangyiyang.cc/images/posts/2026-06-23-从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI_002.png)
 
 ### 1. 协作：单机工具的原罪
 
@@ -60,7 +60,7 @@ Obsidian 本质上是个单用户的桌面应用。多设备同步要买 Sync �
 
 这是最致命的一刀，也是最隐蔽的一刀。
 
-![Notion AI 摊薄固定月费的成本优势对比图](/images/posts/2026-06-23-从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI_003.png)
+![Notion AI 摊薄固定月费的成本优势对比图](https://www.wangyiyang.cc/images/posts/2026-06-23-从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI_003.png)
 
 用 Notion AI，你拿到的是**被平台摊薄过的固定月费**：前沿模型内置、零运维、不用管 API Key 和配额、原生接你整个 workspace 和连接器。
 
@@ -91,7 +91,7 @@ Obsidian 本质上是个单用户的桌面应用。多设备同步要买 Sync �
 
 而真正让这套 Harness 跑起来的，是它把**编排的门槛**也一并打平了。过去想搭一套像样的 Notion 模板，你得先吃透数据库、属性、视图、关联这一整套概念；想要一个能自动干活的 Agent，门槛更高。现在你只要用大白话把需求说清楚——"帮我建一个稿件库，要有状态、目标渠道、阅读量统计""再配一个每周帮我汇总流量的助手"——Notion AI 就能把模板搭好、把 Agent 配好。原本属于专家的编排能力，被它压成了一句话的事。
 
-![Notion AI 一键编排模型上下文的工作流示意图](/images/posts/2026-06-23-从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI_004.png)
+![Notion AI 一键编排模型上下文的工作流示意图](https://www.wangyiyang.cc/images/posts/2026-06-23-从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI/从-LLM-Wiki-到-Harness-护城河-一人公司的知识底座为什么是-Notion-AI_004.png)
 
 Notion AI 把"模型 × 结构化上下文 × 编排"三件事用极低边际成本打包交付，对一人公司而言，它省下的不是钱，是我最贵的资源——时间与注意力。
 

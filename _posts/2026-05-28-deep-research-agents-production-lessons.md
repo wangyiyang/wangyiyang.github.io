@@ -9,7 +9,7 @@ description: "Sarang Kulkarni 在 Arc of AI Conference 2026 上分享了如何�
 keywords: "Deep Research, Multi-Agent, RAG, Production, Thoughtworks"
 ---
 
-![cover](/images/posts/deep-research-agents-production-lessons_1200x630.jpg)
+![cover](https://www.wangyiyang.cc/images/posts/deep-research-agents-production-lessons_1200x630.jpg)
 
 ## 深度研究智能体的生产级架构：来自 Thoughtworks 的实战复盘
 

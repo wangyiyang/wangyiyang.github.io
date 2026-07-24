@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-![纳瓦尔的财富公式，正在被AI重写](/images/posts/2026-07-05-naval-wealth-formula-ai/01.jpeg)
+![纳瓦尔的财富公式，正在被AI重写](https://www.wangyiyang.cc/images/posts/2026-07-05-naval-wealth-formula-ai/01.jpeg)
 
 前几天又有人问我那个老问题：AI 把智能和执行都做成了白菜价，普通人是不是彻底没机会了？
 
@@ -24,7 +24,7 @@ mindmap2: false
 
 ## 一、财富公式没变，变的是杠杆的价格
 
-![杠杆免费的那一天，方向感成了唯一的收费站](/images/posts/2026-07-05-naval-wealth-formula-ai/02.png)
+![杠杆免费的那一天，方向感成了唯一的收费站](https://www.wangyiyang.cc/images/posts/2026-07-05-naval-wealth-formula-ai/02.png)
 
 纳瓦尔讲财富，几乎不提「努力」两个字，他只讲杠杆。
 
@@ -38,7 +38,7 @@ mindmap2: false
 
 ## 二、「特定知识」，正在被 AI 重新定价
 
-![可被培训的知识在消散，只属于你的偏执在发光](/images/posts/2026-07-05-naval-wealth-formula-ai/03.png)
+![可被培训的知识在消散，只属于你的偏执在发光](https://www.wangyiyang.cc/images/posts/2026-07-05-naval-wealth-formula-ai/03.png)
 
 纳瓦尔对「特定知识」（specific knowledge）的定义很挑剔：无法通过培训获得的知识。它来自你的天赋、你的痴迷、你独特的人生经历，别人教不了，也抄不走。
 
@@ -54,7 +54,7 @@ mindmap2: false
 
 ## 三、判断力：唯一不会被 Token 稀释的资产
 
-![模型给出一万个答案，你负责认出那个正确的](/images/posts/2026-07-05-naval-wealth-formula-ai/04.png)
+![模型给出一万个答案，你负责认出那个正确的](https://www.wangyiyang.cc/images/posts/2026-07-05-naval-wealth-formula-ai/04.png)
 
 纳瓦尔有个论断：在杠杆无限的时代，判断力是最重要的技能。逻辑不复杂，你的每个决定都会被放大一千倍，那做对决定的价值，自然也跟着放大一千倍。杠杆是放大器，放大正确，也放大错误。
 
@@ -70,7 +70,7 @@ AI 把这件事推到了极致。
 
 ## 四、「浪费算力，节省人生」
 
-![算力是最便宜的，你的时间才是最贵的](/images/posts/2026-07-05-naval-wealth-formula-ai/05.png)
+![算力是最便宜的，你的时间才是最贵的](https://www.wangyiyang.cc/images/posts/2026-07-05-naval-wealth-formula-ai/05.png)
 
 纳瓦尔用 AI 的方式，粗暴得有点出乎意料。
 
@@ -84,7 +84,7 @@ AI 把这件事推到了极致。
 
 ## 五、当 AI 能复制一切，无法被复制的是「意图」
 
-![一旦抽走意图，一模一样的作品也会瞬间失去价值](/images/posts/2026-07-05-naval-wealth-formula-ai/06.png)
+![一旦抽走意图，一模一样的作品也会瞬间失去价值](https://www.wangyiyang.cc/images/posts/2026-07-05-naval-wealth-formula-ai/06.png)
 
 如果 AI 什么都能做，人还剩下什么？
 

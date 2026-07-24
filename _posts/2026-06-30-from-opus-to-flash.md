@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-![从 Opus 到 Flash，日成本从 50 砍到 10，活干得更多了](/images/posts/2026-06-30-from-opus-to-flash/01-cover.png)
+![从 Opus 到 Flash，日成本从 50 砍到 10，活干得更多了](https://www.wangyiyang.cc/images/posts/2026-06-30-from-opus-to-flash/01-cover.png)
 
 > 💡 前阵子，我 Vibe Coding 光中转站一天就要 **50 上下**；这两天换完模型、把 Kimi 摊进去，一天 all-in 也就 **10 块**。
 > 中间我几乎没动一行业务代码，只做了一件事——把主力模型从 **Claude Opus 4.8** 一路换到了 **DeepSeek V4 Flash**。
@@ -48,11 +48,11 @@ mindmap2: false
 
 这是这两天的真实记录：
 
-![DeepSeek Token 消耗](/images/posts/2026-06-30-from-opus-to-flash/02-deepseek-tokens.png)
+![DeepSeek Token 消耗](https://www.wangyiyang.cc/images/posts/2026-06-30-from-opus-to-flash/02-deepseek-tokens.png)
 
-![最近一个月的中转站费用](/images/posts/2026-06-30-from-opus-to-flash/03-proxy-cost.png)
+![最近一个月的中转站费用](https://www.wangyiyang.cc/images/posts/2026-06-30-from-opus-to-flash/03-proxy-cost.png)
 
-![Kimi](/images/posts/2026-06-30-from-opus-to-flash/04-kimi.png)
+![Kimi](https://www.wangyiyang.cc/images/posts/2026-06-30-from-opus-to-flash/04-kimi.png)
 
 ## 把两天的账摆在一起
 

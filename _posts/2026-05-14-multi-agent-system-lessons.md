@@ -7,7 +7,7 @@ permalink: /2026/05/14/multi-agent-system-lessons/
 description: "从一个 Hackday 项目出发，复盘多代理系统从零到一的全过程——架构选型、通信协调、错误处理的实战经验与教训。"
 ---
 
-![cover](/images/posts/multi-agent-system-lessons_1200x630.jpg)
+![cover](https://www.wangyiyang.cc/images/posts/multi-agent-system-lessons_1200x630.jpg)
 
 ## 开篇：一个 Hackday 项目如何改变了我对 AI 的认知
 

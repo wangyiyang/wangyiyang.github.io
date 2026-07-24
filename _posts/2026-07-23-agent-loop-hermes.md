@@ -12,10 +12,10 @@ mindmap: false
 mindmap2: false
 ---
 
-![](/images/posts/2026-07-23-agent-loop-hermes/01.png)
+![](https://www.wangyiyang.cc/images/posts/2026-07-23-agent-loop-hermes/01.png)
 最近 Nous Research 的 Hermes Agent 挺火，官网把它称为“会随你成长”的 Agent。我不太关心这句宣传语，真正让我停下来翻源码的是两个问题：它的 loop 到底怎么跑？它说的“自进化”，最后改动的究竟是什么？
-这件事还有一点前情。在 [《Agent Loop 的文章好写》](/2026-07-08/agent-loop.html) 结尾，我建议想学 Agent Loop 的人先看 OpenClaw 和它的内核 pi，不要急着从零手搓。这个建议没变。但轮到我给 OPc 做执行 core 时，主要参照物却换成了 Hermes。
-先说最现实的问题。OpenClaw 和 Hermes 都大量依赖 agent + skill：Skill 是自然语言，缺少稳定契约，也很难做回归；Hermes 还允许后台 LLM 自己判断何时创建或修改技能。出了问题，排查链路会很长。我在 [《当 AI 学会了你的 Skill，你还剩下什么》](/2026-04-09/当-AI-学会了你的-Skill，你还剩下什么.html) 里已经踩过这类坑，所以这次更想把能确定的执行过程写成程序，把模型留在真正需要判断的位置。
+这件事还有一点前情。在 [《Agent Loop 的文章好写》](https://www.wangyiyang.cc/2026-07-08/agent-loop.html) 结尾，我建议想学 Agent Loop 的人先看 OpenClaw 和它的内核 pi，不要急着从零手搓。这个建议没变。但轮到我给 OPc 做执行 core 时，主要参照物却换成了 Hermes。
+先说最现实的问题。OpenClaw 和 Hermes 都大量依赖 agent + skill：Skill 是自然语言，缺少稳定契约，也很难做回归；Hermes 还允许后台 LLM 自己判断何时创建或修改技能。出了问题，排查链路会很长。我在 [《当 AI 学会了你的 Skill，你还剩下什么》](https://www.wangyiyang.cc/2026-04-09/当-AI-学会了你的-Skill，你还剩下什么.html) 里已经踩过这类坑，所以这次更想把能确定的执行过程写成程序，把模型留在真正需要判断的位置。
 另一个原因是系统形态。pi 是 TS monorepo 里的嵌入式库，和前端运行时靠得很近。我的设想则是把 core 做成 headless 服务，CLI、IM 和 Web 只是不同入口。以后 OPc 真要从自用工具变成多人系统，也不用再拆一次前后端。Hermes 的 Python `AIAgent` 正好提供了一个更接近这个方向的样本。
 下面不是一份完整的 Hermes 源码导读。我只拆跟这次架构选择有关的部分，也会明确写出哪些地方准备借鉴，哪些地方我不会照搬。
 # 一、Loop：它没有"pi"
@@ -31,7 +31,7 @@ OpenClaw 的核心 loop 来自独立的 pi（pi-agent-core + pi-ai）：Read、W
 6. 发起一次"可中断的" API 调用
 7. 看响应：有 tool_calls 就执行工具、把结果塞回历史、回到第 4 步继续循环；纯文本就持久化会话、必要时刷新记忆，然后返回
 画成流程图更直观：
-![](/images/posts/2026-07-23-agent-loop-hermes/02.png)
+![](https://www.wangyiyang.cc/images/posts/2026-07-23-agent-loop-hermes/02.png)
 落到代码上，主循环大致长这样（基于 `agent/conversation_loop.py` 的源码做了简化，非逐行原文）：
 ```python
 # agent/conversation_loop.py · run_conversation 主循环（简化版）
@@ -89,7 +89,7 @@ def discover_builtin_tools(tools_dir: Optional[Path] = None) -> List[str]:
 两条路线的差别很直接。OpenClaw 把独立的 pi 包起来，接到多个渠道；Hermes 自己维护整套平台无关的 loop。pi 更小、更容易复用，Hermes 则把多 provider 和多平台的控制权留在自己手里。代价也摆在明面上：后者要维护的东西更多。
 # 二、自进化：两层，别混为一谈
 “Self-improving”很容易说成玄学。源码里的实现没有那么神秘：一套机制在运行时整理技能和记忆，另一套机制离线读取轨迹、做优化，再走人工审核。先看它们怎么接在一起：
-![](/images/posts/2026-07-23-agent-loop-hermes/03.png)
+![](https://www.wangyiyang.cc/images/posts/2026-07-23-agent-loop-hermes/03.png)
 ## 第一层：运行时学习闭环（内置）
 日常对话中的“学习”，主要发生在后台复盘里。
 - 默认每 10 条用户消息，或者单轮累计 10 次工具调用，`_spawn_background_review` 会启动一个 daemon 线程。线程里另起 `review_agent`，用专门的 prompt 回看这段对话，寻找用户纠错、可复用技巧和已经过时的技能。
@@ -105,7 +105,7 @@ if is_background_review():
 所以 Hermes 的在线学习更像维护一套会变化的工作笔记，而不是在运行时训练模型。
 ## 第二层：DSPy + GEPA 离线进化（独立仓库）
 另一套机制放在独立仓库 `hermes-agent-self-evolution`，不参与实时对话。它读取执行轨迹，定位失败原因，生成候选修改，最终以 PR 的形式回到主仓库。
-这里我很熟悉。在 [《我把一个 Skill 从手写 Prompt 重构成了可编译模块》](/2026-06-12/我把一个-Skill-从手写-Prompt-重构成了可编译模块-一次-DSPy-实战复盘.html) 里，我用 DSPy 把 Skill 中靠手感调整的措辞变成可以评估、回归和重新编译的参数。Hermes 做的是同一类事，只是目标从单个 Skill 扩大到了 prompt、工具描述和其他 agent 组件。
+这里我很熟悉。在 [《我把一个 Skill 从手写 Prompt 重构成了可编译模块》](https://www.wangyiyang.cc/2026-06-12/我把一个-Skill-从手写-Prompt-重构成了可编译模块-一次-DSPy-实战复盘.html) 里，我用 DSPy 把 Skill 中靠手感调整的措辞变成可以评估、回归和重新编译的参数。Hermes 做的是同一类事，只是目标从单个 Skill 扩大到了 prompt、工具描述和其他 agent 组件。
 1. 选定目标（某个技能 / prompt 片段 / 工具）
 2. 构建评估数据集（LLM 合成 + 挖真实会话历史 + 人工 golden 集）
 3. 把目标文本包装成 DSPy 模块，让"指令"变成可学习参数

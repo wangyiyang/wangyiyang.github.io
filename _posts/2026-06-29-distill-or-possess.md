@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-![最恐怖的不是被蒸馏，而是被夺舍](/images/posts/2026-06-29-distill-or-possess/01-cover.png)
+![最恐怖的不是被蒸馏，而是被夺舍](https://www.wangyiyang.cc/images/posts/2026-06-29-distill-or-possess/01-cover.png)
 
 > ⚠️ **提醒一句**：这篇文章的后半段会把「蒸馏」和「夺舍」推到逻辑的尽头，有些推演读着会让人发凉。但请读到最后，结论其实是把主动权重新交回你自己手里。
 
@@ -52,7 +52,7 @@ mindmap2: false
 
 ## 把这条线推到底，还剩什么
 
-![一条没有尽头的下滑线：知识、接入执行、私有认知逐层被吸走，只有「授权」和「署名担责」落在线外](/images/posts/2026-06-29-distill-or-possess/02-distill-line.png)
+![一条没有尽头的下滑线：知识、接入执行、私有认知逐层被吸走，只有「授权」和「署名担责」落在线外](https://www.wangyiyang.cc/images/posts/2026-06-29-distill-or-possess/02-distill-line.png)
 
 你可能会反驳：私有数据、线上状态、改生产环境的权限，模型不也能靠 MCP、function call、浏览器够得着吗？没错，而且会更彻底。连 MCP 本身都只是过渡，终点是模型直接上手操作计算机。
 
@@ -158,7 +158,7 @@ Cursor 这一年就是个活生生的例子。
 
 ## 最后一道防线：守住主权
 
-![分清「做决定的人」和「只剩签字的手」：握方向盘的是操作者，只按签字章的是被夺舍的壳](/images/posts/2026-06-29-distill-or-possess/03-sovereignty.png)
+![分清「做决定的人」和「只剩签字的手」：握方向盘的是操作者，只按签字章的是被夺舍的壳](https://www.wangyiyang.cc/images/posts/2026-06-29-distill-or-possess/03-sovereignty.png)
 
 比「被蒸馏」更值得当心的，是被夺舍。
 

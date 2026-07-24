@@ -20,7 +20,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928155858.webp" type="image/webp">
-  <img src="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928155858.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928155858.webp" alt="" loading="lazy">
 </picture>
 *Photo by [Martin Sanchez](https://unsplash.com/@martinsanchez?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
@@ -61,7 +61,7 @@ mindmap2: false
 
 <picture>
   <source srcset="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928160230.webp" type="image/webp">
-  <img src="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928160230.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928160230.webp" alt="" loading="lazy">
 </picture>
 *A visual analogy of how APIs work. Image by author.*
 
@@ -73,7 +73,7 @@ API与上面的类比的区别在于，你不是通过手机的短信应用发�
 
 <picture>
   <source srcset="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928160659.webp" type="image/webp">
-  <img src="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928160659.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928160659.webp" alt="" loading="lazy">
 </picture>
 *Visualization of how API calls to OpenAI works. Image by author.*
 
@@ -92,7 +92,7 @@ OpenAI API提供了[多个可供选择的模型](https://platform.openai.com/doc
 
 <picture>
   <source srcset="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928161043.webp" type="image/webp">
-  <img src="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928161043.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928161043.webp" alt="" loading="lazy">
 </picture>
 *List of available models via the OpenAI API as of Jul 2023. Image by author. [[1](https://platform.openai.com/docs/models)]*
 
@@ -107,7 +107,7 @@ OpenAI API提供了[多个可供选择的模型](https://platform.openai.com/doc
 
 <picture>
   <source srcset="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928161504.webp" type="image/webp">
-  <img src="/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928161504.webp" alt="" loading="lazy">
+  <img src="https://www.wangyiyang.cc/images/posts/2023-10-09-cracking-open-the-openai-python-api/Pasted%20image%2020230928161504.webp" alt="" loading="lazy">
 </picture>
 *Toy example showing one possible token mapping between text and integers. Image by author.*
 

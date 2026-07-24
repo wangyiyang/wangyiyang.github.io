@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-![](/images/posts/yi-ren-gong-si-notion-erp/01.png)
+![](https://www.wangyiyang.cc/images/posts/yi-ren-gong-si-notion-erp/01.png)
 
 前阵子 GitHub 上爆火过一个项目，叫「三省六部·Edict」：作者把 1300 年前的唐朝官制搬进了多 Agent 架构——太子负责分拣消息，中书省规划，门下省审核封驳，尚书省派发，六部并行执行，还配了一块军机处看板。用户扮演皇上，说句话就是下旨，十几个 Agent 各司其职、相互制衡。项目上线两周星标 6.5K+，媒体给它起的外号叫「赛博朝廷」——顺便说一句，它的底座正是 OpenClaw。
 
@@ -45,7 +45,7 @@ mindmap2: false
 
 注意，这不是角色扮演的行为艺术。部门的本质是**给心智切换装一个开关**：打开编辑部的页面，我就只想选题和发布的事；打开财务部，我就只看收支和跑道。页面即语境，语境即角色。
 
-![](/images/posts/yi-ren-gong-si-notion-erp/02.png)
+![](https://www.wangyiyang.cc/images/posts/yi-ren-gong-si-notion-erp/02.png)
 
 这套开关最硬的证明，是坐进部门里的不一定是人。我给这家公司安排过一位 COO——一个 Agent：它读的是同样的表，认的是同样的状态流转，拆任务、派任务、盯进度，全靠任务卡异步接力，不需要我口头交代一句。每天早上我还没坐下，它已经把各部门的表扫了一遍，把当天的工作理好摆在桌上：今天该写什么、该修什么、什么在等我拍板——一号位的早晨从看简报开始，而不是从找今天该干嘛开始。
 

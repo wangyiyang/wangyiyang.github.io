@@ -12,11 +12,11 @@ mindmap: false
 mindmap2: false
 ---
 
-![](/images/posts/mcp-ema-standardized-half/01.png)
+![](https://www.wangyiyang.cc/images/posts/mcp-ema-standardized-half/01.png)
 前几天刷到一条新闻：MCP 的 Enterprise-Managed Authorization（EMA）转正为 stable——Anthropic、Microsoft、Okta 已经采用，Claude、VS Code 等客户端，以及 Asana、Atlassian、Figma、Linear、Supabase 等一批 Server 都宣布了支持。
 看到新闻的第一反应不是「又一个协议更新」，而是一阵强烈的既视感：EMA 做的这件事，我几年前在项目里**手搓过一个私有版**。这篇文章想讲清楚三件事：我当年为什么要手搓、EMA 把哪一半标准化了、以及剩下那一半为什么协议永远不会替你解决。
 先补一段背景。**EMA（Enterprise-Managed Authorization，企业托管授权）是 MCP 授权规范的官方扩展**。它把「谁能连哪个 MCP Server、拿什么 scope」这个决策，从每个用户的逐个授权，上移到企业自己信任的身份提供商（IdP，如 Okta）手里：管理员配置一次策略，员工用企业身份登录一次，被授权的 MCP Server 就自动全部连上，全程没有任何 per-server 的 OAuth 授权环节——官方把这个体验叫 **zero-touch**。
-![](/images/posts/mcp-ema-standardized-half/02.png)
+![](https://www.wangyiyang.cc/images/posts/mcp-ema-standardized-half/02.png)
 ### per-user OAuth 弹窗，从来不是我们的选项
 把 Agent 接进企业内部系统，生态里的教科书路径是 per-user OAuth：**每个用户 × 每个下游系统**，各自走一遍授权弹窗、各自维护一份 token。这个乘法放到企业里，结局不难推演：
 - **对用户**：光是把十几个内部系统逐个授权一遍就要耗掉大半天，token 过期后还得再来一轮；
@@ -40,8 +40,8 @@ EMA 的核心，是把「用户凭证」从链路里彻底拿掉——用户只�
 1. **用户只认 IdP**：真正的登录只发生在用户 ↔ IdP 之间，主凭证不下发给任何 MCP Server。
 2. **IdP 签发身份断言**：用 ID-JAG 签出一张 JWT，声明「这个用户 / 这个客户端被允许连这个 Server、在这个 scope 下」。
 3. **在 MCP Server 的授权服务器换 token**：这张断言被换成 access token，客户端带着它去调 Server
-![](/images/posts/mcp-ema-standardized-half/03.png)
-![](/images/posts/mcp-ema-standardized-half/04.png)
+![](https://www.wangyiyang.cc/images/posts/mcp-ema-standardized-half/03.png)
+![](https://www.wangyiyang.cc/images/posts/mcp-ema-standardized-half/04.png)
 
 没错，这就是上一节那条手搓链的标准化版本：平台 token 换成了 IdP 签发的身份断言，点对点的私有换发约定换成了公开的 IETF 草案，散落在后端配置里的授权决策上移到了企业 IdP——我当年欠下的四条债，EMA 直接还掉了前两条；至于后两条，正是下半篇要讲的事。落地上，Okta Cross App Access 是首个支持的 IdP 路径，而且要 IdP 和 MCP Server 两头都支持这个扩展——有意义，但还不算完整。
 
