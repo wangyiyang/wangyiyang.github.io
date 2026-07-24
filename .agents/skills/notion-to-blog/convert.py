@@ -38,6 +38,18 @@ HEADERS = {
 }
 
 
+def _load_site_url() -> str:
+    """从 _config.yml 读取站点 url，用于生成图片绝对路径"""
+    m = re.search(r'^url:\s*(\S+)',
+                  (BLOG_ROOT / "_config.yml").read_text(encoding="utf-8"),
+                  re.MULTILINE)
+    assert m, "❌ _config.yml 中未找到 url 配置"
+    return m.group(1).rstrip('/')
+
+
+SITE_URL = _load_site_url()
+
+
 # ─── 工具函数 ──────────────────────────────────────────────────────
 def info(msg):    print(f"ℹ️  {msg}")
 def ok(msg):      print(f"✅ {msg}")
@@ -252,7 +264,7 @@ for line in lines:
                     ext = "webp"
                 filename = f"{idx+1:02d}.{ext}"
                 line = re.sub(r'\]\(https?://[^)]+\)',
-                             f'](/images/posts/{pub_date}-{slug}/{filename})',
+                             f']({SITE_URL}/images/posts/{pub_date}-{slug}/{filename})',
                              line)
                 break
     cleaned.append(line)

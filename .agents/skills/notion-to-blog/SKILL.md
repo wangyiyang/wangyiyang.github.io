@@ -36,7 +36,7 @@ ID:   f13de733-01f7-4039-94c4-4210f6604a28
 3. 获取 Markdown 内容
 4. 提取并下载图片（自动处理 alt text 嵌套链接）
 5. 处理 Notion 特有标记（`<callout>`→blockquote、`<empty-block/>`→空行）
-6. 替换图片路径为本地路径
+6. 替换图片路径为绝对路径（站点 URL 从 `_config.yml` 读取）
 7. 组装 Front Matter
 8. md5 去重验证图片
 9. 自动 Jekyll 构建验证
@@ -62,7 +62,7 @@ export NOTION_API_TOKEN=$(cat ~/.config/notion/api_key 2>/dev/null)
 |---|---|
 | 文件名 | `_posts/{发布日期}-{slug}.md` |
 | 日期 | 从 Notion `计划发布日` 取，无则用今天 |
-| 图片 | `images/posts/{slug}/01..N.{ext}` |
+| 图片 | 存于 `images/posts/{date}-{slug}/01..N.{ext}`，文中引用为绝对路径 `{site.url}/images/posts/...` |
 | Front Matter | `categories` 从 Notion `系列 / 标签` 提取 |
 | Feature switch | 默认全部 `false`（固定模板） |
 
