@@ -93,7 +93,7 @@ def download_file(url: str, dest: Path):
     """下载文件，返回 (success, size)"""
     r = subprocess.run(
         ["curl", "-sfL", "-o", str(dest), "-w", "%{size_download}", url],
-        capture_output=True, text=True, timeout=60)
+        capture_output=True, text=True, timeout=120)
     if r.returncode == 0:
         return True, int(r.stdout) if r.stdout else 0
     return False, 0
