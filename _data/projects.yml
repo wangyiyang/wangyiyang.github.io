@@ -1,63 +1,104 @@
-- key: ai-engineering
-  title: AI 工程
-  description: Agent、RAG、MCP 相关工具。
+- key: agent-skills
+  title: Agent 技能
+  description: 面向不同场景的 AI Agent 工作流技能集合。
   projects:
+    - name: dev-agent-skills
+      repo: wangyiyang/dev-agent-skills
+      url: https://github.com/wangyiyang/dev-agent-skills
+      description: 开发场景 Agent 技能集，覆盖编码、调试、部署等环节。
+      language: Python
+      stars: 4
+      updated: 2026-07-23
+      tags: [Agent, Skills, Python]
+    - name: writing-agent-skills
+      repo: wangyiyang/writing-agent-skills
+      url: https://github.com/wangyiyang/writing-agent-skills
+      description: 写作场景 Agent 技能集，辅助内容创作与润色。
+      language: HTML
+      stars: 0
+      updated: 2026-07-26
+      tags: [Agent, Writing, Skills]
+    - name: fin-agent-skills
+      repo: wangyiyang/fin-agent-skills
+      url: https://github.com/wangyiyang/fin-agent-skills
+      description: 金融场景 Agent 技能集，面向财务分析与数据处理。
+      language: HTML
+      stars: 0
+      updated: 2026-07-23
+      tags: [Agent, Finance, Skills]
+    - name: design-agent-skills
+      repo: wangyiyang/design-agent-skills
+      url: https://github.com/wangyiyang/design-agent-skills
+      description: 设计场景 Agent 技能集，辅助 UI/UX 与视觉设计。
+      stars: 0
+      updated: 2026-07-23
+      tags: [Agent, Design, Skills]
     - name: oss-mcp
       repo: wangyiyang/oss-mcp
       url: https://github.com/wangyiyang/oss-mcp
-      description: 对象存储 MCP 服务。
+      description: 对象存储 MCP 服务，让 AI Agent 直接操作云存储。
       language: Python
       stars: 0
       updated: 2025-12-25
       tags: [Python, MCP, OSS]
-- key: automation-tools
-  title: 自动化
-  description: 个人工作流和开发环境配置。
+
+- key: products
+  title: 产品 & 设计
+  description: 独立作品与品牌设计项目。
   projects:
-    - name: agent-skills
-      repo: wangyiyang/agent-skills
-      url: https://github.com/wangyiyang/agent-skills
-      description: Agent 工作流技能集合。
-      language: Python
-      stars: 3
-      updated: 2026-03-30
-      tags: [Agent, Skills, Python]
-    - name: dotfiles
-      repo: wangyiyang/dotfiles
-      url: https://github.com/wangyiyang/dotfiles
-      description: 开发环境和 shell 配置。
-      language: Shell
+    - name: yy-design
+      repo: wangyiyang/yy-design
+      url: https://github.com/wangyiyang/yy-design
+      description: 个人品牌设计系统，基于 HTML 的原生设计能力，为技术领导者打造高级感品牌视觉。
+      language: HTML
+      stars: 5
+      updated: 2026-05-31
+      tags: [Design, Brand, HTML]
+    - name: kiyo
+      repo: wangyiyang/kiyo
+      url: https://github.com/wangyiyang/kiyo
+      description: AI 音乐创作平台。
+      language: TypeScript
       stars: 0
-      updated: 2026-03-30
-      tags: [Shell, macOS, Workflow]
-- key: content-system
-  title: 内容
-  description: 博客和内容管理工具。
+      updated: 2026-06-01
+      tags: [AI, Music, TypeScript]
+
+- key: content
+  title: 内容 & 文档
+  description: 博客、指南与知识沉淀。
   projects:
     - name: wangyiyang.github.io
       repo: wangyiyang/wangyiyang.github.io
       url: https://github.com/wangyiyang/wangyiyang.github.io
-      description: 本博客源码。
+      description: 个人技术博客「翊行代码」源码，基于 Jekyll。
       language: HTML
       stars: 3
-      updated: 2026-04-23
+      updated: 2026-07-26
       tags: [Jekyll, Blog, Writing]
-- key: open-source-components
-  title: 开源组件
-  description: 可复用组件和模板。
+    - name: pi-zh-guide
+      repo: wangyiyang/pi-zh-guide
+      url: https://github.com/wangyiyang/pi-zh-guide
+      description: Pi Coding Agent 中文使用指南。
+      stars: 1
+      updated: 2026-05-24
+      tags: [Guide, Pi, Agent]
+
+- key: dev-tools
+  title: 开发工具
+  description: 效率工具与项目模板。
   projects:
-    - name: md
-      repo: wangyiyang/md
-      url: https://github.com/wangyiyang/md
-      description: 微信 Markdown 编辑器。
-      language: Vue
+    - name: dotfiles
+      repo: wangyiyang/dotfiles
+      url: https://github.com/wangyiyang/dotfiles
+      description: 个人开发环境与 Shell 配置。
+      language: Shell
       stars: 0
-      updated: 2026-04-04
-      tags: [Vue, Markdown, Editor]
+      updated: 2026-03-30
+      tags: [Shell, macOS, Workflow]
     - name: fastapi-project-template
       repo: wangyiyang/fastapi-project-template
       url: https://github.com/wangyiyang/fastapi-project-template
-      description: FastAPI 项目模板。
+      description: FastAPI 项目模板，开箱即用的后端脚手架。
       language: Python
       stars: 0
       updated: 2025-12-05
