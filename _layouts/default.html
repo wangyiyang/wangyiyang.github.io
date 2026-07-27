@@ -6,8 +6,9 @@ layout: compress
 {% if assets_base_url == '/' %}
 {% assign assets_base_url = '' %}
 {% endif %}
-{% if site.cdn.jsdelivr.enabled %}
-{% assign assets_base_url = "https://fastly.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
+{% if site.cdn.jsdelivr.enabled and jekyll.environment == 'production' %}
+{% assign build_rev = site.github.build_revision | default: 'master' %}
+{% assign assets_base_url = "https://fastly.jsdelivr.net/gh/" | append: site.repository | append: '@' | append: build_rev %}
 {% endif %}
 {% assign assets_images_url = '<img src="' | append: site.url | append: "/images" %}
 {% include header.html %}

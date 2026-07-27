@@ -3,8 +3,9 @@ layout: default
 ---
 
 {% assign assets_base_url = site.url %}
-{% if site.cdn.jsdelivr.enabled %}
-{% assign assets_base_url = "https://fastly.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
+{% if site.cdn.jsdelivr.enabled and jekyll.environment == 'production' %}
+{% assign build_rev = site.github.build_revision | default: 'master' %}
+{% assign assets_base_url = "https://fastly.jsdelivr.net/gh/" | append: site.repository | append: '@' | append: build_rev %}
 {% endif %}
 <section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 15, ''}}">
 <div class="container">
