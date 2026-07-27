@@ -92,9 +92,19 @@ a:focus {
 /* === 代码块：深色主题 === */
 .markdown-body pre {
   background: var(--theme-code-bg);
+  color: var(--theme-code-text);
   border: 1px solid var(--theme-border);
   border-radius: var(--theme-radius-md);
   overflow-x: auto;
+}
+
+/* common.css 的 .markdown-body .highlight pre 特异性更高，会覆盖上面的深色背景，
+   这里用同等特异性（且加载更晚）确保深色背景对 Rouge 高亮块同样生效 */
+.markdown-body .highlight pre {
+  background: var(--theme-code-bg);
+  color: var(--theme-code-text);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--theme-radius-md);
 }
 
 .markdown-body pre code {
