@@ -82,6 +82,11 @@
   margin-bottom: var(--theme-space-3);
 }
 
+/* 文章页已有 Contents 标题，隐藏 sidebar-post-nav 里的重复标题（wiki/fragment 页仍显示） */
+.post-toc .post-directory-title {
+  display: none;
+}
+
 .post-toc a {
   color: var(--theme-muted);
   font-size: 0.85rem;

@@ -1,14 +1,15 @@
-##post-directory-module {
+#post-directory-module {
     z-index: 999;
 }
 
 .post-directory {
     font-size: 14px;
-    background: #fff;
+    background: var(--theme-surface, #fff);
     overflow: hidden;
     width: 100%;
-    padding-bottom: 1em;
-    border: 1px solid #efefef;
+    padding: 0.75em 1em;
+    border: 1px solid var(--theme-border, #efefef);
+    border-radius: var(--theme-radius-md, 8px);
     color: #999;
     box-sizing: border-box;
     word-break: break-word;
@@ -18,11 +19,6 @@
 .post-directory ol {
     padding-left: 1.5em;
     list-style: none;
-}
-
-.post-directory strong {
-    border-left: 5px solid #999;
-    padding: 2px 5px 2px 15px;
 }
 
 .post-directory a {

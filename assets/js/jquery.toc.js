@@ -53,7 +53,7 @@
 
     var level = get_level(headers[0]),
     this_level,
-    html = "<p><strong class=\"toc-title\">" + settings.title + "</strong></p>\n";
+    html = settings.title ? "<p><strong class=\"toc-title\">" + settings.title + "</strong></p>\n" : "";
     html += " <"+settings.listType+" class=\"toc\">";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
@@ -103,7 +103,7 @@
 })(jQuery);
 
 $(document).ready(function(){
-  $('.post-directory').toc();
+  $('.post-directory').toc({ title: '' });
 
   var tocSections = $('.clickable-header');
   var tocSectionOffsets = [];
