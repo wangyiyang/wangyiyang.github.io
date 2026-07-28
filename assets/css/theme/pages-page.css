@@ -67,3 +67,9 @@
 #search_box::placeholder {
   color: var(--theme-muted);
 }
+
+#search_box:focus-visible {
+  border-color: var(--theme-accent);
+  box-shadow: var(--theme-focus-ring);
+  outline: 0;
+}
