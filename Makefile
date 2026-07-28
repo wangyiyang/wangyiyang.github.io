@@ -17,6 +17,10 @@ all: build
 build:
 	$(JEKYLL) build
 
+check-theme:
+	bash scripts/check-theme-v21.sh all
+	$(JEKYLL) build
+
 serve:
 	$(JEKYLL) serve
 
@@ -73,4 +77,4 @@ cdn-sync: check-qshell check-qiniu-bucket qiniu-login clean build cdn-upload
 
 syncfile: cdn-sync
 
-.PHONY: all build serve sass clean check-qshell check-qiniu-bucket check-qiniu-account qiniu-login cdn-upload cdn-sync syncfile
+.PHONY: all build check-theme serve sass clean check-qshell check-qiniu-bucket check-qiniu-account qiniu-login cdn-upload cdn-sync syncfile
