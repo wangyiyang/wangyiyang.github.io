@@ -14,6 +14,7 @@
 .workbench-hero-content {
   align-self: center;
   max-width: 620px;
+  min-width: 0;
   padding: var(--theme-space-12) var(--theme-space-16) var(--theme-space-12) 0;
 }
 
@@ -40,6 +41,7 @@
   letter-spacing: -0.06em;
   line-height: 0.95;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .workbench-tagline {
@@ -55,6 +57,7 @@
   line-height: 1.8;
   margin: 0;
   max-width: 540px;
+  overflow-wrap: anywhere;
 }
 
 .workbench-actions {
@@ -62,6 +65,12 @@
   flex-wrap: wrap;
   gap: var(--theme-space-3);
   margin-top: var(--theme-space-6);
+}
+
+.workbench-actions .theme-button {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .workbench-signal-line {
@@ -74,7 +83,7 @@
   color: var(--yx-off-white);
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  margin-right: min(0px, calc((var(--theme-container) - 100vw) / 2));
+  margin-right: calc(min(0px, (var(--theme-container) - 100vw) / 2) - var(--theme-space-6));
   min-width: 0;
   padding: var(--theme-space-8);
 }
@@ -245,7 +254,7 @@
 
 @media (max-width: 900px) {
   .workbench-hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .workbench-hero-content {
