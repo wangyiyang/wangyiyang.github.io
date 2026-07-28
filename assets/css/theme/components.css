@@ -1,26 +1,29 @@
 .theme-button {
   align-items: center;
+  background: transparent;
   border: 1px solid var(--theme-border-strong);
   border-radius: var(--theme-radius-sm);
   color: var(--theme-text);
   display: inline-flex;
   font-weight: 600;
   gap: var(--theme-space-2);
-  min-height: 38px;
+  min-height: 40px;
   padding: 0 var(--theme-space-4);
   text-decoration: none;
+  transition: border-color 180ms, transform 180ms;
 }
 
 .theme-button-primary {
-  background: var(--theme-accent);
-  border-color: var(--theme-accent);
-  color: #fff;
+  background: var(--theme-text);
+  border-color: var(--theme-text);
+  color: var(--theme-bg);
 }
 
 .theme-button:hover,
-.theme-button:focus {
+.theme-button:focus-visible {
   border-color: var(--theme-accent);
   text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .theme-list {
@@ -58,28 +61,33 @@
   padding: 0.12rem 0.55rem;
 }
 
+.brand-signal {
+  background: var(--theme-accent);
+  display: inline-block;
+  flex: 0 0 7px;
+  height: 7px;
+  width: 7px;
+}
+
 .site-header {
   background: var(--theme-bg);
   border-bottom: 1px solid var(--theme-border);
 }
 
 .site-header .container {
-  max-width: var(--theme-container);
-  margin: 0 auto;
-  padding: 16px var(--theme-space-4);
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--theme-container);
+  padding: 16px var(--theme-space-4);
 }
 
-/* Override primer.css clearfix pseudo-elements that become flex items */
 .site-header .container::before,
 .site-header .container::after {
   display: none;
 }
 
-/* === 站点品牌 Logo === */
-/* Override common.css float/line-height */
 .site-header h1 {
   float: none;
   line-height: 1;
@@ -87,85 +95,70 @@
 }
 
 .site-brand {
-  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  display: inline-flex;
+  gap: 10px;
   text-decoration: none;
   vertical-align: middle;
 }
 
-.site-brand:hover {
+.site-brand:hover,
+.site-brand:focus-visible {
   text-decoration: none;
 }
 
-.site-logo {
-  width: 32px;
-  height: 32px;
-  display: block;
-  flex-shrink: 0;
-}
-
 .site-brand-name {
-  font-family: var(--theme-font-serif);
-  font-size: 1.25rem;
-  font-weight: 600;
   color: var(--theme-text);
-  letter-spacing: 0.05em;
+  font-family: var(--theme-font-sans);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   line-height: 1;
 }
 
 .site-header-nav {
-  float: none;
-  margin-bottom: 0;
-  display: flex;
   align-items: center;
+  display: flex;
+  float: none;
   gap: 4px;
+  margin-bottom: 0;
 }
 
 .site-header-nav-item {
+  border-bottom: 1px solid transparent;
   color: var(--theme-text);
-  text-decoration: none;
-  padding: 6px 12px;
   font-size: 0.95rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s;
+  font-weight: 500;
+  padding: 6px 12px;
+  text-decoration: none;
 }
 
 .site-header-nav-item.selected,
-.site-header-nav-item:hover {
-  color: var(--theme-accent);
+.site-header-nav-item:hover,
+.site-header-nav-item:focus-visible {
   border-bottom-color: var(--theme-accent);
+  color: var(--theme-text);
+  text-decoration: none;
 }
 
-/* === Footer 朱红印章 === */
-.footer-seal {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0.25em;
-}
-
-/* Theme toggle button */
 .theme-toggle {
   align-items: center;
   background: transparent;
   border: 1px solid var(--theme-border);
-  border-radius: var(--theme-radius-md);
+  border-radius: var(--theme-radius-sm);
   color: var(--theme-muted);
   cursor: pointer;
   display: inline-flex;
   font-size: 0.85rem;
-  gap: var(--theme-space-2);
   height: 32px;
   justify-content: center;
   padding: 0 var(--theme-space-3);
-  transition: border-color 0.2s, color 0.2s;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
   border-color: var(--theme-accent);
-  color: var(--theme-accent);
+  color: var(--theme-text);
 }
 
 .theme-toggle .theme-toggle-dark {
@@ -184,17 +177,46 @@
   display: inline;
 }
 
-/* WeChat QR code */
+.site-footer .copyright {
+  align-items: center;
+  display: flex;
+}
+
+.footer-brand {
+  align-items: center;
+  display: inline-flex;
+  font-weight: 700;
+  gap: var(--theme-space-2);
+  letter-spacing: 0.08em;
+}
+
+.footer-domain {
+  color: var(--theme-muted);
+  font-family: var(--theme-font-mono);
+  font-size: 0.78rem;
+  margin-left: var(--theme-space-3);
+}
+
+.site-footer-links a {
+  color: var(--theme-muted);
+}
+
+.site-footer-links a:hover,
+.site-footer-links a:focus-visible {
+  color: var(--theme-text);
+  text-decoration: underline;
+  text-decoration-color: var(--theme-accent);
+}
+
 .wechat-qr-wrap {
   text-align: center;
 }
 
 .wechat-qr-img {
-  width: 180px;
-  height: 180px;
-  border-radius: var(--theme-radius-md);
   border: 1px solid var(--theme-border);
-  box-shadow: 0 2px 8px var(--theme-shadow);
+  border-radius: var(--theme-radius-md);
+  height: 180px;
+  width: 180px;
 }
 
 .wechat-qr-caption {
