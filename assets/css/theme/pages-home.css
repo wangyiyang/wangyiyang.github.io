@@ -156,6 +156,9 @@
   position: sticky;
   top: 92px;
   align-self: start;
+  max-height: calc(100vh - 116px);
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 /* 侧边栏卡片 */
@@ -295,6 +298,8 @@
   }
 
   .home-sidebar {
+    max-height: none;
+    overflow: visible;
     position: static;
   }
 

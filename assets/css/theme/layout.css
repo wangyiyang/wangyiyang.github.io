@@ -16,7 +16,7 @@
 }
 
 .theme-section-kicker {
-  color: var(--theme-accent);
+  color: var(--theme-text);
   display: inline-flex;
   font-family: var(--theme-font-mono);
   font-size: 0.72rem;
@@ -44,6 +44,13 @@
 .theme-section-description {
   color: var(--theme-muted);
   max-width: 680px;
+}
+
+.theme-section-subtitle {
+  color: var(--theme-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .theme-grid {
