@@ -124,6 +124,10 @@ a:focus {
   border-color: var(--theme-accent);
 }
 
+.code-copy-btn:focus-visible {
+  opacity: 1;
+}
+
 .code-copy-btn.copied,
 .code-copy-btn.copied:hover {
   background: var(--theme-accent);
