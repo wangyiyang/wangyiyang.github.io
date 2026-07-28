@@ -41,7 +41,9 @@ a:focus {
 
 .markdown-body h2,
 .markdown-body h3,
-.markdown-body h4 {
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
   color: var(--theme-text);
   font-family: var(--theme-font-sans);
   font-weight: 700;
@@ -51,6 +53,7 @@ a:focus {
 }
 
 .markdown-body h2 {
+  border-bottom-color: var(--theme-border);
   font-size: 1.5rem;
 }
 
@@ -106,6 +109,26 @@ a:focus {
   font-size: 14px;
   line-height: 1.5;
   padding: 0;
+}
+
+.code-copy-btn,
+.code-copy-btn:hover,
+.code-copy-btn:active {
+  background: var(--theme-code-bg);
+  border-color: var(--theme-border-strong);
+  color: var(--theme-code-text);
+}
+
+.code-copy-btn:hover,
+.code-copy-btn:focus-visible {
+  border-color: var(--theme-accent);
+}
+
+.code-copy-btn.copied,
+.code-copy-btn.copied:hover {
+  background: var(--theme-accent);
+  border-color: var(--theme-accent);
+  color: var(--yx-carbon);
 }
 
 /* === Rouge 高亮覆盖 === */
@@ -231,7 +254,9 @@ a:focus {
 /* === 表格 === */
 .markdown-body table {
   border-collapse: collapse;
+  display: block;
   font-size: 0.92em;
+  overflow-x: auto;
   width: 100%;
 }
 
@@ -253,6 +278,39 @@ a:focus {
 
 .markdown-body table tr:nth-child(2n) {
   background: var(--theme-surface);
+}
+
+.markdown-body hr {
+  background: var(--theme-border);
+  border: 0;
+  color: var(--theme-border);
+  height: 1px;
+}
+
+.post-copyright {
+  background: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  margin-top: 2em;
+  padding: 0 1.5em;
+}
+
+.post-directory,
+.post-directory ul,
+.post-directory ol {
+  color: var(--theme-muted);
+}
+
+.post-directory a {
+  color: var(--theme-muted);
+}
+
+.post-directory a:hover,
+.post-directory a:active,
+.post-directory a.on {
+  color: var(--theme-text);
+  text-decoration: underline;
+  text-decoration-color: var(--theme-accent);
+  text-underline-offset: 0.18em;
 }
 
 @media (prefers-reduced-motion: reduce) {

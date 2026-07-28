@@ -24,3 +24,46 @@
 .theme-page-content {
   padding: var(--theme-space-10, 2.5rem) 0 var(--theme-space-16);
 }
+
+.posts-list,
+.posts-list-item {
+  color: var(--theme-text);
+}
+
+.posts-list-item {
+  border-bottom-color: var(--theme-border);
+}
+
+.posts-list-item a {
+  color: var(--theme-text);
+  font-family: var(--theme-font-sans);
+}
+
+.posts-list-meta {
+  color: var(--theme-muted);
+  font-family: var(--theme-font-mono);
+}
+
+.collection-head {
+  background: var(--theme-surface) !important;
+  box-shadow: none;
+  color: var(--theme-text);
+  text-shadow: none;
+}
+
+.collection-head .collection-header,
+.collection-head a {
+  color: var(--theme-text);
+}
+
+#search_box {
+  background: var(--theme-bg);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--theme-radius-sm);
+  color: var(--theme-text);
+  padding: var(--theme-space-2);
+}
+
+#search_box::placeholder {
+  color: var(--theme-muted);
+}
