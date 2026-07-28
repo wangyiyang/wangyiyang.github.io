@@ -10,4 +10,5 @@ Gemfile.lock
 .jekyll-metadata
 .idea/
 .ant-colony/
+.worktrees/
 .agents/skills/notion-to-blog/__pycache__/
