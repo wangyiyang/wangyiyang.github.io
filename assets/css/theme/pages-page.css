@@ -5,8 +5,11 @@
 
 .theme-page-title {
   color: var(--theme-text);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.15;
+  font-family: var(--theme-font-sans);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
   margin: 0;
 }
 

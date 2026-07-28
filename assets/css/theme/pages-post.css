@@ -1,21 +1,31 @@
-/* === 文章页 Header：占顶 30vh === */
+/* === 文章页 Header === */
 .post-hero {
-  padding: 0;
-  min-height: 30vh;
-  display: flex;
   align-items: flex-end;
-  position: relative;
   border-bottom: 1px solid var(--theme-border);
+  display: flex;
+  min-height: 30vh;
+  padding: 0;
+  position: relative;
+}
+
+.post-hero::after {
+  background: var(--theme-accent);
+  bottom: -1px;
+  content: "";
+  height: 2px;
+  left: max(var(--theme-space-6), calc((100% - var(--theme-container)) / 2));
+  position: absolute;
+  width: min(18vw, 220px);
 }
 
 .post-hero-inner {
-  max-width: var(--theme-container);
+  display: grid;
+  gap: var(--theme-space-12);
+  grid-template-columns: minmax(0, 1fr) 260px;
   margin: 0 auto;
+  max-width: var(--theme-container);
   padding: var(--theme-space-8) var(--theme-space-6);
   width: 100%;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
-  gap: var(--theme-space-12);
 }
 
 .post-hero-content {
@@ -23,12 +33,12 @@
 }
 
 .post-hero-brand {
-  display: flex;
   align-items: center;
-  gap: var(--theme-space-3);
   color: var(--theme-muted);
+  display: flex;
   font-family: var(--theme-font-mono);
   font-size: 0.76rem;
+  gap: var(--theme-space-3);
   letter-spacing: 0.08em;
   margin-bottom: var(--theme-space-6);
   text-transform: uppercase;
@@ -55,31 +65,33 @@
   line-height: 1.75;
 }
 
-/* === 文章主体：680px 居中 === */
+/* === 文章主体 === */
 .post-content-wrap {
-  max-width: var(--theme-reading);
   margin: 0 auto;
+  max-width: var(--theme-reading);
   padding: var(--theme-space-8) var(--theme-space-6);
 }
 
-/* === TOC：右侧浮动，灰色小字，当前项朱红 === */
+/* === TOC === */
 .post-toc {
   align-self: start;
-  position: sticky;
-  top: 92px;
-  max-height: calc(100vh - 112px);
+  border-left: 1px solid var(--theme-border);
   display: flex;
   flex-direction: column;
+  max-height: calc(100vh - 112px);
   padding: 0.5rem 0 0.5rem 0.75rem;
+  position: sticky;
+  top: 92px;
 }
 
 .post-toc-title {
   color: var(--theme-text);
-  font-size: 0.78rem;
+  font-family: var(--theme-font-mono);
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   margin-bottom: var(--theme-space-3);
+  text-transform: uppercase;
 }
 
 /* 文章页已有 Contents 标题，隐藏 sidebar-post-nav 里的重复标题（wiki/fragment 页仍显示） */
@@ -89,17 +101,20 @@
 
 .post-toc a {
   color: var(--theme-muted);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   line-height: 1.8;
   text-decoration: none;
 }
 
-.post-toc a:hover {
-  color: var(--theme-accent);
+.post-toc a:hover,
+.post-toc .active > a {
+  color: var(--theme-text);
+  text-decoration: underline;
+  text-decoration-color: var(--theme-accent);
+  text-underline-offset: 0.18em;
 }
 
 .post-toc .active > a {
-  color: var(--theme-accent);
   font-weight: 600;
 }
 
@@ -112,8 +127,8 @@
 
 #post-directory-module ul {
   list-style: none;
-  padding-left: 0;
   margin: 0;
+  padding-left: 0;
 }
 
 #post-directory-module li {
@@ -130,7 +145,19 @@
 }
 
 .post-toc-wechat {
+  border-top: 1px solid var(--theme-border);
   flex-shrink: 0;
+  margin-top: var(--theme-space-8);
+  padding-top: var(--theme-space-6);
+}
+
+.post-toc-wechat-image {
+  height: 140px;
+  width: 140px;
+}
+
+.post-toc-wechat-caption {
+  font-size: 0.78rem;
 }
 
 .post-footer-nav {
@@ -142,17 +169,18 @@
   padding-top: var(--theme-space-6);
 }
 
-/* 修复：related-posts 的 border-top 与 card 底部边框重叠 */
-.related-posts {
-  border-top: none !important;
-}
-
-.related-posts > .theme-list {
-  border-top: 1px solid var(--theme-border);
-}
-
 @media (max-width: 900px) {
+  .post-hero-inner {
+    grid-template-columns: 1fr;
+    padding-left: var(--theme-space-4);
+    padding-right: var(--theme-space-4);
+  }
+
   .post-toc {
+    border-left: 0;
+    border-top: 1px solid var(--theme-border);
+    max-height: none;
+    padding: var(--theme-space-6) 0 0;
     position: static;
   }
 
