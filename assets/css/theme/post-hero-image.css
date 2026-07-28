@@ -1,7 +1,9 @@
 .post-hero-image {
+  box-sizing: border-box;
   margin: var(--theme-space-8) auto 0;
   max-width: var(--theme-container);
   padding: 0 var(--theme-space-6);
+  width: 100%;
 }
 
 .post-hero-image-inner {

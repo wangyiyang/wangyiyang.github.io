@@ -1,8 +1,9 @@
 /* === 文章页 Header === */
 .post-hero {
-  align-items: flex-end;
+  align-items: stretch;
   border-bottom: 1px solid var(--theme-border);
   display: flex;
+  flex-direction: column;
   min-height: 30vh;
   padding: 0;
   position: relative;
@@ -22,7 +23,7 @@
   display: grid;
   gap: var(--theme-space-12);
   grid-template-columns: minmax(0, 1fr) 260px;
-  margin: 0 auto;
+  margin: auto auto 0;
   max-width: var(--theme-container);
   padding: var(--theme-space-8) var(--theme-space-6);
   width: 100%;
@@ -107,14 +108,16 @@
 }
 
 .post-toc a:hover,
-.post-toc .active > a {
+.post-toc .active > a,
+.post-toc .jumper.on {
   color: var(--theme-text);
   text-decoration: underline;
   text-decoration-color: var(--theme-accent);
   text-underline-offset: 0.18em;
 }
 
-.post-toc .active > a {
+.post-toc .active > a,
+.post-toc .jumper.on {
   font-weight: 600;
 }
 
@@ -176,6 +179,11 @@
     padding-right: var(--theme-space-4);
   }
 
+  .theme-post-shell > .markdown-body {
+    min-width: 0;
+    width: 100%;
+  }
+
   .post-toc {
     border-left: 0;
     border-top: 1px solid var(--theme-border);
@@ -191,5 +199,10 @@
   /* 目录在小屏上不再需要滚动限制 */
   #post-directory-module {
     max-height: none;
+  }
+
+  .post-toc #post-directory-module.mobile-hidden {
+    display: block !important;
+    overflow-y: visible;
   }
 }

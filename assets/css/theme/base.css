@@ -24,7 +24,7 @@ a:focus {
   text-decoration-color: var(--theme-accent);
 }
 
-a:focus-visible {
+:focus-visible {
   box-shadow: var(--theme-focus-ring);
   outline: 0;
 }
@@ -109,6 +109,7 @@ a:focus-visible {
 }
 
 /* === Rouge 高亮覆盖 === */
+.markdown-body .highlight,
 .markdown-body pre .highlight,
 .markdown-body pre .hll {
   background: transparent;
@@ -157,12 +158,17 @@ a:focus-visible {
   background: transparent;
 }
 
+.markdown-body pre .err {
+  background: transparent;
+}
+
 .markdown-body pre .ge,
 .markdown-body pre .sd {
   font-style: italic;
 }
 
 .markdown-body pre .o,
+.markdown-body pre .err,
 .markdown-body pre .gd,
 .markdown-body pre .ge,
 .markdown-body pre .gr,
@@ -238,6 +244,15 @@ a:focus-visible {
 .markdown-body table th {
   background: var(--theme-surface);
   font-weight: 600;
+}
+
+.markdown-body table tr {
+  background: transparent;
+  border-top: 1px solid var(--theme-border);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background: var(--theme-surface);
 }
 
 @media (prefers-reduced-motion: reduce) {
