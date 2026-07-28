@@ -1,11 +1,10 @@
 {% assign manifesto = site.data.workbench.manifesto %}
 <section class="workbench-hero">
-  <div class="workbench-hero-image">
-    <img src="{{ site.url }}/images/yixing-hero-banner.jpg" alt="翊行代码 — 用代码丈量世界，以仰望探索未知" loading="eager">
-  </div>
   <div class="theme-container workbench-hero-grid">
     <div class="workbench-hero-content">
+      <p class="workbench-eyebrow">WANGYIYANG.CC / ONLINE</p>
       <h1 class="workbench-title">{{ manifesto.title }}</h1>
+      <p class="workbench-tagline">Code, one stroke at a time.</p>
       <p class="workbench-description">{{ manifesto.description }}</p>
       <div class="workbench-actions">
         {% for action in manifesto.actions %}
@@ -13,5 +12,20 @@
         {% endfor %}
       </div>
     </div>
+    <div class="workbench-signal-line" aria-hidden="true"></div>
+    <aside class="workbench-hero-panel" aria-hidden="true">
+      <div class="workbench-panel-head">
+        <span>YY / SYSTEM</span>
+        <span>RUNNING</span>
+      </div>
+      <div class="workbench-panel-grid">
+        <span>01/CODE</span>
+        <span>02/AI</span>
+        <span>03/AGENTS</span>
+        <span>04/SYSTEMS</span>
+      </div>
+      <div class="workbench-panel-axis"></div>
+      <p class="workbench-panel-status">SIGNAL STABLE</p>
+    </aside>
   </div>
 </section>
