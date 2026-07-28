@@ -56,20 +56,128 @@
     {% if page.mermaid %}
     <script type="module">
       import mermaid from 'https://fastly.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: false });
-      await mermaid.run({
-        nodes: document.querySelectorAll('pre code.language-mermaid'),
-      });
-    </script>
-    <script type="text/javascript">
-  (function(){
-    $("pre code.language-mermaid").each(function(index, element) {
-      var preBlock = element.parentNode;
-      element.style.backgroundColor = 'initial';
-      preBlock.style.border = 'none';
-      preBlock.style.backgroundColor = 'initial';
-    });
-  })()
+
+      const root = document.documentElement;
+      const diagrams = Array.from(document.querySelectorAll('pre code.language-mermaid'))
+        .map((code) => {
+          const pre = code.closest('pre');
+
+          if (!pre) {
+            console.error('Mermaid 图表初始化失败：缺少代码块容器');
+            return null;
+          }
+
+          const source = code.textContent;
+          const container = document.createElement('div');
+
+          container.className = 'mermaid';
+          pre.replaceWith(container);
+
+          return { container, source };
+        })
+        .filter(Boolean);
+      let renderQueue = Promise.resolve();
+
+      function readThemeTokens() {
+        const styles = getComputedStyle(document.documentElement);
+        const read = (name) => styles.getPropertyValue(name).trim();
+
+        return {
+          background: read('--theme-bg'),
+          surface: read('--theme-surface'),
+          surfaceStrong: read('--theme-surface-strong'),
+          text: read('--theme-text'),
+          border: read('--theme-border'),
+          borderStrong: read('--theme-border-strong'),
+          accent: read('--theme-accent')
+        };
+      }
+
+      function createMermaidThemeCSS(tokens) {
+        const nodeShapes = '.node rect,.node circle,.node ellipse,.node polygon,.node path';
+
+        return [
+          `${nodeShapes}{fill:${tokens.surfaceStrong}!important;stroke:${tokens.accent}!important}`,
+          `.cluster rect{fill:${tokens.surface}!important;stroke:${tokens.borderStrong}!important}`,
+          `.nodeLabel,.edgeLabel,.cluster-label,.label text{color:${tokens.text}!important;fill:${tokens.text}!important}`,
+          `.flowchart-link,.edgePath .path,.messageLine0,.messageLine1,.loopLine{stroke:${tokens.accent}!important}`,
+          `marker path{fill:${tokens.accent}!important;stroke:${tokens.accent}!important}`
+        ].join('');
+      }
+
+      function createMermaidThemeVariables(tokens) {
+        return {
+          background: tokens.background,
+          primaryColor: tokens.surfaceStrong,
+          primaryTextColor: tokens.text,
+          primaryBorderColor: tokens.accent,
+          lineColor: tokens.accent,
+          secondaryColor: tokens.surface,
+          tertiaryColor: tokens.background,
+          textColor: tokens.text,
+          mainBkg: tokens.surfaceStrong,
+          nodeBorder: tokens.accent,
+          clusterBkg: tokens.surface,
+          clusterBorder: tokens.borderStrong,
+          edgeLabelBackground: tokens.background,
+          actorBkg: tokens.surfaceStrong,
+          actorBorder: tokens.accent,
+          actorTextColor: tokens.text,
+          actorLineColor: tokens.borderStrong,
+          signalColor: tokens.accent,
+          signalTextColor: tokens.text,
+          labelBoxBkgColor: tokens.background,
+          labelBoxBorderColor: tokens.borderStrong,
+          labelTextColor: tokens.text,
+          loopTextColor: tokens.text,
+          noteBkgColor: tokens.surfaceStrong,
+          noteBorderColor: tokens.accent,
+          noteTextColor: tokens.text
+        };
+      }
+
+      function createMermaidConfig(tokens) {
+        return {
+          startOnLoad: false,
+          theme: 'base',
+          themeCSS: createMermaidThemeCSS(tokens),
+          themeVariables: createMermaidThemeVariables(tokens),
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true,
+            curve: 'basis'
+          },
+          sequence: {
+            useMaxWidth: true,
+            diagramMarginX: 50,
+            diagramMarginY: 10
+          }
+        };
+      }
+
+      async function renderMermaidDiagrams() {
+        mermaid.initialize(createMermaidConfig(readThemeTokens()));
+
+        for (const [index, diagram] of diagrams.entries()) {
+          diagram.container.removeAttribute('data-processed');
+          diagram.container.textContent = diagram.source;
+
+          try {
+            await mermaid.run({ nodes: [diagram.container] });
+          } catch (error) {
+            console.error(`Mermaid 图表 ${index + 1} 渲染失败`, error);
+          }
+        }
+      }
+
+      function queueMermaidRender() {
+        renderQueue = renderQueue
+          .then(renderMermaidDiagrams)
+          .catch((error) => console.error('Mermaid 主题渲染失败', error));
+      }
+
+      root.addEventListener('themechange', queueMermaidRender);
+      queueMermaidRender();
     </script>
     {% endif %}
 

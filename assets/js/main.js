@@ -1,10 +1,15 @@
 function toggleMenu() {
-  var nav = document.getElementsByClassName("site-header-nav")[0];
-  if (nav.style.display == "inline-flex") {
-    nav.style.display = "none";
-  } else {
-    nav.style.display = "inline-flex";
+  var nav = document.getElementById('site-header-nav');
+  var button = document.querySelector('[aria-controls="site-header-nav"]');
+
+  if (!nav || !button) {
+    console.error('导航菜单初始化失败：缺少导航或菜单按钮');
+    return;
   }
+
+  var isOpen = nav.classList.toggle('is-open');
+  button.setAttribute('aria-expanded', String(isOpen));
+  button.setAttribute('aria-label', isOpen ? '收起导航菜单' : '展开导航菜单');
 }
 
 function toggleTheme() {
@@ -13,6 +18,9 @@ function toggleTheme() {
   var next = current === 'dark' ? 'light' : 'dark';
   html.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
+  html.dispatchEvent(new CustomEvent('themechange', {
+    detail: { theme: next }
+  }));
 }
 
 jQuery(function() {

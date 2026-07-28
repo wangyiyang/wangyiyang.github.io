@@ -61,6 +61,33 @@ expect_tree_absent() {
   esac
 }
 
+expect_tree_count() {
+  local directory="$1"
+  local pattern="$2"
+  local expected="$3"
+  local label="$4"
+  local matches
+  local result
+  local count
+
+  matches="$(grep -REio -- "$pattern" "$root_dir/$directory")"
+  result=$?
+  case "$result" in
+    0) count="$(printf '%s\n' "$matches" | wc -l | tr -d ' ')" ;;
+    1) count=0 ;;
+    *)
+      fail "${label}（检查执行失败：${directory}，grep 退出码 ${result}）"
+      return
+      ;;
+  esac
+
+  if [ "$count" -eq "$expected" ]; then
+    pass "$label"
+  else
+    fail "${label}（期望 ${expected}，实际 ${count}）"
+  fi
+}
+
 check_foundations() {
   expect_contains 'assets/css/theme/tokens.css' '--yx-carbon: #0A0A0A;' '定义碳黑 token'
   expect_contains 'assets/css/theme/tokens.css' '--yx-off-white: #FAFAFA;' '定义冷白 token'
@@ -79,6 +106,12 @@ check_shell() {
   expect_contains '_includes/header.html' 'brand-signal' '头部使用信号品牌标识'
   expect_contains '_includes/footer.html' 'footer-brand' '页脚使用品牌标识'
   expect_contains '_includes/theme/post-header.html' 'post-hero-brand' '文章头部使用品牌标识'
+  expect_contains '_includes/header.html' 'id="site-header-nav"' '移动导航具有稳定标识'
+  expect_contains '_includes/header.html' 'aria-label="展开导航菜单"' '菜单按钮具有可访问名称'
+  expect_contains '_includes/header.html' 'aria-controls="site-header-nav"' '菜单按钮关联导航'
+  expect_contains '_includes/header.html' 'aria-expanded="false"' '菜单按钮声明初始状态'
+  expect_contains 'assets/js/main.js' "classList.toggle('is-open'" '菜单使用类控制展开状态'
+  expect_contains 'assets/js/main.js' "setAttribute('aria-expanded'" '菜单同步可访问状态'
 }
 
 check_home() {
@@ -95,6 +128,13 @@ check_reading() {
   expect_absent '_includes/theme/post-toc.html' 'style=' '目录不含内联样式'
   expect_tree_absent 'assets/css/theme' '#C0392B|#D4A84B|#9E2B20|#E04A3A' '主题目录不含旧配色'
   expect_tree_absent 'assets/css/theme' 'theme-font-serif|Noto Serif SC' '主题目录不含衬线字体'
+  expect_tree_absent '_includes' '#e1f5fe|#01579b|#0288d1|#fff3e0|#e8f5e9' 'Mermaid 初始化不含旧蓝橙绿'
+  expect_tree_count '_includes' 'import[[:space:]]+mermaid[[:space:]]+from' 1 'Mermaid 仅加载一次'
+  expect_tree_count '_includes' 'mermaid\.initialize' 1 'Mermaid 仅初始化一次'
+  expect_contains '_includes/footer.html' 'getComputedStyle(document.documentElement)' 'Mermaid 从 CSS token 读取主题'
+  expect_contains '_includes/footer.html' "theme: 'base'" 'Mermaid 使用基础主题'
+  expect_contains '_includes/footer.html' "addEventListener('themechange'" 'Mermaid 响应主题切换'
+  expect_contains '_includes/footer.html' "console.error('Mermaid" 'Mermaid 显式报告渲染错误'
 }
 
 run_checks() {

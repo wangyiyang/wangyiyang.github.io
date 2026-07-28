@@ -140,32 +140,6 @@
     </script>
     {% endif %}
     
-    <!-- Mermaid.js for diagram support -->
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({
-        startOnLoad: true,
-        theme: 'default',
-        themeVariables: {
-          primaryColor: '#e1f5fe',
-          primaryTextColor: '#01579b',
-          primaryBorderColor: '#0288d1',
-          lineColor: '#0288d1',
-          secondaryColor: '#fff3e0',
-          tertiaryColor: '#e8f5e9'
-        },
-        flowchart: {
-          useMaxWidth: true,
-          htmlLabels: true,
-          curve: 'basis'
-        },
-        sequence: {
-          useMaxWidth: true,
-          diagramMarginX: 50,
-          diagramMarginY: 10
-        }
-      });
-    </script>
 </head>
 <body class="{{ page.class }}" data-mz="{{ page.class }}">
     <header class="site-header">
@@ -174,16 +148,17 @@
                 <span class="site-brand-name">翊行代码</span>
                 <span class="brand-signal" aria-hidden="true"></span>
             </a></div>
-            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();" aria-label="展开导航菜单" aria-controls="site-header-nav" aria-expanded="false">
+              <span class="icon-bar" aria-hidden="true"></span>
+              <span class="icon-bar" aria-hidden="true"></span>
+              <span class="icon-bar" aria-hidden="true"></span>
             </button>
-            <nav class="site-header-nav" role="navigation">
+            <nav class="site-header-nav" id="site-header-nav" role="navigation">
                 {% for nav in site.navs %}
                 <a href="{{ site.url }}{{ nav.href }}" class="{% if nav.mobile-hidden %}mobile-hidden {% endif %}{% if page.menu == nav.label %}selected {% endif %}site-header-nav-item"{% if page.menu == nav.label %} aria-current="page"{% endif %} target="{{ nav.target | default: '_self' }}" title="{{ nav.label }}">{{ nav.label }}</a>
                 {% endfor %}
                 <button class="theme-toggle mobile-hidden" type="button" onclick="toggleTheme();" aria-label="切换主题" title="切换主题">
+                  <span class="theme-toggle-label">主题</span>
                   <span class="theme-toggle-light">&#9788;</span>
                   <span class="theme-toggle-dark">&#9790;</span>
                 </button>
