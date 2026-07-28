@@ -147,7 +147,7 @@
 /* 首页主体：左右两栏 */
 .home-two-column {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  grid-template-columns: minmax(0, 7fr) minmax(260px, 3fr);
   gap: var(--theme-space-10);
   align-items: start;
 }
@@ -160,19 +160,23 @@
 
 /* 侧边栏卡片 */
 .sidebar-widget {
+  background: var(--theme-surface);
   border: 1px solid var(--theme-border);
-  border-radius: var(--theme-radius-md);
+  border-radius: var(--theme-radius-sm);
   padding: var(--theme-space-5);
   margin-bottom: var(--theme-space-5);
 }
 
 .sidebar-widget-title {
   color: var(--theme-text);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--theme-border);
+  font-family: var(--theme-font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin: 0 0 var(--theme-space-3);
+  margin: 0 0 var(--theme-space-4);
+  padding-bottom: var(--theme-space-3);
 }
 
 /* 公众号二维码 */
@@ -185,37 +189,45 @@
 }
 
 .sidebar-wechat .wechat-qr-img {
-  width: 180px;
-  height: 180px;
-  border-radius: var(--theme-radius-md);
   border: 1px solid var(--theme-border);
-  box-shadow: 0 2px 8px var(--theme-shadow);
+  border-radius: var(--theme-radius-sm);
+  height: 180px;
+  width: 180px;
 }
 
 .sidebar-wechat .wechat-qr-caption {
-  color: var(--theme-text);
-  font-size: 0.9rem;
-  font-weight: 600;
+  color: var(--theme-muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
   margin: var(--theme-space-2) 0 0;
 }
 
 .sidebar-widget-desc {
   color: var(--theme-muted);
   font-size: 0.85rem;
+  line-height: 1.7;
   margin: var(--theme-space-3) 0 0;
 }
 
 /* 关于 */
 .sidebar-about p {
   color: var(--theme-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.7;
   margin: 0 0 var(--theme-space-2);
 }
 
 .sidebar-about a {
-  color: var(--theme-accent);
-  font-size: 0.9rem;
+  color: var(--theme-text);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.sidebar-about a:hover,
+.sidebar-about a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--theme-accent);
+  text-underline-offset: 0.18em;
 }
 
 /* 分类列表 */
@@ -239,17 +251,21 @@
 
 .sidebar-topic-list a {
   color: var(--theme-text);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  text-decoration: none;
 }
 
-.sidebar-topic-list a:hover {
-  color: var(--theme-accent);
+.sidebar-topic-list a:hover,
+.sidebar-topic-list a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--theme-accent);
+  text-underline-offset: 0.18em;
 }
 
 .sidebar-topic-list span {
   color: var(--theme-muted);
-  font-size: 0.8rem;
   font-family: var(--theme-font-mono);
+  font-size: 0.76rem;
 }
 
 @media (max-width: 900px) {
