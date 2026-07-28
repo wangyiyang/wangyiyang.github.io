@@ -20,12 +20,15 @@ expect_contains() {
   local file="$1"
   local pattern="$2"
   local label="$3"
+  local result
 
-  if grep -Fq -- "$pattern" "$root_dir/$file"; then
-    pass "$label"
-  else
-    fail "$label"
-  fi
+  grep -Fq -- "$pattern" "$root_dir/$file"
+  result=$?
+  case "$result" in
+    0) pass "$label" ;;
+    1) fail "$label" ;;
+    *) fail "${label}（检查执行失败：${file}，grep 退出码 ${result}）" ;;
+  esac
 }
 
 expect_absent() {
@@ -49,7 +52,7 @@ expect_tree_absent() {
   local label="$3"
   local result
 
-  grep -REq -- "$pattern" "$root_dir/$directory"
+  grep -REiq -- "$pattern" "$root_dir/$directory"
   result=$?
   case "$result" in
     0) fail "$label" ;;

@@ -4,8 +4,8 @@
   --yx-terminal: #00E676;
 
   --theme-bg: var(--yx-off-white);
-  --theme-surface: var(--yx-off-white);
-  --theme-surface-strong: var(--yx-carbon);
+  --theme-surface: rgba(10,10,10,.025);
+  --theme-surface-strong: rgba(10,10,10,.055);
   --theme-text: var(--yx-carbon);
   --theme-muted: rgba(10, 10, 10, 0.62);
   --theme-subtle: rgba(10, 10, 10, 0.42);
@@ -15,7 +15,7 @@
   --theme-code-bg: var(--yx-carbon);
   --theme-code-text: var(--yx-off-white);
   --theme-code-muted: rgba(250, 250, 250, 0.62);
-  --theme-focus-ring: rgba(0, 230, 118, 0.5);
+  --theme-focus-ring: 0 0 0 2px var(--theme-bg), 0 0 0 4px var(--theme-accent);
   --theme-radius-sm: 2px;
   --theme-radius-md: 4px;
   --theme-container: 1120px;
@@ -37,16 +37,15 @@
 
 [data-theme="dark"] {
   --theme-bg: var(--yx-carbon);
-  --theme-surface: var(--yx-carbon);
-  --theme-surface-strong: var(--yx-off-white);
+  --theme-surface: rgba(250,250,250,.04);
+  --theme-surface-strong: rgba(250,250,250,.08);
   --theme-text: var(--yx-off-white);
   --theme-muted: rgba(250, 250, 250, 0.62);
   --theme-subtle: rgba(250, 250, 250, 0.42);
   --theme-border: rgba(250, 250, 250, 0.16);
   --theme-border-strong: rgba(250, 250, 250, 0.32);
   --theme-accent: var(--yx-terminal);
-  --theme-code-bg: var(--yx-off-white);
-  --theme-code-text: var(--yx-carbon);
-  --theme-code-muted: rgba(10, 10, 10, 0.62);
-  --theme-focus-ring: rgba(0, 230, 118, 0.6);
+  --theme-code-bg: var(--yx-carbon);
+  --theme-code-text: var(--yx-off-white);
+  --theme-code-muted: rgba(250,250,250,0.62);
 }
