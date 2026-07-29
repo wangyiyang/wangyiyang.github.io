@@ -9,16 +9,6 @@
   position: relative;
 }
 
-.post-hero::after {
-  background: var(--theme-accent);
-  bottom: -1px;
-  content: "";
-  height: 2px;
-  left: max(var(--theme-space-6), calc((100% - var(--theme-container)) / 2));
-  position: absolute;
-  width: min(18vw, 220px);
-}
-
 .post-hero-inner {
   display: grid;
   gap: var(--theme-space-12);
@@ -76,26 +66,29 @@
 /* === TOC === */
 .post-toc {
   align-self: start;
-  border-left: 1px solid var(--theme-border);
   display: flex;
   flex-direction: column;
+  gap: var(--theme-space-5);
   max-height: calc(100vh - 112px);
-  padding: 0.5rem 0 0.5rem 0.75rem;
   position: sticky;
   top: 92px;
 }
 
-.post-toc-title {
-  color: var(--theme-text);
-  font-family: var(--theme-font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-bottom: var(--theme-space-3);
-  text-transform: uppercase;
+.post-toc-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
-/* 文章页已有 Contents 标题，隐藏 sidebar-post-nav 里的重复标题（wiki/fragment 页仍显示） */
+.post-toc-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  padding: var(--theme-space-3) var(--theme-space-4);
+}
+
+/* 文章页面板已有 Contents 头，隐藏 sidebar-post-nav 里的重复标题（wiki/fragment 页仍显示） */
 .post-toc .post-directory-title {
   display: none;
 }
@@ -128,6 +121,15 @@
   overflow-y: auto;
 }
 
+/* 压掉旧 posts/index.css 的灰底边框盒，TOC 已由 console-panel 承载 */
+.post-toc .post-directory {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  padding: 0;
+}
+
 #post-directory-module ul {
   list-style: none;
   margin: 0;
@@ -148,10 +150,11 @@
 }
 
 .post-toc-wechat {
-  border-top: 1px solid var(--theme-border);
   flex-shrink: 0;
-  margin-top: var(--theme-space-8);
-  padding-top: var(--theme-space-6);
+}
+
+.post-toc-wechat-body {
+  text-align: center;
 }
 
 .post-toc-wechat-image {
@@ -185,10 +188,7 @@
   }
 
   .post-toc {
-    border-left: 0;
-    border-top: 1px solid var(--theme-border);
     max-height: none;
-    padding: var(--theme-space-6) 0 0;
     position: static;
   }
 
