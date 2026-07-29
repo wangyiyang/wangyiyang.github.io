@@ -23,16 +23,18 @@ permalink: /wiki/
 {% endfor %}
 {% for wiki in site.wiki %}
 {% if wiki.title != "Wiki Template" and wiki.topmost != true %}
-<li class="listing-item"><a href="{{ site.url }}{{ wiki.url }}">{{ wiki.title }}<span style="font-size:12px;color:red;font-style:italic;">{%if wiki.layout == 'mindmap' %}  mindmap{% endif %}</span></a></li>
+<li class="listing-item"><a href="{{ site.url }}{{ wiki.url }}">{{ wiki.title }}<span class="wiki-entry-flag">{%if wiki.layout == 'mindmap' %}mindmap{% endif %}</span></a></li>
 {% endif %}
 {% endfor %}
 </ul>
 
 {% when 'cate' %}
 
-{% assign item_grouped = site.wiki | where_exp: 'item', 'item.title != "Wiki Template"' | group_by: 'cate1' | sort: 'name' %}
+{% assign wiki_items = site.wiki | where_exp: 'item', 'item.title != "Wiki Template"' %}
+{% assign wiki_items = wiki_items | where_exp: 'item', 'item.slug != "template"' %}
+{% assign item_grouped = wiki_items | group_by: 'cate1' | sort: 'name' %}
 {% for group in item_grouped %}
-###### {{ group.name }}
+{% if group.name %}###### {{ group.name }}{% endif %}
 {% assign cate_items = group.items | sort: 'title' %}
 {% assign item2_grouped = cate_items | group_by: 'cate2' | sort: 'name' %}
 {% for sub_group in item2_grouped %}
@@ -44,7 +46,7 @@ permalink: /wiki/
 {%- assign item_index = 0 -%}
 {%- for item in sub_group.items -%}
 {%- assign item_index = item_index | plus: 1 -%}
-<a href="{%- if item.type == 'link' -%}{{ item.link }}{%- else -%}{{ site.url }}{{ item.url }}{%- endif -%}" style="display:inline-block;padding:0.5em" {% if item.type == 'link' %} target="_blank" {% endif %} >{{ item.title }}<span style="font-size:12px;color:red;font-style:italic;">{%if item.layout == 'mindmap' %}  mindmap{% endif %}</span></a>{%- if item_index < item_count -%}<span> <b>·</b></span>{%- endif -%}
+<a href="{%- if item.type == 'link' -%}{{ item.link }}{%- else -%}{{ site.url }}{{ item.url }}{%- endif -%}" class="wiki-cate-link" {% if item.type == 'link' %} target="_blank" {% endif %} >{{ item.title }}<span class="wiki-entry-flag">{%if item.layout == 'mindmap' %}mindmap{% endif %}</span></a>{%- if item_index < item_count -%}<span> <b>·</b></span>{%- endif -%}
 {%- endfor -%}
 {% endfor %}
 {% endfor %}

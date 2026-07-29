@@ -2,61 +2,39 @@
 layout: default
 ---
 
-{% assign assets_base_url = site.url %}
-{% if site.cdn.jsdelivr.enabled and jekyll.environment == 'production' %}
-{% assign build_rev = site.github.build_revision | default: 'master' %}
-{% assign assets_base_url = "https://fastly.jsdelivr.net/gh/" | append: site.repository | append: '@' | append: build_rev %}
-{% endif %}
-<section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 15, ''}}">
-<div class="container">
-  <div class="columns">
-    <div class="column three-fourths">
-      <div class="collection-title">
-        <h1 class="collection-header">{% if page.cate1 %}{{ page.cate1 }} - {% endif %}{% if page.cate2 %}{{ page.cate2 }} - {% endif %}{{ page.title }}</h1>
-        <div class="collection-info">
-          {% if page.url != '/wiki/' %}
-          <span class="meta-info">
-            <span class="octicon octicon-file-directory"></span>
-            <a href="{{ site.url }}/wiki/" title="Wiki">Wiki</a>
-          </span>
-          {% endif %}
-          {% if page.cate1 %}
-          <span class="meta-info">
-            <span class="octicon octicon-file-directory"></span>
-            <a href="{{ site.url }}/wiki/#{{ page.cate1 | downcase | replace: ' ', '-'}}" title="{{ page.cate1 }}">{{ page.cate1 }}</a>
-          </span>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <div class="column one-fourth mobile-hidden">
-    </div>
+<header class="theme-page-hero">
+  <div class="theme-container">
+    <p class="theme-page-eyebrow">
+      <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
+      {% if page.cate1 %}<span class="theme-page-eyebrow-sep">/</span>{{ page.cate1 }}{% endif %}
+      {% if page.cate2 %}<span class="theme-page-eyebrow-sep">/</span>{{ page.cate2 }}{% endif %}
+    </p>
+    <h1 class="theme-page-title">{{ page.title }}</h1>
+    {% if page.description and page.description != page.title %}
+    <p class="theme-page-description">{{ page.description }}</p>
+    {% endif %}
   </div>
-</div>
-</section>
-<!-- / .banner -->
-<section class="container content">
-<div class="columns">
-  <div class="column three-fourths" >
-    {% include content-header-ad.html %}
-    <article class="article-content markdown-body">
+</header>
+
+<div class="theme-post-shell">
+  <article class="article-content markdown-body">
     {{ content }}
     {% include copyright.html %}
-    </article>
-    <div class="share">
-      {% include sns-share.html %}
+  </article>
+  <aside class="post-toc" aria-label="页面目录">
+    <div class="console-panel post-toc-panel">
+      <div class="console-panel-head">
+        <span>Contents</span>
+      </div>
+      <div class="console-panel-body post-toc-body">
+        {% include sidebar-post-nav.html %}
+      </div>
     </div>
-    {% include content-footer-ad.html %}
-    <div class="comment">
-      {% include comments.html %}
-    </div>
-  </div>
-  <div class="column one-fourth">
-    {% include sidebar-search.html %}
-    {% include sidebar-qrcode.html %}
-    {% include sidebar-post-nav.html %}
-    {% include sidebar-detail-ad.html %}
-  </div>
+  </aside>
 </div>
-</section>
-<!-- /section.content -->
+
+{% unless page.comments == false %}
+<div class="theme-container page-comments">
+  {% include comments.html %}
+</div>
+{% endunless %}
