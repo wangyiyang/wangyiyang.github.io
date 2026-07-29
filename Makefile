@@ -1,6 +1,5 @@
 # 定义变量
 JEKYLL = bundle exec jekyll
-SASS = bundle exec sass
 QSHELL ?= qshell
 SITE_DIR ?= _site
 ifneq (,$(wildcard .env))
@@ -23,9 +22,6 @@ check-theme:
 
 serve:
 	$(JEKYLL) serve
-
-sass:
-	$(SASS) --watch _sass:css
 
 clean:
 	$(JEKYLL) clean
@@ -77,4 +73,4 @@ cdn-sync: check-qshell check-qiniu-bucket qiniu-login clean build cdn-upload
 
 syncfile: cdn-sync
 
-.PHONY: all build check-theme serve sass clean check-qshell check-qiniu-bucket check-qiniu-account qiniu-login cdn-upload cdn-sync syncfile
+.PHONY: all build check-theme serve clean check-qshell check-qiniu-bucket check-qiniu-account qiniu-login cdn-upload cdn-sync syncfile
