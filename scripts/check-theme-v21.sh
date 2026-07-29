@@ -117,9 +117,30 @@ check_shell() {
 check_home() {
   expect_absent '_includes/theme/hero-manifesto.html' 'yixing-hero-banner.jpg' '首页移除旧横幅图'
   expect_contains '_includes/theme/hero-manifesto.html' 'workbench-hero-panel' '首页包含工作台面板'
-  expect_contains '_includes/theme/hero-manifesto.html' 'workbench-signal-line' '首页包含工作台信号线'
+  expect_contains '_includes/theme/hero-manifesto.html' 'console-stats' '首页面板展示真实站点统计'
+  expect_contains '_includes/theme/hero-manifesto.html' 'workbench-panel-feed-list' '首页面板展示最新文章'
+  expect_absent '_includes/theme/hero-manifesto.html' 'workbench-signal-line' '首页移除大面积绿色信号线'
+  expect_absent '_includes/theme/hero-manifesto.html' 'workbench-panel-axis' '首页面板移除装饰十字线'
   expect_contains '_includes/theme/featured-posts.html' 'featured-post-list' '精选文章使用列表结构'
+  expect_contains '_includes/theme/featured-posts.html' 'console-list-item' '精选文章使用控制台列表'
+  expect_absent '_includes/theme/featured-posts.html' 'featured-post-link' '精选文章移除 OPEN 列'
   expect_absent 'assets/css/theme/featured-posts.css' 'box-shadow' '精选文章不使用阴影'
+  expect_contains '_includes/theme/article-list.html' 'desc != post.title' '文章列表去除重复摘要'
+  expect_contains '_includes/theme/post-header.html' 'page.description != page.title' '文章头部去除重复描述'
+}
+
+check_legacy() {
+  expect_absent '_includes/header.html' 'globals/common.css' '头部不再加载旧全局 CSS'
+  expect_absent '_includes/header.html' 'primer-css' '头部不再加载 primer'
+  expect_absent '_includes/header.html' 'octicons' '头部不再加载 octicons'
+  expect_absent '_includes/footer.html' 'geopattern' '页脚移除 geopattern'
+  expect_absent '_includes/footer.html' '<center>' '页脚移除 center 标签'
+  expect_contains '_includes/footer.html' 'site-footer-beian' '备案号进入页脚结构'
+  expect_absent '_layouts/wiki.html' 'geopattern' 'Wiki 布局移除图案头图'
+  expect_contains '_layouts/wiki.html' 'theme-page-hero' 'Wiki 布局使用 v2.1 页头'
+  expect_absent '_layouts/fragment.html' 'geopattern' 'Fragment 布局移除图案头图'
+  expect_absent 'pages/wiki.md' 'style=' 'Wiki 索引页无内联样式'
+  expect_absent 'pages/fragments.md' 'style=' 'Fragments 索引页无内联样式'
 }
 
 check_reading() {
@@ -143,14 +164,16 @@ run_checks() {
     shell) check_shell ;;
     home) check_home ;;
     reading) check_reading ;;
+    legacy) check_legacy ;;
     all)
       check_foundations
       check_shell
       check_home
       check_reading
+      check_legacy
       ;;
     *)
-      printf '用法: %s {foundations|shell|home|reading|all}\n' "$0" >&2
+      printf '用法: %s {foundations|shell|home|reading|legacy|all}\n' "$0" >&2
       exit 2
       ;;
   esac
