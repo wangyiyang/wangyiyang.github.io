@@ -3,6 +3,37 @@
   padding: var(--theme-space-12) 0 var(--theme-space-8);
 }
 
+.theme-page-eyebrow {
+  color: var(--theme-muted);
+  font-family: var(--theme-font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 var(--theme-space-3);
+  text-transform: uppercase;
+}
+
+.theme-page-eyebrow a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.theme-page-eyebrow a:hover,
+.theme-page-eyebrow a:focus-visible {
+  color: var(--theme-text);
+  text-decoration: underline;
+  text-decoration-color: var(--theme-accent);
+  text-underline-offset: 0.18em;
+}
+
+.theme-page-eyebrow-sep {
+  color: var(--theme-subtle);
+  margin: 0 var(--theme-space-2);
+}
+
+.page-comments {
+  padding-bottom: var(--theme-space-12);
+}
+
 .theme-page-title {
   color: var(--theme-text);
   font-family: var(--theme-font-sans);
@@ -25,23 +56,116 @@
   padding: var(--theme-space-10, 2.5rem) 0 var(--theme-space-16);
 }
 
-.posts-list,
-.posts-list-item {
+/* === 归档页：目录式年份列表 === */
+.archive-year {
+  align-items: baseline;
   color: var(--theme-text);
+  display: flex;
+  font-size: 1.1rem;
+  gap: var(--theme-space-3);
+  margin: var(--theme-space-10) 0 var(--theme-space-4);
 }
 
-.posts-list-item {
-  border-bottom-color: var(--theme-border);
+.archive-year:first-of-type {
+  margin-top: 0;
 }
 
-.posts-list-item a {
-  color: var(--theme-text);
-  font-family: var(--theme-font-sans);
-}
-
-.posts-list-meta {
+.archive-year-count {
   color: var(--theme-muted);
   font-family: var(--theme-font-mono);
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.archive-posts {
+  border-top-width: 1px;
+}
+
+.archive-list-item {
+  padding: var(--theme-space-2) 0;
+}
+
+.archive-row {
+  align-items: baseline;
+  display: flex;
+  font-weight: 500;
+  gap: var(--theme-space-4);
+}
+
+.archive-date {
+  color: var(--theme-subtle);
+  flex: none;
+  font-family: var(--theme-font-mono);
+  font-size: 0.78rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* === Wiki / Fragment 索引页 === */
+.wiki-cate-link {
+  display: inline-block;
+  padding: 0.4em 0.2em;
+}
+
+.wiki-entry-flag {
+  color: var(--theme-muted);
+  font-family: var(--theme-font-mono);
+  font-size: 0.72rem;
+  font-style: normal;
+  margin-left: 0.4em;
+  text-decoration: none;
+}
+
+/* === 专题页：控制台面板 === */
+.topic-path-title {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.topic-path-title a {
+  color: var(--theme-text);
+  text-decoration: none;
+}
+
+.topic-path-title a:hover,
+.topic-path-title a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--theme-accent);
+  text-underline-offset: 0.18em;
+}
+
+.topic-path-desc {
+  color: var(--theme-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin: var(--theme-space-2) 0 0;
+}
+
+/* === 项目页 === */
+.project-group {
+  margin-top: var(--theme-space-10);
+}
+
+.project-group:first-of-type {
+  margin-top: 0;
+}
+
+.project-group > h3 {
+  color: var(--theme-text);
+  font-size: 1.1rem;
+  margin: 0 0 var(--theme-space-1);
+}
+
+.project-group > p {
+  color: var(--theme-muted);
+  font-size: 0.9rem;
+  margin: 0 0 var(--theme-space-5);
+}
+
+.project-list-item .theme-meta {
+  margin-top: var(--theme-space-2);
 }
 
 .collection-head {

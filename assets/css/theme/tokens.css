@@ -33,6 +33,12 @@
 
   --theme-font-sans: "Inter", "Noto Sans SC", "Source Han Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --theme-font-mono: "JetBrains Mono", "SFMono-Regular", "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* 控制台面板（碳黑实体，深色模式反转为冷白） */
+  --theme-console-bg: var(--yx-carbon);
+  --theme-console-text: var(--yx-off-white);
+  --theme-console-muted: rgba(250, 250, 250, 0.62);
+  --theme-console-border: rgba(250, 250, 250, 0.18);
 }
 
 [data-theme="dark"] {
@@ -48,4 +54,9 @@
   --theme-code-bg: var(--yx-carbon);
   --theme-code-text: var(--yx-off-white);
   --theme-code-muted: rgba(250,250,250,0.62);
+
+  --theme-console-bg: var(--yx-off-white);
+  --theme-console-text: var(--yx-carbon);
+  --theme-console-muted: rgba(10, 10, 10, 0.62);
+  --theme-console-border: rgba(10, 10, 10, 0.18);
 }

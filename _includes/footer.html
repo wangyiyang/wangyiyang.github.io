@@ -1,7 +1,5 @@
     <footer class="container">
 
-      {% include footer-ad.html %}
-
         <div class="site-footer" role="contentinfo">
             <div class="copyright left mobile-block">
                     <span class="footer-brand"><span class="brand-signal" aria-hidden="true"></span>© {{ site.time | date: "%Y" }} 翊行代码</span>
@@ -22,24 +20,17 @@
 
           {% include visit-stat.html %}
 
+          <p class="site-footer-beian"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2021015985号-1</a></p>
+
         </div>
     </footer>
     <div class="tools-wrapper">
-      <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a>
+      <a class="gotop" href="#" title="回到顶部" aria-label="回到顶部">↑</a>
     </div>
     <!-- / footer -->
     {% if site.components.share.enabled %}
     <script src="{{ assets_base_url }}/assets/vendor/share.js/dist/js/share.min.js"></script>
     {% endif %}
-    <script src="{{ assets_base_url }}/assets/js/geopattern.js"></script>
-    <script>
-      jQuery(document).ready(function($) {
-        $('.geopattern').each(function(){
-          $(this).geopattern($(this).data('pattern-id'));
-        });
-       /* hljs.initHighlightingOnLoad(); */
-      });
-    </script>
 
     {% if site.components.fancybox.enabled %}
     <script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
@@ -338,6 +329,5 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<center><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2021015985号-1</a></center>
 </body>
 </html>

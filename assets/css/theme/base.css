@@ -72,14 +72,12 @@ a:focus {
 
 /* === 引用块 === */
 .markdown-body blockquote {
-  background: var(--theme-surface);
-  border-left: 4px solid var(--theme-accent);
-  border-radius: 0 var(--theme-radius-sm) var(--theme-radius-sm) 0;
+  border-left: 1px solid var(--theme-border);
   color: var(--theme-muted);
   font-style: italic;
   margin-left: 0;
   margin-right: 0;
-  padding: 1em 1.2em;
+  padding: 0.2em 1.2em;
 }
 
 /* === 行内代码 === */
@@ -140,6 +138,30 @@ a:focus {
 .markdown-body pre .highlight,
 .markdown-body pre .hll {
   background: transparent;
+}
+
+.markdown-body .highlight {
+  position: relative;
+}
+
+/* 代码复制按钮布局（颜色由上方 .code-copy-btn 主题规则负责） */
+.code-copy-btn {
+  border-radius: var(--theme-radius-sm);
+  cursor: pointer;
+  font-family: var(--theme-font-mono);
+  font-size: 12px;
+  opacity: 0;
+  padding: 4px 8px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transition: opacity 180ms ease;
+  z-index: 10;
+}
+
+.markdown-body .highlight:hover .code-copy-btn,
+.code-copy-btn:focus-visible {
+  opacity: 1;
 }
 
 .markdown-body pre .c,
@@ -296,6 +318,40 @@ a:focus {
   border: 1px solid var(--theme-border);
   margin-top: 2em;
   padding: 0 1.5em;
+}
+
+/* === 脚注（自旧 common.css 迁移，已三色化） === */
+a.footnote::before {
+  content: "[";
+  padding: 0 2px;
+}
+
+a.footnote::after {
+  content: "]";
+  padding: 0 2px;
+}
+
+div.footnotes > ol {
+  font-size: 0.9rem;
+  padding-left: 1.5rem;
+}
+
+div.footnotes > ol p {
+  margin-bottom: 0.5rem;
+}
+
+div.footnotes::before {
+  border: 0;
+  border-top: 1px solid var(--theme-border);
+  content: "";
+  display: block;
+  margin: 1.5rem 0;
+  width: 20%;
+}
+
+/* 图片说明文字 */
+img + em {
+  color: var(--theme-muted);
 }
 
 .post-directory,

@@ -1,10 +1,18 @@
 <aside class="post-toc" aria-label="文章目录">
-  <h2 class="post-toc-title">Contents</h2>
-  {% include sidebar-post-nav.html %}
+  <div class="console-panel post-toc-panel">
+    <div class="console-panel-head">
+      <span>Contents</span>
+    </div>
+    <div class="console-panel-body post-toc-body">
+      {% include sidebar-post-nav.html %}
+    </div>
+  </div>
 
-  <div class="post-toc-wechat">
-    <h2 class="post-toc-title">公众号</h2>
-    <div class="wechat-qr-wrap">
+  <div class="console-panel post-toc-wechat">
+    <div class="console-panel-head">
+      <span>WeChat</span>
+    </div>
+    <div class="console-panel-body post-toc-wechat-body">
       <img src="{{ site.url }}/images/qrcode.jpg" alt="{{ site.components.qrcode.image_alt }}" class="wechat-qr-img post-toc-wechat-image" />
       <p class="wechat-qr-caption post-toc-wechat-caption">{{ site.components.qrcode.image_alt }}</p>
     </div>

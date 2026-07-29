@@ -5,16 +5,15 @@
       <h2 class="theme-section-title">{{ site.data.workbench.featured_posts.title }}</h2>
       <p class="theme-section-subtitle">{{ site.data.workbench.featured_posts.subtitle }}</p>
     </header>
-    <ol class="featured-post-list">
+    <ol class="console-list featured-post-list">
       {% for post in site.data.workbench.featured_posts.posts %}
-      <li class="featured-post-item">
-        <span class="featured-post-index" aria-hidden="true">0{{ forloop.index }}</span>
-        <article class="featured-post-body">
-          <span class="featured-post-tag">SELECTED / {{ forloop.index }}</span>
+      <li class="console-list-item featured-post-item">
+        <article class="console-list-body">
           <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.description }}</p>
+          {% if post.description and post.description != post.title %}
+          <p class="console-list-excerpt">{{ post.description }}</p>
+          {% endif %}
         </article>
-        <a href="{{ post.url | relative_url }}" class="featured-post-link" aria-label="打开文章：{{ post.title }}">OPEN ↗</a>
       </li>
       {% endfor %}
     </ol>

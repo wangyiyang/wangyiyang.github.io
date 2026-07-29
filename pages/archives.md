@@ -8,7 +8,7 @@ menu: 文章
 permalink: /archives/
 ---
 
-<section class="container posts-content">
+<div class="archive-list">
 {% assign count = 1 %}
 {% for post in site.posts reversed %}
     {% assign year = post.date | date: '%Y' %}
@@ -34,18 +34,19 @@ permalink: /archives/
         {% if thisyear != 1 %}
             </ol>
         {% endif %}
-<h3>{{ post.date | date: '%Y' }} ({{ counts[i] }})</h3>
+<h3 class="archive-year">{{ post.date | date: '%Y' }} <span class="archive-year-count">{{ counts[i] }} 篇</span></h3>
         {% if thisyear != 0 %}
             {% assign thisyear = 0 %}
         {% endif %}
-        <ol class="posts-list">
+        <ol class="console-list archive-posts">
         {% assign i = i | plus: 1 %}
     {% endif %}
-<li class="posts-list-item">
-<span class="posts-list-meta">{{ post.date | date:"%m-%d" }}</span>
-<a class="posts-list-name" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+<li class="console-list-item archive-list-item">
+    <article class="console-list-body">
+        <h3 class="archive-row"><span class="archive-date">{{ post.date | date: "%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    </article>
 </li>
 {% endfor %}
 
 </ol>
-</section>
+</div>
