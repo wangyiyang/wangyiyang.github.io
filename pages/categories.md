@@ -8,18 +8,18 @@ menu: 分类
 permalink: /categories/
 ---
 
-<section class="container posts-content">
+<div class="archive-list">
 {% assign sorted_categories = site.categories | sort %}
 {% for category in sorted_categories %}
-<h3 id="{{ category[0] }}">{{ category | first }}</h3>
-<ol class="posts-list">
+<h3 class="archive-year" id="{{ category[0] }}">{{ category | first }} <span class="archive-year-count">{{ category.last.size }} 篇</span></h3>
+<ol class="console-list archive-posts">
 {% for post in category.last %}
-<li class="posts-list-item">
-<span class="posts-list-meta">{{ post.date | date:"%Y-%m-%d" }}</span>
-<a class="posts-list-name" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+<li class="console-list-item archive-list-item">
+    <article class="console-list-body">
+        <h3 class="archive-row"><span class="archive-date">{{ post.date | date: "%y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    </article>
 </li>
 {% endfor %}
 </ol>
 {% endfor %}
-</section>
-<!-- /section.content -->
+</div>

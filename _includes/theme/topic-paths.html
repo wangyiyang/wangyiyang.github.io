@@ -8,12 +8,14 @@
     <div class="theme-grid theme-grid-3">
       {% for topic in site.data.topics %}
       {% assign topic_posts = site.categories[topic.category] | default: empty %}
-      <article class="topic-path" id="{{ topic.key }}">
-        <h3><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></h3>
-        <p>{{ topic.description }}</p>
-        <div class="theme-meta">
-          <span>{{ topic_posts.size }} 篇文章</span>
+      <article class="console-panel topic-path" id="{{ topic.key }}">
+        <div class="console-panel-head">
           <span>{{ topic.category }}</span>
+          <span>{{ topic_posts.size }} 篇</span>
+        </div>
+        <div class="console-panel-body">
+          <h3 class="topic-path-title"><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></h3>
+          <p class="topic-path-desc">{{ topic.description }}</p>
         </div>
       </article>
       {% endfor %}
