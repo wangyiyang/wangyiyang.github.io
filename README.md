@@ -103,16 +103,6 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
    - 上传命令使用 `qshell qupload2 --overwrite --rescan-local`，适合静态站点全量覆盖同步。
    - 如果你只想更换本地账号别名，可以修改 `.env` 里的 `QINIU_USERNAME`。
 
-5. GitHub Actions 自动同步。
-
-   仓库提供 `.github/workflows/qiniu-sync.yml`，推送到 `master` 分支时会自动构建并同步到七牛；也可以在 GitHub Actions 页面手动触发 `Sync to Qiniu CDN`。
-
-   需要在 GitHub 仓库的 Secrets 中配置：
-
-   - `QINIU_AK`
-   - `QINIU_SK`
-   - `QINIU_BUCKET`
-
 ## 经验与思考
 
 * 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
