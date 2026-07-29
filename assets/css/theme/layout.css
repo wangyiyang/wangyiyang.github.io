@@ -4,6 +4,62 @@
   padding: 0 var(--theme-space-6);
 }
 
+/* 旧 .container 迁移：页头/页脚等旧结构仍使用，统一对齐到主题容器 */
+.container {
+  margin: 0 auto;
+  max-width: var(--theme-container);
+  padding-left: var(--theme-space-4);
+  padding-right: var(--theme-space-4);
+}
+
+.mobile-visible {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .mobile-block {
+    display: block;
+    float: none;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .mobile-visible {
+    display: inline-block;
+  }
+
+  /* 汉堡菜单按钮（自旧 responsive.css 迁移，紫色已三色化） */
+  .collapsed {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 2em;
+    outline: none;
+    padding: 0;
+    width: 22px;
+  }
+
+  .collapsed .icon-bar {
+    background-color: var(--theme-text);
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+  }
+
+  .collapsed .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+
+  .tools-wrapper {
+    bottom: 1em;
+  }
+}
+
 .theme-section {
   border-top: 1px solid var(--theme-border);
   padding: var(--theme-space-16) 0;
@@ -78,6 +134,103 @@
 .theme-reading {
   max-width: var(--theme-reading);
 }
+
+/* === 控制台组件族：细线围合 + mono 标签头 === */
+
+/* 状态灯：终端绿小方块，全站唯一信号形式 */
+.console-status {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.55em;
+}
+
+.console-status::before {
+  background: var(--theme-accent);
+  content: "";
+  flex: none;
+  height: 6px;
+  width: 6px;
+}
+
+/* 细线面板（浅色实体卡片替代物） */
+.console-panel {
+  background: var(--theme-bg);
+  border: 1px solid var(--theme-border-strong);
+  border-radius: var(--theme-radius-sm);
+}
+
+.console-panel-head {
+  align-items: center;
+  border-bottom: 1px solid var(--theme-border);
+  color: var(--theme-muted);
+  display: flex;
+  font-family: var(--theme-font-mono);
+  font-size: 0.68rem;
+  gap: var(--theme-space-3);
+  justify-content: space-between;
+  letter-spacing: 0.1em;
+  padding: var(--theme-space-2) var(--theme-space-4);
+  text-transform: uppercase;
+}
+
+.console-panel-head > span {
+  min-width: 0;
+}
+
+.console-panel-head > span:last-child {
+  flex: none;
+  white-space: nowrap;
+}
+
+.console-panel-body {
+  padding: var(--theme-space-4);
+}
+
+/* 碳黑实体面板（Hero 专用，深色模式随 token 反转） */
+.console-panel-solid {
+  background: var(--theme-console-bg);
+  border-color: var(--theme-console-bg);
+  color: var(--theme-console-text);
+}
+
+.console-panel-solid .console-panel-head {
+  border-bottom-color: var(--theme-console-border);
+  color: var(--theme-console-muted);
+}
+
+/* 统计数字组 */
+.console-stats {
+  display: grid;
+  gap: var(--theme-space-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+}
+
+.console-stat {
+  min-width: 0;
+}
+
+.console-stat-value {
+  display: block;
+  font-family: var(--theme-font-mono);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.console-stat-label {
+  color: var(--theme-muted);
+  display: block;
+  font-family: var(--theme-font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  margin-top: var(--theme-space-1);
+  text-transform: uppercase;
+}
+
+.console-panel-solid .console-stat-label {
+  color: var(--theme-console-muted);
+}
+
 
 @media (max-width: 900px) {
   .theme-grid-2,
