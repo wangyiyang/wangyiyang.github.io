@@ -12,20 +12,39 @@
         {% endfor %}
       </div>
     </div>
-    <div class="workbench-signal-line" aria-hidden="true"></div>
-    <aside class="workbench-hero-panel" aria-hidden="true">
-      <div class="workbench-panel-head">
+    <aside class="console-panel console-panel-solid workbench-hero-panel" aria-label="站点状态面板">
+      <div class="console-panel-head">
         <span>YY / SYSTEM</span>
-        <span>RUNNING</span>
+        <span class="console-status">RUNNING</span>
       </div>
-      <div class="workbench-panel-grid">
-        <span>01 / CODE</span>
-        <span>02 / AI</span>
-        <span>03 / AGENTS</span>
-        <span>04 / SYSTEMS</span>
+      <div class="console-panel-body workbench-panel-body">
+        <dl class="console-stats">
+          <div class="console-stat">
+            <dd class="console-stat-value">{{ site.posts | size }}</dd>
+            <dt class="console-stat-label">Posts</dt>
+          </div>
+          <div class="console-stat">
+            <dd class="console-stat-value">{{ site.categories | size }}</dd>
+            <dt class="console-stat-label">Categories</dt>
+          </div>
+          <div class="console-stat">
+            <dd class="console-stat-value">{{ site.time | date: "%y.%m.%d" }}</dd>
+            <dt class="console-stat-label">Updated</dt>
+          </div>
+        </dl>
+        <div class="workbench-panel-feed">
+          <p class="workbench-panel-feed-title">Latest signals</p>
+          <ol class="workbench-panel-feed-list">
+            {% for post in site.posts limit: 4 %}
+            <li>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m.%d" }}</time>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+        <p class="workbench-panel-foot">SIGNAL STABLE</p>
       </div>
-      <div class="workbench-panel-axis"></div>
-      <p class="workbench-panel-status">SIGNAL STABLE</p>
     </aside>
   </div>
 </section>
