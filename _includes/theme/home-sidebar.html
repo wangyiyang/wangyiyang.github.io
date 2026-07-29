@@ -1,20 +1,31 @@
-<div class="sidebar-widget sidebar-wechat">
-  <h3 class="sidebar-widget-title">微信公众号</h3>
-  <div class="wechat-qr-wrap">
-    <img src="{{ site.url }}/images/qrcode.jpg" alt="{{ site.components.qrcode.image_alt }}" class="wechat-qr-img" />
-    <p class="wechat-qr-caption">{{ site.components.qrcode.image_alt }}</p>
+<div class="console-panel sidebar-wechat">
+  <div class="console-panel-head">
+    <span>WeChat</span>
+    <span class="console-status">订阅号</span>
   </div>
-  <p class="sidebar-widget-desc">扫码关注，获取更多技术文章与实践经验。</p>
+  <div class="console-panel-body sidebar-wechat-body">
+    <div class="wechat-qr-wrap">
+      <img src="{{ site.url }}/images/qrcode.jpg" alt="{{ site.components.qrcode.image_alt }}" class="wechat-qr-img" />
+      <p class="wechat-qr-caption">{{ site.components.qrcode.image_alt }}</p>
+    </div>
+    <p class="sidebar-widget-desc">扫码关注，获取更多技术文章与实践经验。</p>
+  </div>
 </div>
 
-<div class="sidebar-widget sidebar-about">
-  <h3 class="sidebar-widget-title">关于</h3>
-  <p>独立开发者，关注如何用 AI、代码、自动化和写作构建个人生产系统。</p>
-  <a href="{{ '/about/' | relative_url }}">了解更多 →</a>
+<div class="console-panel sidebar-about">
+  <div class="console-panel-head">
+    <span>About</span>
+  </div>
+  <div class="console-panel-body">
+    <p>独立开发者，关注如何用 AI、代码、自动化和写作构建个人生产系统。</p>
+    <a href="{{ '/about/' | relative_url }}">了解更多 →</a>
+  </div>
 </div>
 
-<div class="sidebar-widget sidebar-topics">
-  <h3 class="sidebar-widget-title">分类</h3>
+<div class="console-panel sidebar-topics">
+  <div class="console-panel-head">
+    <span>Topics</span>
+  </div>
   <ul class="sidebar-topic-list">
     {% for topic in site.data.topics %}
     <li>
