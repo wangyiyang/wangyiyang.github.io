@@ -37,7 +37,7 @@ components:
     word_count:
         enabled: true
     # 页面右上角，以及「关于」页面的二维码
-    # 修改图片请替换 assets/images/qrcode.jpg
+    # 修改图片请替换 images/qrcode.jpg，并同步更新引用中的缓存版本
     qrcode:
         enabled: true
         image_alt: 翊行代码微信公众号
